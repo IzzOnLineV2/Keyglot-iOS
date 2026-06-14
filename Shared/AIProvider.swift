@@ -2,8 +2,12 @@ import Foundation
 
 /// The single abstraction the keyboard depends on. Swapping providers (or adding new ones)
 /// never touches the keyboard logic — only this file's `AIProviderType`/`AIProviderFactory`.
+///
+/// `generate` is intentionally generic: the caller supplies the full system prompt, so the
+/// same method powers both translation (`TargetLanguage.prompt`) and rewriting
+/// (`RewriteAction.prompt`). The provider never knows which feature invoked it.
 protocol AIProvider: Sendable {
-    func translate(text: String, targetLanguage: TargetLanguage) async throws -> String
+    func generate(text: String, systemPrompt: String) async throws -> String
 }
 
 /// The available AI providers. Claude Sonnet is the default; OpenAI is wired up and ready,

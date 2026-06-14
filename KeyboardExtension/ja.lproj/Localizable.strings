@@ -3,12 +3,13 @@
 "Open the Keyglot app to add your API key." = "Keyglotアプリを開いてAPIキーを追加してください。";
 "Tap 🌐 to type on your keyboard, then come back here and pick a language." = "🌐をタップしてキーボードで入力し、ここに戻って言語を選んでください。";
 "Tap a flag to translate your message." = "旗をタップしてメッセージを翻訳します。";
+"Tap an action to improve the text or change the tone." = "アクションをタップして、テキストを改善したり口調を変えたりできます。";
 "Translating to %@…" = "%@に翻訳中…";
 "Translate to %@" = "%@に翻訳";
 
 /* ===== Error banners ===== */
 "No API key set — add your %@ key in the Keyglot app." = "APIキーが未設定です — Keyglotアプリで%@のキーを追加してください。";
-"Type a message first, then tap a language." = "先にメッセージを入力し、言語をタップしてください。";
+"Type a message first, then tap a button." = "先にメッセージを入力し、ボタンをタップしてください。";
 "Invalid API key — open the Keyglot app and check your %@ key." = "APIキーが無効です — Keyglotアプリを開いて%@のキーを確認してください。";
 "Billing issue — add credit to your %@ account." = "課金の問題 — %@のアカウントにクレジットを追加してください。";
 "Access denied — your %@ key isn't allowed to do this." = "アクセスが拒否されました — %@のキーには権限がありません。";
@@ -22,3 +23,10 @@
 "%@ returned nothing — try again." = "%@から応答がありませんでした — もう一度お試しください。";
 "Unexpected response from %@." = "%@から予期しない応答がありました。";
 "Couldn't translate: %@" = "翻訳できませんでした: %@";
+
+/* ===== Rewrite actions ===== */
+"Rewriting…" = "書き換えています…";
+"Improve the text" = "テキストを改善";
+"Rewrite in a professional tone" = "フォーマルな口調に書き換える";
+"Rewrite in a friendly tone" = "フレンドリーな口調に書き換える";
+"Rewrite in a flirty tone" = "思わせぶりな口調に書き換える";

@@ -9,7 +9,8 @@ final class KeyboardState: ObservableObject {
 
     enum Status: Equatable {
         case idle
-        case translating(TargetLanguage)
+        /// Work in flight (translating or rewriting). The string is the progress label to show.
+        case busy(String)
         case error(String)
     }
 
@@ -31,20 +32,22 @@ final class KeyboardState: ObservableObject {
     /// Whether to show the "switch keyboard" globe (only when other keyboards exist).
     @Published var showsNextKeyboard: Bool = true
 
-    /// Translation is only possible with Full Access, a configured key, and no work in flight.
+    /// Actions (translate/rewrite) only work with Full Access, a configured key, and no work
+    /// in flight.
     var canTranslate: Bool {
         hasFullAccess && hasAPIKey && !isBusy
     }
 
     private var errorResetTask: Task<Void, Never>?
 
-    func beginTranslating(_ language: TargetLanguage) {
+    /// Enter the busy state with a progress label (e.g. "Translating to Français…", "Rewriting…").
+    func beginWork(_ label: String) {
         errorResetTask?.cancel()
-        status = .translating(language)
+        status = .busy(label)
     }
 
-    func finishTranslating() {
-        if case .translating = status { status = .idle }
+    func finishWork() {
+        if case .busy = status { status = .idle }
     }
 
     /// Show a transient error banner that clears itself after a few seconds.
@@ -59,7 +62,7 @@ final class KeyboardState: ObservableObject {
     }
 
     var isBusy: Bool {
-        if case .translating = status { return true }
+        if case .busy = status { return true }
         return false
     }
 }

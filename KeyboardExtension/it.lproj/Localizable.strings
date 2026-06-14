@@ -3,12 +3,13 @@
 "Open the Keyglot app to add your API key." = "Apri l'app Keyglot per aggiungere la tua chiave API.";
 "Tap 🌐 to type on your keyboard, then come back here and pick a language." = "Tocca 🌐 per scrivere con la tua tastiera, poi torna qui e scegli una lingua.";
 "Tap a flag to translate your message." = "Tocca una bandiera per tradurre il messaggio.";
+"Tap an action to improve the text or change the tone." = "Tocca un'azione per migliorare il testo o cambiare il tono.";
 "Translating to %@…" = "Sto traducendo in %@…";
 "Translate to %@" = "Traduci in %@";
 
 /* ===== Error banners ===== */
 "No API key set — add your %@ key in the Keyglot app." = "Nessuna chiave API — aggiungi la chiave %@ nell'app Keyglot.";
-"Type a message first, then tap a language." = "Scrivi prima un messaggio, poi tocca una lingua.";
+"Type a message first, then tap a button." = "Scrivi prima un messaggio, poi tocca un pulsante.";
 "Invalid API key — open the Keyglot app and check your %@ key." = "Chiave API non valida — apri l'app Keyglot e controlla la chiave %@.";
 "Billing issue — add credit to your %@ account." = "Problema di fatturazione — aggiungi credito al tuo account %@.";
 "Access denied — your %@ key isn't allowed to do this." = "Accesso negato — la tua chiave %@ non è autorizzata a farlo.";
@@ -22,3 +23,10 @@
 "%@ returned nothing — try again." = "%@ non ha restituito nulla — riprova.";
 "Unexpected response from %@." = "Risposta inattesa da %@.";
 "Couldn't translate: %@" = "Impossibile tradurre: %@";
+
+/* ===== Rewrite actions ===== */
+"Rewriting…" = "Sto riscrivendo…";
+"Improve the text" = "Migliora il testo";
+"Rewrite in a professional tone" = "Riscrivi con un tono professionale";
+"Rewrite in a friendly tone" = "Riscrivi con un tono amichevole";
+"Rewrite in a flirty tone" = "Riscrivi con un tono ammiccante";

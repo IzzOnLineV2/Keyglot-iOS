@@ -14,7 +14,7 @@ final class GeminiProvider: AIProvider {
         self.session = session
     }
 
-    func translate(text: String, targetLanguage: TargetLanguage) async throws -> String {
+    func generate(text: String, systemPrompt: String) async throws -> String {
         var request = URLRequest(url: Configuration.geminiURL())
         request.httpMethod = "POST"
         request.timeoutInterval = Configuration.requestTimeout
@@ -22,7 +22,7 @@ final class GeminiProvider: AIProvider {
         request.setValue(apiKey, forHTTPHeaderField: "x-goog-api-key")
 
         let payload = RequestBody(
-            systemInstruction: .init(parts: [.init(text: targetLanguage.prompt)]),
+            systemInstruction: .init(parts: [.init(text: systemPrompt)]),
             contents: [.init(role: "user", parts: [.init(text: text)])]
         )
         request.httpBody = try JSONEncoder().encode(payload)

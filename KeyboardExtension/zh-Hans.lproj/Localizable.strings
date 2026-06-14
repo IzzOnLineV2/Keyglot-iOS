@@ -3,12 +3,13 @@
 "Open the Keyglot app to add your API key." = "打开 Keyglot App 添加你的 API 密钥。";
 "Tap 🌐 to type on your keyboard, then come back here and pick a language." = "点按 🌐 用你的键盘输入，然后回到这里选择一种语言。";
 "Tap a flag to translate your message." = "点按一面旗帜来翻译你的消息。";
+"Tap an action to improve the text or change the tone." = "点按一个动作来改进文本或改变语气。";
 "Translating to %@…" = "正在翻译为 %@…";
 "Translate to %@" = "翻译为 %@";
 
 /* ===== Error banners ===== */
 "No API key set — add your %@ key in the Keyglot app." = "未设置 API 密钥——请在 Keyglot App 中添加你的 %@ 密钥。";
-"Type a message first, then tap a language." = "请先输入消息，然后点按一种语言。";
+"Type a message first, then tap a button." = "请先输入消息，然后点按一个按钮。";
 "Invalid API key — open the Keyglot app and check your %@ key." = "API 密钥无效——打开 Keyglot App 检查你的 %@ 密钥。";
 "Billing issue — add credit to your %@ account." = "计费问题——请为你的 %@ 账户充值。";
 "Access denied — your %@ key isn't allowed to do this." = "访问被拒绝——你的 %@ 密钥无权执行此操作。";
@@ -22,3 +23,10 @@
 "%@ returned nothing — try again." = "%@ 未返回任何内容——请重试。";
 "Unexpected response from %@." = "来自 %@ 的意外响应。";
 "Couldn't translate: %@" = "无法翻译：%@";
+
+/* ===== Rewrite actions ===== */
+"Rewriting…" = "正在重写…";
+"Improve the text" = "改进文本";
+"Rewrite in a professional tone" = "以专业语气重写";
+"Rewrite in a friendly tone" = "以友好语气重写";
+"Rewrite in a flirty tone" = "以俏皮的语气重写";

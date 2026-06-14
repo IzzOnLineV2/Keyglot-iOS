@@ -14,8 +14,8 @@ final class OpenAIProvider: AIProvider {
         self.session = session
     }
 
-    func translate(text: String, targetLanguage: TargetLanguage) async throws -> String {
-        let instructions = targetLanguage.prompt
+    func generate(text: String, systemPrompt: String) async throws -> String {
+        let instructions = systemPrompt
         do {
             return try await send(text: text, model: Configuration.openAIDefaultModel, instructions: instructions)
         } catch let error as ProviderError where error.isModelRejection {

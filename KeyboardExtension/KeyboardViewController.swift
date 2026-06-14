@@ -11,7 +11,8 @@ final class KeyboardViewController: UIInputViewController {
     private let service = TranslationService()
     private var heightConstraint: NSLayoutConstraint?
 
-    private static let keyboardHeight: CGFloat = 100
+    // Status hint + language-flag row + rewrite caption + rewrite-action row.
+    private static let keyboardHeight: CGFloat = 172
 
     // MARK: - Lifecycle
 
@@ -89,6 +90,9 @@ final class KeyboardViewController: UIInputViewController {
             onSelect: { [weak self] language in
                 self?.performTranslation(to: language)
             },
+            onRewrite: { [weak self] action in
+                self?.performRewrite(action)
+            },
             configureNextKeyboardButton: { [weak self] button in
                 guard let self else { return }
                 button.addTarget(
@@ -122,9 +126,28 @@ final class KeyboardViewController: UIInputViewController {
         heightConstraint = constraint
     }
 
-    // MARK: - Translation flow
+    // MARK: - Translation & rewrite flow
 
     private func performTranslation(to language: TargetLanguage) {
+        let label = String(localized: "Translating to \(language.name)…")
+        runAction(label: label) { service, text in
+            try await service.translate(text, to: language)
+        }
+    }
+
+    private func performRewrite(_ action: RewriteAction) {
+        let label = String(localized: "Rewriting…")
+        runAction(label: label) { service, text in
+            try await service.rewrite(text, as: action)
+        }
+    }
+
+    /// Shared flow for both translation and rewriting: validate, read the exposed text, run the
+    /// provider call, and replace the message in place. On failure the original text is untouched.
+    private func runAction(
+        label: String,
+        _ work: @escaping @Sendable (TranslationService, String) async throws -> String
+    ) {
         guard !state.isBusy else { return }
 
         guard hasFullAccess else {
@@ -137,18 +160,18 @@ final class KeyboardViewController: UIInputViewController {
         let fullText = before + after
 
         guard !fullText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
-            state.showError(String(localized: "Type a message first, then tap a language."))
+            state.showError(String(localized: "Type a message first, then tap a button."))
             return
         }
 
-        state.beginTranslating(language)
+        state.beginWork(label)
 
         Task { [weak self] in
             guard let self else { return }
             do {
-                let translated = try await self.service.translate(fullText, to: language)
-                self.replaceMessage(before: before, after: after, with: translated)
-                self.state.finishTranslating()
+                let result = try await work(self.service, fullText)
+                self.replaceMessage(before: before, after: after, with: result)
+                self.state.finishWork()
             } catch {
                 // On failure we leave the user's original text untouched.
                 self.state.showError(self.bannerMessage(for: error))
@@ -181,7 +204,7 @@ final class KeyboardViewController: UIInputViewController {
             return String(localized: "No API key set — add your \(name) key in the Keyglot app.")
         }
         if case TranslationService.ServiceError.emptyInput = error {
-            return String(localized: "Type a message first, then tap a language.")
+            return String(localized: "Type a message first, then tap a button.")
         }
         if case let ProviderError.http(status, message) = error {
             let text = message.lowercased()

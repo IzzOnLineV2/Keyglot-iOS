@@ -1,7 +1,7 @@
 import SwiftUI
 
-/// The keyboard's entire UI: a single row of translation buttons, with a transient
-/// status line for progress and errors.
+/// The keyboard's entire UI: a row of translation (language) buttons and a row of rewrite
+/// (tone) buttons, with a transient status line for progress and errors.
 ///
 /// A keyboard extension *replaces* the system keyboard, so this view also offers a
 /// "switch keyboard" globe to let the user return to their typing keyboard.
@@ -10,6 +10,8 @@ struct ToolbarView: View {
 
     /// Invoked when a language button is tapped.
     let onSelect: (TargetLanguage) -> Void
+    /// Invoked when a rewrite (tone) button is tapped.
+    let onRewrite: (RewriteAction) -> Void
     /// Wires the globe up to the system keyboard switcher (tap = advance, long-press = picker).
     let configureNextKeyboardButton: (UIButton) -> Void
 
@@ -17,6 +19,8 @@ struct ToolbarView: View {
         VStack(spacing: 6) {
             statusBar
             buttonRow
+            rewriteCaption
+            rewriteRow
         }
         .padding(.horizontal, 8)
         .padding(.vertical, 8)
@@ -50,10 +54,11 @@ struct ToolbarView: View {
                 .lineLimit(2)
                 .minimumScaleFactor(0.7)
 
-        case .translating(let language):
+        case .busy(let label):
             HStack(spacing: 8) {
                 ProgressView().controlSize(.small)
-                Text("Translating to \(language.title)…")
+                // `label` is already localized by the view controller (translate vs rewrite).
+                Text(verbatim: label)
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }
@@ -99,6 +104,42 @@ struct ToolbarView: View {
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel(language.accessibilityLabel)
+                .disabled(!state.canTranslate)
+                .opacity(state.canTranslate ? 1 : 0.5)
+            }
+        }
+    }
+
+    /// Caption between the two rows, making clear the tone buttons rewrite (same language)
+    /// rather than translate. Mirrors the "Tap a flag…" status hint above the language row.
+    private var rewriteCaption: some View {
+        Text("Tap an action to improve the text or change the tone.")
+            .font(.footnote)
+            .foregroundStyle(.secondary)
+            .multilineTextAlignment(.center)
+            .lineLimit(2)
+            .minimumScaleFactor(0.7)
+    }
+
+    /// The same-language rewrite actions (✨ 💼 😊 ❤️). Shares `canTranslate` — both need
+    /// Full Access, a key, and no work in flight.
+    private var rewriteRow: some View {
+        HStack(spacing: 8) {
+            ForEach(RewriteAction.all) { action in
+                Button {
+                    onRewrite(action)
+                } label: {
+                    Text(action.glyph)
+                        .font(.system(size: 24))
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 44)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .fill(Color(.secondarySystemBackground))
+                        )
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(action.accessibilityLabel)
                 .disabled(!state.canTranslate)
                 .opacity(state.canTranslate ? 1 : 0.5)
             }

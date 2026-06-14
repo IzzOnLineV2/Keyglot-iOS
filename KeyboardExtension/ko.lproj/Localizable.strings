@@ -3,12 +3,13 @@
 "Open the Keyglot app to add your API key." = "Keyglot 앱을 열어 API 키를 추가하세요.";
 "Tap 🌐 to type on your keyboard, then come back here and pick a language." = "🌐를 탭해 키보드로 입력한 다음 여기로 돌아와 언어를 선택하세요.";
 "Tap a flag to translate your message." = "국기를 탭해 메시지를 번역하세요.";
+"Tap an action to improve the text or change the tone." = "동작을 탭해 텍스트를 개선하거나 어조를 바꾸세요.";
 "Translating to %@…" = "%@(으)로 번역 중…";
 "Translate to %@" = "%@(으)로 번역";
 
 /* ===== Error banners ===== */
 "No API key set — add your %@ key in the Keyglot app." = "API 키 없음 — Keyglot 앱에서 %@ 키를 추가하세요.";
-"Type a message first, then tap a language." = "먼저 메시지를 입력한 다음 언어를 탭하세요.";
+"Type a message first, then tap a button." = "먼저 메시지를 입력한 다음 버튼을 탭하세요.";
 "Invalid API key — open the Keyglot app and check your %@ key." = "잘못된 API 키 — Keyglot 앱을 열어 %@ 키를 확인하세요.";
 "Billing issue — add credit to your %@ account." = "결제 문제 — %@ 계정에 크레딧을 추가하세요.";
 "Access denied — your %@ key isn't allowed to do this." = "접근 거부됨 — %@ 키에는 권한이 없습니다.";
@@ -22,3 +23,10 @@
 "%@ returned nothing — try again." = "%@에서 아무것도 반환하지 않았습니다 — 다시 시도하세요.";
 "Unexpected response from %@." = "%@에서 예기치 않은 응답입니다.";
 "Couldn't translate: %@" = "번역할 수 없습니다: %@";
+
+/* ===== Rewrite actions ===== */
+"Rewriting…" = "다시 쓰는 중…";
+"Improve the text" = "텍스트 개선";
+"Rewrite in a professional tone" = "전문적인 어조로 다시 쓰기";
+"Rewrite in a friendly tone" = "친근한 어조로 다시 쓰기";
+"Rewrite in a flirty tone" = "은근히 다정한 어조로 다시 쓰기";

@@ -95,9 +95,9 @@ struct ApiKeyView: View {
             let client = AIProviderFactory.make(type, apiKey: key)
             let language = TargetLanguage.byID("en") ?? TargetLanguage.catalog[0]
             do {
-                let output = try await client.translate(
+                let output = try await client.generate(
                     text: "Ciao, come stai? Spero che il viaggio stia andando bene.",
-                    targetLanguage: language
+                    systemPrompt: language.prompt
                 )
                 testResult = String(localized: "✅ Works.\n\nTranslation:\n\(output)")
             } catch {

@@ -3,12 +3,13 @@
 "Open the Keyglot app to add your API key." = "افتح تطبيق Keyglot لإضافة مفتاح API.";
 "Tap 🌐 to type on your keyboard, then come back here and pick a language." = "انقر على 🌐 للكتابة بلوحة المفاتيح، ثم عُد إلى هنا واختر لغة.";
 "Tap a flag to translate your message." = "انقر على عَلَم لترجمة رسالتك.";
+"Tap an action to improve the text or change the tone." = "انقر على إجراء لتحسين النص أو تغيير النبرة.";
 "Translating to %@…" = "جارٍ الترجمة إلى %@…";
 "Translate to %@" = "ترجمة إلى %@";
 
 /* ===== Error banners ===== */
 "No API key set — add your %@ key in the Keyglot app." = "لا يوجد مفتاح API — أضف مفتاح %@ في تطبيق Keyglot.";
-"Type a message first, then tap a language." = "اكتب رسالة أولًا، ثم انقر على لغة.";
+"Type a message first, then tap a button." = "اكتب رسالة أولًا، ثم انقر على زر.";
 "Invalid API key — open the Keyglot app and check your %@ key." = "مفتاح API غير صالح — افتح تطبيق Keyglot وتحقق من مفتاح %@.";
 "Billing issue — add credit to your %@ account." = "مشكلة في الفوترة — أضف رصيدًا إلى حساب %@.";
 "Access denied — your %@ key isn't allowed to do this." = "تم رفض الوصول — مفتاح %@ غير مخوَّل بذلك.";
@@ -22,3 +23,10 @@
 "%@ returned nothing — try again." = "لم يُرجِع %@ أي شيء — حاول مرة أخرى.";
 "Unexpected response from %@." = "استجابة غير متوقعة من %@.";
 "Couldn't translate: %@" = "تعذّرت الترجمة: %@";
+
+/* ===== Rewrite actions ===== */
+"Rewriting…" = "جارٍ إعادة الصياغة…";
+"Improve the text" = "تحسين النص";
+"Rewrite in a professional tone" = "إعادة الصياغة بنبرة احترافية";
+"Rewrite in a friendly tone" = "إعادة الصياغة بنبرة ودية";
+"Rewrite in a flirty tone" = "إعادة الصياغة بنبرة مرحة وغزلية";

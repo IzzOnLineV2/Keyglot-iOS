@@ -14,7 +14,7 @@ final class OpenRouterProvider: AIProvider {
         self.session = session
     }
 
-    func translate(text: String, targetLanguage: TargetLanguage) async throws -> String {
+    func generate(text: String, systemPrompt: String) async throws -> String {
         var request = URLRequest(url: Configuration.openRouterURL)
         request.httpMethod = "POST"
         request.timeoutInterval = Configuration.requestTimeout
@@ -27,7 +27,7 @@ final class OpenRouterProvider: AIProvider {
         let payload = RequestBody(
             model: Configuration.openRouterModel,
             messages: [
-                RequestBody.Message(role: "system", content: targetLanguage.prompt),
+                RequestBody.Message(role: "system", content: systemPrompt),
                 RequestBody.Message(role: "user", content: text),
             ]
         )
