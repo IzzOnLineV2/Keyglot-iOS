@@ -1,0 +1,63 @@
+/* ===== Onboarding ===== */
+"AI Message Translator" = "AIメッセージ翻訳";
+"Type in any language and replace your message with a natural translation — right inside WhatsApp, no copy/paste." = "どんな言語でも入力でき、メッセージを自然な翻訳に置き換えます — WhatsApp内で直接、コピペ不要。";
+"Provider" = "プロバイダ";
+"Add your %@ API key to get started." = "%@のAPIキーを追加して始めましょう。";
+"Reveal key" = "キーを表示";
+"Get a %@ API key" = "%@のAPIキーを取得";
+"Stored securely in the iOS Keychain on this device — never in plain settings, and shared only with the keyboard." = "この端末のiOSキーチェーンに安全に保存されます — 設定に平文で保存されることはなく、キーボードとのみ共有されます。";
+"Get Started" = "始める";
+"Couldn't save the key" = "キーを保存できませんでした";
+"The key couldn't be written to the iOS Keychain. Run the app signed with your Team (from Xcode) or on a device, then try again." = "iOSキーチェーンにキーを書き込めませんでした。Teamで署名したアプリを（Xcodeから）または実機で実行して、もう一度お試しください。";
+
+/* ===== Settings ===== */
+"API Key" = "APIキー";
+"Configured" = "設定済み";
+"Not set" = "未設定";
+"AI Provider" = "AIプロバイダ";
+"Default is Claude Sonnet for natural, native-sounding translations. Each provider stores its own API key." = "デフォルトはClaude Sonnetで、自然でネイティブのような翻訳が可能です。各プロバイダは独自のAPIキーを保存します。";
+"Languages" = "言語";
+"%lld shown" = "%lld件表示";
+"Keyboard" = "キーボード";
+"Choose which languages appear on the keyboard (up to %lld). The source language is detected automatically." = "キーボードに表示する言語を選びます（最大%lld件）。元の言語は自動的に検出されます。";
+"Setup" = "セットアップ";
+"About" = "情報";
+"Enter your %@ API key above." = "上に%@のAPIキーを入力してください。";
+"Open iOS Settings → General → Keyboard → Keyboards → Add New Keyboard… and add “Keyglot”." = "iOSの「設定」→「一般」→「キーボード」→「キーボード」→「新しいキーボードを追加…」を開き、「Keyglot」を追加します。";
+"Tap “Keyglot” in that list and turn on Allow Full Access (required for network access)." = "そのリストで「Keyglot」をタップし、「フルアクセスを許可」をオンにします（ネットワークアクセスに必要）。";
+"In any chat, tap 🌐 to switch to the Keyglot keyboard, then tap a language." = "任意のチャットで🌐をタップしてKeyglotキーボードに切り替え、言語をタップします。";
+
+/* ===== API Key ===== */
+"Stored securely in the iOS Keychain on this device. Sent only to %@." = "この端末のiOSキーチェーンに安全に保存されます。%@にのみ送信されます。";
+"Save" = "保存";
+"Test translation" = "翻訳をテスト";
+"Remove key" = "キーを削除";
+"“Test” sends one short request to %@ and shows the exact result or error — handy to check the key, model and billing." = "「テスト」は%@に短いリクエストを1回送り、正確な結果またはエラーを表示します — キー・モデル・課金の確認に便利です。";
+"Saved" = "保存しました";
+"Your %@ API key has been saved." = "%@のAPIキーを保存しました。";
+"Test result" = "テスト結果";
+"✅ Works.\n\nTranslation:\n%@" = "✅ 動作します。\n\n翻訳:\n%@";
+"❌ Failed.\n\n%@" = "❌ 失敗しました。\n\n%@";
+
+/* ===== About ===== */
+"A personal keyboard that translates the message you've already typed — in place, without copy/paste. Write in any language and replace it with a natural, native-sounding translation in the language you pick. The source language is detected automatically." = "すでに入力したメッセージをその場で翻訳する、コピペ不要の個人用キーボードです。どんな言語でも書いて、選んだ言語の自然でネイティブのような翻訳に置き換えられます。元の言語は自動的に検出されます。";
+"How it works" = "使い方";
+"Type your message in any app with your normal keyboard." = "通常のキーボードで、任意のアプリにメッセージを入力します。";
+"Tap 🌐 to switch to the Keyglot keyboard." = "🌐をタップしてKeyglotキーボードに切り替えます。";
+"Tap a language — the text is replaced with the translation." = "言語をタップ — テキストが翻訳に置き換わります。";
+"Press Send." = "送信を押します。";
+"Choose which languages appear in Settings → Keyboard → Languages." = "「設定」→「キーボード」→「言語」で表示する言語を選びます。";
+"Keyboard languages" = "キーボードの言語";
+"Version" = "バージョン";
+"Model" = "モデル";
+"Details" = "詳細";
+"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation." = "APIキーはこの端末のiOSキーチェーンに保存されます。メッセージは翻訳のため、選択したAIプロバイダにのみ送信されます。";
+"Developer" = "開発者";
+"Developed by Stefania Izzo" = "開発: Stefania Izzo";
+
+/* ===== Keyboard Languages ===== */
+"On the keyboard — %lld/%lld" = "キーボード上 — %lld/%lld";
+"Swipe to remove; tap Edit to reorder. They appear left-to-right on the keyboard. At least one is required." = "スワイプで削除、「編集」をタップで並べ替え。キーボードでは左から右に表示されます。少なくとも1つ必要です。";
+"Add a language" = "言語を追加";
+"Remove one to add another (max %lld)." = "別の言語を追加するには1つ削除してください（最大%lld）。";
+"Keyboard Languages" = "キーボードの言語";

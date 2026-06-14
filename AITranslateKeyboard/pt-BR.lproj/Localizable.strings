@@ -1,0 +1,63 @@
+/* ===== Onboarding ===== */
+"AI Message Translator" = "Tradutor de Mensagens com IA";
+"Type in any language and replace your message with a natural translation — right inside WhatsApp, no copy/paste." = "Escreva em qualquer idioma e substitua sua mensagem por uma tradução natural — direto no WhatsApp, sem copiar e colar.";
+"Provider" = "Provedor";
+"Add your %@ API key to get started." = "Adicione sua chave de API da %@ para começar.";
+"Reveal key" = "Mostrar chave";
+"Get a %@ API key" = "Obter uma chave de API da %@";
+"Stored securely in the iOS Keychain on this device — never in plain settings, and shared only with the keyboard." = "Armazenada com segurança no Keychain do iOS neste dispositivo — nunca em ajustes em texto simples, e compartilhada apenas com o teclado.";
+"Get Started" = "Começar";
+"Couldn't save the key" = "Não foi possível salvar a chave";
+"The key couldn't be written to the iOS Keychain. Run the app signed with your Team (from Xcode) or on a device, then try again." = "Não foi possível gravar a chave no Keychain do iOS. Execute o app assinado com seu Team (pelo Xcode) ou em um dispositivo e tente novamente.";
+
+/* ===== Settings ===== */
+"API Key" = "Chave de API";
+"Configured" = "Configurada";
+"Not set" = "Não definida";
+"AI Provider" = "Provedor de IA";
+"Default is Claude Sonnet for natural, native-sounding translations. Each provider stores its own API key." = "O padrão é o Claude Sonnet, para traduções naturais e com sonoridade nativa. Cada provedor armazena sua própria chave de API.";
+"Languages" = "Idiomas";
+"%lld shown" = "%lld exibidos";
+"Keyboard" = "Teclado";
+"Choose which languages appear on the keyboard (up to %lld). The source language is detected automatically." = "Escolha quais idiomas aparecem no teclado (até %lld). O idioma de origem é detectado automaticamente.";
+"Setup" = "Configuração";
+"About" = "Sobre";
+"Enter your %@ API key above." = "Insira acima sua chave de API da %@.";
+"Open iOS Settings → General → Keyboard → Keyboards → Add New Keyboard… and add “Keyglot”." = "Abra Ajustes do iOS → Geral → Teclado → Teclados → Adicionar Novo Teclado… e adicione “Keyglot”.";
+"Tap “Keyglot” in that list and turn on Allow Full Access (required for network access)." = "Toque em “Keyglot” nessa lista e ative Permitir Acesso Total (necessário para acesso à rede).";
+"In any chat, tap 🌐 to switch to the Keyglot keyboard, then tap a language." = "Em qualquer conversa, toque em 🌐 para mudar para o teclado Keyglot e toque em um idioma.";
+
+/* ===== API Key ===== */
+"Stored securely in the iOS Keychain on this device. Sent only to %@." = "Armazenada com segurança no Keychain do iOS neste dispositivo. Enviada apenas para a %@.";
+"Save" = "Salvar";
+"Test translation" = "Testar tradução";
+"Remove key" = "Remover chave";
+"“Test” sends one short request to %@ and shows the exact result or error — handy to check the key, model and billing." = "“Testar” envia uma breve solicitação à %@ e mostra o resultado ou o erro exato — útil para verificar a chave, o modelo e a cobrança.";
+"Saved" = "Salva";
+"Your %@ API key has been saved." = "Sua chave de API da %@ foi salva.";
+"Test result" = "Resultado do teste";
+"✅ Works.\n\nTranslation:\n%@" = "✅ Funciona.\n\nTradução:\n%@";
+"❌ Failed.\n\n%@" = "❌ Falhou.\n\n%@";
+
+/* ===== About ===== */
+"A personal keyboard that translates the message you've already typed — in place, without copy/paste. Write in any language and replace it with a natural, native-sounding translation in the language you pick. The source language is detected automatically." = "Um teclado pessoal que traduz a mensagem que você já digitou — no lugar, sem copiar e colar. Escreva em qualquer idioma e substitua por uma tradução natural e com sonoridade nativa no idioma que você escolher. O idioma de origem é detectado automaticamente.";
+"How it works" = "Como funciona";
+"Type your message in any app with your normal keyboard." = "Digite sua mensagem em qualquer app com seu teclado normal.";
+"Tap 🌐 to switch to the Keyglot keyboard." = "Toque em 🌐 para mudar para o teclado Keyglot.";
+"Tap a language — the text is replaced with the translation." = "Toque em um idioma — o texto é substituído pela tradução.";
+"Press Send." = "Toque em Enviar.";
+"Choose which languages appear in Settings → Keyboard → Languages." = "Escolha quais idiomas aparecem em Ajustes → Teclado → Idiomas.";
+"Keyboard languages" = "Idiomas do teclado";
+"Version" = "Versão";
+"Model" = "Modelo";
+"Details" = "Detalhes";
+"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation." = "Sua chave de API é armazenada no Keychain do iOS neste dispositivo. As mensagens são enviadas apenas ao provedor de IA selecionado para tradução.";
+"Developer" = "Desenvolvedor";
+"Developed by Stefania Izzo" = "Desenvolvido por Stefania Izzo";
+
+/* ===== Keyboard Languages ===== */
+"On the keyboard — %lld/%lld" = "No teclado — %lld/%lld";
+"Swipe to remove; tap Edit to reorder. They appear left-to-right on the keyboard. At least one is required." = "Deslize para remover; toque em Editar para reordenar. Aparecem da esquerda para a direita no teclado. É necessário pelo menos um.";
+"Add a language" = "Adicionar um idioma";
+"Remove one to add another (max %lld)." = "Remova um para adicionar outro (máx. %lld).";
+"Keyboard Languages" = "Idiomas do teclado";

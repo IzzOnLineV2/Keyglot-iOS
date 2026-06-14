@@ -1,0 +1,24 @@
+/* ===== Status line ===== */
+"Enable Full Access in Settings to translate." = "Aktiviere den vollständigen Zugriff in den Einstellungen, um zu übersetzen.";
+"Open the Keyglot app to add your API key." = "Öffne die Keyglot-App, um deinen API-Schlüssel hinzuzufügen.";
+"Tap 🌐 to type on your keyboard, then come back here and pick a language." = "Tippe auf 🌐, um mit deiner Tastatur zu schreiben, komm dann zurück und wähle eine Sprache.";
+"Tap a flag to translate your message." = "Tippe auf eine Flagge, um deine Nachricht zu übersetzen.";
+"Translating to %@…" = "Übersetze nach %@…";
+"Translate to %@" = "Nach %@ übersetzen";
+
+/* ===== Error banners ===== */
+"No API key set — add your %@ key in the Keyglot app." = "Kein API-Schlüssel — füge deinen %@ Schlüssel in der Keyglot-App hinzu.";
+"Type a message first, then tap a language." = "Schreibe zuerst eine Nachricht und tippe dann auf eine Sprache.";
+"Invalid API key — open the Keyglot app and check your %@ key." = "Ungültiger API-Schlüssel — öffne die Keyglot-App und prüfe deinen %@ Schlüssel.";
+"Billing issue — add credit to your %@ account." = "Abrechnungsproblem — lade Guthaben in dein %@ Konto.";
+"Access denied — your %@ key isn't allowed to do this." = "Zugriff verweigert — dein %@ Schlüssel ist dafür nicht berechtigt.";
+"Out of credit — add billing to your %@ account." = "Kein Guthaben — füge deinem %@ Konto eine Zahlungsmethode hinzu.";
+"%@ rejected the request: %@" = "%@ hat die Anfrage abgelehnt: %@";
+"Model not available for your %@ key." = "Modell für deinen %@ Schlüssel nicht verfügbar.";
+"Too many requests — wait a few seconds and try again." = "Zu viele Anfragen — warte ein paar Sekunden und versuche es erneut.";
+"%@ is temporarily unavailable — try again shortly." = "%@ ist vorübergehend nicht verfügbar — versuche es bald erneut.";
+"%@ error %lld: %@" = "%@ Fehler %lld: %@";
+"No network — check your connection and that Full Access is on." = "Kein Netzwerk — prüfe deine Verbindung und ob der vollständige Zugriff aktiviert ist.";
+"%@ returned nothing — try again." = "%@ hat nichts zurückgegeben — versuche es erneut.";
+"Unexpected response from %@." = "Unerwartete Antwort von %@.";
+"Couldn't translate: %@" = "Übersetzung fehlgeschlagen: %@";

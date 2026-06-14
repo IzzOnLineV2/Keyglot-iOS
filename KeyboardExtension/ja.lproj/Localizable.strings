@@ -1,0 +1,24 @@
+/* ===== Status line ===== */
+"Enable Full Access in Settings to translate." = "翻訳するには設定で「フルアクセスを許可」をオンにしてください。";
+"Open the Keyglot app to add your API key." = "Keyglotアプリを開いてAPIキーを追加してください。";
+"Tap 🌐 to type on your keyboard, then come back here and pick a language." = "🌐をタップしてキーボードで入力し、ここに戻って言語を選んでください。";
+"Tap a flag to translate your message." = "旗をタップしてメッセージを翻訳します。";
+"Translating to %@…" = "%@に翻訳中…";
+"Translate to %@" = "%@に翻訳";
+
+/* ===== Error banners ===== */
+"No API key set — add your %@ key in the Keyglot app." = "APIキーが未設定です — Keyglotアプリで%@のキーを追加してください。";
+"Type a message first, then tap a language." = "先にメッセージを入力し、言語をタップしてください。";
+"Invalid API key — open the Keyglot app and check your %@ key." = "APIキーが無効です — Keyglotアプリを開いて%@のキーを確認してください。";
+"Billing issue — add credit to your %@ account." = "課金の問題 — %@のアカウントにクレジットを追加してください。";
+"Access denied — your %@ key isn't allowed to do this." = "アクセスが拒否されました — %@のキーには権限がありません。";
+"Out of credit — add billing to your %@ account." = "クレジットがありません — %@のアカウントに支払い方法を追加してください。";
+"%@ rejected the request: %@" = "%@がリクエストを拒否しました: %@";
+"Model not available for your %@ key." = "%@のキーではこのモデルを利用できません。";
+"Too many requests — wait a few seconds and try again." = "リクエストが多すぎます — 数秒待ってからもう一度お試しください。";
+"%@ is temporarily unavailable — try again shortly." = "%@は一時的に利用できません — しばらくしてからお試しください。";
+"%@ error %lld: %@" = "%@エラー %lld: %@";
+"No network — check your connection and that Full Access is on." = "ネットワークがありません — 接続とフルアクセスが有効か確認してください。";
+"%@ returned nothing — try again." = "%@から応答がありませんでした — もう一度お試しください。";
+"Unexpected response from %@." = "%@から予期しない応答がありました。";
+"Couldn't translate: %@" = "翻訳できませんでした: %@";

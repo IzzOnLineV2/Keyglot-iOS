@@ -1,0 +1,63 @@
+/* ===== Onboarding ===== */
+"AI Message Translator" = "مترجم الرسائل بالذكاء الاصطناعي";
+"Type in any language and replace your message with a natural translation — right inside WhatsApp, no copy/paste." = "اكتب بأي لغة واستبدل رسالتك بترجمة طبيعية — مباشرةً داخل واتساب، دون نسخ ولصق.";
+"Provider" = "المزوّد";
+"Add your %@ API key to get started." = "أضف مفتاح API الخاص بـ %@ للبدء.";
+"Reveal key" = "إظهار المفتاح";
+"Get a %@ API key" = "احصل على مفتاح API لـ %@";
+"Stored securely in the iOS Keychain on this device — never in plain settings, and shared only with the keyboard." = "مُخزَّن بأمان في سلسلة مفاتيح iOS على هذا الجهاز — لا يُحفظ أبدًا كنص عادي في الإعدادات، ويُشارَك فقط مع لوحة المفاتيح.";
+"Get Started" = "ابدأ";
+"Couldn't save the key" = "تعذّر حفظ المفتاح";
+"The key couldn't be written to the iOS Keychain. Run the app signed with your Team (from Xcode) or on a device, then try again." = "تعذّرت كتابة المفتاح في سلسلة مفاتيح iOS. شغّل التطبيق موقَّعًا بفريقك (من Xcode) أو على جهاز، ثم حاول مرة أخرى.";
+
+/* ===== Settings ===== */
+"API Key" = "مفتاح API";
+"Configured" = "مُهيّأ";
+"Not set" = "غير مُعيّن";
+"AI Provider" = "مزوّد الذكاء الاصطناعي";
+"Default is Claude Sonnet for natural, native-sounding translations. Each provider stores its own API key." = "الافتراضي هو Claude Sonnet، لترجمات طبيعية وكأنها من متحدث أصلي. يحفظ كل مزوّد مفتاح API الخاص به.";
+"Languages" = "اللغات";
+"%lld shown" = "%lld معروضة";
+"Keyboard" = "لوحة المفاتيح";
+"Choose which languages appear on the keyboard (up to %lld). The source language is detected automatically." = "اختر اللغات التي تظهر على لوحة المفاتيح (حتى %lld). يتم اكتشاف لغة المصدر تلقائيًا.";
+"Setup" = "الإعداد";
+"About" = "حول";
+"Enter your %@ API key above." = "أدخل مفتاح API الخاص بـ %@ في الأعلى.";
+"Open iOS Settings → General → Keyboard → Keyboards → Add New Keyboard… and add “Keyglot”." = "افتح إعدادات iOS ← عام ← لوحة المفاتيح ← لوحات المفاتيح ← إضافة لوحة مفاتيح جديدة… وأضف “Keyglot”.";
+"Tap “Keyglot” in that list and turn on Allow Full Access (required for network access)." = "انقر على “Keyglot” في تلك القائمة وفعّل السماح بالوصول الكامل (مطلوب للوصول إلى الشبكة).";
+"In any chat, tap 🌐 to switch to the Keyglot keyboard, then tap a language." = "في أي محادثة، انقر على 🌐 للتبديل إلى لوحة مفاتيح Keyglot، ثم انقر على لغة.";
+
+/* ===== API Key ===== */
+"Stored securely in the iOS Keychain on this device. Sent only to %@." = "مُخزَّن بأمان في سلسلة مفاتيح iOS على هذا الجهاز. يُرسَل فقط إلى %@.";
+"Save" = "حفظ";
+"Test translation" = "اختبار الترجمة";
+"Remove key" = "إزالة المفتاح";
+"“Test” sends one short request to %@ and shows the exact result or error — handy to check the key, model and billing." = "يرسل “اختبار” طلبًا قصيرًا واحدًا إلى %@ ويعرض النتيجة أو الخطأ بدقة — مفيد للتحقق من المفتاح والنموذج والفوترة.";
+"Saved" = "تم الحفظ";
+"Your %@ API key has been saved." = "تم حفظ مفتاح API الخاص بـ %@.";
+"Test result" = "نتيجة الاختبار";
+"✅ Works.\n\nTranslation:\n%@" = "✅ يعمل.\n\nالترجمة:\n%@";
+"❌ Failed.\n\n%@" = "❌ فشل.\n\n%@";
+
+/* ===== About ===== */
+"A personal keyboard that translates the message you've already typed — in place, without copy/paste. Write in any language and replace it with a natural, native-sounding translation in the language you pick. The source language is detected automatically." = "لوحة مفاتيح شخصية تترجم الرسالة التي كتبتها بالفعل — في مكانها، دون نسخ ولصق. اكتب بأي لغة واستبدلها بترجمة طبيعية وكأنها من متحدث أصلي باللغة التي تختارها. يتم اكتشاف لغة المصدر تلقائيًا.";
+"How it works" = "كيف يعمل";
+"Type your message in any app with your normal keyboard." = "اكتب رسالتك في أي تطبيق بلوحة المفاتيح المعتادة.";
+"Tap 🌐 to switch to the Keyglot keyboard." = "انقر على 🌐 للتبديل إلى لوحة مفاتيح Keyglot.";
+"Tap a language — the text is replaced with the translation." = "انقر على لغة — يُستبدل النص بالترجمة.";
+"Press Send." = "اضغط على إرسال.";
+"Choose which languages appear in Settings → Keyboard → Languages." = "اختر اللغات التي تظهر في الإعدادات ← لوحة المفاتيح ← اللغات.";
+"Keyboard languages" = "لغات لوحة المفاتيح";
+"Version" = "الإصدار";
+"Model" = "النموذج";
+"Details" = "التفاصيل";
+"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation." = "يُخزَّن مفتاح API الخاص بك في سلسلة مفاتيح iOS على هذا الجهاز. تُرسَل الرسائل فقط إلى مزوّد الذكاء الاصطناعي المحدد للترجمة.";
+"Developer" = "المطوّر";
+"Developed by Stefania Izzo" = "تم التطوير بواسطة Stefania Izzo";
+
+/* ===== Keyboard Languages ===== */
+"On the keyboard — %lld/%lld" = "على لوحة المفاتيح — %lld/%lld";
+"Swipe to remove; tap Edit to reorder. They appear left-to-right on the keyboard. At least one is required." = "اسحب للإزالة؛ انقر على تعديل لإعادة الترتيب. تظهر بالترتيب على لوحة المفاتيح. مطلوب واحدة على الأقل.";
+"Add a language" = "إضافة لغة";
+"Remove one to add another (max %lld)." = "أزل واحدة لإضافة أخرى (بحد أقصى %lld).";
+"Keyboard Languages" = "لغات لوحة المفاتيح";

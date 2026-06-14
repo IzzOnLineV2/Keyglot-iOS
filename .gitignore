@@ -1,0 +1,21 @@
+# Xcode / build
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+# The Xcode project is generated from project.yml by XcodeGen.
+# Uncomment the next line if you prefer to regenerate it instead of committing it.
+# *.xcodeproj
+
+# macOS
+.DS_Store
+
+# Local assistant/editor settings
+.claude/
+
+# Secrets — never commit your OpenAI key.
+*.env
+Secrets.xcconfig

@@ -1,0 +1,24 @@
+/* ===== Status line ===== */
+"Enable Full Access in Settings to translate." = "번역하려면 설정에서 전체 접근을 허용하세요.";
+"Open the Keyglot app to add your API key." = "Keyglot 앱을 열어 API 키를 추가하세요.";
+"Tap 🌐 to type on your keyboard, then come back here and pick a language." = "🌐를 탭해 키보드로 입력한 다음 여기로 돌아와 언어를 선택하세요.";
+"Tap a flag to translate your message." = "국기를 탭해 메시지를 번역하세요.";
+"Translating to %@…" = "%@(으)로 번역 중…";
+"Translate to %@" = "%@(으)로 번역";
+
+/* ===== Error banners ===== */
+"No API key set — add your %@ key in the Keyglot app." = "API 키 없음 — Keyglot 앱에서 %@ 키를 추가하세요.";
+"Type a message first, then tap a language." = "먼저 메시지를 입력한 다음 언어를 탭하세요.";
+"Invalid API key — open the Keyglot app and check your %@ key." = "잘못된 API 키 — Keyglot 앱을 열어 %@ 키를 확인하세요.";
+"Billing issue — add credit to your %@ account." = "결제 문제 — %@ 계정에 크레딧을 추가하세요.";
+"Access denied — your %@ key isn't allowed to do this." = "접근 거부됨 — %@ 키에는 권한이 없습니다.";
+"Out of credit — add billing to your %@ account." = "크레딧 없음 — %@ 계정에 결제 수단을 추가하세요.";
+"%@ rejected the request: %@" = "%@이(가) 요청을 거부했습니다: %@";
+"Model not available for your %@ key." = "%@ 키에서 사용할 수 없는 모델입니다.";
+"Too many requests — wait a few seconds and try again." = "요청이 너무 많습니다 — 몇 초 후 다시 시도하세요.";
+"%@ is temporarily unavailable — try again shortly." = "%@을(를) 일시적으로 사용할 수 없습니다 — 잠시 후 다시 시도하세요.";
+"%@ error %lld: %@" = "%@ 오류 %lld: %@";
+"No network — check your connection and that Full Access is on." = "네트워크 없음 — 연결과 전체 접근이 켜져 있는지 확인하세요.";
+"%@ returned nothing — try again." = "%@에서 아무것도 반환하지 않았습니다 — 다시 시도하세요.";
+"Unexpected response from %@." = "%@에서 예기치 않은 응답입니다.";
+"Couldn't translate: %@" = "번역할 수 없습니다: %@";

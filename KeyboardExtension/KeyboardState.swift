@@ -1,0 +1,65 @@
+import SwiftUI
+
+/// Observable UI state for the keyboard toolbar.
+///
+/// Lives on the main actor because it drives SwiftUI. The view controller owns it and
+/// mutates it as a translation progresses.
+@MainActor
+final class KeyboardState: ObservableObject {
+
+    enum Status: Equatable {
+        case idle
+        case translating(TargetLanguage)
+        case error(String)
+    }
+
+    @Published var status: Status = .idle
+
+    /// Languages shown on the toolbar, in order — driven by the user's settings.
+    @Published var languages: [TargetLanguage] = []
+
+    /// Whether the host has granted Full Access. Network calls only work when this is true.
+    @Published var hasFullAccess: Bool = true
+
+    /// Whether an API key is configured for the selected provider. No key → buttons disabled.
+    @Published var hasAPIKey: Bool = false
+
+    /// Whether the input field currently holds text — drives the contextual idle hint
+    /// (empty → "type on your keyboard first", non-empty → "tap a flag").
+    @Published var hasText: Bool = false
+
+    /// Whether to show the "switch keyboard" globe (only when other keyboards exist).
+    @Published var showsNextKeyboard: Bool = true
+
+    /// Translation is only possible with Full Access, a configured key, and no work in flight.
+    var canTranslate: Bool {
+        hasFullAccess && hasAPIKey && !isBusy
+    }
+
+    private var errorResetTask: Task<Void, Never>?
+
+    func beginTranslating(_ language: TargetLanguage) {
+        errorResetTask?.cancel()
+        status = .translating(language)
+    }
+
+    func finishTranslating() {
+        if case .translating = status { status = .idle }
+    }
+
+    /// Show a transient error banner that clears itself after a few seconds.
+    func showError(_ message: String) {
+        status = .error(message)
+        errorResetTask?.cancel()
+        errorResetTask = Task { [weak self] in
+            try? await Task.sleep(for: .seconds(3))
+            guard !Task.isCancelled else { return }
+            if case .error = self?.status { self?.status = .idle }
+        }
+    }
+
+    var isBusy: Bool {
+        if case .translating = status { return true }
+        return false
+    }
+}

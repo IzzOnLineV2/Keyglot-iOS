@@ -1,0 +1,24 @@
+/* ===== Status line ===== */
+"Enable Full Access in Settings to translate." = "Ative o Acesso Total em Ajustes para traduzir.";
+"Open the Keyglot app to add your API key." = "Abra o app Keyglot para adicionar sua chave de API.";
+"Tap 🌐 to type on your keyboard, then come back here and pick a language." = "Toque em 🌐 para escrever com seu teclado, depois volte aqui e escolha um idioma.";
+"Tap a flag to translate your message." = "Toque em uma bandeira para traduzir sua mensagem.";
+"Translating to %@…" = "Traduzindo para %@…";
+"Translate to %@" = "Traduzir para %@";
+
+/* ===== Error banners ===== */
+"No API key set — add your %@ key in the Keyglot app." = "Nenhuma chave de API — adicione sua chave da %@ no app Keyglot.";
+"Type a message first, then tap a language." = "Digite uma mensagem primeiro e toque em um idioma.";
+"Invalid API key — open the Keyglot app and check your %@ key." = "Chave de API inválida — abra o app Keyglot e verifique sua chave da %@.";
+"Billing issue — add credit to your %@ account." = "Problema de cobrança — adicione crédito à sua conta da %@.";
+"Access denied — your %@ key isn't allowed to do this." = "Acesso negado — sua chave da %@ não tem permissão para isso.";
+"Out of credit — add billing to your %@ account." = "Sem crédito — adicione um meio de pagamento à sua conta da %@.";
+"%@ rejected the request: %@" = "%@ rejeitou a solicitação: %@";
+"Model not available for your %@ key." = "Modelo não disponível para sua chave da %@.";
+"Too many requests — wait a few seconds and try again." = "Muitas solicitações — aguarde alguns segundos e tente novamente.";
+"%@ is temporarily unavailable — try again shortly." = "%@ está temporariamente indisponível — tente novamente em breve.";
+"%@ error %lld: %@" = "Erro da %@ %lld: %@";
+"No network — check your connection and that Full Access is on." = "Sem rede — verifique sua conexão e se o Acesso Total está ativado.";
+"%@ returned nothing — try again." = "%@ não retornou nada — tente novamente.";
+"Unexpected response from %@." = "Resposta inesperada da %@.";
+"Couldn't translate: %@" = "Não foi possível traduzir: %@";

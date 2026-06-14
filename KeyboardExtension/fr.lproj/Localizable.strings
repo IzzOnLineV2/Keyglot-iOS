@@ -1,0 +1,24 @@
+/* ===== Status line ===== */
+"Enable Full Access in Settings to translate." = "Activez l'accès complet dans Réglages pour traduire.";
+"Open the Keyglot app to add your API key." = "Ouvrez l'app Keyglot pour ajouter votre clé API.";
+"Tap 🌐 to type on your keyboard, then come back here and pick a language." = "Touchez 🌐 pour écrire avec votre clavier, puis revenez ici et choisissez une langue.";
+"Tap a flag to translate your message." = "Touchez un drapeau pour traduire votre message.";
+"Translating to %@…" = "Traduction en %@…";
+"Translate to %@" = "Traduire en %@";
+
+/* ===== Error banners ===== */
+"No API key set — add your %@ key in the Keyglot app." = "Aucune clé API — ajoutez votre clé %@ dans l'app Keyglot.";
+"Type a message first, then tap a language." = "Saisissez d'abord un message, puis touchez une langue.";
+"Invalid API key — open the Keyglot app and check your %@ key." = "Clé API invalide — ouvrez l'app Keyglot et vérifiez votre clé %@.";
+"Billing issue — add credit to your %@ account." = "Problème de facturation — ajoutez du crédit à votre compte %@.";
+"Access denied — your %@ key isn't allowed to do this." = "Accès refusé — votre clé %@ n'est pas autorisée à le faire.";
+"Out of credit — add billing to your %@ account." = "Crédit épuisé — ajoutez un moyen de paiement à votre compte %@.";
+"%@ rejected the request: %@" = "%@ a rejeté la requête : %@";
+"Model not available for your %@ key." = "Modèle non disponible pour votre clé %@.";
+"Too many requests — wait a few seconds and try again." = "Trop de requêtes — patientez quelques secondes et réessayez.";
+"%@ is temporarily unavailable — try again shortly." = "%@ est temporairement indisponible — réessayez bientôt.";
+"%@ error %lld: %@" = "Erreur %@ %lld : %@";
+"No network — check your connection and that Full Access is on." = "Pas de réseau — vérifiez votre connexion et que l'accès complet est activé.";
+"%@ returned nothing — try again." = "%@ n'a rien renvoyé — réessayez.";
+"Unexpected response from %@." = "Réponse inattendue de %@.";
+"Couldn't translate: %@" = "Traduction impossible : %@";

@@ -1,0 +1,24 @@
+/* ===== Status line ===== */
+"Enable Full Access in Settings to translate." = "فعّل الوصول الكامل في الإعدادات للترجمة.";
+"Open the Keyglot app to add your API key." = "افتح تطبيق Keyglot لإضافة مفتاح API.";
+"Tap 🌐 to type on your keyboard, then come back here and pick a language." = "انقر على 🌐 للكتابة بلوحة المفاتيح، ثم عُد إلى هنا واختر لغة.";
+"Tap a flag to translate your message." = "انقر على عَلَم لترجمة رسالتك.";
+"Translating to %@…" = "جارٍ الترجمة إلى %@…";
+"Translate to %@" = "ترجمة إلى %@";
+
+/* ===== Error banners ===== */
+"No API key set — add your %@ key in the Keyglot app." = "لا يوجد مفتاح API — أضف مفتاح %@ في تطبيق Keyglot.";
+"Type a message first, then tap a language." = "اكتب رسالة أولًا، ثم انقر على لغة.";
+"Invalid API key — open the Keyglot app and check your %@ key." = "مفتاح API غير صالح — افتح تطبيق Keyglot وتحقق من مفتاح %@.";
+"Billing issue — add credit to your %@ account." = "مشكلة في الفوترة — أضف رصيدًا إلى حساب %@.";
+"Access denied — your %@ key isn't allowed to do this." = "تم رفض الوصول — مفتاح %@ غير مخوَّل بذلك.";
+"Out of credit — add billing to your %@ account." = "نفد الرصيد — أضف طريقة دفع إلى حساب %@.";
+"%@ rejected the request: %@" = "رفض %@ الطلب: %@";
+"Model not available for your %@ key." = "النموذج غير متاح لمفتاح %@.";
+"Too many requests — wait a few seconds and try again." = "طلبات كثيرة جدًا — انتظر بضع ثوانٍ وحاول مرة أخرى.";
+"%@ is temporarily unavailable — try again shortly." = "%@ غير متاح مؤقتًا — حاول مرة أخرى قريبًا.";
+"%@ error %lld: %@" = "خطأ %@ %lld: %@";
+"No network — check your connection and that Full Access is on." = "لا توجد شبكة — تحقق من اتصالك ومن تفعيل الوصول الكامل.";
+"%@ returned nothing — try again." = "لم يُرجِع %@ أي شيء — حاول مرة أخرى.";
+"Unexpected response from %@." = "استجابة غير متوقعة من %@.";
+"Couldn't translate: %@" = "تعذّرت الترجمة: %@";

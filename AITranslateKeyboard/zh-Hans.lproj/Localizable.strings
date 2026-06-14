@@ -1,0 +1,63 @@
+/* ===== Onboarding ===== */
+"AI Message Translator" = "AI 消息翻译";
+"Type in any language and replace your message with a natural translation — right inside WhatsApp, no copy/paste." = "用任何语言输入，将你的消息替换为自然的翻译——直接在 WhatsApp 中完成，无需复制粘贴。";
+"Provider" = "提供商";
+"Add your %@ API key to get started." = "添加你的 %@ API 密钥即可开始。";
+"Reveal key" = "显示密钥";
+"Get a %@ API key" = "获取 %@ API 密钥";
+"Stored securely in the iOS Keychain on this device — never in plain settings, and shared only with the keyboard." = "安全存储在本设备的 iOS 钥匙串中——绝不以明文形式保存在设置里，仅与键盘共享。";
+"Get Started" = "开始";
+"Couldn't save the key" = "无法保存密钥";
+"The key couldn't be written to the iOS Keychain. Run the app signed with your Team (from Xcode) or on a device, then try again." = "无法将密钥写入 iOS 钥匙串。请使用你的 Team 签名（通过 Xcode）运行 App 或在真机上运行，然后重试。";
+
+/* ===== Settings ===== */
+"API Key" = "API 密钥";
+"Configured" = "已配置";
+"Not set" = "未设置";
+"AI Provider" = "AI 提供商";
+"Default is Claude Sonnet for natural, native-sounding translations. Each provider stores its own API key." = "默认使用 Claude Sonnet，提供自然、地道的翻译。每个提供商都保存各自的 API 密钥。";
+"Languages" = "语言";
+"%lld shown" = "已显示 %lld 个";
+"Keyboard" = "键盘";
+"Choose which languages appear on the keyboard (up to %lld). The source language is detected automatically." = "选择键盘上显示的语言（最多 %lld 个）。源语言会自动检测。";
+"Setup" = "设置步骤";
+"About" = "关于";
+"Enter your %@ API key above." = "在上方输入你的 %@ API 密钥。";
+"Open iOS Settings → General → Keyboard → Keyboards → Add New Keyboard… and add “Keyglot”." = "打开 iOS 设置 → 通用 → 键盘 → 键盘 → 添加新键盘…，然后添加“Keyglot”。";
+"Tap “Keyglot” in that list and turn on Allow Full Access (required for network access)." = "在列表中点按“Keyglot”，并打开允许完全访问（联网所需）。";
+"In any chat, tap 🌐 to switch to the Keyglot keyboard, then tap a language." = "在任意聊天中点按 🌐 切换到 Keyglot 键盘，然后点按一种语言。";
+
+/* ===== API Key ===== */
+"Stored securely in the iOS Keychain on this device. Sent only to %@." = "安全存储在本设备的 iOS 钥匙串中。仅发送给 %@。";
+"Save" = "保存";
+"Test translation" = "测试翻译";
+"Remove key" = "移除密钥";
+"“Test” sends one short request to %@ and shows the exact result or error — handy to check the key, model and billing." = "“测试”会向 %@ 发送一次简短请求并显示确切的结果或错误——便于检查密钥、模型和计费。";
+"Saved" = "已保存";
+"Your %@ API key has been saved." = "你的 %@ API 密钥已保存。";
+"Test result" = "测试结果";
+"✅ Works.\n\nTranslation:\n%@" = "✅ 正常。\n\n翻译：\n%@";
+"❌ Failed.\n\n%@" = "❌ 失败。\n\n%@";
+
+/* ===== About ===== */
+"A personal keyboard that translates the message you've already typed — in place, without copy/paste. Write in any language and replace it with a natural, native-sounding translation in the language you pick. The source language is detected automatically." = "一款个人键盘，可就地翻译你已经输入的消息——无需复制粘贴。用任何语言书写，并替换为你所选语言的自然、地道的翻译。源语言会自动检测。";
+"How it works" = "工作原理";
+"Type your message in any app with your normal keyboard." = "用你平常的键盘在任意 App 中输入消息。";
+"Tap 🌐 to switch to the Keyglot keyboard." = "点按 🌐 切换到 Keyglot 键盘。";
+"Tap a language — the text is replaced with the translation." = "点按一种语言——文本会被替换为翻译。";
+"Press Send." = "点按发送。";
+"Choose which languages appear in Settings → Keyboard → Languages." = "在设置 → 键盘 → 语言 中选择要显示的语言。";
+"Keyboard languages" = "键盘语言";
+"Version" = "版本";
+"Model" = "模型";
+"Details" = "详情";
+"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation." = "你的 API 密钥存储在本设备的 iOS 钥匙串中。消息仅发送给所选的 AI 提供商进行翻译。";
+"Developer" = "开发者";
+"Developed by Stefania Izzo" = "由 Stefania Izzo 开发";
+
+/* ===== Keyboard Languages ===== */
+"On the keyboard — %lld/%lld" = "键盘上 — %lld/%lld";
+"Swipe to remove; tap Edit to reorder. They appear left-to-right on the keyboard. At least one is required." = "滑动以移除；点按“编辑”重新排序。它们在键盘上从左到右显示。至少需要一个。";
+"Add a language" = "添加语言";
+"Remove one to add another (max %lld)." = "移除一个以添加另一个（最多 %lld 个）。";
+"Keyboard Languages" = "键盘语言";

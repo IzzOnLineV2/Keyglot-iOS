@@ -1,0 +1,63 @@
+/* ===== Onboarding ===== */
+"AI Message Translator" = "AI 메시지 번역기";
+"Type in any language and replace your message with a natural translation — right inside WhatsApp, no copy/paste." = "어떤 언어로든 입력하고 메시지를 자연스러운 번역으로 바꾸세요 — WhatsApp 안에서 바로, 복사·붙여넣기 없이.";
+"Provider" = "제공업체";
+"Add your %@ API key to get started." = "시작하려면 %@ API 키를 추가하세요.";
+"Reveal key" = "키 표시";
+"Get a %@ API key" = "%@ API 키 받기";
+"Stored securely in the iOS Keychain on this device — never in plain settings, and shared only with the keyboard." = "이 기기의 iOS 키체인에 안전하게 저장되며 — 설정에 평문으로 저장되지 않고 키보드와만 공유됩니다.";
+"Get Started" = "시작하기";
+"Couldn't save the key" = "키를 저장할 수 없습니다";
+"The key couldn't be written to the iOS Keychain. Run the app signed with your Team (from Xcode) or on a device, then try again." = "iOS 키체인에 키를 쓸 수 없습니다. Team으로 서명한 앱을 (Xcode에서) 또는 기기에서 실행한 후 다시 시도하세요.";
+
+/* ===== Settings ===== */
+"API Key" = "API 키";
+"Configured" = "설정됨";
+"Not set" = "설정 안 됨";
+"AI Provider" = "AI 제공업체";
+"Default is Claude Sonnet for natural, native-sounding translations. Each provider stores its own API key." = "기본값은 Claude Sonnet으로, 자연스럽고 원어민 같은 번역을 제공합니다. 각 제공업체는 자체 API 키를 저장합니다.";
+"Languages" = "언어";
+"%lld shown" = "%lld개 표시";
+"Keyboard" = "키보드";
+"Choose which languages appear on the keyboard (up to %lld). The source language is detected automatically." = "키보드에 표시할 언어를 선택하세요 (최대 %lld개). 원본 언어는 자동으로 감지됩니다.";
+"Setup" = "설정 방법";
+"About" = "정보";
+"Enter your %@ API key above." = "위에 %@ API 키를 입력하세요.";
+"Open iOS Settings → General → Keyboard → Keyboards → Add New Keyboard… and add “Keyglot”." = "iOS 설정 → 일반 → 키보드 → 키보드 → 새로운 키보드 추가… 를 열고 “Keyglot”을 추가하세요.";
+"Tap “Keyglot” in that list and turn on Allow Full Access (required for network access)." = "목록에서 “Keyglot”을 탭하고 전체 접근 허용을 켜세요 (네트워크 접근에 필요).";
+"In any chat, tap 🌐 to switch to the Keyglot keyboard, then tap a language." = "아무 대화에서나 🌐를 탭해 Keyglot 키보드로 전환한 다음 언어를 탭하세요.";
+
+/* ===== API Key ===== */
+"Stored securely in the iOS Keychain on this device. Sent only to %@." = "이 기기의 iOS 키체인에 안전하게 저장됩니다. %@에만 전송됩니다.";
+"Save" = "저장";
+"Test translation" = "번역 테스트";
+"Remove key" = "키 제거";
+"“Test” sends one short request to %@ and shows the exact result or error — handy to check the key, model and billing." = "“테스트”는 %@에 짧은 요청을 한 번 보내고 정확한 결과나 오류를 보여줍니다 — 키, 모델, 청구를 확인하는 데 유용합니다.";
+"Saved" = "저장됨";
+"Your %@ API key has been saved." = "%@ API 키가 저장되었습니다.";
+"Test result" = "테스트 결과";
+"✅ Works.\n\nTranslation:\n%@" = "✅ 작동합니다.\n\n번역:\n%@";
+"❌ Failed.\n\n%@" = "❌ 실패했습니다.\n\n%@";
+
+/* ===== About ===== */
+"A personal keyboard that translates the message you've already typed — in place, without copy/paste. Write in any language and replace it with a natural, native-sounding translation in the language you pick. The source language is detected automatically." = "이미 입력한 메시지를 그 자리에서 번역하는 개인용 키보드입니다 — 복사·붙여넣기 없이. 어떤 언어로든 작성하고 선택한 언어의 자연스럽고 원어민 같은 번역으로 바꾸세요. 원본 언어는 자동으로 감지됩니다.";
+"How it works" = "사용 방법";
+"Type your message in any app with your normal keyboard." = "평소 키보드로 아무 앱에서나 메시지를 입력하세요.";
+"Tap 🌐 to switch to the Keyglot keyboard." = "🌐를 탭해 Keyglot 키보드로 전환하세요.";
+"Tap a language — the text is replaced with the translation." = "언어를 탭하면 — 텍스트가 번역으로 바뀝니다.";
+"Press Send." = "보내기를 누르세요.";
+"Choose which languages appear in Settings → Keyboard → Languages." = "설정 → 키보드 → 언어 에서 표시할 언어를 선택하세요.";
+"Keyboard languages" = "키보드 언어";
+"Version" = "버전";
+"Model" = "모델";
+"Details" = "세부 정보";
+"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation." = "API 키는 이 기기의 iOS 키체인에 저장됩니다. 메시지는 번역을 위해 선택한 AI 제공업체에만 전송됩니다.";
+"Developer" = "개발자";
+"Developed by Stefania Izzo" = "개발: Stefania Izzo";
+
+/* ===== Keyboard Languages ===== */
+"On the keyboard — %lld/%lld" = "키보드에 — %lld/%lld";
+"Swipe to remove; tap Edit to reorder. They appear left-to-right on the keyboard. At least one is required." = "쓸어넘겨 제거하고, 편집을 탭해 순서를 바꾸세요. 키보드에서 왼쪽부터 오른쪽으로 표시됩니다. 최소 하나가 필요합니다.";
+"Add a language" = "언어 추가";
+"Remove one to add another (max %lld)." = "다른 언어를 추가하려면 하나를 제거하세요 (최대 %lld).";
+"Keyboard Languages" = "키보드 언어";
