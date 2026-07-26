@@ -40,18 +40,18 @@
 "❌ Failed.\n\n%@" = "❌ فشل.\n\n%@";
 
 /* ===== About ===== */
-"A personal keyboard that translates the message you've already typed — in place, without copy/paste. Write in any language and replace it with a natural, native-sounding translation in the language you pick. The source language is detected automatically." = "لوحة مفاتيح شخصية تترجم الرسالة التي كتبتها بالفعل — في مكانها، دون نسخ ولصق. اكتب بأي لغة واستبدلها بترجمة طبيعية وكأنها من متحدث أصلي باللغة التي تختارها. يتم اكتشاف لغة المصدر تلقائيًا.";
+"Keyglot translates or rewrites the message you've already typed — in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language." = "يترجم Keyglot أو يعيد صياغة الرسالة التي كتبتها بالفعل — في مكانها، دون نسخ ولصق. انقر على لغة للحصول على ترجمة طبيعية (تُكتشف لغة المصدر تلقائيًا)، أو انقر على نغمة لتحسين نصك أو إعادة صياغته باللغة نفسها.";
 "How it works" = "كيف يعمل";
 "Type your message in any app with your normal keyboard." = "اكتب رسالتك في أي تطبيق بلوحة المفاتيح المعتادة.";
 "Tap 🌐 to switch to the Keyglot keyboard." = "انقر على 🌐 للتبديل إلى لوحة مفاتيح Keyglot.";
-"Tap a language — the text is replaced with the translation." = "انقر على لغة — يُستبدل النص بالترجمة.";
+"Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite — the text is replaced in place." = "انقر على لغة للترجمة، أو على نغمة (✨ 💼 😊 ❤️) لإعادة الصياغة — يُستبدل النص في مكانه.";
 "Press Send." = "اضغط على إرسال.";
 "Choose which languages appear in Settings → Keyboard → Languages." = "اختر اللغات التي تظهر في الإعدادات ← لوحة المفاتيح ← اللغات.";
 "Keyboard languages" = "لغات لوحة المفاتيح";
 "Version" = "الإصدار";
 "Model" = "النموذج";
 "Details" = "التفاصيل";
-"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation." = "يُخزَّن مفتاح API الخاص بك في سلسلة مفاتيح iOS على هذا الجهاز. تُرسَل الرسائل فقط إلى مزوّد الذكاء الاصطناعي المحدد للترجمة.";
+"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation or rewriting." = "يُخزَّن مفتاح API الخاص بك في سلسلة مفاتيح iOS على هذا الجهاز. تُرسَل الرسائل فقط إلى مزوّد الذكاء الاصطناعي المحدد للترجمة أو إعادة الصياغة.";
 "Developer" = "المطوّر";
 "Developed by Stefania Izzo" = "تم التطوير بواسطة Stefania Izzo";
 

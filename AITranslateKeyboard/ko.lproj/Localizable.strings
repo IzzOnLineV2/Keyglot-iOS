@@ -40,18 +40,18 @@
 "❌ Failed.\n\n%@" = "❌ 실패했습니다.\n\n%@";
 
 /* ===== About ===== */
-"A personal keyboard that translates the message you've already typed — in place, without copy/paste. Write in any language and replace it with a natural, native-sounding translation in the language you pick. The source language is detected automatically." = "이미 입력한 메시지를 그 자리에서 번역하는 개인용 키보드입니다 — 복사·붙여넣기 없이. 어떤 언어로든 작성하고 선택한 언어의 자연스럽고 원어민 같은 번역으로 바꾸세요. 원본 언어는 자동으로 감지됩니다.";
+"Keyglot translates or rewrites the message you've already typed — in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language." = "Keyglot은 이미 입력한 메시지를 그 자리에서 번역하거나 다시 씁니다 — 복사·붙여넣기 없이. 언어를 탭하면 자연스러운 번역(원본 언어 자동 감지), 톤을 탭하면 같은 언어로 문장을 다듬거나 다시 쓸 수 있습니다.";
 "How it works" = "사용 방법";
 "Type your message in any app with your normal keyboard." = "평소 키보드로 아무 앱에서나 메시지를 입력하세요.";
 "Tap 🌐 to switch to the Keyglot keyboard." = "🌐를 탭해 Keyglot 키보드로 전환하세요.";
-"Tap a language — the text is replaced with the translation." = "언어를 탭하면 — 텍스트가 번역으로 바뀝니다.";
+"Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite — the text is replaced in place." = "언어를 탭해 번역, 톤(✨ 💼 😊 ❤️)을 탭해 다시 쓰기 — 텍스트가 그 자리에서 교체됩니다.";
 "Press Send." = "보내기를 누르세요.";
 "Choose which languages appear in Settings → Keyboard → Languages." = "설정 → 키보드 → 언어 에서 표시할 언어를 선택하세요.";
 "Keyboard languages" = "키보드 언어";
 "Version" = "버전";
 "Model" = "모델";
 "Details" = "세부 정보";
-"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation." = "API 키는 이 기기의 iOS 키체인에 저장됩니다. 메시지는 번역을 위해 선택한 AI 제공업체에만 전송됩니다.";
+"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation or rewriting." = "API 키는 이 기기의 iOS 키체인에 저장됩니다. 메시지는 번역 또는 다시 쓰기를 위해 선택한 AI 제공업체에만 전송됩니다.";
 "Developer" = "개발자";
 "Developed by Stefania Izzo" = "개발: Stefania Izzo";
 

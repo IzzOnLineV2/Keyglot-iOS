@@ -40,18 +40,18 @@
 "❌ Failed.\n\n%@" = "❌ Error.\n\n%@";
 
 /* ===== About ===== */
-"A personal keyboard that translates the message you've already typed — in place, without copy/paste. Write in any language and replace it with a natural, native-sounding translation in the language you pick. The source language is detected automatically." = "Un teclado personal que traduce el mensaje que ya has escrito — en el sitio, sin copiar y pegar. Escribe en cualquier idioma y sustitúyelo por una traducción natural y con sonido nativo en el idioma que elijas. El idioma de origen se detecta automáticamente.";
+"Keyglot translates or rewrites the message you've already typed — in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language." = "Keyglot traduce o reescribe el mensaje que ya has escrito — en el sitio, sin copiar y pegar. Toca un idioma para una traducción natural (idioma de origen detectado automáticamente), o toca un tono para mejorar o reescribir tu texto en el mismo idioma.";
 "How it works" = "Cómo funciona";
 "Type your message in any app with your normal keyboard." = "Escribe tu mensaje en cualquier app con tu teclado habitual.";
 "Tap 🌐 to switch to the Keyglot keyboard." = "Toca 🌐 para cambiar al teclado Keyglot.";
-"Tap a language — the text is replaced with the translation." = "Toca un idioma — el texto se sustituye por la traducción.";
+"Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite — the text is replaced in place." = "Toca un idioma para traducir, o un tono (✨ 💼 😊 ❤️) para reescribir — el texto se sustituye en el sitio.";
 "Press Send." = "Pulsa Enviar.";
 "Choose which languages appear in Settings → Keyboard → Languages." = "Elige qué idiomas aparecen en Configuración → Teclado → Idiomas.";
 "Keyboard languages" = "Idiomas del teclado";
 "Version" = "Versión";
 "Model" = "Modelo";
 "Details" = "Detalles";
-"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation." = "Tu clave API se guarda en el Llavero de iOS de este dispositivo. Los mensajes se envían solo al proveedor de IA seleccionado para la traducción.";
+"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation or rewriting." = "Tu clave API se guarda en el Llavero de iOS de este dispositivo. Los mensajes se envían solo al proveedor de IA seleccionado para la traducción o la reescritura.";
 "Developer" = "Desarrollador";
 "Developed by Stefania Izzo" = "Desarrollado por Stefania Izzo";
 

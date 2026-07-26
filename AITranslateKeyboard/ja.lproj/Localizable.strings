@@ -40,18 +40,18 @@
 "❌ Failed.\n\n%@" = "❌ 失敗しました。\n\n%@";
 
 /* ===== About ===== */
-"A personal keyboard that translates the message you've already typed — in place, without copy/paste. Write in any language and replace it with a natural, native-sounding translation in the language you pick. The source language is detected automatically." = "すでに入力したメッセージをその場で翻訳する、コピペ不要の個人用キーボードです。どんな言語でも書いて、選んだ言語の自然でネイティブのような翻訳に置き換えられます。元の言語は自動的に検出されます。";
+"Keyglot translates or rewrites the message you've already typed — in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language." = "Keyglot は、すでに入力したメッセージをその場で翻訳または書き換えます — コピペ不要。言語をタップすると自然な翻訳（元の言語は自動検出）、トーンをタップすると同じ言語のまま文章を改善・書き換えできます。";
 "How it works" = "使い方";
 "Type your message in any app with your normal keyboard." = "通常のキーボードで、任意のアプリにメッセージを入力します。";
 "Tap 🌐 to switch to the Keyglot keyboard." = "🌐をタップしてKeyglotキーボードに切り替えます。";
-"Tap a language — the text is replaced with the translation." = "言語をタップ — テキストが翻訳に置き換わります。";
+"Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite — the text is replaced in place." = "言語をタップして翻訳、またはトーン（✨ 💼 😊 ❤️）をタップして書き換え — テキストはその場で置き換わります。";
 "Press Send." = "送信を押します。";
 "Choose which languages appear in Settings → Keyboard → Languages." = "「設定」→「キーボード」→「言語」で表示する言語を選びます。";
 "Keyboard languages" = "キーボードの言語";
 "Version" = "バージョン";
 "Model" = "モデル";
 "Details" = "詳細";
-"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation." = "APIキーはこの端末のiOSキーチェーンに保存されます。メッセージは翻訳のため、選択したAIプロバイダにのみ送信されます。";
+"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation or rewriting." = "APIキーはこの端末のiOSキーチェーンに保存されます。メッセージは翻訳または書き換えのため、選択したAIプロバイダにのみ送信されます。";
 "Developer" = "開発者";
 "Developed by Stefania Izzo" = "開発: Stefania Izzo";
 

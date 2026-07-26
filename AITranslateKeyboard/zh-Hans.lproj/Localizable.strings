@@ -40,18 +40,18 @@
 "❌ Failed.\n\n%@" = "❌ 失败。\n\n%@";
 
 /* ===== About ===== */
-"A personal keyboard that translates the message you've already typed — in place, without copy/paste. Write in any language and replace it with a natural, native-sounding translation in the language you pick. The source language is detected automatically." = "一款个人键盘，可就地翻译你已经输入的消息——无需复制粘贴。用任何语言书写，并替换为你所选语言的自然、地道的翻译。源语言会自动检测。";
+"Keyglot translates or rewrites the message you've already typed — in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language." = "Keyglot 可就地翻译或改写你已经输入的消息——无需复制粘贴。点按语言可获得自然的翻译（自动检测源语言），点按语气则可用同一种语言润色或改写你的文字。";
 "How it works" = "工作原理";
 "Type your message in any app with your normal keyboard." = "用你平常的键盘在任意 App 中输入消息。";
 "Tap 🌐 to switch to the Keyglot keyboard." = "点按 🌐 切换到 Keyglot 键盘。";
-"Tap a language — the text is replaced with the translation." = "点按一种语言——文本会被替换为翻译。";
+"Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite — the text is replaced in place." = "点按语言进行翻译，或点按语气（✨ 💼 😊 ❤️）进行改写——文本会就地替换。";
 "Press Send." = "点按发送。";
 "Choose which languages appear in Settings → Keyboard → Languages." = "在设置 → 键盘 → 语言 中选择要显示的语言。";
 "Keyboard languages" = "键盘语言";
 "Version" = "版本";
 "Model" = "模型";
 "Details" = "详情";
-"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation." = "你的 API 密钥存储在本设备的 iOS 钥匙串中。消息仅发送给所选的 AI 提供商进行翻译。";
+"Your API key is stored in the iOS Keychain on this device. Messages are sent only to the selected AI provider for translation or rewriting." = "你的 API 密钥存储在本设备的 iOS 钥匙串中。消息仅发送给所选的 AI 提供商进行翻译或改写。";
 "Developer" = "开发者";
 "Developed by Stefania Izzo" = "由 Stefania Izzo 开发";
 

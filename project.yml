@@ -12,7 +12,8 @@ settings:
     SWIFT_VERSION: "6.0"
     MARKETING_VERSION: "1.0"
     CURRENT_PROJECT_VERSION: "14"
-    # SmartApiBox S.r.l.s. development team.
+    # TODO: replace with the IzzOnLine di Stefania Izzo Apple Developer Team ID.
+    # 32BK2Y9JL3 is the old SmartApiBox S.r.l.s. team and will stop working after migration.
     DEVELOPMENT_TEAM: "32BK2Y9JL3"
     CODE_SIGN_STYLE: Automatic
     TARGETED_DEVICE_FAMILY: "1"
