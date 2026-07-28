@@ -68,6 +68,6 @@ enum Configuration {
     static let openRouterModel = "openai/gpt-4o-mini"
 
     /// Optional attribution headers OpenRouter uses for ranking.
-    static let openRouterReferer = "https://smartapibox.com"
+    static let openRouterReferer = "https://izzonline.it"
     static let openRouterTitle = "Keyglot"
 }

@@ -58,8 +58,8 @@ struct AboutView: View {
                 }
                 .padding(.vertical, 2)
 
-                Link(destination: URL(string: "https://smartapibox.com")!) {
-                    Label("smartapibox.com", systemImage: "globe")
+                Link(destination: URL(string: "https://izzonline.it")!) {
+                    Label("izzonline.it", systemImage: "globe")
                 }
             }
         }
