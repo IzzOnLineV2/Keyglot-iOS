@@ -29,10 +29,7 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>NSExtensionActivationRule</key>
-			<dict>
-				<key>NSExtensionActivationSupportsAudioWithMaxCount</key>
-				<integer>1</integer>
-			</dict>
+			<string>SUBQUERY ( extensionItems, $extensionItem, SUBQUERY ( $extensionItem.attachments, $attachment, ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.audio" OR ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.data" ).@count == $extensionItem.attachments.@count ).@count == 1</string>
 		</dict>
 	</dict>
 </dict>

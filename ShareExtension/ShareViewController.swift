@@ -53,8 +53,11 @@ final class ShareViewController: UIViewController {
             }
 
             // The system-provided URL is temporary and removed once this block returns, so copy
-            // the file somewhere we control before the async upload.
-            let ext = url.pathExtension.isEmpty ? "m4a" : url.pathExtension
+            // the file somewhere we control before the async upload. Preserve the real extension
+            // (WhatsApp voice notes are often .opus) so OpenAI can detect the audio format.
+            let ext = url.pathExtension.isEmpty
+                ? (UTType(typeID)?.preferredFilenameExtension ?? "m4a")
+                : url.pathExtension
             let dest = FileManager.default.temporaryDirectory
                 .appendingPathComponent(UUID().uuidString)
                 .appendingPathExtension(ext)
