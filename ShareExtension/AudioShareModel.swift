@@ -36,8 +36,14 @@ final class AudioShareModel: ObservableObject {
             }
 
             phase = .working(String(localized: "Translating…"))
+            // The transcript can be informal or in a regional dialect (e.g. Moroccan Darija,
+            // possibly in Latin-script Arabizi) — nudge the model to detect that before translating.
+            let systemPrompt = TargetLanguage.deviceLanguage.prompt
+                + "\n\nThe message to translate is a transcribed voice message. It may be informal "
+                + "or in a regional dialect, including Latin-script Arabic (Arabizi) such as Moroccan "
+                + "Darija. Detect its real source language and translate it faithfully."
             let translation = try await OpenAIProvider(apiKey: key)
-                .generate(text: transcript, systemPrompt: TargetLanguage.deviceLanguage.prompt)
+                .generate(text: transcript, systemPrompt: systemPrompt)
 
             phase = .done(transcript: transcript, translation: translation)
         } catch {

@@ -53,7 +53,10 @@ enum Configuration {
     /// turn a received voice message into text before translating it. Whisper auto-detects the
     /// spoken language, so the user doesn't have to say what language the audio is in.
     static let openAITranscriptionURL = URL(string: "https://api.openai.com/v1/audio/transcriptions")!
-    static let openAITranscriptionModel = "whisper-1"
+    /// `gpt-4o-transcribe` is far more accurate than `whisper-1` on accents and dialects (e.g.
+    /// Moroccan Darija) and rarely mis-detects the language, which `whisper-1` did (hallucinating
+    /// English for short dialectal clips).
+    static let openAITranscriptionModel = "gpt-4o-transcribe"
 
     // MARK: - Google Gemini
 
