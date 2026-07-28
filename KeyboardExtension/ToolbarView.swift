@@ -86,21 +86,31 @@ struct ToolbarView: View {
         HStack(spacing: 8) {
             if state.showsNextKeyboard {
                 NextKeyboardButton(configure: configureNextKeyboardButton)
-                    .frame(width: 44, height: 44)
+                    .frame(width: 44, height: 54)
             }
 
             ForEach(state.languages) { language in
                 Button {
                     onSelect(language)
                 } label: {
-                    Text(language.flag)
-                        .font(.system(size: 24))
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 44)
-                        .background(
-                            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                .fill(Color(.secondarySystemBackground))
-                        )
+                    VStack(spacing: 3) {
+                        Text(language.flag)
+                            .font(.system(size: 22))
+                        // Native language name, tiny; shrinks so long autonyms
+                        // (e.g. "العربية الفصحى", "Português") still fit on one line.
+                        Text(language.name)
+                            .font(.system(size: 9, weight: .medium))
+                            .foregroundStyle(.secondary)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.5)
+                            .padding(.horizontal, 2)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 54)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(Color(.secondarySystemBackground))
+                    )
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel(language.accessibilityLabel)
