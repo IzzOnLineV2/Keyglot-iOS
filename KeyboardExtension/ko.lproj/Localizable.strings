@@ -30,3 +30,16 @@
 "Rewrite in a professional tone" = "전문적인 어조로 다시 쓰기";
 "Rewrite in a friendly tone" = "친근한 어조로 다시 쓰기";
 "Rewrite in a flirty tone" = "은근히 다정한 어조로 다시 쓰기";
+
+/* ===== Toolbar button labels (short) ===== */
+"Improve" = "개선";
+"Professional" = "전문적";
+"Friendly" = "친근하게";
+"Flirty" = "다정하게";
+
+/* ===== Received message (clipboard) ===== */
+"Translate a received message from the clipboard" = "받은 메시지를 클립보드에서 번역";
+"Received message" = "받은 메시지";
+"Close" = "닫기";
+"Copy a message first, then tap the clipboard button." = "먼저 메시지를 복사한 다음 클립보드 버튼을 누르세요.";
+"Translating…" = "번역 중…";

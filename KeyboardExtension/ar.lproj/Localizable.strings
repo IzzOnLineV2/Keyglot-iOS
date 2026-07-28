@@ -30,3 +30,16 @@
 "Rewrite in a professional tone" = "إعادة الصياغة بنبرة احترافية";
 "Rewrite in a friendly tone" = "إعادة الصياغة بنبرة ودية";
 "Rewrite in a flirty tone" = "إعادة الصياغة بنبرة مرحة وغزلية";
+
+/* ===== Toolbar button labels (short) ===== */
+"Improve" = "تحسين";
+"Professional" = "احترافي";
+"Friendly" = "ودّي";
+"Flirty" = "غزلي";
+
+/* ===== Received message (clipboard) ===== */
+"Translate a received message from the clipboard" = "ترجمة رسالة مستلمة من الحافظة";
+"Received message" = "رسالة مستلمة";
+"Close" = "إغلاق";
+"Copy a message first, then tap the clipboard button." = "انسخ رسالة أولاً، ثم اضغط على زر الحافظة.";
+"Translating…" = "جارٍ الترجمة…";

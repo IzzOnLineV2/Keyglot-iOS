@@ -30,3 +30,16 @@
 "Rewrite in a professional tone" = "以专业语气重写";
 "Rewrite in a friendly tone" = "以友好语气重写";
 "Rewrite in a flirty tone" = "以俏皮的语气重写";
+
+/* ===== Toolbar button labels (short) ===== */
+"Improve" = "改进";
+"Professional" = "专业";
+"Friendly" = "友好";
+"Flirty" = "俏皮";
+
+/* ===== Received message (clipboard) ===== */
+"Translate a received message from the clipboard" = "从剪贴板翻译收到的消息";
+"Received message" = "收到的消息";
+"Close" = "关闭";
+"Copy a message first, then tap the clipboard button." = "请先复制一条消息，然后点按剪贴板按钮。";
+"Translating…" = "正在翻译…";

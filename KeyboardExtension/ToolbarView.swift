@@ -12,19 +12,31 @@ struct ToolbarView: View {
     let onSelect: (TargetLanguage) -> Void
     /// Invoked when a rewrite (tone) button is tapped.
     let onRewrite: (RewriteAction) -> Void
+    /// Invoked when the "translate from clipboard" (received message) button is tapped.
+    let onTranslateClipboard: () -> Void
     /// Wires the globe up to the system keyboard switcher (tap = advance, long-press = picker).
     let configureNextKeyboardButton: (UIButton) -> Void
 
     var body: some View {
+        Group {
+            if let result = state.clipboardResult {
+                clipboardPanel(result)
+            } else {
+                mainToolbar
+            }
+        }
+        .padding(.horizontal, 8)
+        .padding(.vertical, 8)
+        .frame(maxWidth: .infinity)
+    }
+
+    private var mainToolbar: some View {
         VStack(spacing: 6) {
             statusBar
             buttonRow
             rewriteCaption
             rewriteRow
         }
-        .padding(.horizontal, 8)
-        .padding(.vertical, 8)
-        .frame(maxWidth: .infinity)
     }
 
     // MARK: - Status
@@ -89,6 +101,23 @@ struct ToolbarView: View {
                     .frame(width: 44, height: 54)
             }
 
+            // Translate a received message the user has copied to the clipboard.
+            Button {
+                onTranslateClipboard()
+            } label: {
+                Text("📋")
+                    .font(.system(size: 22))
+                    .frame(width: 44, height: 54)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(Color(.secondarySystemBackground))
+                    )
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel(Text("Translate a received message from the clipboard"))
+            .disabled(!state.canTranslate)
+            .opacity(state.canTranslate ? 1 : 0.5)
+
             ForEach(state.languages) { language in
                 Button {
                     onSelect(language)
@@ -139,19 +168,56 @@ struct ToolbarView: View {
                 Button {
                     onRewrite(action)
                 } label: {
-                    Text(action.glyph)
-                        .font(.system(size: 24))
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 44)
-                        .background(
-                            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                .fill(Color(.secondarySystemBackground))
-                        )
+                    VStack(spacing: 3) {
+                        Text(action.glyph)
+                            .font(.system(size: 22))
+                        // Localized action name (Migliora, Improve, …); shrinks to fit.
+                        Text(LocalizedStringKey(action.name))
+                            .font(.system(size: 9, weight: .medium))
+                            .foregroundStyle(.secondary)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.5)
+                            .padding(.horizontal, 2)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 54)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(Color(.secondarySystemBackground))
+                    )
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel(action.accessibilityLabel)
                 .disabled(!state.canTranslate)
                 .opacity(state.canTranslate ? 1 : 0.5)
+            }
+        }
+    }
+
+    /// Read-only panel showing the translation of a received message (from the clipboard).
+    /// A close button dismisses it and returns to the normal toolbar.
+    private func clipboardPanel(_ text: String) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            HStack {
+                Label("Received message", systemImage: "tray.and.arrow.down")
+                    .font(.footnote.weight(.semibold))
+                    .foregroundStyle(.secondary)
+                Spacer()
+                Button {
+                    state.clipboardResult = nil
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.title3)
+                        .foregroundStyle(.secondary)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(Text("Close"))
+            }
+            ScrollView {
+                Text(text)
+                    .font(.body)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .textSelection(.enabled)
             }
         }
     }

@@ -11,8 +11,8 @@ final class KeyboardViewController: UIInputViewController {
     private let service = TranslationService()
     private var heightConstraint: NSLayoutConstraint?
 
-    // Status hint + language row (flag + name) + rewrite caption + rewrite-action row.
-    private static let keyboardHeight: CGFloat = 184
+    // Status hint + language row (flag + name) + rewrite caption + tone row (glyph + name).
+    private static let keyboardHeight: CGFloat = 196
 
     // MARK: - Lifecycle
 
@@ -93,6 +93,9 @@ final class KeyboardViewController: UIInputViewController {
             onRewrite: { [weak self] action in
                 self?.performRewrite(action)
             },
+            onTranslateClipboard: { [weak self] in
+                self?.performClipboardTranslation()
+            },
             configureNextKeyboardButton: { [weak self] button in
                 guard let self else { return }
                 button.addTarget(
@@ -139,6 +142,36 @@ final class KeyboardViewController: UIInputViewController {
         let label = String(localized: "Rewriting…")
         runAction(label: label) { service, text in
             try await service.rewrite(text, as: action)
+        }
+    }
+
+    /// Translate a RECEIVED message the user copied to the clipboard, into their own language,
+    /// and show it read-only. Unlike translate/rewrite, this never touches the text field.
+    private func performClipboardTranslation() {
+        guard !state.isBusy else { return }
+
+        guard hasFullAccess else {
+            state.showError(String(localized: "Enable Full Access in Settings to translate."))
+            return
+        }
+
+        let clip = (UIPasteboard.general.string ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !clip.isEmpty else {
+            state.showError(String(localized: "Copy a message first, then tap the clipboard button."))
+            return
+        }
+
+        state.beginWork(String(localized: "Translating…"))
+
+        Task { [weak self] in
+            guard let self else { return }
+            do {
+                let result = try await self.service.translate(clip, to: .deviceLanguage)
+                self.state.clipboardResult = result
+                self.state.finishWork()
+            } catch {
+                self.state.showError(self.bannerMessage(for: error))
+            }
         }
     }
 

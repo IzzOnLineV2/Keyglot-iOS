@@ -25,6 +25,15 @@ struct TargetLanguage: Identifiable, Codable, Equatable, Sendable {
 
     static func byID(_ id: String) -> TargetLanguage? { catalog.first { $0.id == id } }
 
+    /// Target for translating a RECEIVED message into the user's own language (the device UI
+    /// language). Used by the "translate from clipboard" feature; falls back to English.
+    static var deviceLanguage: TargetLanguage {
+        let code = Locale.current.language.languageCode?.identifier ?? "en"
+        if let match = byID(code) { return match }
+        let name = Locale.current.localizedString(forLanguageCode: code) ?? "English"
+        return TargetLanguage(id: "device_\(code)", name: name, flag: "📋", instruction: generic(name))
+    }
+
     /// Languages shown by default (matches the original five).
     static let defaultIDs = ["en", "fr", "ar", "darija_ar", "darija_latin"]
 

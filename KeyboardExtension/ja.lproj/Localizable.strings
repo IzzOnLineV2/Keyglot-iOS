@@ -30,3 +30,16 @@
 "Rewrite in a professional tone" = "フォーマルな口調に書き換える";
 "Rewrite in a friendly tone" = "フレンドリーな口調に書き換える";
 "Rewrite in a flirty tone" = "思わせぶりな口調に書き換える";
+
+/* ===== Toolbar button labels (short) ===== */
+"Improve" = "改善";
+"Professional" = "フォーマル";
+"Friendly" = "フレンドリー";
+"Flirty" = "思わせぶり";
+
+/* ===== Received message (clipboard) ===== */
+"Translate a received message from the clipboard" = "受信したメッセージをクリップボードから翻訳";
+"Received message" = "受信したメッセージ";
+"Close" = "閉じる";
+"Copy a message first, then tap the clipboard button." = "先にメッセージをコピーしてから、クリップボードのボタンをタップしてください。";
+"Translating…" = "翻訳中…";

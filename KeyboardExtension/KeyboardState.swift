@@ -32,6 +32,10 @@ final class KeyboardState: ObservableObject {
     /// Whether to show the "switch keyboard" globe (only when other keyboards exist).
     @Published var showsNextKeyboard: Bool = true
 
+    /// Read-only translation of a RECEIVED message the user copied to the clipboard.
+    /// When non-nil, the toolbar shows a read-only panel instead of the normal buttons.
+    @Published var clipboardResult: String? = nil
+
     /// Actions (translate/rewrite) only work with Full Access, a configured key, and no work
     /// in flight.
     var canTranslate: Bool {

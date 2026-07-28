@@ -30,3 +30,16 @@
 "Rewrite in a professional tone" = "Riscrivi con un tono professionale";
 "Rewrite in a friendly tone" = "Riscrivi con un tono amichevole";
 "Rewrite in a flirty tone" = "Riscrivi con un tono ammiccante";
+
+/* ===== Toolbar button labels (short) ===== */
+"Improve" = "Migliora";
+"Professional" = "Formale";
+"Friendly" = "Amichevole";
+"Flirty" = "Ammiccante";
+
+/* ===== Received message (clipboard) ===== */
+"Translate a received message from the clipboard" = "Traduci un messaggio ricevuto dagli appunti";
+"Received message" = "Messaggio ricevuto";
+"Close" = "Chiudi";
+"Copy a message first, then tap the clipboard button." = "Copia prima un messaggio, poi tocca il pulsante appunti.";
+"Translating…" = "Sto traducendo…";
