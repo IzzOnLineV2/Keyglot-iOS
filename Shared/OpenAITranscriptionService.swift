@@ -15,7 +15,7 @@ struct OpenAITranscriptionService: Sendable {
         self.session = session
     }
 
-    func transcribe(fileURL: URL) async throws -> String {
+    func transcribe(fileURL: URL, language: String? = nil) async throws -> String {
         let boundary = "keyglot-\(UUID().uuidString)"
 
         var request = URLRequest(url: Configuration.openAITranscriptionURL)
@@ -38,6 +38,13 @@ struct OpenAITranscriptionService: Sendable {
         appendField("--\(boundary)\r\n")
         appendField("Content-Disposition: form-data; name=\"model\"\r\n\r\n")
         appendField("\(Configuration.openAITranscriptionModel)\r\n")
+        // language hint (optional ISO-639-1) — greatly improves accuracy for dialects like
+        // Moroccan Darija (transcribe as "ar") when auto-detect gets the language wrong.
+        if let language, !language.isEmpty {
+            appendField("--\(boundary)\r\n")
+            appendField("Content-Disposition: form-data; name=\"language\"\r\n\r\n")
+            appendField("\(language)\r\n")
+        }
         // file
         appendField("--\(boundary)\r\n")
         appendField("Content-Disposition: form-data; name=\"file\"; filename=\"\(fileURL.lastPathComponent)\"\r\n")

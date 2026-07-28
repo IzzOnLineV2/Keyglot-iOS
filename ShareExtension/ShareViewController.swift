@@ -68,7 +68,7 @@ final class ShareViewController: UIViewController {
                 return
             }
 
-            Task { await self.model.run(fileURL: dest) }
+            Task { @MainActor in self.model.start(fileURL: dest) }
         }
     }
 }
