@@ -1,7 +1,7 @@
 /* ===== Share extension — audio voice message ===== */
 "No audio found to translate." = "Nessun audio da tradurre.";
 "Couldn't read the audio." = "Impossibile leggere l'audio.";
-"Add an OpenAI API key in the Keyglot app to translate voice messages." = "Aggiungi una chiave API OpenAI nell'app Keyglot per tradurre i messaggi vocali.";
+"Add a Google Gemini API key in the Keyglot app to translate voice messages." = "Aggiungi una chiave API Google Gemini nell'app Keyglot per tradurre i messaggi vocali.";
 "The audio didn't contain any speech." = "L'audio non conteneva parlato.";
 "Transcribing…" = "Sto trascrivendo…";
 "Translating…" = "Sto traducendo…";

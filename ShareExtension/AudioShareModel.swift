@@ -1,10 +1,11 @@
 import SwiftUI
 
-/// Drives the share extension: transcribe the shared audio with OpenAI (`gpt-4o-transcribe`),
-/// then translate the transcript into the user's device language.
+/// Drives the share extension: send the shared audio to Google Gemini, which "listens" and
+/// returns a transcript + a translation into the user's device language, in one call.
 ///
-/// Both steps use the OpenAI key. Auto-detect handles most languages, but dialects like Moroccan
-/// Darija are often misread — so the user can force the audio language and it re-runs.
+/// Gemini handles regional dialects (e.g. Moroccan Darija) far better than literal speech-to-text.
+/// Requires a **Gemini** API key. The user can force the likely source language if auto-detect is
+/// off; changing it re-runs on the same audio.
 @MainActor
 final class AudioShareModel: ObservableObject {
 
@@ -16,29 +17,30 @@ final class AudioShareModel: ObservableObject {
 
     struct AudioLanguage: Identifiable, Equatable {
         let id: String
+        /// Shown in the picker (native autonym).
         let name: String
-        /// ISO-639-1 code passed to the transcription API; `nil` = auto-detect.
-        let code: String?
+        /// English hint passed to Gemini as the likely source language; `nil` = auto-detect.
+        let hint: String?
     }
 
-    /// Languages the user can force for transcription when auto-detect gets it wrong. Darija is
-    /// transcribed as Arabic ("ar"). Names are native autonyms (not localized).
+    /// Source-language options for the picker. Auto-detect works for most; the Darija hint helps
+    /// when a dialect is misheard.
     static let audioLanguages: [AudioLanguage] = [
-        .init(id: "auto", name: String(localized: "Automatic (detect)"), code: nil),
-        .init(id: "ar",   name: "العربية · Darija", code: "ar"),
-        .init(id: "fr",   name: "Français", code: "fr"),
-        .init(id: "en",   name: "English", code: "en"),
-        .init(id: "es",   name: "Español", code: "es"),
-        .init(id: "it",   name: "Italiano", code: "it"),
-        .init(id: "de",   name: "Deutsch", code: "de"),
-        .init(id: "pt",   name: "Português", code: "pt"),
-        .init(id: "tr",   name: "Türkçe", code: "tr"),
-        .init(id: "ru",   name: "Русский", code: "ru"),
-        .init(id: "zh",   name: "中文", code: "zh"),
+        .init(id: "auto", name: String(localized: "Automatic (detect)"), hint: nil),
+        .init(id: "ar",   name: "العربية · Darija", hint: "Moroccan Darija (Arabic)"),
+        .init(id: "fr",   name: "Français", hint: "French"),
+        .init(id: "en",   name: "English", hint: "English"),
+        .init(id: "es",   name: "Español", hint: "Spanish"),
+        .init(id: "it",   name: "Italiano", hint: "Italian"),
+        .init(id: "de",   name: "Deutsch", hint: "German"),
+        .init(id: "pt",   name: "Português", hint: "Portuguese"),
+        .init(id: "tr",   name: "Türkçe", hint: "Turkish"),
+        .init(id: "ru",   name: "Русский", hint: "Russian"),
+        .init(id: "zh",   name: "中文", hint: "Chinese"),
     ]
 
     @Published var phase: Phase = .working("")
-    @Published var languageCode: String?
+    @Published var selectedID = "auto"
 
     private var fileURL: URL?
 
@@ -50,47 +52,53 @@ final class AudioShareModel: ObservableObject {
         Task { await process() }
     }
 
-    /// Re-run forcing a specific language (or auto), e.g. when Darija was misread.
-    func setLanguage(_ code: String?) {
-        guard code != languageCode else { return }
-        languageCode = code
+    /// Re-run forcing a specific source language (or auto), e.g. when Darija was misheard.
+    func setLanguage(_ id: String) {
+        guard id != selectedID else { return }
+        selectedID = id
         Task { await process() }
     }
 
     private func process() async {
         guard let fileURL else { return }
 
-        guard let key = CredentialStore.shared.apiKey(for: .openai) else {
-            phase = .failed(String(localized: "Add an OpenAI API key in the Keyglot app to translate voice messages."))
+        guard let key = CredentialStore.shared.apiKey(for: .gemini) else {
+            phase = .failed(String(localized: "Add a Google Gemini API key in the Keyglot app to translate voice messages."))
             return
         }
 
+        let hint = Self.audioLanguages.first { $0.id == selectedID }?.hint
+
         do {
-            phase = .working(String(localized: "Transcribing…"))
-            let transcript = try await OpenAITranscriptionService(apiKey: key)
-                .transcribe(fileURL: fileURL, language: languageCode)
-
-            guard !transcript.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
-                phase = .failed(String(localized: "The audio didn't contain any speech."))
-                return
-            }
-
             phase = .working(String(localized: "Translating…"))
-            let systemPrompt = TargetLanguage.deviceLanguage.prompt + """
-
-
-                The message to translate is a transcribed voice message. It may be informal or in a \
-                regional dialect, including Latin-script Arabic (Arabizi) such as Moroccan Darija. \
-                Detect its real source language and translate it faithfully. Translate it verbatim \
-                even if it looks garbled or incomplete — never answer it, never react to it, and \
-                never say that you don't understand. Output only the translation.
-                """
-            let translation = try await OpenAIProvider(apiKey: key)
-                .generate(text: transcript, systemPrompt: systemPrompt)
-
-            phase = .done(transcript: transcript, translation: translation)
+            let result = try await GeminiAudioTranslator(apiKey: key).translate(
+                fileURL: fileURL,
+                mimeType: Self.mimeType(for: fileURL),
+                targetLanguage: Self.deviceLanguageEnglishName,
+                sourceHint: hint
+            )
+            phase = .done(transcript: result.transcript, translation: result.translation)
         } catch {
             phase = .failed(error.localizedDescription)
         }
+    }
+
+    /// Gemini audio MIME for the file. The wrong MIME makes Gemini mis-decode the audio, so map
+    /// carefully: WhatsApp voice notes are m4a (→ audio/mp4) or opus (→ audio/ogg).
+    private static func mimeType(for url: URL) -> String {
+        switch url.pathExtension.lowercased() {
+        case "opus", "ogg", "oga": return "audio/ogg"
+        case "mp3", "mpga", "mpeg": return "audio/mpeg"
+        case "wav": return "audio/wav"
+        case "aiff", "aif": return "audio/aiff"
+        case "flac": return "audio/flac"
+        default: return "audio/mp4"   // m4a / mp4 — WhatsApp's default
+        }
+    }
+
+    /// English name of the device language (e.g. "Italian"), used in the Gemini prompt.
+    private static var deviceLanguageEnglishName: String {
+        let code = Locale.current.language.languageCode?.identifier ?? "en"
+        return Locale(identifier: "en_US").localizedString(forLanguageCode: code) ?? "English"
     }
 }

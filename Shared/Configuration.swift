@@ -65,6 +65,11 @@ enum Configuration {
     /// Configurable — e.g. "gemini-2.5-flash".
     static let geminiModel = "gemini-2.0-flash"
 
+    /// Gemini model used by the share extension to transcribe + translate voice messages from
+    /// audio. Gemini "listens" to the clip, which handles dialects (e.g. Moroccan Darija) far
+    /// better than literal speech-to-text.
+    static let geminiAudioModel = "gemini-flash-latest"
+
     static func geminiURL(model: String = geminiModel) -> URL {
         URL(string: "\(geminiBaseURL)/\(model):generateContent")!
     }

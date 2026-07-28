@@ -27,7 +27,7 @@ struct AudioShareView: View {
     }
 
     private var currentLanguageName: String {
-        AudioShareModel.audioLanguages.first { $0.code == model.languageCode }?.name
+        AudioShareModel.audioLanguages.first { $0.id == model.selectedID }?.name
             ?? AudioShareModel.audioLanguages[0].name
     }
 
@@ -35,9 +35,9 @@ struct AudioShareView: View {
         Menu {
             ForEach(AudioShareModel.audioLanguages) { lang in
                 Button {
-                    model.setLanguage(lang.code)
+                    model.setLanguage(lang.id)
                 } label: {
-                    if lang.code == model.languageCode {
+                    if lang.id == model.selectedID {
                         Label(lang.name, systemImage: "checkmark")
                     } else {
                         Text(lang.name)
