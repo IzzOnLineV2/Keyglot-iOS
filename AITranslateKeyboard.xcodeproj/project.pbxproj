@@ -8,51 +8,71 @@
 
 /* Begin PBXBuildFile section */
 		0149A5192E25431E6907671C /* OpenRouterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEA0022FE2B4338974E591 /* OpenRouterProvider.swift */; };
+		0544B6226AEF898AFFC02CDD /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA005DFD19F76418AAC9C595 /* CredentialStore.swift */; };
 		09616E7141296842E44F5F7A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = D3078FE5E9FC7D54D9B18267 /* PrivacyInfo.xcprivacy */; };
 		103C5D0241F1F3854BD70B6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0FA20717491EE64E9FDAE7F /* Localizable.strings */; };
+		1573702B69B68219F688FEF5 /* AudioShareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9160CA2C35B1FC7E053595A /* AudioShareModel.swift */; };
 		169227BC53021AA01ADF5AA0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8BAA075D548E9B01C95C50C /* Localizable.strings */; };
 		1DC1DBC0CAEBAE9F2B70EF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148544529EF65F107A323578 /* Assets.xcassets */; };
+		1DEA682BBE56B1845562AB01 /* RewriteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFA86C9FFE001D68E40C52 /* RewriteAction.swift */; };
 		1EAC49D537841C9691F0A349 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEF32F24C33E91B249EDA5FA /* Localizable.strings */; };
 		23089448A6F9AD92E2AF3CB0 /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61F6E03979C64CDDAE9BA4 /* ToolbarView.swift */; };
 		270F97CA50A1FCA1594588C3 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA005DFD19F76418AAC9C595 /* CredentialStore.swift */; };
+		2D9E55FC7C0338BEA88B7D5B /* GeminiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B7BD74777B6745934F80 /* GeminiProvider.swift */; };
 		2F95CA4AF0A448EEE5ACE8F1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E0FDBD9A5D9660BC529AB2 /* OnboardingView.swift */; };
 		2FFD7F657753AD83CBDA9711 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF309E8F2FD223F7A0902EA9 /* Localizable.strings */; };
 		31D404C6898BEECC9CDBD0BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A265B1CB38EF589AAE6EA37 /* Localizable.strings */; };
+		338AE36CC975966E36D8604F /* OpenRouterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEA0022FE2B4338974E591 /* OpenRouterProvider.swift */; };
 		33B8DF838CC8E30B91CA11D0 /* GeminiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B7BD74777B6745934F80 /* GeminiProvider.swift */; };
+		3481BB73DFF56737B108A4EB /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263B584837F8740AAFEEA9E /* AppGroupStorage.swift */; };
 		39399668F8D2A68E2C90D021 /* AIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4429600700EA0481935F48E /* AIProvider.swift */; };
 		3BE72969717A0BDCF965AB27 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F598E2FEA6D89521EC3E7764 /* KeychainStore.swift */; };
+		3C24C2A52A5850DF28C16421 /* AudioShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5261FF3F6DFD8F4F0529BE /* AudioShareView.swift */; };
 		3D5E3D1A3A73054FD743D919 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFB7D1E4A2A62771E7E871BF /* Localizable.strings */; };
 		3DF0FCF5FA68732359812450 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1B3BDBDC2714DE93A91CF631 /* PrivacyInfo.xcprivacy */; };
+		4357DE8F6D2ACA5589DB18A9 /* OpenAITranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */; };
 		441B9E58278DE30C666D9F68 /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263B584837F8740AAFEEA9E /* AppGroupStorage.swift */; };
 		4991DC13590E151A49038A29 /* LanguageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73687E6A686F7E004B2FB /* LanguageSelectionView.swift */; };
+		4FA5622D415098D47F08441C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900DF980202C946D6B599F01 /* Models.swift */; };
 		5120E1CDCB52DD16286722BF /* AIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4429600700EA0481935F48E /* AIProvider.swift */; };
 		5570B43FC0C52443FDAA01B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E31E87EA0880A20B700CA5DE /* Localizable.strings */; };
+		56BB5C048E46AC6826D7498D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA41021236A7FA81E1811D89 /* Localizable.strings */; };
 		58108E65F810C6940C3145AC /* ApiKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714A644D549C6B896808DDD /* ApiKeyView.swift */; };
+		58E2CB913ACE9CBBAEA8FF42 /* OpenAITranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */; };
 		5FAC1F9297102364A2E16358 /* RewriteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFA86C9FFE001D68E40C52 /* RewriteAction.swift */; };
 		628EBD817D6441F22B96C431 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79400FF888540EC3B4BAA3B0 /* Configuration.swift */; };
+		6304AA886DE39B0118FCC9A9 /* OpenAIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */; };
+		6B5CB758D9CF27B464BA901F /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F598E2FEA6D89521EC3E7764 /* KeychainStore.swift */; };
 		6BD5A0180D308952153BEE1B /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC5BB3B9CFF6587069B9D0 /* TranslationService.swift */; };
+		6F2C176E9A5915A2D25C2396 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE6423DE8A9E04BBEE78E81 /* ShareViewController.swift */; };
 		70F81A1FCCBA61A9C7E91889 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900DF980202C946D6B599F01 /* Models.swift */; };
 		7541A178C9BCA1E0FEDEB007 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB087C899BA56C116E84E233 /* Localizable.strings */; };
 		7A291A26FBA7498BF2C10BA3 /* AITranslateKeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472966A37A5845747FD71D90 /* AITranslateKeyboardApp.swift */; };
 		7C7B776065E04C9DC20818A9 /* OpenAIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */; };
 		8233188AFB4C40203C67D193 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3C7AB1D21F62C5AE8F10113 /* Localizable.strings */; };
+		8251ECEEEEAE354200488433 /* AITranslateKeyboardShare.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A32263EF88BCA30284D392CB /* AITranslateKeyboardShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		88BB88E905C0528DA39671B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4499155DA7481A15BC1517A6 /* Localizable.strings */; };
 		9024FDF5F51462DDE881B7DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A75B0380350902E079D77E49 /* Localizable.strings */; };
 		9711C73C33FAE736AB986301 /* ClaudeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC290A1B0B21A88A9D580A /* ClaudeProvider.swift */; };
 		B23183E16F2228F47354D991 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900DF980202C946D6B599F01 /* Models.swift */; };
 		B282B84F8B9F2C90807B2118 /* ClaudeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC290A1B0B21A88A9D580A /* ClaudeProvider.swift */; };
 		B92C851F4C62CB2C2C5BD6A9 /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263B584837F8740AAFEEA9E /* AppGroupStorage.swift */; };
+		BEB817753944AD1987AA1943 /* AIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4429600700EA0481935F48E /* AIProvider.swift */; };
+		BF267554296C53C7BCAE3E62 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79400FF888540EC3B4BAA3B0 /* Configuration.swift */; };
 		BF2DEC73C258B3B6188894B3 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3021D3F96196B3F3B503D3 /* KeyboardViewController.swift */; };
 		C006C18F8F45181EE4B271E5 /* OpenRouterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEA0022FE2B4338974E591 /* OpenRouterProvider.swift */; };
 		C16D643BE861994AE3E84940 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA005DFD19F76418AAC9C595 /* CredentialStore.swift */; };
 		C462E369B3DCA31B241817B4 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79400FF888540EC3B4BAA3B0 /* Configuration.swift */; };
 		C5BF793A1FBDCDCBECD7CBAB /* OpenAIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */; };
 		CB7E2C88ABC81637F2B6D976 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2FF0EA91D0779EA3A9EB502 /* Localizable.strings */; };
+		CCF9FD913FE41F4F25D1BBAE /* ClaudeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC290A1B0B21A88A9D580A /* ClaudeProvider.swift */; };
 		D3AC994AE2AED5AF0E5D4E36 /* AITranslateKeyboardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CB3A17DBE7EEE22E2F91B123 /* AITranslateKeyboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D979851787264ED117CF51BC /* OpenAITranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */; };
 		DA6C55D65BC4637116A68228 /* GeminiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B7BD74777B6745934F80 /* GeminiProvider.swift */; };
 		DF6F12EA20F4A15D655BD00E /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9018947EBABFDAD65F8865D /* AboutView.swift */; };
 		E8DB86A93B1F5B8C43E99790 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B1F6C3139BC3016BC633C32 /* Localizable.strings */; };
 		E900DB1FF5574CE9892752F0 /* RewriteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFA86C9FFE001D68E40C52 /* RewriteAction.swift */; };
+		F174E346979EA4E9C1581690 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 448D369B0CD394B4D0D2E710 /* PrivacyInfo.xcprivacy */; };
 		F226444E0E7EAD7520E1739D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68779465572FA00D02D77CFA /* SettingsView.swift */; };
 		F571AA6C3102D1C5DAF782F0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C5C936B7D51CBD497C36AFF /* Localizable.strings */; };
 		F79CEC7EF03C2BD24208453D /* KeyboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0DABECCD383B4928A1D956 /* KeyboardState.swift */; };
@@ -64,6 +84,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		36333027A09164FE4AC56274 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42E33800579CD327E90FE28D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 716DB6F787270250E9695C44;
+			remoteInfo = AITranslateKeyboardShare;
+		};
 		690FDC531F0E6D04F5687385 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 42E33800579CD327E90FE28D /* Project object */;
@@ -81,6 +108,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				D3AC994AE2AED5AF0E5D4E36 /* AITranslateKeyboardExtension.appex in Embed Foundation Extensions */,
+				8251ECEEEEAE354200488433 /* AITranslateKeyboardShare.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,14 +122,17 @@
 		1A3021D3F96196B3F3B503D3 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		1B1F6C3139BC3016BC633C32 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1B3BDBDC2714DE93A91CF631 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAITranscriptionService.swift; sourceTree = "<group>"; };
 		2C5C936B7D51CBD497C36AFF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3A0DABECCD383B4928A1D956 /* KeyboardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardState.swift; sourceTree = "<group>"; };
+		448D369B0CD394B4D0D2E710 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		4499155DA7481A15BC1517A6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		44C287346EC30F500716A10D /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		472966A37A5845747FD71D90 /* AITranslateKeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITranslateKeyboardApp.swift; sourceTree = "<group>"; };
 		4A77B7BD74777B6745934F80 /* GeminiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiProvider.swift; sourceTree = "<group>"; };
 		5A265B1CB38EF589AAE6EA37 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		68779465572FA00D02D77CFA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		69339DB2AA687B67A212C03B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6A7AA9E5AA7060D4C2A2FF1C /* AITranslateKeyboard.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AITranslateKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C79E21E1819E3AA9E4E0EE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		72ABD87571F13FEB3A75A800 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -110,12 +141,14 @@
 		8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIProvider.swift; sourceTree = "<group>"; };
 		900DF980202C946D6B599F01 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		A021352BEA614D1A2DE2DEDB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A32263EF88BCA30284D392CB /* AITranslateKeyboardShare.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = AITranslateKeyboardShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C7AB1D21F62C5AE8F10113 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A714A644D549C6B896808DDD /* ApiKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeyView.swift; sourceTree = "<group>"; };
 		A75B0380350902E079D77E49 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ACBEA0022FE2B4338974E591 /* OpenRouterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenRouterProvider.swift; sourceTree = "<group>"; };
 		AF61F6E03979C64CDDAE9BA4 /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
 		B9018947EBABFDAD65F8865D /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		BA41021236A7FA81E1811D89 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF425314E51927E53F4B7B5F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C0EC5BB3B9CFF6587069B9D0 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		C263B584837F8740AAFEEA9E /* AppGroupStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupStorage.swift; sourceTree = "<group>"; };
@@ -124,17 +157,21 @@
 		CA005DFD19F76418AAC9C595 /* CredentialStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialStore.swift; sourceTree = "<group>"; };
 		CB3A17DBE7EEE22E2F91B123 /* AITranslateKeyboardExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = AITranslateKeyboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF46F08B3523494C579DFE18 /* AITranslateKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AITranslateKeyboard.entitlements; sourceTree = "<group>"; };
+		CFD5BE4376CA7C5F2AD1F3CA /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
 		D0FA20717491EE64E9FDAE7F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D3078FE5E9FC7D54D9B18267 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		D9160CA2C35B1FC7E053595A /* AudioShareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioShareModel.swift; sourceTree = "<group>"; };
 		DEF32F24C33E91B249EDA5FA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E31E87EA0880A20B700CA5DE /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E4429600700EA0481935F48E /* AIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProvider.swift; sourceTree = "<group>"; };
 		E6E0FDBD9A5D9660BC529AB2 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		EA5261FF3F6DFD8F4F0529BE /* AudioShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioShareView.swift; sourceTree = "<group>"; };
 		EB087C899BA56C116E84E233 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ED94C6151650248393EB1C9B /* KeyboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardExtension.entitlements; sourceTree = "<group>"; };
 		EF309E8F2FD223F7A0902EA9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F598E2FEA6D89521EC3E7764 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		FFB7D1E4A2A62771E7E871BF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FFE6423DE8A9E04BBEE78E81 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -143,6 +180,7 @@
 			children = (
 				6A7AA9E5AA7060D4C2A2FF1C /* AITranslateKeyboard.app */,
 				CB3A17DBE7EEE22E2F91B123 /* AITranslateKeyboardExtension.appex */,
+				A32263EF88BCA30284D392CB /* AITranslateKeyboardShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +191,7 @@
 				7B351D74956B8D2829226A4B /* AITranslateKeyboard */,
 				E8F07E6BBA93F05CBEB62D56 /* KeyboardExtension */,
 				C8E188A13622625BCB4DB909 /* Shared */,
+				F68496D7AF46F8977B671C98 /* ShareExtension */,
 				0CC2D32AB136319E2DCFF031 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -194,6 +233,7 @@
 				F598E2FEA6D89521EC3E7764 /* KeychainStore.swift */,
 				900DF980202C946D6B599F01 /* Models.swift */,
 				8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */,
+				2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */,
 				ACBEA0022FE2B4338974E591 /* OpenRouterProvider.swift */,
 				01DFA86C9FFE001D68E40C52 /* RewriteAction.swift */,
 			);
@@ -223,6 +263,20 @@
 			path = KeyboardExtension;
 			sourceTree = "<group>";
 		};
+		F68496D7AF46F8977B671C98 /* ShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D9160CA2C35B1FC7E053595A /* AudioShareModel.swift */,
+				EA5261FF3F6DFD8F4F0529BE /* AudioShareView.swift */,
+				69339DB2AA687B67A212C03B /* Info.plist */,
+				BA41021236A7FA81E1811D89 /* Localizable.strings */,
+				448D369B0CD394B4D0D2E710 /* PrivacyInfo.xcprivacy */,
+				CFD5BE4376CA7C5F2AD1F3CA /* ShareExtension.entitlements */,
+				FFE6423DE8A9E04BBEE78E81 /* ShareViewController.swift */,
+			);
+			path = ShareExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,6 +292,7 @@
 			);
 			dependencies = (
 				40006DF7F575592DE268FBF0 /* PBXTargetDependency */,
+				5DBEDB58F515A4BA2789B813 /* PBXTargetDependency */,
 			);
 			name = AITranslateKeyboard;
 			packageProductDependencies = (
@@ -264,6 +319,24 @@
 			productReference = CB3A17DBE7EEE22E2F91B123 /* AITranslateKeyboardExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		716DB6F787270250E9695C44 /* AITranslateKeyboardShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF7CC8FB44E795FE1C0CAB5B /* Build configuration list for PBXNativeTarget "AITranslateKeyboardShare" */;
+			buildPhases = (
+				D467EB37407D06A80D9A0CFB /* Sources */,
+				1EBCD54014BF252D08E998A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AITranslateKeyboardShare;
+			packageProductDependencies = (
+			);
+			productName = AITranslateKeyboardShare;
+			productReference = A32263EF88BCA30284D392CB /* AITranslateKeyboardShare.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -278,6 +351,10 @@
 						ProvisioningStyle = Automatic;
 					};
 					5ADFAB6208FC96CE8D817553 = {
+						DevelopmentTeam = WF6Z643R96;
+						ProvisioningStyle = Automatic;
+					};
+					716DB6F787270250E9695C44 = {
 						DevelopmentTeam = WF6Z643R96;
 						ProvisioningStyle = Automatic;
 					};
@@ -308,11 +385,21 @@
 			targets = (
 				4D726258F7CB5C84DFE27469 /* AITranslateKeyboard */,
 				5ADFAB6208FC96CE8D817553 /* AITranslateKeyboardExtension */,
+				716DB6F787270250E9695C44 /* AITranslateKeyboardShare */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1EBCD54014BF252D08E998A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56BB5C048E46AC6826D7498D /* Localizable.strings in Resources */,
+				F174E346979EA4E9C1581690 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		96F6EBBEDDC0DEC7411E4815 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,10 +453,33 @@
 				FDED827BFD57B8BCC35CBC0E /* KeychainStore.swift in Sources */,
 				70F81A1FCCBA61A9C7E91889 /* Models.swift in Sources */,
 				C5BF793A1FBDCDCBECD7CBAB /* OpenAIProvider.swift in Sources */,
+				D979851787264ED117CF51BC /* OpenAITranscriptionService.swift in Sources */,
 				C006C18F8F45181EE4B271E5 /* OpenRouterProvider.swift in Sources */,
 				5FAC1F9297102364A2E16358 /* RewriteAction.swift in Sources */,
 				23089448A6F9AD92E2AF3CB0 /* ToolbarView.swift in Sources */,
 				6BD5A0180D308952153BEE1B /* TranslationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D467EB37407D06A80D9A0CFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEB817753944AD1987AA1943 /* AIProvider.swift in Sources */,
+				3481BB73DFF56737B108A4EB /* AppGroupStorage.swift in Sources */,
+				1573702B69B68219F688FEF5 /* AudioShareModel.swift in Sources */,
+				3C24C2A52A5850DF28C16421 /* AudioShareView.swift in Sources */,
+				CCF9FD913FE41F4F25D1BBAE /* ClaudeProvider.swift in Sources */,
+				BF267554296C53C7BCAE3E62 /* Configuration.swift in Sources */,
+				0544B6226AEF898AFFC02CDD /* CredentialStore.swift in Sources */,
+				2D9E55FC7C0338BEA88B7D5B /* GeminiProvider.swift in Sources */,
+				6B5CB758D9CF27B464BA901F /* KeychainStore.swift in Sources */,
+				4FA5622D415098D47F08441C /* Models.swift in Sources */,
+				6304AA886DE39B0118FCC9A9 /* OpenAIProvider.swift in Sources */,
+				4357DE8F6D2ACA5589DB18A9 /* OpenAITranscriptionService.swift in Sources */,
+				338AE36CC975966E36D8604F /* OpenRouterProvider.swift in Sources */,
+				1DEA682BBE56B1845562AB01 /* RewriteAction.swift in Sources */,
+				6F2C176E9A5915A2D25C2396 /* ShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +501,7 @@
 				B23183E16F2228F47354D991 /* Models.swift in Sources */,
 				2F95CA4AF0A448EEE5ACE8F1 /* OnboardingView.swift in Sources */,
 				7C7B776065E04C9DC20818A9 /* OpenAIProvider.swift in Sources */,
+				58E2CB913ACE9CBBAEA8FF42 /* OpenAITranscriptionService.swift in Sources */,
 				0149A5192E25431E6907671C /* OpenRouterProvider.swift in Sources */,
 				E900DB1FF5574CE9892752F0 /* RewriteAction.swift in Sources */,
 				F226444E0E7EAD7520E1739D /* SettingsView.swift in Sources */,
@@ -405,9 +516,31 @@
 			target = 5ADFAB6208FC96CE8D817553 /* AITranslateKeyboardExtension */;
 			targetProxy = 690FDC531F0E6D04F5687385 /* PBXContainerItemProxy */;
 		};
+		5DBEDB58F515A4BA2789B813 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 716DB6F787270250E9695C44 /* AITranslateKeyboardShare */;
+			targetProxy = 36333027A09164FE4AC56274 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0803330062B993B27BAB571A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = it.izzonline.keyglot.share;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		08468DA9F4F9F410313D3295 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -443,7 +576,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -504,7 +637,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -602,6 +735,23 @@
 			};
 			name = Release;
 		};
+		8C95183289AFA2CF67A517D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = it.izzonline.keyglot.share;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		DD613A6CEF328C59F1DF8ADC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -645,6 +795,15 @@
 			buildConfigurations = (
 				319C95DAE4F7662F41284F21 /* Debug */,
 				89C1075D92F68EF8D213F192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CF7CC8FB44E795FE1C0CAB5B /* Build configuration list for PBXNativeTarget "AITranslateKeyboardShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0803330062B993B27BAB571A /* Debug */,
+				8C95183289AFA2CF67A517D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

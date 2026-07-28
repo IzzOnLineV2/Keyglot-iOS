@@ -49,6 +49,12 @@ enum Configuration {
     /// Reasoning effort for the OpenAI Responses API. `nil` omits the field.
     static let openAIReasoningEffort: String? = "low"
 
+    /// OpenAI audio transcription (Whisper) endpoint + model. Used by the share extension to
+    /// turn a received voice message into text before translating it. Whisper auto-detects the
+    /// spoken language, so the user doesn't have to say what language the audio is in.
+    static let openAITranscriptionURL = URL(string: "https://api.openai.com/v1/audio/transcriptions")!
+    static let openAITranscriptionModel = "whisper-1"
+
     // MARK: - Google Gemini
 
     static let geminiBaseURL = "https://generativelanguage.googleapis.com/v1beta/models"

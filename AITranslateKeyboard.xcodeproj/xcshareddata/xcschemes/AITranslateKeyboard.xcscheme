@@ -35,6 +35,20 @@
                ReferencedContainer = "container:AITranslateKeyboard.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "716DB6F787270250E9695C44"
+               BuildableName = "AITranslateKeyboardShare.appex"
+               BlueprintName = "AITranslateKeyboardShare"
+               ReferencedContainer = "container:AITranslateKeyboard.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
