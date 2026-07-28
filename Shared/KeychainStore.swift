@@ -18,7 +18,7 @@ struct KeychainStore: Sendable {
     static let shared = KeychainStore()
 
     /// Namespaces our items within the shared access group.
-    private let service = "com.smartapibox.keyglot.credentials"
+    private let service = "it.izzonline.keyglot.credentials"
 
     /// Read a secret for `account`, or `nil` if absent.
     func string(account: String) -> String? {

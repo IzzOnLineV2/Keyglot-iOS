@@ -8,7 +8,7 @@ enum Configuration {
 
     /// App Group used to share settings between the main app and the keyboard extension.
     /// Must match the `com.apple.security.application-groups` entitlement of both targets.
-    static let appGroupIdentifier = "group.com.smartapibox.keyglot"
+    static let appGroupIdentifier = "group.it.izzonline.keyglot"
 
     /// Provider used when the user hasn't chosen one yet. Claude Sonnet is the default for
     /// its strong multilingual, conversational translation quality.

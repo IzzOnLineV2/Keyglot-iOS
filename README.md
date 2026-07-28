@@ -114,7 +114,7 @@ Requirements: Xcode 16+ (built/verified on Xcode 26.5, Swift 6), an iPhone on iO
 1. Open `AITranslateKeyboard.xcodeproj`.
 2. Select the **AITranslateKeyboard** target → *Signing & Capabilities* → set your **Team**.
    Do the same for the **AITranslateKeyboardExtension** target.
-   (Both targets already declare the App Group `group.com.smartapibox.keyglot`.)
+   (Both targets already declare the App Group `group.it.izzonline.keyglot`.)
 3. Run on your iPhone (a third-party keyboard with network access only works on a real device).
 4. On first launch the app shows a short **onboarding** screen. Pick your provider (default
    Claude) and paste an **API key for that provider** (e.g. `sk-ant-…` for Claude), then tap
@@ -155,7 +155,7 @@ Edit `Shared/Configuration.swift`:
 
 - **API key storage:** keys are stored in the **iOS Keychain** (`kSecClassGenericPassword`,
   `AfterFirstUnlockThisDeviceOnly`), never in `UserDefaults`. They sit in a **shared Keychain
-  access group** (`$(AppIdentifierPrefix)com.smartapibox.keyglot.shared`, declared in both
+  access group** (`$(AppIdentifierPrefix)it.izzonline.keyglot.shared`, declared in both
   targets' entitlements) so the keyboard extension can read them. The code omits
   `kSecAttrAccessGroup`, relying on the single-entry entitlement as the default group — so
   there's no hard-coded team-ID prefix to maintain. App Groups carry only the non-secret
