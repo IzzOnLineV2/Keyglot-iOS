@@ -18,6 +18,7 @@ struct AppGroupStorage: @unchecked Sendable { // `UserDefaults` is documented th
     private enum Keys {
         static let selectedProvider = "selected_provider"
         static let selectedLanguages = "selected_language_ids"
+        static let audioLanguageID = "audio_language_id"
     }
 
     /// The AI provider the keyboard uses. Defaults to `Configuration.defaultProvider` (Claude).
@@ -46,5 +47,12 @@ struct AppGroupStorage: @unchecked Sendable { // `UserDefaults` is documented th
     /// The selected languages resolved against the catalog, in display order.
     var selectedLanguages: [TargetLanguage] {
         selectedLanguageIDs.compactMap(TargetLanguage.byID)
+    }
+
+    /// Source language last chosen in the share extension's audio translator ("auto" by default),
+    /// so the user doesn't have to re-pick (e.g. Darija) on every voice message.
+    var audioLanguageID: String {
+        get { defaults.string(forKey: Keys.audioLanguageID) ?? "auto" }
+        nonmutating set { defaults.set(newValue, forKey: Keys.audioLanguageID) }
     }
 }

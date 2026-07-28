@@ -1,0 +1,11 @@
+/* ===== Share extension — audio voice message ===== */
+"No audio found to translate." = "Kein Audio zum Übersetzen gefunden.";
+"Couldn't read the audio." = "Audio konnte nicht gelesen werden.";
+"Add a Google Gemini API key in the Keyglot app to translate voice messages." = "Füge in der Keyglot-App einen Google-Gemini-API-Schlüssel hinzu, um Sprachnachrichten zu übersetzen.";
+"Translating…" = "Übersetzen…";
+"Working…" = "Wird bearbeitet…";
+"Done" = "Fertig";
+"Translation" = "Übersetzung";
+"Original transcript" = "Originaltranskript";
+"Audio language" = "Audiosprache";
+"Automatic (detect)" = "Automatisch (erkennen)";

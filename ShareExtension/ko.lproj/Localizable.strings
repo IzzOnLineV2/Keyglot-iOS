@@ -1,0 +1,11 @@
+/* ===== Share extension — audio voice message ===== */
+"No audio found to translate." = "번역할 오디오가 없습니다.";
+"Couldn't read the audio." = "오디오를 읽을 수 없습니다.";
+"Add a Google Gemini API key in the Keyglot app to translate voice messages." = "음성 메시지를 번역하려면 Keyglot 앱에 Google Gemini API 키를 추가하세요.";
+"Translating…" = "번역 중…";
+"Working…" = "처리 중…";
+"Done" = "완료";
+"Translation" = "번역";
+"Original transcript" = "원본 텍스트";
+"Audio language" = "오디오 언어";
+"Automatic (detect)" = "자동 (감지)";

@@ -40,7 +40,8 @@ final class AudioShareModel: ObservableObject {
     ]
 
     @Published var phase: Phase = .working("")
-    @Published var selectedID = "auto"
+    /// Restored from the App Group so the last-picked language (e.g. Darija) sticks.
+    @Published var selectedID = AppGroupStorage.shared.audioLanguageID
 
     private var fileURL: URL?
 
@@ -56,6 +57,7 @@ final class AudioShareModel: ObservableObject {
     func setLanguage(_ id: String) {
         guard id != selectedID else { return }
         selectedID = id
+        AppGroupStorage.shared.audioLanguageID = id   // remember for next time
         Task { await process() }
     }
 
