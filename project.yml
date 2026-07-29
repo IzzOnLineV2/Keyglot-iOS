@@ -11,7 +11,7 @@ settings:
   base:
     SWIFT_VERSION: "6.0"
     MARKETING_VERSION: "1.0"
-    CURRENT_PROJECT_VERSION: "11"
+    CURRENT_PROJECT_VERSION: "10"
     # IzzOnLine di Stefania Izzo Apple Developer Team ID (migrated from SmartApiBox's 32BK2Y9JL3).
     DEVELOPMENT_TEAM: "WF6Z643R96"
     CODE_SIGN_STYLE: Automatic
