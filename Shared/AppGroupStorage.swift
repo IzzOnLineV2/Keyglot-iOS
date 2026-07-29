@@ -20,6 +20,8 @@ struct AppGroupStorage: @unchecked Sendable { // `UserDefaults` is documented th
         static let selectedLanguages = "selected_language_ids"
         static let audioLanguageID = "audio_language_id"
         static let pendingListen = "pending_listen"
+        static let useCount = "use_count"
+        static let isSupporter = "is_supporter"
     }
 
     /// The AI provider the keyboard uses. Defaults to `Configuration.defaultProvider` (Claude).
@@ -61,5 +63,25 @@ struct AppGroupStorage: @unchecked Sendable { // `UserDefaults` is documented th
     var pendingListen: Bool {
         get { defaults.bool(forKey: Keys.pendingListen) }
         nonmutating set { defaults.set(newValue, forKey: Keys.pendingListen) }
+    }
+
+    /// Number of translations so far — drives the "support Keyglot" reminder. Counted across all
+    /// surfaces (keyboard, share, listen); frozen once the user has purchased.
+    var useCount: Int {
+        get { defaults.integer(forKey: Keys.useCount) }
+        nonmutating set { defaults.set(newValue, forKey: Keys.useCount) }
+    }
+
+    /// Whether the user bought the one-time "support" purchase (cached from StoreKit by the app so
+    /// the extensions can stop counting). Source of truth is StoreKit's entitlements.
+    var isSupporter: Bool {
+        get { defaults.bool(forKey: Keys.isSupporter) }
+        nonmutating set { defaults.set(newValue, forKey: Keys.isSupporter) }
+    }
+
+    /// Count one successful translation toward the reminder (no-op once purchased).
+    func recordUse() {
+        guard !isSupporter else { return }
+        useCount += 1
     }
 }

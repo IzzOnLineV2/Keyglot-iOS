@@ -85,3 +85,11 @@
 "📋 Translate a message you've copied — tap 📋 on the keyboard." = "📋 ترجم رسالة نسختها — اضغط على 📋 في لوحة المفاتيح.";
 "📤 Share any text or voice note to Keyglot to translate it." = "📤 شارك أي نص أو رسالة صوتية مع Keyglot لترجمته.";
 "Audio (voice notes and live listening) uses Google Gemini — add a Gemini API key in Settings to use it." = "يستخدم الصوت (الرسائل الصوتية والاستماع المباشر) Google Gemini — أضف مفتاح API الخاص بـ Gemini في الإعدادات لاستخدامه.";
+
+/* ===== Support / paywall ===== */
+"Support Keyglot" = "ادعم Keyglot";
+"Keyglot is free and open source. A one-time purchase removes this reminder and helps me keep improving it." = "Keyglot مجاني ومفتوح المصدر. عملية شراء لمرة واحدة تزيل هذا التذكير وتساعدني على مواصلة تحسينه.";
+"Unlock forever · %@" = "افتح للأبد · %@";
+"Continue for free" = "تابع مجانًا";
+"Restore purchases" = "استعادة المشتريات";
+"Terms & Privacy" = "الشروط والخصوصية";

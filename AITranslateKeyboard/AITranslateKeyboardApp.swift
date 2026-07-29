@@ -10,13 +10,20 @@ struct AITranslateKeyboardApp: App {
 }
 
 /// Gates the app on having an API key for the selected provider (Claude by default).
-/// No key → onboarding; key present → settings. Also handles the widget's "listen" request:
-/// when the widget's App Intent set `pendingListen`, present the Listen screen on launch.
+/// No key → onboarding; key present → settings. Also handles:
+/// - the widget's "listen" request (present the Listen screen when `pendingListen` is set), and
+/// - the "support Keyglot" reminder (a dismissible paywall after a few uses, until purchased).
 private struct RootView: View {
     @Environment(\.scenePhase) private var scenePhase
+    @StateObject private var store = StoreManager()
     @State private var isConfigured = CredentialStore.shared
         .hasAPIKey(for: AppGroupStorage.shared.selectedProvider)
     @State private var showListen = false
+    @State private var showPaywall = false
+    @State private var paywallShownThisLaunch = false
+
+    /// Show the reminder after this many translations.
+    private let paywallThreshold = 6
 
     var body: some View {
         Group {
@@ -36,9 +43,19 @@ private struct RootView: View {
                     }
             }
         }
+        .sheet(isPresented: $showPaywall) {
+            PaywallView(store: store) { showPaywall = false }
+        }
+        .task {
+            await store.load()
+            maybeShowPaywall()
+        }
         .onAppear(perform: consumePendingListen)
         .onChange(of: scenePhase) { _, phase in
-            if phase == .active { consumePendingListen() }
+            if phase == .active {
+                consumePendingListen()
+                maybeShowPaywall()
+            }
         }
     }
 
@@ -46,5 +63,15 @@ private struct RootView: View {
         guard AppGroupStorage.shared.pendingListen else { return }
         AppGroupStorage.shared.pendingListen = false
         showListen = true
+    }
+
+    /// At most once per launch, and only if not yet a supporter and past the threshold.
+    private func maybeShowPaywall() {
+        guard !store.isSupporter,
+              !paywallShownThisLaunch,
+              !showListen,
+              AppGroupStorage.shared.useCount >= paywallThreshold else { return }
+        paywallShownThisLaunch = true
+        showPaywall = true
     }
 }

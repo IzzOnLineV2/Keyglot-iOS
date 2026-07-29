@@ -150,6 +150,7 @@ final class ListenViewModel: NSObject, ObservableObject {
                 sourceHint: VoiceLanguage.hint(for: selectedID)
             )
             phase = .result(transcript: result.transcript, translation: result.translation)
+            AppGroupStorage.shared.recordUse()
         } catch {
             phase = .failed(error.localizedDescription)
         }

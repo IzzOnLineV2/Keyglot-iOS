@@ -169,6 +169,7 @@ final class KeyboardViewController: UIInputViewController {
                 let result = try await self.service.translate(clip, to: .deviceLanguage)
                 self.state.clipboardResult = result
                 self.state.finishWork()
+                AppGroupStorage.shared.recordUse()
             } catch {
                 self.state.showError(self.bannerMessage(for: error))
             }
@@ -205,6 +206,7 @@ final class KeyboardViewController: UIInputViewController {
                 let result = try await work(self.service, fullText)
                 self.replaceMessage(before: before, after: after, with: result)
                 self.state.finishWork()
+                AppGroupStorage.shared.recordUse()
             } catch {
                 // On failure we leave the user's original text untouched.
                 self.state.showError(self.bannerMessage(for: error))

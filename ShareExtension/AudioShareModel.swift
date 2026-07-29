@@ -53,6 +53,7 @@ final class AudioShareModel: ObservableObject {
                 sourceHint: VoiceLanguage.hint(for: selectedID)
             )
             phase = .done(transcript: result.transcript, translation: result.translation)
+            AppGroupStorage.shared.recordUse()
         } catch {
             phase = .failed(error.localizedDescription)
         }

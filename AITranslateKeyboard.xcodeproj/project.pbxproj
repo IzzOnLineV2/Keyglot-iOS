@@ -109,6 +109,7 @@
 		DA6C55D65BC4637116A68228 /* GeminiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B7BD74777B6745934F80 /* GeminiProvider.swift */; };
 		DF6F12EA20F4A15D655BD00E /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9018947EBABFDAD65F8865D /* AboutView.swift */; };
 		E03AEC3E65029C2CB2F9BFDE /* KeyglotListenWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C556B0E9EF0FD86DE836E7 /* KeyglotListenWidget.swift */; };
+		E1D37B7D2ECDC3CBA1537A69 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD912243D496848B9060F93C /* PaywallView.swift */; };
 		E1D8545FEDCE175F9403A194 /* OpenListenIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD83467D28C137D8C6CDAC /* OpenListenIntent.swift */; };
 		E210574C0DF6BC7A36BD723F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39B7ED501F36F3459C0EC2BF /* Localizable.strings */; };
 		E2A19A36999CDB9DBC96C2D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE4D4525C5D3DABF8C5966E5 /* Localizable.strings */; };
@@ -126,6 +127,7 @@
 		FB92A4784B52B825CA15D220 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900DF980202C946D6B599F01 /* Models.swift */; };
 		FC13460EFC1B52DB0C7C4275 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D3CB74E1BF74FFB03C53E82 /* Localizable.strings */; };
 		FCAF1D188398C244061F9D30 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A021352BEA614D1A2DE2DEDB /* Localizable.strings */; };
+		FCF8BA642136B890CAA31D8A /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ADE10290A901FF1FED49D8 /* StoreManager.swift */; };
 		FD2B8B74E7015E8316054DB0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44C287346EC30F500716A10D /* Localizable.strings */; };
 		FDED827BFD57B8BCC35CBC0E /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F598E2FEA6D89521EC3E7764 /* KeychainStore.swift */; };
 		FEEA8F75F46566C664DA07AC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72ABD87571F13FEB3A75A800 /* Localizable.strings */; };
@@ -177,6 +179,7 @@
 		01DFA86C9FFE001D68E40C52 /* RewriteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewriteAction.swift; sourceTree = "<group>"; };
 		01EC290A1B0B21A88A9D580A /* ClaudeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeProvider.swift; sourceTree = "<group>"; };
 		01FD83467D28C137D8C6CDAC /* OpenListenIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenListenIntent.swift; sourceTree = "<group>"; };
+		02ADE10290A901FF1FED49D8 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		0729D34B482498EE6CBBC894 /* ListenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenViewModel.swift; sourceTree = "<group>"; };
 		0AF4B2C4CA5670AC23646B5D /* ListenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenView.swift; sourceTree = "<group>"; };
 		0B73E045D3EBFCEA1ED6CB0C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -223,6 +226,7 @@
 		A714A644D549C6B896808DDD /* ApiKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeyView.swift; sourceTree = "<group>"; };
 		A75B0380350902E079D77E49 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ACBEA0022FE2B4338974E591 /* OpenRouterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenRouterProvider.swift; sourceTree = "<group>"; };
+		AD912243D496848B9060F93C /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		AF61F6E03979C64CDDAE9BA4 /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
 		B51FE311B722DD394E8936BC /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B81CCAAFE87D4E4017C2F736 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -304,8 +308,10 @@
 				A021352BEA614D1A2DE2DEDB /* Localizable.strings */,
 				D0FA20717491EE64E9FDAE7F /* Localizable.strings */,
 				E6E0FDBD9A5D9660BC529AB2 /* OnboardingView.swift */,
+				AD912243D496848B9060F93C /* PaywallView.swift */,
 				D3078FE5E9FC7D54D9B18267 /* PrivacyInfo.xcprivacy */,
 				68779465572FA00D02D77CFA /* SettingsView.swift */,
+				02ADE10290A901FF1FED49D8 /* StoreManager.swift */,
 			);
 			path = AITranslateKeyboard;
 			sourceTree = "<group>";
@@ -685,8 +691,10 @@
 				58E2CB913ACE9CBBAEA8FF42 /* OpenAITranscriptionService.swift in Sources */,
 				B195CC1280B48784F6985F99 /* OpenListenIntent.swift in Sources */,
 				0149A5192E25431E6907671C /* OpenRouterProvider.swift in Sources */,
+				E1D37B7D2ECDC3CBA1537A69 /* PaywallView.swift in Sources */,
 				E900DB1FF5574CE9892752F0 /* RewriteAction.swift in Sources */,
 				F226444E0E7EAD7520E1739D /* SettingsView.swift in Sources */,
+				FCF8BA642136B890CAA31D8A /* StoreManager.swift in Sources */,
 				3153B6E523E339C6B36FBF2C /* VoiceLanguage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -788,7 +796,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -849,7 +857,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

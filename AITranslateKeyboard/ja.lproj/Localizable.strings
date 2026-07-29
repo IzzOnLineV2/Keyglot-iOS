@@ -85,3 +85,11 @@
 "📋 Translate a message you've copied — tap 📋 on the keyboard." = "📋 コピーしたメッセージを翻訳 — キーボードの 📋 をタップ。";
 "📤 Share any text or voice note to Keyglot to translate it." = "📤 テキストや音声メッセージを Keyglot に共有して翻訳します。";
 "Audio (voice notes and live listening) uses Google Gemini — add a Gemini API key in Settings to use it." = "音声（音声メッセージとライブ聞き取り）は Google Gemini を使用します — 設定で Gemini の API キーを追加してください。";
+
+/* ===== Support / paywall ===== */
+"Support Keyglot" = "Keyglot をサポート";
+"Keyglot is free and open source. A one-time purchase removes this reminder and helps me keep improving it." = "Keyglot は無料でオープンソースです。一度の購入でこのお知らせが消え、改善を続ける支えになります。";
+"Unlock forever · %@" = "永久に解除 · %@";
+"Continue for free" = "無料で続ける";
+"Restore purchases" = "購入を復元";
+"Terms & Privacy" = "利用規約とプライバシー";

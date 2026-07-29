@@ -85,3 +85,11 @@
 "📋 Translate a message you've copied — tap 📋 on the keyboard." = "📋 翻译你复制的消息 — 点按键盘上的 📋。";
 "📤 Share any text or voice note to Keyglot to translate it." = "📤 将任意文本或语音消息分享给 Keyglot 进行翻译。";
 "Audio (voice notes and live listening) uses Google Gemini — add a Gemini API key in Settings to use it." = "音频（语音消息和实时聆听）使用 Google Gemini — 请在设置中添加 Gemini API 密钥以使用。";
+
+/* ===== Support / paywall ===== */
+"Support Keyglot" = "支持 Keyglot";
+"Keyglot is free and open source. A one-time purchase removes this reminder and helps me keep improving it." = "Keyglot 免费且开源。一次性购买可移除此提醒，并支持我持续改进它。";
+"Unlock forever · %@" = "永久解锁 · %@";
+"Continue for free" = "免费继续";
+"Restore purchases" = "恢复购买";
+"Terms & Privacy" = "条款与隐私";

@@ -85,3 +85,11 @@
 "📋 Translate a message you've copied — tap 📋 on the keyboard." = "📋 복사한 메시지를 번역 — 키보드에서 📋 를 탭하세요.";
 "📤 Share any text or voice note to Keyglot to translate it." = "📤 아무 텍스트나 음성 메시지를 Keyglot에 공유하여 번역하세요.";
 "Audio (voice notes and live listening) uses Google Gemini — add a Gemini API key in Settings to use it." = "오디오(음성 메시지 및 실시간 듣기)는 Google Gemini를 사용합니다 — 설정에서 Gemini API 키를 추가하세요.";
+
+/* ===== Support / paywall ===== */
+"Support Keyglot" = "Keyglot 후원하기";
+"Keyglot is free and open source. A one-time purchase removes this reminder and helps me keep improving it." = "Keyglot은 무료이며 오픈 소스입니다. 일회성 구매로 이 알림이 사라지고 계속 개선하는 데 도움이 됩니다.";
+"Unlock forever · %@" = "영구 잠금 해제 · %@";
+"Continue for free" = "무료로 계속";
+"Restore purchases" = "구매 복원";
+"Terms & Privacy" = "약관 및 개인정보";

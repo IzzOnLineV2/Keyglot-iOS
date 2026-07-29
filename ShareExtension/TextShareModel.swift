@@ -30,6 +30,7 @@ final class TextShareModel: ObservableObject {
                 systemPrompt: TargetLanguage.deviceLanguage.prompt
             )
             phase = .done(original: trimmed, translation: translation)
+            AppGroupStorage.shared.recordUse()
         } catch {
             phase = .failed(error.localizedDescription)
         }
