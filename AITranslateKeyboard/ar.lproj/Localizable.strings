@@ -61,3 +61,20 @@
 "Add a language" = "إضافة لغة";
 "Remove one to add another (max %lld)." = "أزل واحدة لإضافة أخرى (بحد أقصى %lld).";
 "Keyboard Languages" = "لغات لوحة المفاتيح";
+
+/* ===== Listen & translate ===== */
+"Listen & translate" = "استمع وترجم";
+"Press, speak, and Keyglot translates what it hears into your language." = "اضغط وتحدّث، وسيترجم Keyglot ما يسمعه إلى لغتك.";
+"Audio language" = "لغة الصوت";
+"Automatic (detect)" = "تلقائي (اكتشاف)";
+"Tap to listen" = "اضغط للاستماع";
+"Listening…" = "جارٍ الاستماع…";
+"Stop" = "إيقاف";
+"Translating…" = "جارٍ الترجمة…";
+"Translation" = "الترجمة";
+"Original" = "النص الأصلي";
+"Listen again" = "استمع مرة أخرى";
+"Try again" = "أعد المحاولة";
+"Microphone access is off. Enable it in Settings." = "الوصول إلى الميكروفون مُعطَّل. فعّله من الإعدادات.";
+"Add a Google Gemini API key in Settings to translate what you hear." = "أضف مفتاح API الخاص بـ Google Gemini في الإعدادات لترجمة ما تسمعه.";
+"Close" = "إغلاق";

@@ -29,7 +29,7 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>NSExtensionActivationRule</key>
-			<string>SUBQUERY ( extensionItems, $extensionItem, SUBQUERY ( $extensionItem.attachments, $attachment, ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.audio" OR ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.data" ).@count == $extensionItem.attachments.@count ).@count == 1</string>
+			<string>SUBQUERY ( extensionItems, $ei, SUBQUERY ( $ei.attachments, $a, ( ANY $a.registeredTypeIdentifiers UTI-CONFORMS-TO "public.text" OR ANY $a.registeredTypeIdentifiers UTI-CONFORMS-TO "public.audio" OR ANY $a.registeredTypeIdentifiers UTI-CONFORMS-TO "public.data" ) AND NOT ( ANY $a.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image" OR ANY $a.registeredTypeIdentifiers UTI-CONFORMS-TO "public.movie" ) ).@count == $ei.attachments.@count ).@count == 1</string>
 		</dict>
 	</dict>
 </dict>

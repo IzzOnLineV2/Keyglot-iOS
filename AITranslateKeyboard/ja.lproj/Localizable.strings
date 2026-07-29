@@ -61,3 +61,20 @@
 "Add a language" = "言語を追加";
 "Remove one to add another (max %lld)." = "別の言語を追加するには1つ削除してください（最大%lld）。";
 "Keyboard Languages" = "キーボードの言語";
+
+/* ===== Listen & translate ===== */
+"Listen & translate" = "聞いて翻訳";
+"Press, speak, and Keyglot translates what it hears into your language." = "押して話すと、Keyglot が聞き取った内容をあなたの言語に翻訳します。";
+"Audio language" = "音声の言語";
+"Automatic (detect)" = "自動（検出）";
+"Tap to listen" = "タップして聞き取り";
+"Listening…" = "聞き取り中…";
+"Stop" = "停止";
+"Translating…" = "翻訳中…";
+"Translation" = "翻訳";
+"Original" = "原文";
+"Listen again" = "もう一度聞き取る";
+"Try again" = "再試行";
+"Microphone access is off. Enable it in Settings." = "マイクへのアクセスがオフです。設定でオンにしてください。";
+"Add a Google Gemini API key in Settings to translate what you hear." = "聞き取った内容を翻訳するには、設定で Google Gemini の API キーを追加してください。";
+"Close" = "閉じる";

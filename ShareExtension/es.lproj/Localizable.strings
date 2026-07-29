@@ -9,3 +9,7 @@
 "Original transcript" = "Transcripción original";
 "Audio language" = "Idioma del audio";
 "Automatic (detect)" = "Automático (detectar)";
+
+/* ===== Shared text ===== */
+"Original" = "Original";
+"Nothing to translate here." = "Aquí no hay nada que traducir.";

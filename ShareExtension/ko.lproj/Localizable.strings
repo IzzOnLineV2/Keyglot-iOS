@@ -9,3 +9,7 @@
 "Original transcript" = "원본 텍스트";
 "Audio language" = "오디오 언어";
 "Automatic (detect)" = "자동 (감지)";
+
+/* ===== Shared text ===== */
+"Original" = "원문";
+"Nothing to translate here." = "번역할 내용이 없습니다.";

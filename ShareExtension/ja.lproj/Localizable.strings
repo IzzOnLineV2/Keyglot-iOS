@@ -9,3 +9,7 @@
 "Original transcript" = "元の文字起こし";
 "Audio language" = "音声の言語";
 "Automatic (detect)" = "自動（検出）";
+
+/* ===== Shared text ===== */
+"Original" = "原文";
+"Nothing to translate here." = "ここに翻訳するものがありません。";

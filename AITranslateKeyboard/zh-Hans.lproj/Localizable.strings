@@ -61,3 +61,20 @@
 "Add a language" = "添加语言";
 "Remove one to add another (max %lld)." = "移除一个以添加另一个（最多 %lld 个）。";
 "Keyboard Languages" = "键盘语言";
+
+/* ===== Listen & translate ===== */
+"Listen & translate" = "聆听并翻译";
+"Press, speak, and Keyglot translates what it hears into your language." = "按住说话，Keyglot 会把听到的内容翻译成你的语言。";
+"Audio language" = "音频语言";
+"Automatic (detect)" = "自动（检测）";
+"Tap to listen" = "点按开始聆听";
+"Listening…" = "正在聆听…";
+"Stop" = "停止";
+"Translating…" = "正在翻译…";
+"Translation" = "翻译";
+"Original" = "原文";
+"Listen again" = "再次聆听";
+"Try again" = "重试";
+"Microphone access is off. Enable it in Settings." = "麦克风访问已关闭。请在设置中开启。";
+"Add a Google Gemini API key in Settings to translate what you hear." = "请在设置中添加 Google Gemini API 密钥以翻译你听到的内容。";
+"Close" = "关闭";

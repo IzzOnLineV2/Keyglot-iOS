@@ -9,3 +9,7 @@
 "Original transcript" = "原始转录";
 "Audio language" = "音频语言";
 "Automatic (detect)" = "自动（检测）";
+
+/* ===== Shared text ===== */
+"Original" = "原文";
+"Nothing to translate here." = "这里没有可翻译的内容。";

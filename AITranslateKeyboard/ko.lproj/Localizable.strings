@@ -61,3 +61,20 @@
 "Add a language" = "언어 추가";
 "Remove one to add another (max %lld)." = "다른 언어를 추가하려면 하나를 제거하세요 (최대 %lld).";
 "Keyboard Languages" = "키보드 언어";
+
+/* ===== Listen & translate ===== */
+"Listen & translate" = "듣고 번역";
+"Press, speak, and Keyglot translates what it hears into your language." = "누르고 말하면 Keyglot이 들은 내용을 내 언어로 번역합니다.";
+"Audio language" = "오디오 언어";
+"Automatic (detect)" = "자동 (감지)";
+"Tap to listen" = "탭하여 듣기";
+"Listening…" = "듣는 중…";
+"Stop" = "중지";
+"Translating…" = "번역 중…";
+"Translation" = "번역";
+"Original" = "원문";
+"Listen again" = "다시 듣기";
+"Try again" = "다시 시도";
+"Microphone access is off. Enable it in Settings." = "마이크 접근이 꺼져 있습니다. 설정에서 켜세요.";
+"Add a Google Gemini API key in Settings to translate what you hear." = "들은 내용을 번역하려면 설정에서 Google Gemini API 키를 추가하세요.";
+"Close" = "닫기";

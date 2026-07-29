@@ -10,7 +10,7 @@ struct KeyglotListenWidget: Widget {
             KeyglotListenWidgetView()
         }
         .configurationDisplayName("Keyglot")
-        .description("Tap to listen and translate what you hear.")
+        .description(Text("Tap to listen and translate what you hear."))
         .supportedFamilies([.systemSmall])
     }
 }
