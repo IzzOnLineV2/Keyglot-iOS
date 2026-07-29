@@ -78,3 +78,10 @@
 "Microphone access is off. Enable it in Settings." = "마이크 접근이 꺼져 있습니다. 설정에서 켜세요.";
 "Add a Google Gemini API key in Settings to translate what you hear." = "들은 내용을 번역하려면 설정에서 Google Gemini API 키를 추가하세요.";
 "Close" = "닫기";
+
+/* ===== More ways to translate (About) ===== */
+"More ways to translate" = "번역하는 다른 방법";
+"🎧 Listen & translate — press, speak, and get a translation of what you hear (also from the widget)." = "🎧 듣고 번역 — 누르고 말하면 들리는 내용의 번역을 받습니다 (위젯에서도).";
+"📋 Translate a message you've copied — tap 📋 on the keyboard." = "📋 복사한 메시지를 번역 — 키보드에서 📋 를 탭하세요.";
+"📤 Share any text or voice note to Keyglot to translate it." = "📤 아무 텍스트나 음성 메시지를 Keyglot에 공유하여 번역하세요.";
+"Audio (voice notes and live listening) uses Google Gemini — add a Gemini API key in Settings to use it." = "오디오(음성 메시지 및 실시간 듣기)는 Google Gemini를 사용합니다 — 설정에서 Gemini API 키를 추가하세요.";

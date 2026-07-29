@@ -78,3 +78,10 @@
 "Microphone access is off. Enable it in Settings." = "L'accesso al microfono è disattivato. Attivalo in Impostazioni.";
 "Add a Google Gemini API key in Settings to translate what you hear." = "Aggiungi una chiave API Google Gemini nelle Impostazioni per tradurre ciò che senti.";
 "Close" = "Chiudi";
+
+/* ===== More ways to translate (About) ===== */
+"More ways to translate" = "Altri modi per tradurre";
+"🎧 Listen & translate — press, speak, and get a translation of what you hear (also from the widget)." = "🎧 Ascolta e traduci — premi, parla e ottieni la traduzione di ciò che senti (anche dal widget).";
+"📋 Translate a message you've copied — tap 📋 on the keyboard." = "📋 Traduci un messaggio che hai copiato — tocca 📋 sulla tastiera.";
+"📤 Share any text or voice note to Keyglot to translate it." = "📤 Condividi qualsiasi testo o nota vocale a Keyglot per tradurlo.";
+"Audio (voice notes and live listening) uses Google Gemini — add a Gemini API key in Settings to use it." = "L'audio (note vocali e ascolto dal vivo) usa Google Gemini — aggiungi una chiave API Gemini nelle Impostazioni per usarlo.";

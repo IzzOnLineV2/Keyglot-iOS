@@ -1,16 +1,16 @@
-# Keyglot — AI Message Translator Keyboard
+# Keyglot — AI Translator
 
-An iPhone keyboard extension that **translates *or* rewrites the message you've already typed —
-in place, without copy/paste**. Translate into any of ~18 languages, or restyle your text *in
-the same language* (fix it, make it professional, warmer, or add a light flirty tone).
+Keyglot is an iPhone translation toolkit powered by **your own AI provider key** — no backend,
+nothing sensitive in this repo. It translates (and rewrites) wherever you need it:
 
-The goal is **natural communication**, not literal translation — output should read as if a
-native speaker wrote it. There's **no backend**: the AI provider is called directly from the
-device using **your own API key**.
+- ⌨️ a **keyboard** that translates or rewrites the message you've already typed — in place, no copy/paste
+- 📋 translate a **received message** you've copied
+- 📤 a **share extension** that translates any shared **text** or **voice note** (WhatsApp included)
+- 🎧 **Listen & translate** — press, speak, and it translates what it hears
+- 📲 a **widget** that opens straight into listening
 
-Keyglot is heading to **TestFlight / the App Store**, and its source is **open (MIT)** — see
-[`LICENSE`](LICENSE). The bring-your-own-key model means there are no server secrets: nothing
-sensitive lives in this repo.
+The goal is **natural communication**, not literal translation — output should read as if a native
+speaker wrote it. Open source (**MIT**, see [`LICENSE`](LICENSE)); heading to TestFlight / the App Store.
 
 ## What it does
 
@@ -79,42 +79,63 @@ A custom keyboard *replaces* the system keyboard, so the flow is:
    target works.
 4. The text in the field is replaced with the result. Press **Send**.
 
+## Beyond the keyboard
+
+The keyboard only sees the field you're typing in — these cover the rest:
+
+### 📋 Translate a received message
+Long-press a received message → **Copy**, switch to Keyglot, tap **📋** — it reads the clipboard,
+translates into your language, and shows it in a read-only panel (never touching your reply).
+
+### 📤 Share to Keyglot — text *or* voice note
+From any app, share a **text selection / note / link**, or a **voice note** (WhatsApp → *Forward →
+Share*), to Keyglot. Text is translated by your selected provider; **audio is transcribed +
+translated by Google Gemini**, which understands dialects like Moroccan Darija that literal
+speech-to-text mishears. A source-language picker lets you force the language if auto-detect is off.
+
+### 🎧 Listen & translate + widget
+**Listen & translate** (in the app, or from the home-screen **widget**) records immediately,
+auto-stops on silence, and shows Gemini's translation of what it heard — a quick conversation
+interpreter. The widget's mic button opens the app straight into listening via an **App Intent**
+(no URL scheme). These audio features need a **Gemini** key.
+
 ## Project layout
 
 ```
-AITranslateKeyboard/        Main app (SwiftUI) — onboarding, provider/key, language picker, settings, about
-  PrivacyInfo.xcprivacy       Privacy manifest (App Store requirement)
-  *.entitlements              App Group + shared Keychain access group
-KeyboardExtension/          The keyboard: toolbar (languages + tones) + translate/rewrite flow
-  PrivacyInfo.xcprivacy       Privacy manifest (App Store requirement)
-  *.entitlements              App Group + shared Keychain access group
-Shared/                     Compiled into both targets:
-                              AIProvider        protocol + AIProviderType + factory + errors
-                              ClaudeProvider    Anthropic Messages API (default)
-                              OpenAIProvider    OpenAI Responses API
-                              GeminiProvider    Google Generative Language API
-                              OpenRouterProvider OpenRouter (OpenAI-compatible)
-                              Models            TargetLanguage catalog + per-language prompts
-                              RewriteAction     tone actions (✨ 💼 😊 ❤️) + rewrite prompts
-                              KeychainStore     low-level shared-Keychain wrapper
-                              CredentialStore   provider API keys (Keychain-backed)
-                              AppGroupStorage   non-secret settings (provider, chosen languages)
-                              Configuration     endpoints, model ids, constants
+AITranslateKeyboard/        Main app (SwiftUI) — onboarding, provider/key, language picker,
+                            settings, About, and the "Listen & translate" screen (ListenView)
+KeyboardExtension/          The keyboard: toolbar (languages + tones), translate/rewrite +
+                            "translate from clipboard" (📋) flow
+ShareExtension/             Share extension — translate shared text (selected provider) or a
+                            voice note (Gemini): AudioShareModel / TextShareModel + views
+Widget/                     WidgetKit widget — a mic button that opens the app into listening
+                            (KeyglotListenWidget) via OpenListenIntent
+Shared/                     Compiled into every target:
+                              AIProvider         protocol + AIProviderType + factory + errors
+                              ClaudeProvider / OpenAIProvider / GeminiProvider / OpenRouterProvider
+                              GeminiAudioTranslator  audio → transcript + translation (Gemini)
+                              Models             TargetLanguage catalog + per-language prompts
+                              RewriteAction      tone actions (✨ 💼 😊 ❤️) + rewrite prompts
+                              VoiceLanguage      source-language options + audio MIME helpers
+                              OpenListenIntent   App Intent run by the widget
+                              KeychainStore / CredentialStore   provider keys (shared Keychain)
+                              AppGroupStorage    non-secret settings (provider, languages, …)
+                              Configuration      endpoints, model ids, constants
 project.yml                 XcodeGen spec — the source of truth for the Xcode project
 AITranslateKeyboard.xcodeproj  Generated; open this in Xcode
 ```
 
-The `Shared/` files are members of **both** targets so the app and the keyboard share one
-implementation.
+Each target's own folder holds its code; `Shared/` is compiled into **all** of them (app, keyboard,
+share, widget), and `PrivacyInfo.xcprivacy` + `*.entitlements` live in each target's folder.
 
 ## Build & run
 
 Requirements: Xcode 16+ (built/verified on Xcode 26.5, Swift 6), an iPhone on iOS 18+.
 
 1. Open `AITranslateKeyboard.xcodeproj`.
-2. Select the **AITranslateKeyboard** target → *Signing & Capabilities* → set your **Team**.
-   Do the same for the **AITranslateKeyboardExtension** target.
-   (Both targets already declare the App Group `group.it.izzonline.keyglot`.)
+2. Select the **AITranslateKeyboard** target → *Signing & Capabilities* → set your **Team** with
+   *Automatically manage signing*; Xcode applies it to the keyboard, share, and widget extensions
+   too. (All targets declare the App Group `group.it.izzonline.keyglot`.)
 3. Run on your iPhone (a third-party keyboard with network access only works on a real device).
 4. On first launch the app shows a short **onboarding** screen. Pick your provider (default
    Claude) and paste an **API key for that provider** (e.g. `sk-ant-…` for Claude), then tap

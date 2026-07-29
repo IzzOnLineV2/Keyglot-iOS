@@ -78,3 +78,10 @@
 "Microphone access is off. Enable it in Settings." = "麦克风访问已关闭。请在设置中开启。";
 "Add a Google Gemini API key in Settings to translate what you hear." = "请在设置中添加 Google Gemini API 密钥以翻译你听到的内容。";
 "Close" = "关闭";
+
+/* ===== More ways to translate (About) ===== */
+"More ways to translate" = "更多翻译方式";
+"🎧 Listen & translate — press, speak, and get a translation of what you hear (also from the widget)." = "🎧 聆听并翻译 — 按住说话，获得你听到内容的翻译（也可从小组件）。";
+"📋 Translate a message you've copied — tap 📋 on the keyboard." = "📋 翻译你复制的消息 — 点按键盘上的 📋。";
+"📤 Share any text or voice note to Keyglot to translate it." = "📤 将任意文本或语音消息分享给 Keyglot 进行翻译。";
+"Audio (voice notes and live listening) uses Google Gemini — add a Gemini API key in Settings to use it." = "音频（语音消息和实时聆听）使用 Google Gemini — 请在设置中添加 Gemini API 密钥以使用。";

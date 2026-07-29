@@ -34,6 +34,16 @@ struct AboutView: View {
                 bullet("Choose which languages appear in Settings → Keyboard → Languages.")
             }
 
+            Section {
+                bullet("🎧 Listen & translate — press, speak, and get a translation of what you hear (also from the widget).")
+                bullet("📋 Translate a message you've copied — tap 📋 on the keyboard.")
+                bullet("📤 Share any text or voice note to Keyglot to translate it.")
+            } header: {
+                Text("More ways to translate")
+            } footer: {
+                Text("Audio (voice notes and live listening) uses Google Gemini — add a Gemini API key in Settings to use it.")
+            }
+
             Section("Keyboard languages") {
                 ForEach(languages) { language in
                     LabeledContent(language.name) { Text(language.flag) }
