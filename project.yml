@@ -45,6 +45,8 @@ targets:
         embed: true
       - target: AITranslateKeyboardShare
         embed: true
+      - target: AITranslateKeyboardWidget
+        embed: true
 
   AITranslateKeyboardExtension:
     type: app-extension
@@ -72,6 +74,19 @@ targets:
         INFOPLIST_FILE: ShareExtension/Info.plist
         CODE_SIGN_ENTITLEMENTS: ShareExtension/ShareExtension.entitlements
 
+  AITranslateKeyboardWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: Widget
+      - path: Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: it.izzonline.keyglot.widget
+        GENERATE_INFOPLIST_FILE: "NO"
+        INFOPLIST_FILE: Widget/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Widget/Widget.entitlements
+
 schemes:
   AITranslateKeyboard:
     build:
@@ -79,6 +94,7 @@ schemes:
         AITranslateKeyboard: all
         AITranslateKeyboardExtension: all
         AITranslateKeyboardShare: all
+        AITranslateKeyboardWidget: all
     run:
       config: Debug
     archive:

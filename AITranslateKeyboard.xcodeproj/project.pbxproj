@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0008072EC27DE4C117302A69 /* VoiceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106247F43656D42D3CE5E2B9 /* VoiceLanguage.swift */; };
 		0149A5192E25431E6907671C /* OpenRouterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEA0022FE2B4338974E591 /* OpenRouterProvider.swift */; };
 		02BCB3AAA9EAECB266D1E185 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00AC4B784E4E8FFCF44D1CC8 /* Localizable.strings */; };
 		0544B6226AEF898AFFC02CDD /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA005DFD19F76418AAC9C595 /* CredentialStore.swift */; };
 		09616E7141296842E44F5F7A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = D3078FE5E9FC7D54D9B18267 /* PrivacyInfo.xcprivacy */; };
 		103C5D0241F1F3854BD70B6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0FA20717491EE64E9FDAE7F /* Localizable.strings */; };
+		118E6C8613ACE6F117871555 /* RewriteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFA86C9FFE001D68E40C52 /* RewriteAction.swift */; };
+		13FAC8293C81C1ED475D4DC0 /* OpenAIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */; };
 		1573702B69B68219F688FEF5 /* AudioShareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9160CA2C35B1FC7E053595A /* AudioShareModel.swift */; };
+		15A4F1D86B41A4B975D9AF6C /* AITranslateKeyboardWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0095B73241D3D5B02752A575 /* AITranslateKeyboardWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		169227BC53021AA01ADF5AA0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8BAA075D548E9B01C95C50C /* Localizable.strings */; };
 		1DC1DBC0CAEBAE9F2B70EF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148544529EF65F107A323578 /* Assets.xcassets */; };
 		1DEA682BBE56B1845562AB01 /* RewriteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFA86C9FFE001D68E40C52 /* RewriteAction.swift */; };
+		1E5FE6656465A2D8B3237D84 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F598E2FEA6D89521EC3E7764 /* KeychainStore.swift */; };
 		1EAC49D537841C9691F0A349 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEF32F24C33E91B249EDA5FA /* Localizable.strings */; };
 		202E116BCA1E3E27CDC9CF74 /* ListenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4B2C4CA5670AC23646B5D /* ListenView.swift */; };
 		23089448A6F9AD92E2AF3CB0 /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61F6E03979C64CDDAE9BA4 /* ToolbarView.swift */; };
 		270F97CA50A1FCA1594588C3 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA005DFD19F76418AAC9C595 /* CredentialStore.swift */; };
 		289EEE85B0ABFF1D6EDC5860 /* VoiceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106247F43656D42D3CE5E2B9 /* VoiceLanguage.swift */; };
+		2A098ED50A6B55B5DEEDB867 /* OpenListenIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD83467D28C137D8C6CDAC /* OpenListenIntent.swift */; };
 		2D9E55FC7C0338BEA88B7D5B /* GeminiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B7BD74777B6745934F80 /* GeminiProvider.swift */; };
 		2E647C7B749163467EF08236 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A0A6080287F6361BB1F5ECF /* Localizable.strings */; };
 		2F95CA4AF0A448EEE5ACE8F1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E0FDBD9A5D9660BC529AB2 /* OnboardingView.swift */; };
@@ -38,13 +44,16 @@
 		4357DE8F6D2ACA5589DB18A9 /* OpenAITranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */; };
 		441B9E58278DE30C666D9F68 /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263B584837F8740AAFEEA9E /* AppGroupStorage.swift */; };
 		4535AD4D113B80DCD05BD7D1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68A1EC4B678837BDA940148F /* Localizable.strings */; };
+		49747FBFD9319BDC3CC3F71B /* ClaudeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC290A1B0B21A88A9D580A /* ClaudeProvider.swift */; };
 		4991DC13590E151A49038A29 /* LanguageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73687E6A686F7E004B2FB /* LanguageSelectionView.swift */; };
 		4FA5622D415098D47F08441C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900DF980202C946D6B599F01 /* Models.swift */; };
 		5120E1CDCB52DD16286722BF /* AIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4429600700EA0481935F48E /* AIProvider.swift */; };
+		5569D952140CE5CCC75CD81C /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263B584837F8740AAFEEA9E /* AppGroupStorage.swift */; };
 		5570B43FC0C52443FDAA01B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E31E87EA0880A20B700CA5DE /* Localizable.strings */; };
 		56BB5C048E46AC6826D7498D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA41021236A7FA81E1811D89 /* Localizable.strings */; };
 		58108E65F810C6940C3145AC /* ApiKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714A644D549C6B896808DDD /* ApiKeyView.swift */; };
 		58E2CB913ACE9CBBAEA8FF42 /* OpenAITranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */; };
+		5F45BC5E22FA70C28D092CC0 /* GeminiAudioTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33D60467799B0A208D4655 /* GeminiAudioTranslator.swift */; };
 		5FAC1F9297102364A2E16358 /* RewriteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFA86C9FFE001D68E40C52 /* RewriteAction.swift */; };
 		628EBD817D6441F22B96C431 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79400FF888540EC3B4BAA3B0 /* Configuration.swift */; };
 		6304AA886DE39B0118FCC9A9 /* OpenAIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */; };
@@ -53,18 +62,24 @@
 		6F2C176E9A5915A2D25C2396 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE6423DE8A9E04BBEE78E81 /* ShareViewController.swift */; };
 		6F7F26A2AAC47DC8A718C469 /* VoiceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106247F43656D42D3CE5E2B9 /* VoiceLanguage.swift */; };
 		70F81A1FCCBA61A9C7E91889 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900DF980202C946D6B599F01 /* Models.swift */; };
+		74A1462BF42288C3F2AB010D /* AIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4429600700EA0481935F48E /* AIProvider.swift */; };
 		7541A178C9BCA1E0FEDEB007 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB087C899BA56C116E84E233 /* Localizable.strings */; };
+		762EA1BCBC9E2C1E92979245 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA005DFD19F76418AAC9C595 /* CredentialStore.swift */; };
+		76532D56B412EF5EF9B02F0E /* OpenRouterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEA0022FE2B4338974E591 /* OpenRouterProvider.swift */; };
 		7A291A26FBA7498BF2C10BA3 /* AITranslateKeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472966A37A5845747FD71D90 /* AITranslateKeyboardApp.swift */; };
 		7C7B776065E04C9DC20818A9 /* OpenAIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */; };
 		8233188AFB4C40203C67D193 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3C7AB1D21F62C5AE8F10113 /* Localizable.strings */; };
 		8251ECEEEEAE354200488433 /* AITranslateKeyboardShare.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A32263EF88BCA30284D392CB /* AITranslateKeyboardShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		88BB88E905C0528DA39671B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4499155DA7481A15BC1517A6 /* Localizable.strings */; };
 		9024FDF5F51462DDE881B7DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A75B0380350902E079D77E49 /* Localizable.strings */; };
+		9053DDD23F15CFA7E9CF4315 /* OpenAITranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */; };
 		920FCE902AC6AE00FE6BE741 /* GeminiAudioTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33D60467799B0A208D4655 /* GeminiAudioTranslator.swift */; };
 		96A128C7DBAD1B9542A45546 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5448DCCB377FFFA4E5DB8D85 /* Localizable.strings */; };
 		9711C73C33FAE736AB986301 /* ClaudeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC290A1B0B21A88A9D580A /* ClaudeProvider.swift */; };
 		A33C2AAF6A521CFA53F6251C /* GeminiAudioTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33D60467799B0A208D4655 /* GeminiAudioTranslator.swift */; };
 		A3E4CC5B9121513789FDA7F1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3ECB221273276FF80B56D6D3 /* Localizable.strings */; };
+		AB526FBEAAD342153548F9A3 /* KeyglotWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829946E1E962DEE87D91EC63 /* KeyglotWidgetBundle.swift */; };
+		B195CC1280B48784F6985F99 /* OpenListenIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD83467D28C137D8C6CDAC /* OpenListenIntent.swift */; };
 		B23183E16F2228F47354D991 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900DF980202C946D6B599F01 /* Models.swift */; };
 		B282B84F8B9F2C90807B2118 /* ClaudeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC290A1B0B21A88A9D580A /* ClaudeProvider.swift */; };
 		B92C851F4C62CB2C2C5BD6A9 /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263B584837F8740AAFEEA9E /* AppGroupStorage.swift */; };
@@ -75,6 +90,8 @@
 		C16D643BE861994AE3E84940 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA005DFD19F76418AAC9C595 /* CredentialStore.swift */; };
 		C462E369B3DCA31B241817B4 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79400FF888540EC3B4BAA3B0 /* Configuration.swift */; };
 		C5BF793A1FBDCDCBECD7CBAB /* OpenAIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */; };
+		C614D4DCBE100F15798CF66B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79400FF888540EC3B4BAA3B0 /* Configuration.swift */; };
+		C9258BF0C957557FEF43A100 /* OpenListenIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD83467D28C137D8C6CDAC /* OpenListenIntent.swift */; };
 		CB7E2C88ABC81637F2B6D976 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2FF0EA91D0779EA3A9EB502 /* Localizable.strings */; };
 		CCC0761882CD8441CDBA226A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C70C7DFFE8583E8204555D15 /* Localizable.strings */; };
 		CCF9FD913FE41F4F25D1BBAE /* ClaudeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC290A1B0B21A88A9D580A /* ClaudeProvider.swift */; };
@@ -83,9 +100,12 @@
 		D979851787264ED117CF51BC /* OpenAITranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */; };
 		DA6C55D65BC4637116A68228 /* GeminiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B7BD74777B6745934F80 /* GeminiProvider.swift */; };
 		DF6F12EA20F4A15D655BD00E /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9018947EBABFDAD65F8865D /* AboutView.swift */; };
+		E03AEC3E65029C2CB2F9BFDE /* KeyglotListenWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C556B0E9EF0FD86DE836E7 /* KeyglotListenWidget.swift */; };
+		E1D8545FEDCE175F9403A194 /* OpenListenIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD83467D28C137D8C6CDAC /* OpenListenIntent.swift */; };
 		E2A19A36999CDB9DBC96C2D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE4D4525C5D3DABF8C5966E5 /* Localizable.strings */; };
 		E8DB86A93B1F5B8C43E99790 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B1F6C3139BC3016BC633C32 /* Localizable.strings */; };
 		E900DB1FF5574CE9892752F0 /* RewriteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFA86C9FFE001D68E40C52 /* RewriteAction.swift */; };
+		EEA21F58A9A60591D370429E /* GeminiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B7BD74777B6745934F80 /* GeminiProvider.swift */; };
 		F174E346979EA4E9C1581690 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 448D369B0CD394B4D0D2E710 /* PrivacyInfo.xcprivacy */; };
 		F226444E0E7EAD7520E1739D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68779465572FA00D02D77CFA /* SettingsView.swift */; };
 		F571AA6C3102D1C5DAF782F0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C5C936B7D51CBD497C36AFF /* Localizable.strings */; };
@@ -93,6 +113,7 @@
 		F79CEC7EF03C2BD24208453D /* KeyboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0DABECCD383B4928A1D956 /* KeyboardState.swift */; };
 		F897E9DD17E319930BF2E82D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF425314E51927E53F4B7B5F /* Localizable.strings */; };
 		F9AB11F18EEA73D1563495C9 /* GeminiAudioTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33D60467799B0A208D4655 /* GeminiAudioTranslator.swift */; };
+		FB92A4784B52B825CA15D220 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900DF980202C946D6B599F01 /* Models.swift */; };
 		FCAF1D188398C244061F9D30 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A021352BEA614D1A2DE2DEDB /* Localizable.strings */; };
 		FD2B8B74E7015E8316054DB0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44C287346EC30F500716A10D /* Localizable.strings */; };
 		FDED827BFD57B8BCC35CBC0E /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F598E2FEA6D89521EC3E7764 /* KeychainStore.swift */; };
@@ -100,6 +121,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		135CDD8FFE034AC5153FD94F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42E33800579CD327E90FE28D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DDE29356F96E574DFCCFB81;
+			remoteInfo = AITranslateKeyboardWidget;
+		};
 		36333027A09164FE4AC56274 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 42E33800579CD327E90FE28D /* Project object */;
@@ -125,6 +153,7 @@
 			files = (
 				D3AC994AE2AED5AF0E5D4E36 /* AITranslateKeyboardExtension.appex in Embed Foundation Extensions */,
 				8251ECEEEEAE354200488433 /* AITranslateKeyboardShare.appex in Embed Foundation Extensions */,
+				15A4F1D86B41A4B975D9AF6C /* AITranslateKeyboardWidget.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,9 +161,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0095B73241D3D5B02752A575 /* AITranslateKeyboardWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = AITranslateKeyboardWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AC4B784E4E8FFCF44D1CC8 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		01DFA86C9FFE001D68E40C52 /* RewriteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewriteAction.swift; sourceTree = "<group>"; };
 		01EC290A1B0B21A88A9D580A /* ClaudeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeProvider.swift; sourceTree = "<group>"; };
+		01FD83467D28C137D8C6CDAC /* OpenListenIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenListenIntent.swift; sourceTree = "<group>"; };
 		0729D34B482498EE6CBBC894 /* ListenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenViewModel.swift; sourceTree = "<group>"; };
 		0AF4B2C4CA5670AC23646B5D /* ListenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenView.swift; sourceTree = "<group>"; };
 		106247F43656D42D3CE5E2B9 /* VoiceLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceLanguage.swift; sourceTree = "<group>"; };
@@ -144,6 +175,7 @@
 		1B3BDBDC2714DE93A91CF631 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAITranscriptionService.swift; sourceTree = "<group>"; };
 		2C5C936B7D51CBD497C36AFF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2FBA9813688578722924E4FD /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
 		3A0DABECCD383B4928A1D956 /* KeyboardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardState.swift; sourceTree = "<group>"; };
 		3ECB221273276FF80B56D6D3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		448D369B0CD394B4D0D2E710 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -160,9 +192,11 @@
 		6A7AA9E5AA7060D4C2A2FF1C /* AITranslateKeyboard.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AITranslateKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C79E21E1819E3AA9E4E0EE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		72ABD87571F13FEB3A75A800 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		74C556B0E9EF0FD86DE836E7 /* KeyglotListenWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyglotListenWidget.swift; sourceTree = "<group>"; };
 		79400FF888540EC3B4BAA3B0 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		7A33D60467799B0A208D4655 /* GeminiAudioTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiAudioTranslator.swift; sourceTree = "<group>"; };
 		7CD73687E6A686F7E004B2FB /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionView.swift; sourceTree = "<group>"; };
+		829946E1E962DEE87D91EC63 /* KeyglotWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyglotWidgetBundle.swift; sourceTree = "<group>"; };
 		8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIProvider.swift; sourceTree = "<group>"; };
 		900DF980202C946D6B599F01 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		9A0A6080287F6361BB1F5ECF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -197,6 +231,7 @@
 		EB087C899BA56C116E84E233 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ED94C6151650248393EB1C9B /* KeyboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardExtension.entitlements; sourceTree = "<group>"; };
 		EF309E8F2FD223F7A0902EA9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F2B3368F0EE820F74CD141AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F598E2FEA6D89521EC3E7764 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		FFB7D1E4A2A62771E7E871BF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FFE6423DE8A9E04BBEE78E81 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +244,7 @@
 				6A7AA9E5AA7060D4C2A2FF1C /* AITranslateKeyboard.app */,
 				CB3A17DBE7EEE22E2F91B123 /* AITranslateKeyboardExtension.appex */,
 				A32263EF88BCA30284D392CB /* AITranslateKeyboardShare.appex */,
+				0095B73241D3D5B02752A575 /* AITranslateKeyboardWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,6 +256,7 @@
 				E8F07E6BBA93F05CBEB62D56 /* KeyboardExtension */,
 				C8E188A13622625BCB4DB909 /* Shared */,
 				F68496D7AF46F8977B671C98 /* ShareExtension */,
+				90A5968B46AE044246769C79 /* Widget */,
 				0CC2D32AB136319E2DCFF031 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -251,6 +288,17 @@
 			path = AITranslateKeyboard;
 			sourceTree = "<group>";
 		};
+		90A5968B46AE044246769C79 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				F2B3368F0EE820F74CD141AF /* Info.plist */,
+				74C556B0E9EF0FD86DE836E7 /* KeyglotListenWidget.swift */,
+				829946E1E962DEE87D91EC63 /* KeyglotWidgetBundle.swift */,
+				2FBA9813688578722924E4FD /* Widget.entitlements */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		C8E188A13622625BCB4DB909 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +313,7 @@
 				900DF980202C946D6B599F01 /* Models.swift */,
 				8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */,
 				2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */,
+				01FD83467D28C137D8C6CDAC /* OpenListenIntent.swift */,
 				ACBEA0022FE2B4338974E591 /* OpenRouterProvider.swift */,
 				01DFA86C9FFE001D68E40C52 /* RewriteAction.swift */,
 				106247F43656D42D3CE5E2B9 /* VoiceLanguage.swift */,
@@ -333,6 +382,7 @@
 			dependencies = (
 				40006DF7F575592DE268FBF0 /* PBXTargetDependency */,
 				5DBEDB58F515A4BA2789B813 /* PBXTargetDependency */,
+				3E4FFF837AFCB4FBFA25344F /* PBXTargetDependency */,
 			);
 			name = AITranslateKeyboard;
 			packageProductDependencies = (
@@ -340,6 +390,23 @@
 			productName = AITranslateKeyboard;
 			productReference = 6A7AA9E5AA7060D4C2A2FF1C /* AITranslateKeyboard.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4DDE29356F96E574DFCCFB81 /* AITranslateKeyboardWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 897AA885088FEA76E1E2CAA6 /* Build configuration list for PBXNativeTarget "AITranslateKeyboardWidget" */;
+			buildPhases = (
+				E797FCB4FA306DA2E6EABEE8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AITranslateKeyboardWidget;
+			packageProductDependencies = (
+			);
+			productName = AITranslateKeyboardWidget;
+			productReference = 0095B73241D3D5B02752A575 /* AITranslateKeyboardWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		5ADFAB6208FC96CE8D817553 /* AITranslateKeyboardExtension */ = {
 			isa = PBXNativeTarget;
@@ -390,6 +457,10 @@
 						DevelopmentTeam = WF6Z643R96;
 						ProvisioningStyle = Automatic;
 					};
+					4DDE29356F96E574DFCCFB81 = {
+						DevelopmentTeam = WF6Z643R96;
+						ProvisioningStyle = Automatic;
+					};
 					5ADFAB6208FC96CE8D817553 = {
 						DevelopmentTeam = WF6Z643R96;
 						ProvisioningStyle = Automatic;
@@ -426,6 +497,7 @@
 				4D726258F7CB5C84DFE27469 /* AITranslateKeyboard */,
 				5ADFAB6208FC96CE8D817553 /* AITranslateKeyboardExtension */,
 				716DB6F787270250E9695C44 /* AITranslateKeyboardShare */,
+				4DDE29356F96E574DFCCFB81 /* AITranslateKeyboardWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -503,6 +575,7 @@
 				70F81A1FCCBA61A9C7E91889 /* Models.swift in Sources */,
 				C5BF793A1FBDCDCBECD7CBAB /* OpenAIProvider.swift in Sources */,
 				D979851787264ED117CF51BC /* OpenAITranscriptionService.swift in Sources */,
+				2A098ED50A6B55B5DEEDB867 /* OpenListenIntent.swift in Sources */,
 				C006C18F8F45181EE4B271E5 /* OpenRouterProvider.swift in Sources */,
 				5FAC1F9297102364A2E16358 /* RewriteAction.swift in Sources */,
 				23089448A6F9AD92E2AF3CB0 /* ToolbarView.swift in Sources */,
@@ -528,6 +601,7 @@
 				4FA5622D415098D47F08441C /* Models.swift in Sources */,
 				6304AA886DE39B0118FCC9A9 /* OpenAIProvider.swift in Sources */,
 				4357DE8F6D2ACA5589DB18A9 /* OpenAITranscriptionService.swift in Sources */,
+				E1D8545FEDCE175F9403A194 /* OpenListenIntent.swift in Sources */,
 				338AE36CC975966E36D8604F /* OpenRouterProvider.swift in Sources */,
 				1DEA682BBE56B1845562AB01 /* RewriteAction.swift in Sources */,
 				6F2C176E9A5915A2D25C2396 /* ShareViewController.swift in Sources */,
@@ -557,6 +631,7 @@
 				2F95CA4AF0A448EEE5ACE8F1 /* OnboardingView.swift in Sources */,
 				7C7B776065E04C9DC20818A9 /* OpenAIProvider.swift in Sources */,
 				58E2CB913ACE9CBBAEA8FF42 /* OpenAITranscriptionService.swift in Sources */,
+				B195CC1280B48784F6985F99 /* OpenListenIntent.swift in Sources */,
 				0149A5192E25431E6907671C /* OpenRouterProvider.swift in Sources */,
 				E900DB1FF5574CE9892752F0 /* RewriteAction.swift in Sources */,
 				F226444E0E7EAD7520E1739D /* SettingsView.swift in Sources */,
@@ -564,9 +639,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E797FCB4FA306DA2E6EABEE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A1462BF42288C3F2AB010D /* AIProvider.swift in Sources */,
+				5569D952140CE5CCC75CD81C /* AppGroupStorage.swift in Sources */,
+				49747FBFD9319BDC3CC3F71B /* ClaudeProvider.swift in Sources */,
+				C614D4DCBE100F15798CF66B /* Configuration.swift in Sources */,
+				762EA1BCBC9E2C1E92979245 /* CredentialStore.swift in Sources */,
+				5F45BC5E22FA70C28D092CC0 /* GeminiAudioTranslator.swift in Sources */,
+				EEA21F58A9A60591D370429E /* GeminiProvider.swift in Sources */,
+				1E5FE6656465A2D8B3237D84 /* KeychainStore.swift in Sources */,
+				E03AEC3E65029C2CB2F9BFDE /* KeyglotListenWidget.swift in Sources */,
+				AB526FBEAAD342153548F9A3 /* KeyglotWidgetBundle.swift in Sources */,
+				FB92A4784B52B825CA15D220 /* Models.swift in Sources */,
+				13FAC8293C81C1ED475D4DC0 /* OpenAIProvider.swift in Sources */,
+				9053DDD23F15CFA7E9CF4315 /* OpenAITranscriptionService.swift in Sources */,
+				C9258BF0C957557FEF43A100 /* OpenListenIntent.swift in Sources */,
+				76532D56B412EF5EF9B02F0E /* OpenRouterProvider.swift in Sources */,
+				118E6C8613ACE6F117871555 /* RewriteAction.swift in Sources */,
+				0008072EC27DE4C117302A69 /* VoiceLanguage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3E4FFF837AFCB4FBFA25344F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DDE29356F96E574DFCCFB81 /* AITranslateKeyboardWidget */;
+			targetProxy = 135CDD8FFE034AC5153FD94F /* PBXContainerItemProxy */;
+		};
 		40006DF7F575592DE268FBF0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5ADFAB6208FC96CE8D817553 /* AITranslateKeyboardExtension */;
@@ -768,6 +872,23 @@
 			};
 			name = Debug;
 		};
+		826533842722CD9FDC088541 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = it.izzonline.keyglot.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		89C1075D92F68EF8D213F192 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -810,6 +931,23 @@
 			};
 			name = Release;
 		};
+		ACBFA1BA170573291360EC6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = it.izzonline.keyglot.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		DD613A6CEF328C59F1DF8ADC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -835,6 +973,15 @@
 			buildConfigurations = (
 				447871F9E45A18207D3B0596 /* Debug */,
 				DD613A6CEF328C59F1DF8ADC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		897AA885088FEA76E1E2CAA6 /* Build configuration list for PBXNativeTarget "AITranslateKeyboardWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				826533842722CD9FDC088541 /* Debug */,
+				ACBFA1BA170573291360EC6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

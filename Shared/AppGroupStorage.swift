@@ -19,6 +19,7 @@ struct AppGroupStorage: @unchecked Sendable { // `UserDefaults` is documented th
         static let selectedProvider = "selected_provider"
         static let selectedLanguages = "selected_language_ids"
         static let audioLanguageID = "audio_language_id"
+        static let pendingListen = "pending_listen"
     }
 
     /// The AI provider the keyboard uses. Defaults to `Configuration.defaultProvider` (Claude).
@@ -54,5 +55,11 @@ struct AppGroupStorage: @unchecked Sendable { // `UserDefaults` is documented th
     var audioLanguageID: String {
         get { defaults.string(forKey: Keys.audioLanguageID) ?? "auto" }
         nonmutating set { defaults.set(newValue, forKey: Keys.audioLanguageID) }
+    }
+
+    /// Set by the widget's App Intent to ask the app to jump into "Listen & translate" on launch.
+    var pendingListen: Bool {
+        get { defaults.bool(forKey: Keys.pendingListen) }
+        nonmutating set { defaults.set(newValue, forKey: Keys.pendingListen) }
     }
 }
