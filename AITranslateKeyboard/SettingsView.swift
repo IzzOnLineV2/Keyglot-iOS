@@ -11,6 +11,16 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Section {
+                    NavigationLink {
+                        ListenView()
+                    } label: {
+                        Label("Listen & translate", systemImage: "mic.fill")
+                    }
+                } footer: {
+                    Text("Press, speak, and Keyglot translates what it hears into your language.")
+                }
+
+                Section {
                     Picker("Provider", selection: $selectedProvider) {
                         ForEach(AIProviderType.allCases) { provider in
                             Text(provider.displayName).tag(provider)

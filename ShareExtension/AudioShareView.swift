@@ -27,13 +27,13 @@ struct AudioShareView: View {
     }
 
     private var currentLanguageName: String {
-        AudioShareModel.audioLanguages.first { $0.id == model.selectedID }?.name
-            ?? AudioShareModel.audioLanguages[0].name
+        VoiceLanguage.options.first { $0.id == model.selectedID }?.name
+            ?? VoiceLanguage.options[0].name
     }
 
     private var languagePicker: some View {
         Menu {
-            ForEach(AudioShareModel.audioLanguages) { lang in
+            ForEach(VoiceLanguage.options) { lang in
                 Button {
                     model.setLanguage(lang.id)
                 } label: {
