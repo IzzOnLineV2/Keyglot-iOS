@@ -80,6 +80,7 @@
 		514A403B377D67363321F3BA /* KGSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128F80C6829F27C22E1B5DF0 /* KGSettings.swift */; };
 		5569D952140CE5CCC75CD81C /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263B584837F8740AAFEEA9E /* AppGroupStorage.swift */; };
 		5570B43FC0C52443FDAA01B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E31E87EA0880A20B700CA5DE /* Localizable.strings */; };
+		55D46725741B2E063A5C921C /* AppAttestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF20ECB22E6621E13384962 /* AppAttestClient.swift */; };
 		56BB5C048E46AC6826D7498D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA41021236A7FA81E1811D89 /* Localizable.strings */; };
 		570D12F2D0053039EDFC6243 /* ScriptText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B761F7007420924A6EF08F1 /* ScriptText.swift */; };
 		58108E65F810C6940C3145AC /* ApiKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714A644D549C6B896808DDD /* ApiKeyView.swift */; };
@@ -140,6 +141,7 @@
 		B92C851F4C62CB2C2C5BD6A9 /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263B584837F8740AAFEEA9E /* AppGroupStorage.swift */; };
 		BA04F85BA87D99CF81D869FE /* InstrumentSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B34AFC284B9868045BB196F /* InstrumentSerif-Regular.ttf */; };
 		BA921EA2D14FACA662BFA508 /* LanguageChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF259BFFC55A686F82F29B2 /* LanguageChip.swift */; };
+		BAB4B0A3E19B7883D8FC7A98 /* AppAttestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF20ECB22E6621E13384962 /* AppAttestClient.swift */; };
 		BC97377B4A4685BF090168EA /* SeamDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AE78B070659901E5508CB1 /* SeamDivider.swift */; };
 		BEB817753944AD1987AA1943 /* AIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4429600700EA0481935F48E /* AIProvider.swift */; };
 		BF18455A39A07E0EEA0E506E /* KGSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128F80C6829F27C22E1B5DF0 /* KGSettings.swift */; };
@@ -159,11 +161,13 @@
 		C9258BF0C957557FEF43A100 /* OpenListenIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD83467D28C137D8C6CDAC /* OpenListenIntent.swift */; };
 		CB7E2C88ABC81637F2B6D976 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2FF0EA91D0779EA3A9EB502 /* Localizable.strings */; };
 		CB9F334AEF306B49D2257797 /* LanguageChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF259BFFC55A686F82F29B2 /* LanguageChip.swift */; };
+		CBFB0D385AA228B5184711ED /* AppAttestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF20ECB22E6621E13384962 /* AppAttestClient.swift */; };
 		CC1084AF88AA812E801F4E05 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B81CCAAFE87D4E4017C2F736 /* Localizable.strings */; };
 		CCC0761882CD8441CDBA226A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C70C7DFFE8583E8204555D15 /* Localizable.strings */; };
 		CCF9FD913FE41F4F25D1BBAE /* ClaudeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC290A1B0B21A88A9D580A /* ClaudeProvider.swift */; };
 		CE2643412E78EAFDFDBAD61B /* AIMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB99DA7772F4D55846AE75 /* AIMode.swift */; };
 		D0AF9A59D9E316F4527F3AF9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5710321427126FBF656EF4C1 /* Localizable.strings */; };
+		D2B1205F59224E233A21FBCA /* AppAttestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF20ECB22E6621E13384962 /* AppAttestClient.swift */; };
 		D3260D6D511E20FC8FAB35DB /* MicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA0A8FF86F43AB2252963A8 /* MicButton.swift */; };
 		D370749B18C1D1C009A14CA9 /* KeyGlotProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B605C3B1AD0EA128D557CE /* KeyGlotProvider.swift */; };
 		D3AC994AE2AED5AF0E5D4E36 /* AITranslateKeyboardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CB3A17DBE7EEE22E2F91B123 /* AITranslateKeyboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -262,6 +266,7 @@
 		0729D34B482498EE6CBBC894 /* ListenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenViewModel.swift; sourceTree = "<group>"; };
 		0AF4B2C4CA5670AC23646B5D /* ListenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenView.swift; sourceTree = "<group>"; };
 		0B73E045D3EBFCEA1ED6CB0C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0BF20ECB22E6621E13384962 /* AppAttestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAttestClient.swift; sourceTree = "<group>"; };
 		106247F43656D42D3CE5E2B9 /* VoiceLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceLanguage.swift; sourceTree = "<group>"; };
 		128F80C6829F27C22E1B5DF0 /* KGSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGSettings.swift; sourceTree = "<group>"; };
 		148544529EF65F107A323578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -479,6 +484,7 @@
 			children = (
 				39BB99DA7772F4D55846AE75 /* AIMode.swift */,
 				E4429600700EA0481935F48E /* AIProvider.swift */,
+				0BF20ECB22E6621E13384962 /* AppAttestClient.swift */,
 				C263B584837F8740AAFEEA9E /* AppGroupStorage.swift */,
 				7D63CB51C0881F2B60209D4D /* AudioTranslating.swift */,
 				01EC290A1B0B21A88A9D580A /* ClaudeProvider.swift */,
@@ -776,6 +782,7 @@
 			files = (
 				211B2BD40C8C532FB96A70A1 /* AIMode.swift in Sources */,
 				39399668F8D2A68E2C90D021 /* AIProvider.swift in Sources */,
+				CBFB0D385AA228B5184711ED /* AppAttestClient.swift in Sources */,
 				B92C851F4C62CB2C2C5BD6A9 /* AppGroupStorage.swift in Sources */,
 				592D7A24F3C258B9DB14B9B2 /* AudioTranslating.swift in Sources */,
 				B282B84F8B9F2C90807B2118 /* ClaudeProvider.swift in Sources */,
@@ -818,6 +825,7 @@
 			files = (
 				CE2643412E78EAFDFDBAD61B /* AIMode.swift in Sources */,
 				BEB817753944AD1987AA1943 /* AIProvider.swift in Sources */,
+				D2B1205F59224E233A21FBCA /* AppAttestClient.swift in Sources */,
 				3481BB73DFF56737B108A4EB /* AppGroupStorage.swift in Sources */,
 				1573702B69B68219F688FEF5 /* AudioShareModel.swift in Sources */,
 				3C24C2A52A5850DF28C16421 /* AudioShareView.swift in Sources */,
@@ -864,6 +872,7 @@
 				7A291A26FBA7498BF2C10BA3 /* AITranslateKeyboardApp.swift in Sources */,
 				DF6F12EA20F4A15D655BD00E /* AboutView.swift in Sources */,
 				58108E65F810C6940C3145AC /* ApiKeyView.swift in Sources */,
+				BAB4B0A3E19B7883D8FC7A98 /* AppAttestClient.swift in Sources */,
 				441B9E58278DE30C666D9F68 /* AppGroupStorage.swift in Sources */,
 				C77D23FE2BD4FC7FC4A646A5 /* AudioTranslating.swift in Sources */,
 				9711C73C33FAE736AB986301 /* ClaudeProvider.swift in Sources */,
@@ -911,6 +920,7 @@
 			files = (
 				227DBF2577EAFCAF6D139B68 /* AIMode.swift in Sources */,
 				74A1462BF42288C3F2AB010D /* AIProvider.swift in Sources */,
+				55D46725741B2E063A5C921C /* AppAttestClient.swift in Sources */,
 				5569D952140CE5CCC75CD81C /* AppGroupStorage.swift in Sources */,
 				95C7175EBFA125434C9667E7 /* AudioTranslating.swift in Sources */,
 				49747FBFD9319BDC3CC3F71B /* ClaudeProvider.swift in Sources */,
@@ -1018,7 +1028,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1079,7 +1089,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

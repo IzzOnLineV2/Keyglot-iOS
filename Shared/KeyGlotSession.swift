@@ -61,6 +61,15 @@ struct KeyGlotSession: Sendable {
         request.httpMethod = "POST"
         request.timeoutInterval = 30
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        // App Attest (Step 4): prove this is a genuine app instance. Best-effort, if attestation is
+        // unavailable we mint unattested and the backend decides whether to require it.
+        if let att = await AppAttestClient(baseURL: baseURL, credentials: credentials, http: http).assertion(binding: jws) {
+            request.setValue(att.keyID, forHTTPHeaderField: "x-attest-key-id")
+            request.setValue(att.assertionBase64, forHTTPHeaderField: "x-attest-assertion")
+            request.setValue(att.challenge, forHTTPHeaderField: "x-attest-challenge")
+        }
+
         request.httpBody = try JSONEncoder().encode(["jws": jws])
         return try await complete(request)
     }
