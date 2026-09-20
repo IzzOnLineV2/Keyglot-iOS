@@ -1,3 +1,6 @@
 /* ===== Keyglot listen widget ===== */
 "Listen" = "Ouvir";
 "Tap to listen and translate what you hear." = "Toque para ouvir e traduzir o que você ouve.";
+
+/* ===== Redesign additions ===== */
+"Listen & translate" = "Ouça e traduza";

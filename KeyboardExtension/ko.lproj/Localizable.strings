@@ -43,3 +43,8 @@
 "Close" = "닫기";
 "Copy a message first, then tap the clipboard button." = "먼저 메시지를 복사한 다음 클립보드 버튼을 누르세요.";
 "Translating…" = "번역 중…";
+
+/* ===== Redesign additions ===== */
+"Type your message, then pick a language." = "메시지를 입력한 뒤 언어를 선택하세요.";
+"Tap a language to replace your message." = "언어를 탭하면 메시지가 바뀝니다.";
+"Translate what they sent" = "받은 메시지 번역";

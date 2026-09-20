@@ -93,3 +93,23 @@
 "Continue for free" = "무료로 계속";
 "Restore purchases" = "구매 복원";
 "Terms & Privacy" = "약관 및 개인정보";
+
+/* ===== Redesign additions ===== */
+"AI Mode" = "AI 모드";
+"AI included. No setup required." = "AI 포함. 설정이 필요 없습니다.";
+"Use your own AI provider and API key. Requests go straight to the provider you choose." = "직접 고른 AI 제공자와 API 키를 사용합니다. 요청은 선택한 제공자로 바로 전송됩니다.";
+"KeyGlot Pro is active" = "KeyGlot Pro가 활성화됨";
+"Loading plans…" = "요금제 불러오는 중…";
+"Your keyboard" = "키보드";
+"About Keyglot" = "Keyglot 정보";
+"You're on KeyGlot — AI is included, no API key needed." = "KeyGlot 사용 중 — AI가 포함되어 API 키가 필요 없습니다.";
+"iOS Settings → General → Keyboard → Keyboards → add “Keyglot”." = "iOS 설정 → 일반 → 키보드 → 키보드 → “Keyglot” 추가.";
+"Tap “Keyglot” and turn on Allow Full Access (needed for network)." = "“Keyglot”을 탭하고 전체 접근 허용을 켜세요 (네트워크에 필요).";
+"In any chat, tap 🌐 to switch to Keyglot, then tap a language." = "채팅에서 🌐 을 탭해 Keyglot으로 전환한 뒤 언어를 탭하세요.";
+"Understand every message. Answer in your words." = "모든 메시지를 이해하고, 당신의 말로 답하세요.";
+"Add your API key" = "API 키 추가";
+"Stored in the iOS Keychain on this device — shared only with the keyboard." = "이 기기의 iOS 키체인에 저장되며 키보드하고만 공유됩니다.";
+"Press to listen" = "눌러서 듣기";
+"It stops on its own when the room goes quiet." = "주변이 조용해지면 자동으로 멈춥니다.";
+"Stop now" = "지금 멈추기";
+"Working out what that was…" = "무슨 말인지 파악 중…";

@@ -93,3 +93,23 @@
 "Continue for free" = "無料で続ける";
 "Restore purchases" = "購入を復元";
 "Terms & Privacy" = "利用規約とプライバシー";
+
+/* ===== Redesign additions ===== */
+"AI Mode" = "AI モード";
+"AI included. No setup required." = "AI 込み。設定は不要です。";
+"Use your own AI provider and API key. Requests go straight to the provider you choose." = "自分の AI プロバイダーと API キーを使います。リクエストは選んだプロバイダーへ直接送られます。";
+"KeyGlot Pro is active" = "KeyGlot Pro は有効です";
+"Loading plans…" = "プランを読み込み中…";
+"Your keyboard" = "キーボード";
+"About Keyglot" = "Keyglot について";
+"You're on KeyGlot — AI is included, no API key needed." = "KeyGlot 使用中 — AI 込みで API キーは不要です。";
+"iOS Settings → General → Keyboard → Keyboards → add “Keyglot”." = "iOS 設定 → 一般 → キーボード → キーボード → 「Keyglot」を追加。";
+"Tap “Keyglot” and turn on Allow Full Access (needed for network)." = "「Keyglot」をタップし、フルアクセスを許可 をオンに（ネットワークに必要）。";
+"In any chat, tap 🌐 to switch to Keyglot, then tap a language." = "チャットで 🌐 をタップして Keyglot に切り替え、言語をタップします。";
+"Understand every message. Answer in your words." = "どのメッセージも理解。自分の言葉で返信。";
+"Add your API key" = "API キーを追加";
+"Stored in the iOS Keychain on this device — shared only with the keyboard." = "この端末の iOS キーチェーンに保存され、キーボードとのみ共有されます。";
+"Press to listen" = "押して聞き取り";
+"It stops on its own when the room goes quiet." = "静かになると自動で停止します。";
+"Stop now" = "停止";
+"Working out what that was…" = "内容を解析中…";

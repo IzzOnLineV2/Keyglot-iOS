@@ -93,3 +93,23 @@
 "Continue for free" = "免费继续";
 "Restore purchases" = "恢复购买";
 "Terms & Privacy" = "条款与隐私";
+
+/* ===== Redesign additions ===== */
+"AI Mode" = "AI 模式";
+"AI included. No setup required." = "已含 AI，无需设置。";
+"Use your own AI provider and API key. Requests go straight to the provider you choose." = "使用你自己的 AI 提供商和 API 密钥。请求会直接发送到你选择的提供商。";
+"KeyGlot Pro is active" = "KeyGlot Pro 已启用";
+"Loading plans…" = "正在加载套餐…";
+"Your keyboard" = "你的键盘";
+"About Keyglot" = "关于 Keyglot";
+"You're on KeyGlot — AI is included, no API key needed." = "你正在使用 KeyGlot — 已含 AI，无需 API 密钥。";
+"iOS Settings → General → Keyboard → Keyboards → add “Keyglot”." = "iOS 设置 → 通用 → 键盘 → 键盘 → 添加“Keyglot”。";
+"Tap “Keyglot” and turn on Allow Full Access (needed for network)." = "点按“Keyglot”并打开允许完全访问（联网所需）。";
+"In any chat, tap 🌐 to switch to Keyglot, then tap a language." = "在任意聊天中点按 🌐 切换到 Keyglot，然后点按一种语言。";
+"Understand every message. Answer in your words." = "读懂每条消息，用自己的话回复。";
+"Add your API key" = "添加你的 API 密钥";
+"Stored in the iOS Keychain on this device — shared only with the keyboard." = "保存在本设备的 iOS 钥匙串中，仅与键盘共享。";
+"Press to listen" = "按下开始聆听";
+"It stops on its own when the room goes quiet." = "安静下来时会自动停止。";
+"Stop now" = "立即停止";
+"Working out what that was…" = "正在识别内容…";

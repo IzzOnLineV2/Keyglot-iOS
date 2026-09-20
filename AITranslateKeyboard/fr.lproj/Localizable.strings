@@ -93,3 +93,23 @@
 "Continue for free" = "Continuer gratuitement";
 "Restore purchases" = "Restaurer les achats";
 "Terms & Privacy" = "Conditions et confidentialité";
+
+/* ===== Redesign additions ===== */
+"AI Mode" = "Mode IA";
+"AI included. No setup required." = "IA incluse. Aucune configuration.";
+"Use your own AI provider and API key. Requests go straight to the provider you choose." = "Utilise ton propre fournisseur d'IA et ta clé API. Les requêtes vont directement au fournisseur choisi.";
+"KeyGlot Pro is active" = "KeyGlot Pro est actif";
+"Loading plans…" = "Chargement des offres…";
+"Your keyboard" = "Ton clavier";
+"About Keyglot" = "À propos de Keyglot";
+"You're on KeyGlot — AI is included, no API key needed." = "Tu es sur KeyGlot — l'IA est incluse, aucune clé API requise.";
+"iOS Settings → General → Keyboard → Keyboards → add “Keyglot”." = "Réglages iOS → Général → Clavier → Claviers → ajoute « Keyglot ».";
+"Tap “Keyglot” and turn on Allow Full Access (needed for network)." = "Touche « Keyglot » et active Autoriser l'accès complet (nécessaire pour le réseau).";
+"In any chat, tap 🌐 to switch to Keyglot, then tap a language." = "Dans une discussion, touche 🌐 pour passer à Keyglot, puis touche une langue.";
+"Understand every message. Answer in your words." = "Comprends chaque message. Réponds avec tes mots.";
+"Add your API key" = "Ajoute ta clé API";
+"Stored in the iOS Keychain on this device — shared only with the keyboard." = "Stockée dans le trousseau iOS de cet appareil — partagée uniquement avec le clavier.";
+"Press to listen" = "Appuie pour écouter";
+"It stops on its own when the room goes quiet." = "Il s'arrête tout seul quand le silence revient.";
+"Stop now" = "Arrêter";
+"Working out what that was…" = "Analyse en cours…";

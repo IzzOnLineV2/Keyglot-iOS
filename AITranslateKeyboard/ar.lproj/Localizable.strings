@@ -93,3 +93,23 @@
 "Continue for free" = "تابع مجانًا";
 "Restore purchases" = "استعادة المشتريات";
 "Terms & Privacy" = "الشروط والخصوصية";
+
+/* ===== Redesign additions ===== */
+"AI Mode" = "وضع الذكاء الاصطناعي";
+"AI included. No setup required." = "الذكاء الاصطناعي مضمّن. لا حاجة لأي إعداد.";
+"Use your own AI provider and API key. Requests go straight to the provider you choose." = "استخدم مزوّد الذكاء الاصطناعي ومفتاح API الخاص بك. تُرسَل الطلبات مباشرةً إلى المزوّد الذي تختاره.";
+"KeyGlot Pro is active" = "KeyGlot Pro مُفعّل";
+"Loading plans…" = "جارٍ تحميل الباقات…";
+"Your keyboard" = "لوحة مفاتيحك";
+"About Keyglot" = "حول Keyglot";
+"You're on KeyGlot — AI is included, no API key needed." = "أنت على KeyGlot — الذكاء الاصطناعي مضمّن، ولا حاجة لمفتاح API.";
+"iOS Settings → General → Keyboard → Keyboards → add “Keyglot”." = "إعدادات iOS ← عام ← لوحة المفاتيح ← لوحات المفاتيح ← أضف ”Keyglot“.";
+"Tap “Keyglot” and turn on Allow Full Access (needed for network)." = "اضغط على ”Keyglot“ وفعّل السماح بالوصول الكامل (لازم للشبكة).";
+"In any chat, tap 🌐 to switch to Keyglot, then tap a language." = "في أي محادثة، اضغط 🌐 للتبديل إلى Keyglot، ثم اضغط على لغة.";
+"Understand every message. Answer in your words." = "افهم كل رسالة. وردّ بكلماتك.";
+"Add your API key" = "أضف مفتاح API الخاص بك";
+"Stored in the iOS Keychain on this device — shared only with the keyboard." = "تُحفَظ في سلسلة مفاتيح iOS على هذا الجهاز — وتُشارَك مع لوحة المفاتيح فقط.";
+"Press to listen" = "اضغط للاستماع";
+"It stops on its own when the room goes quiet." = "يتوقّف تلقائيًا عندما يسود الهدوء.";
+"Stop now" = "أوقف الآن";
+"Working out what that was…" = "جارٍ تحليل ما قيل…";

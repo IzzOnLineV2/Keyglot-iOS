@@ -43,3 +43,8 @@
 "Close" = "Cerrar";
 "Copy a message first, then tap the clipboard button." = "Copia primero un mensaje y luego toca el botón del portapapeles.";
 "Translating…" = "Traduciendo…";
+
+/* ===== Redesign additions ===== */
+"Type your message, then pick a language." = "Escribe tu mensaje y luego elige un idioma.";
+"Tap a language to replace your message." = "Toca un idioma para reemplazar tu mensaje.";
+"Translate what they sent" = "Traduce lo que te enviaron";

@@ -23,7 +23,7 @@ private struct RootView: View {
     @State private var paywallShownThisLaunch = false
 
     /// Show the reminder after this many translations.
-    private let paywallThreshold = 6
+    private let paywallThreshold = 10
 
     /// In KeyGlot mode the app is usable without any API key; in Custom mode it still needs the
     /// selected provider's key (so existing BYOK users keep the same onboarding).
@@ -88,9 +88,10 @@ private struct RootView: View {
         showListen = true
     }
 
-    /// At most once per launch, and only if not yet a supporter and past the threshold.
+    /// At most once per launch, past the threshold, and never for supporters or Pro subscribers.
     private func maybeShowPaywall() {
         guard !store.isSupporter,
+              !subscription.isSubscribed,
               !paywallShownThisLaunch,
               !showListen,
               AppGroupStorage.shared.useCount >= paywallThreshold else { return }

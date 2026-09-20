@@ -43,3 +43,8 @@
 "Close" = "关闭";
 "Copy a message first, then tap the clipboard button." = "请先复制一条消息，然后点按剪贴板按钮。";
 "Translating…" = "正在翻译…";
+
+/* ===== Redesign additions ===== */
+"Type your message, then pick a language." = "先输入消息，再选择语言。";
+"Tap a language to replace your message." = "点按一种语言即可替换你的消息。";
+"Translate what they sent" = "翻译收到的消息";
