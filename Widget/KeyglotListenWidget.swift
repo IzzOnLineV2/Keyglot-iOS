@@ -35,22 +35,25 @@ struct KeyglotProvider: TimelineProvider {
 struct KeyglotListenWidgetView: View {
     var body: some View {
         Button(intent: OpenListenIntent()) {
-            VStack(spacing: 8) {
-                ZStack {
-                    Circle()
-                        .fill(Color.blue.gradient)
-                        .frame(width: 60, height: 60)
-                    Image(systemName: "mic.fill")
-                        .font(.system(size: 26))
-                        .foregroundStyle(.white)
-                }
-                Text("Listen")
-                    .font(.subheadline).fontWeight(.semibold)
-                    .foregroundStyle(.primary)
+            VStack(spacing: 10) {
+                Circle()
+                    .fill(KGGradient.diagonal)
+                    .frame(width: 58, height: 58)
+                    .overlay(Image(systemName: "mic.fill").font(.system(size: 24)).foregroundStyle(.white))
+                Text("Listen & translate")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundStyle(.white)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
             }
         }
         .buttonStyle(.plain)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .containerBackground(.fill.tertiary, for: .widget)
+        .containerBackground(for: .widget) {
+            LinearGradient(
+                colors: [Color(hex: 0x3E2E63), Color(hex: 0x1B2B48)],
+                startPoint: .top, endPoint: .bottom
+            )
+        }
     }
 }

@@ -182,11 +182,7 @@ struct ToolbarView: View {
                 .accessibilityLabel(Text("Close"))
             }
             ScrollView {
-                Text(text)
-                    .font(KGFont.body)
-                    .foregroundStyle(KGColor.ink)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .textSelection(.enabled)
+                ScriptText(text: text, size: 16, style: .body, color: KGColor.ink)
             }
             .frame(maxHeight: .infinity)
         }

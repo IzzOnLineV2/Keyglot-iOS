@@ -13,11 +13,7 @@ struct TranslationResultCard: View {
         VStack(spacing: 12) {
             VStack(alignment: .leading, spacing: 8) {
                 Text(translationLabel).kgEyebrow(KGColor.accent)
-                Text(translation)
-                    .font(KGFont.result)
-                    .foregroundStyle(KGColor.ink)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .textSelection(.enabled)
+                ScriptText(text: translation, size: 19, style: .title3, color: KGColor.ink)
                 SeamDivider()
             }
             .padding(16)
@@ -27,11 +23,7 @@ struct TranslationResultCard: View {
 
             VStack(alignment: .leading, spacing: 6) {
                 Text(originalLabel).kgEyebrow(KGColor.ink3)
-                Text(original)
-                    .font(KGFont.body)
-                    .foregroundStyle(KGColor.ink2)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .textSelection(.enabled)
+                ScriptText(text: original, size: 16, style: .body, color: KGColor.ink2)
             }
             .padding(16)
             .frame(maxWidth: .infinity, alignment: .leading)
