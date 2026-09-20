@@ -57,6 +57,19 @@ struct AboutView: View {
                     }
                 }
 
+                section("Fix and improve your writing") {
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Writing in a language that isn't your own? Fix and polish your message before you send it, in the same language, no translation. Or restyle the tone.")
+                            .font(KGFont.body).foregroundStyle(KGColor.ink2)
+                        VStack(alignment: .leading, spacing: 10) {
+                            tone("✨", "Improve", "Fix grammar and spelling, make it read naturally.")
+                            tone("💼", "Professional", "A formal tone for work, clients and business.")
+                            tone("😊", "Friendly", "Warmer and more conversational.")
+                            tone("❤️", "Flirty", "Light and playful, never explicit.")
+                        }
+                    }
+                }
+
                 section("More ways to translate") {
                     VStack(alignment: .leading, spacing: 10) {
                         bullet("🎧 Listen & translate, press, speak, and get a translation of what you hear (also from the widget).")
@@ -119,6 +132,16 @@ struct AboutView: View {
             Text(label).font(KGFont.row).foregroundStyle(KGColor.ink)
             Spacer()
             Text(value).font(KGFont.row).foregroundStyle(KGColor.ink2)
+        }
+    }
+
+    private func tone(_ glyph: String, _ name: LocalizedStringKey, _ desc: LocalizedStringKey) -> some View {
+        HStack(alignment: .top, spacing: 10) {
+            Text(glyph).font(.system(size: 18)).frame(width: 26)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(name).font(KGFont.row).foregroundStyle(KGColor.ink)
+                Text(desc).font(KGFont.caption).foregroundStyle(KGColor.ink2)
+            }
         }
     }
 

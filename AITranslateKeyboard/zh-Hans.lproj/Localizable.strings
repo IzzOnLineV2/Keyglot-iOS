@@ -143,3 +143,14 @@
 
 "This key also powers “Listen & translate” and voice-note translation." = "此密钥同样用于“聆听并翻译”和语音消息翻译。";
 "“Listen & translate” and voice notes always use Google Gemini. Add a Gemini key too to use them." = "“聆听并翻译”和语音消息始终使用 Google Gemini。请同时添加 Gemini 密钥以使用这些功能。";
+
+"Fix and improve your writing" = "修改并润色你写的内容";
+"Writing in a language that isn't your own? Fix and polish your message before you send it, in the same language, no translation. Or restyle the tone." = "在用不是母语的语言书写？发送前可以在不翻译的情况下，用同一种语言修改并润色你的消息。也可以改变语气。";
+"Improve" = "改进";
+"Fix grammar and spelling, make it read naturally." = "修正语法和拼写，让文字更自然。";
+"Professional" = "专业";
+"A formal tone for work, clients and business." = "适合工作、客户和商务的正式语气。";
+"Friendly" = "友好";
+"Warmer and more conversational." = "更温暖、更口语化。";
+"Flirty" = "俏皮";
+"Light and playful, never explicit." = "轻松俏皮，绝不露骨。";

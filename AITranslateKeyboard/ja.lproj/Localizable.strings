@@ -143,3 +143,14 @@
 
 "This key also powers “Listen & translate” and voice-note translation." = "このキーは「聞いて翻訳」と音声メモの翻訳にも使われます。";
 "“Listen & translate” and voice notes always use Google Gemini. Add a Gemini key too to use them." = "「聞いて翻訳」と音声メモは常に Google Gemini を使用します。利用するには Gemini のキーも追加してください。";
+
+"Fix and improve your writing" = "書いた文章を直して整える";
+"Writing in a language that isn't your own? Fix and polish your message before you send it, in the same language, no translation. Or restyle the tone." = "自分の言語ではない言葉で書いていますか？送信する前に、翻訳せず同じ言語のまま文章を直して整えられます。トーンを変えることもできます。";
+"Improve" = "改善";
+"Fix grammar and spelling, make it read naturally." = "文法とスペルを直し、自然な文章にします。";
+"Professional" = "フォーマル";
+"A formal tone for work, clients and business." = "仕事や顧客、ビジネス向けの丁寧なトーン。";
+"Friendly" = "フレンドリー";
+"Warmer and more conversational." = "より温かく、くだけた調子に。";
+"Flirty" = "思わせぶり";
+"Light and playful, never explicit." = "軽く遊び心のある、露骨にならないトーン。";

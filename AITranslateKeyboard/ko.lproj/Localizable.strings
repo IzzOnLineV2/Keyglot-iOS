@@ -143,3 +143,14 @@
 
 "This key also powers “Listen & translate” and voice-note translation." = "이 키는 “듣고 번역”과 음성 메모 번역에도 사용됩니다.";
 "“Listen & translate” and voice notes always use Google Gemini. Add a Gemini key too to use them." = "“듣고 번역”과 음성 메모는 항상 Google Gemini를 사용합니다. 사용하려면 Gemini 키도 추가하세요.";
+
+"Fix and improve your writing" = "쓴 글을 다듬고 개선하기";
+"Writing in a language that isn't your own? Fix and polish your message before you send it, in the same language, no translation. Or restyle the tone." = "모국어가 아닌 언어로 쓰고 있나요? 보내기 전에 번역하지 않고 같은 언어 그대로 메시지를 고치고 다듬을 수 있어요. 톤을 바꿀 수도 있습니다.";
+"Improve" = "개선";
+"Fix grammar and spelling, make it read naturally." = "문법과 맞춤법을 고치고 문장을 자연스럽게 만듭니다.";
+"Professional" = "정중함";
+"A formal tone for work, clients and business." = "업무, 고객, 비즈니스에 어울리는 격식 있는 톤.";
+"Friendly" = "친근함";
+"Warmer and more conversational." = "더 따뜻하고 대화하듯이.";
+"Flirty" = "설렘";
+"Light and playful, never explicit." = "가볍고 장난스럽게, 절대 노골적이지 않게.";

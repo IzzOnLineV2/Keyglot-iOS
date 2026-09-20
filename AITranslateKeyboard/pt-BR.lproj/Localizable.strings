@@ -143,3 +143,14 @@
 
 "This key also powers “Listen & translate” and voice-note translation." = "Esta chave também ativa “Ouvir e traduzir” e a tradução de notas de voz.";
 "“Listen & translate” and voice notes always use Google Gemini. Add a Gemini key too to use them." = "“Ouvir e traduzir” e as notas de voz sempre usam o Google Gemini. Adicione também uma chave Gemini para usá-los.";
+
+"Fix and improve your writing" = "Corrija e melhore o que você escreve";
+"Writing in a language that isn't your own? Fix and polish your message before you send it, in the same language, no translation. Or restyle the tone." = "Escrevendo em um idioma que não é o seu? Corrija e refine sua mensagem antes de enviar, no mesmo idioma, sem traduzir. Ou mude o tom.";
+"Improve" = "Melhorar";
+"Fix grammar and spelling, make it read naturally." = "Corrige gramática e ortografia e deixa o texto mais natural.";
+"Professional" = "Profissional";
+"A formal tone for work, clients and business." = "Um tom formal para trabalho, clientes e negócios.";
+"Friendly" = "Amigável";
+"Warmer and more conversational." = "Mais caloroso e informal.";
+"Flirty" = "Charmoso";
+"Light and playful, never explicit." = "Leve e brincalhão, nunca explícito.";
