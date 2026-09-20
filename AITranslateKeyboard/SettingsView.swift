@@ -98,7 +98,7 @@ struct SettingsView: View {
                     SegmentedModePicker(mode: $aiMode)
                     Text(aiMode == .keyglot
                          ? "AI included. No setup required."
-                         : "Use your own AI provider and API key. Requests go straight to the provider you choose.")
+                         : "You configure your own AI provider. No other difference.")
                         .font(KGFont.caption).foregroundStyle(KGColor.ink2)
                 }
             }

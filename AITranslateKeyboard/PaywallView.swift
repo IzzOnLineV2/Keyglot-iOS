@@ -23,7 +23,7 @@ struct PaywallView: View {
                     .font(KGFont.serif(34, style: .largeTitle))
                     .foregroundStyle(KGColor.ink)
                     .multilineTextAlignment(.center)
-                Text("Keyglot is free and open source. A one-time purchase removes this reminder and helps me keep improving it.")
+                Text("Keyglot is free and open source. If it helps you, buy us a coffee to support the work.")
                     .font(KGFont.body)
                     .foregroundStyle(KGColor.ink2)
                     .multilineTextAlignment(.center)
@@ -40,10 +40,15 @@ struct PaywallView: View {
                             if store.isSupporter { onDismiss() }
                         }
                     } label: {
-                        Text("Unlock forever · \(priceText)")
+                        Text("Buy us a coffee · \(priceText)")
                     }
                     .buttonStyle(.kgPrimary)
                     .disabled(busy || store.product == nil)
+
+                    Text("The purchase removes the banner for good.")
+                        .font(KGFont.caption)
+                        .foregroundStyle(KGColor.ink3)
+                        .multilineTextAlignment(.center)
 
                     Button("Continue for free", action: onDismiss)
                         .font(KGFont.row).foregroundStyle(KGColor.ink2)

@@ -134,3 +134,9 @@
 "Type in your language, tap a flag, and your message becomes a natural translation, right where you type: WhatsApp, Messages, email." = "用你的语言输入，点一下国旗，消息就会变成自然的译文，就在你输入的地方：WhatsApp、信息、邮件。";
 "Open “Listen & translate”, and hear what they said in your language. Add the widget for one-tap access." = "打开「聆听并翻译」，用你的语言听懂对方说了什么。添加小组件即可一键打开。";
 "Type in any language and replace your message with a natural translation, right where you type: WhatsApp, Messages, email." = "用任何语言输入，并把消息替换成自然的译文，就在你输入的地方：WhatsApp、信息、邮件。";
+
+/* ===== Coffee / free-tier copy ===== */
+"You configure your own AI provider. No other difference." = "你配置自己的 AI 提供商。没有其他区别。";
+"Keyglot is free and open source. If it helps you, buy us a coffee to support the work." = "Keyglot 免费且开源。如果对你有帮助，请我们喝杯咖啡以示支持。";
+"Buy us a coffee · %@" = "请我们喝咖啡 · %@";
+"The purchase removes the banner for good." = "购买后将永久移除该横幅。";

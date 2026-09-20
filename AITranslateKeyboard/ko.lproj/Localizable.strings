@@ -134,3 +134,9 @@
 "Type in your language, tap a flag, and your message becomes a natural translation, right where you type: WhatsApp, Messages, email." = "당신의 언어로 입력하고 국기를 탭하면 메시지가 자연스러운 번역이 됩니다. WhatsApp, 메시지, 이메일 등 입력하는 곳에서.";
 "Open “Listen & translate”, and hear what they said in your language. Add the widget for one-tap access." = "「듣고 번역」을 열면 상대의 말을 당신의 언어로 들을 수 있어요. 위젯을 추가하면 한 번의 탭으로 열 수 있어요.";
 "Type in any language and replace your message with a natural translation, right where you type: WhatsApp, Messages, email." = "어떤 언어로도 입력하고 메시지를 자연스러운 번역으로 바꿔 보세요. WhatsApp, 메시지, 이메일 등 입력하는 곳에서.";
+
+/* ===== Coffee / free-tier copy ===== */
+"You configure your own AI provider. No other difference." = "직접 AI 제공자를 설정합니다. 그 외 차이는 없습니다.";
+"Keyglot is free and open source. If it helps you, buy us a coffee to support the work." = "Keyglot은 무료이며 오픈 소스입니다. 도움이 되었다면 커피 한 잔으로 응원해 주세요.";
+"Buy us a coffee · %@" = "커피 한 잔 · %@";
+"The purchase removes the banner for good." = "구매하면 배너가 영구히 사라집니다.";

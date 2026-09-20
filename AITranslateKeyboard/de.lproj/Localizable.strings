@@ -134,3 +134,9 @@
 "Type in your language, tap a flag, and your message becomes a natural translation, right where you type: WhatsApp, Messages, email." = "Tippe in deiner Sprache, tippe auf eine Flagge, und deine Nachricht wird zu einer natürlichen Übersetzung, genau dort, wo du schreibst: WhatsApp, Nachrichten, E-Mail.";
 "Open “Listen & translate”, and hear what they said in your language. Add the widget for one-tap access." = "Öffne „Zuhören & übersetzen“ und höre in deiner Sprache, was gesagt wurde. Füge das Widget für schnellen Zugriff hinzu.";
 "Type in any language and replace your message with a natural translation, right where you type: WhatsApp, Messages, email." = "Schreib in jeder Sprache und ersetze deine Nachricht durch eine natürliche Übersetzung, genau dort, wo du schreibst: WhatsApp, Nachrichten, E-Mail.";
+
+/* ===== Coffee / free-tier copy ===== */
+"You configure your own AI provider. No other difference." = "Du richtest deinen eigenen KI-Anbieter ein. Kein weiterer Unterschied.";
+"Keyglot is free and open source. If it helps you, buy us a coffee to support the work." = "Keyglot ist kostenlos und Open Source. Wenn es dir hilft, spendier uns einen Kaffee.";
+"Buy us a coffee · %@" = "Spendier uns einen Kaffee · %@";
+"The purchase removes the banner for good." = "Der Kauf entfernt den Hinweis dauerhaft.";
