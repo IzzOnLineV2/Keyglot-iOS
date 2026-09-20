@@ -49,7 +49,7 @@ struct ListenView: View {
                     .font(KGFont.body).foregroundStyle(KGColor.ink2)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            sourcePill
+            languagePills
             Spacer(minLength: 0)
             VStack(spacing: 14) {
                 MicButton(state: .idle) { vm.start() }
@@ -105,21 +105,26 @@ struct ListenView: View {
 
     private func resultView(_ transcript: String, _ translation: String) -> some View {
         VStack(spacing: 16) {
-            sourcePill
+            languagePills
             ScrollView {
                 TranslationResultCard(translation: translation, original: transcript,
                                       originalLabel: "What they said")
             }
             HStack(spacing: 9) {
+                Button { vm.toggleSpeak(translation) } label: {
+                    Label(vm.isSpeaking ? "Stop" : "Read aloud",
+                          systemImage: vm.isSpeaking ? "stop.fill" : "speaker.wave.2.fill")
+                }
+                .buttonStyle(.kgSecondary)
                 Button { copy(translation) } label: {
                     Label(copied ? "Copied" : "Copy", systemImage: copied ? "checkmark" : "doc.on.doc")
                 }
                 .buttonStyle(.kgSecondary)
-                Button { vm.start() } label: {
-                    Label("Listen again", systemImage: "mic.fill")
-                }
-                .buttonStyle(.kgPrimary)
             }
+            Button { vm.start() } label: {
+                Label("Listen again", systemImage: "mic.fill")
+            }
+            .buttonStyle(.kgPrimary)
         }
     }
 
@@ -151,32 +156,36 @@ struct ListenView: View {
         .frame(maxWidth: .infinity)
     }
 
-    // MARK: - Source language
+    // MARK: - Language pills (they speak · you read)
 
-    private var sourcePill: some View {
-        Menu {
-            ForEach(VoiceLanguage.options) { lang in
-                Button {
-                    vm.setLanguage(lang.id)
-                } label: {
-                    if lang.id == vm.selectedID {
-                        Label(lang.name, systemImage: "checkmark")
-                    } else {
-                        Text(lang.name)
+    private var languagePills: some View {
+        HStack(spacing: 9) {
+            pill(caption: "they speak", value: VoiceLanguage.option(for: vm.selectedID).name) {
+                ForEach(VoiceLanguage.options) { lang in
+                    Button { vm.setLanguage(lang.id) } label: {
+                        if lang.id == vm.selectedID { Label(lang.name, systemImage: "checkmark") } else { Text(lang.name) }
                     }
                 }
             }
-        } label: {
-            HStack(spacing: 8) {
-                Image(systemName: "globe").foregroundStyle(KGColor.accent)
-                Text("Audio language").foregroundStyle(KGColor.ink)
-                Spacer()
-                Text(VoiceLanguage.option(for: vm.selectedID).name).foregroundStyle(KGColor.ink2)
-                Image(systemName: "chevron.up.chevron.down").font(.caption2).foregroundStyle(KGColor.ink3)
+            pill(caption: "you read", value: VoiceLanguage.targetOption(for: vm.targetID).name) {
+                ForEach(VoiceLanguage.targetOptions) { target in
+                    Button { vm.setTarget(target.id) } label: {
+                        if target.id == vm.targetID { Label(target.name, systemImage: "checkmark") } else { Text(target.name) }
+                    }
+                }
             }
-            .font(KGFont.row)
-            .padding(.horizontal, 14)
-            .padding(.vertical, 12)
+        }
+    }
+
+    private func pill<Content: View>(caption: LocalizedStringKey, value: String,
+                                     @ViewBuilder menu: () -> Content) -> some View {
+        Menu { menu() } label: {
+            HStack(spacing: 7) {
+                Text(caption).font(.system(size: 11)).foregroundStyle(KGColor.ink3)
+                Text(value).font(KGFont.row.weight(.semibold)).foregroundStyle(KGColor.ink).lineLimit(1)
+            }
+            .frame(maxWidth: .infinity)
+            .frame(height: 46)
             .background(KGColor.surface, in: RoundedRectangle(cornerRadius: KGRadius.button, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: KGRadius.button, style: .continuous)

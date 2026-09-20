@@ -35,6 +35,49 @@ enum VoiceLanguage {
 
     static func hint(for id: String) -> String? { option(for: id).hint }
 
+    // MARK: - Target ("you read") language
+
+    struct TargetOption: Identifiable, Equatable {
+        let id: String
+        /// Shown in the picker/pill (native autonym).
+        let name: String
+        /// English name passed to the model as the translation target; `nil` = use device language.
+        let englishName: String?
+        /// BCP-47 voice code for read-aloud (TTS); `nil` = use the device language's voice.
+        let voiceCode: String?
+    }
+
+    /// Target-language options. "Your language" (auto) keeps today's behaviour (device language).
+    static let targetOptions: [TargetOption] = [
+        .init(id: "auto", name: String(localized: "Your language"), englishName: nil, voiceCode: nil),
+        .init(id: "en", name: "English",   englishName: "English",    voiceCode: "en-US"),
+        .init(id: "it", name: "Italiano",  englishName: "Italian",    voiceCode: "it-IT"),
+        .init(id: "fr", name: "Français",  englishName: "French",     voiceCode: "fr-FR"),
+        .init(id: "es", name: "Español",   englishName: "Spanish",    voiceCode: "es-ES"),
+        .init(id: "de", name: "Deutsch",   englishName: "German",     voiceCode: "de-DE"),
+        .init(id: "pt", name: "Português", englishName: "Portuguese", voiceCode: "pt-BR"),
+        .init(id: "ar", name: "العربية",   englishName: "Arabic",     voiceCode: "ar-SA"),
+        .init(id: "zh", name: "中文",       englishName: "Chinese",    voiceCode: "zh-CN"),
+        .init(id: "ja", name: "日本語",     englishName: "Japanese",   voiceCode: "ja-JP"),
+        .init(id: "ko", name: "한국어",     englishName: "Korean",     voiceCode: "ko-KR"),
+        .init(id: "ru", name: "Русский",   englishName: "Russian",    voiceCode: "ru-RU"),
+        .init(id: "tr", name: "Türkçe",    englishName: "Turkish",    voiceCode: "tr-TR"),
+    ]
+
+    static func targetOption(for id: String) -> TargetOption {
+        targetOptions.first { $0.id == id } ?? targetOptions[0]
+    }
+
+    /// English target-language name for the prompt, resolving "auto" to the device language.
+    static func targetEnglishName(for id: String) -> String {
+        targetOption(for: id).englishName ?? deviceLanguageEnglishName
+    }
+
+    /// BCP-47 voice code for read-aloud, resolving "auto" to the device's preferred language.
+    static func targetVoiceCode(for id: String) -> String {
+        targetOption(for: id).voiceCode ?? Locale.preferredLanguages.first ?? Locale.current.identifier
+    }
+
     /// Gemini audio MIME for a file. The wrong MIME makes Gemini mis-decode the audio, so map
     /// carefully (m4a → audio/mp4, opus → audio/ogg).
     static func mimeType(for url: URL) -> String {

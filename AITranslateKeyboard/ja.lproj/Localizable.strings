@@ -196,3 +196,8 @@
 "Copied" = "コピーしました";
 "It was too quiet to catch" = "静かすぎて聞き取れませんでした";
 "Try again a bit closer, or hold the phone toward them." = "もう少し近づくか、スマホを相手に向けてもう一度お試しください。";
+
+"they speak" = "話す言語";
+"you read" = "読む言語";
+"Your language" = "あなたの言語";
+"Read aloud" = "読み上げ";

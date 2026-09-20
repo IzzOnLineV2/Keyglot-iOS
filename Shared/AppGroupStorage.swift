@@ -19,6 +19,7 @@ struct AppGroupStorage: @unchecked Sendable { // `UserDefaults` is documented th
         static let selectedProvider = "selected_provider"
         static let selectedLanguages = "selected_language_ids"
         static let audioLanguageID = "audio_language_id"
+        static let audioTargetID = "audio_target_id"
         static let pendingListen = "pending_listen"
         static let useCount = "use_count"
         static let isSupporter = "is_supporter"
@@ -114,6 +115,13 @@ struct AppGroupStorage: @unchecked Sendable { // `UserDefaults` is documented th
     var audioLanguageID: String {
         get { defaults.string(forKey: Keys.audioLanguageID) ?? "auto" }
         nonmutating set { defaults.set(newValue, forKey: Keys.audioLanguageID) }
+    }
+
+    /// Language the audio result is translated *into* ("you read"). "auto" = the device language,
+    /// so existing behaviour is unchanged until the user picks a specific target.
+    var audioTargetID: String {
+        get { defaults.string(forKey: Keys.audioTargetID) ?? "auto" }
+        nonmutating set { defaults.set(newValue, forKey: Keys.audioTargetID) }
     }
 
     /// Set by the widget's App Intent to ask the app to jump into "Listen & translate" on launch.

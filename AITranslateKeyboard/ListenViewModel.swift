@@ -23,7 +23,12 @@ final class ListenViewModel: NSObject, ObservableObject {
     /// Seconds elapsed in the current recording, for the live timer.
     @Published private(set) var elapsed: TimeInterval = 0
     @Published var selectedID = AppGroupStorage.shared.audioLanguageID
+    /// Target language the result is translated into ("you read"). "auto" = device language.
+    @Published var targetID = AppGroupStorage.shared.audioTargetID
+    /// Whether read-aloud is currently speaking, for the button toggle.
+    @Published private(set) var isSpeaking = false
 
+    private let synthesizer = AVSpeechSynthesizer()
     private var recorder: AVAudioRecorder?
     private var fileURL: URL?
     private var meterTimer: Timer?
@@ -37,10 +42,16 @@ final class ListenViewModel: NSObject, ObservableObject {
     private let silenceDuration: TimeInterval = 1.4
     private let maxDuration: TimeInterval = 30
 
+    override init() {
+        super.init()
+        synthesizer.delegate = self
+    }
+
     // MARK: - Control
 
     /// Ask for mic permission (first time) and start recording immediately.
     func start() {
+        stopSpeaking()
         AVAudioApplication.requestRecordPermission { [weak self] granted in
             Task { @MainActor in
                 guard let self else { return }
@@ -70,6 +81,7 @@ final class ListenViewModel: NSObject, ObservableObject {
 
     /// Discard any recording and go back to idle (used when leaving the screen).
     func cancel() {
+        stopSpeaking()
         meterTimer?.invalidate(); meterTimer = nil
         recorder?.stop(); recorder = nil
         try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
@@ -82,6 +94,30 @@ final class ListenViewModel: NSObject, ObservableObject {
     func setLanguage(_ id: String) {
         selectedID = id
         AppGroupStorage.shared.audioLanguageID = id
+    }
+
+    func setTarget(_ id: String) {
+        targetID = id
+        AppGroupStorage.shared.audioTargetID = id
+    }
+
+    // MARK: - Read aloud (on-device TTS, no network)
+
+    /// Speak the given text in the target language's voice, or stop if already speaking.
+    func toggleSpeak(_ text: String) {
+        if synthesizer.isSpeaking {
+            synthesizer.stopSpeaking(at: .immediate)
+            return
+        }
+        try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio, options: [])
+        try? AVAudioSession.sharedInstance().setActive(true, options: [])
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(language: VoiceLanguage.targetVoiceCode(for: targetID))
+        synthesizer.speak(utterance)
+    }
+
+    func stopSpeaking() {
+        if synthesizer.isSpeaking { synthesizer.stopSpeaking(at: .immediate) }
     }
 
     // MARK: - Recording
@@ -154,7 +190,7 @@ final class ListenViewModel: NSObject, ObservableObject {
             let result = try await translator.translate(
                 fileURL: fileURL,
                 mimeType: "audio/mp4",
-                targetLanguage: VoiceLanguage.deviceLanguageEnglishName,
+                targetLanguage: VoiceLanguage.targetEnglishName(for: targetID),
                 sourceHint: VoiceLanguage.hint(for: selectedID)
             )
             let transcript = result.transcript.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -168,5 +204,17 @@ final class ListenViewModel: NSObject, ObservableObject {
         } catch {
             phase = .failed(error.localizedDescription)
         }
+    }
+}
+
+extension ListenViewModel: AVSpeechSynthesizerDelegate {
+    nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
+        Task { @MainActor in self.isSpeaking = true }
+    }
+    nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        Task { @MainActor in self.isSpeaking = false }
+    }
+    nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        Task { @MainActor in self.isSpeaking = false }
     }
 }
