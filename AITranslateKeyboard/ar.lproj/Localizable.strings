@@ -187,3 +187,12 @@
 "Voice notes key" = "مفتاح الرسائل الصوتية";
 "Keys are stored in the iOS Keychain on this device and shared only with the Keyglot keyboard. Keyglot never sees them." = "تُحفظ المفاتيح في سلسلة مفاتيح iOS على هذا الجهاز وتُشارك فقط مع لوحة مفاتيح Keyglot. لا يراها Keyglot أبدًا.";
 "Add your %@ API key in Advanced." = "أضف مفتاح API الخاص بـ %@ في المتقدّم.";
+
+"Hold the phone between you. Press, let them speak, and read what they said." = "أمسك الهاتف بينكما. اضغط، ودعهم يتحدثون، ثم اقرأ ما قالوه.";
+"Go ahead, I'll stop when they do." = "تفضّل، سأتوقف عندما يتوقفون.";
+"Usually two or three seconds" = "عادةً ثانيتان أو ثلاث";
+"What they said" = "ما قالوه";
+"Copy" = "نسخ";
+"Copied" = "تم النسخ";
+"It was too quiet to catch" = "كان الصوت خافتًا جدًا";
+"Try again a bit closer, or hold the phone toward them." = "حاول مرة أخرى من مسافة أقرب، أو وجّه الهاتف نحوهم.";

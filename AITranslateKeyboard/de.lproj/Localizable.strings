@@ -187,3 +187,12 @@
 "Voice notes key" = "Schlüssel für Sprachnachrichten";
 "Keys are stored in the iOS Keychain on this device and shared only with the Keyglot keyboard. Keyglot never sees them." = "Schlüssel werden im iOS-Schlüsselbund auf diesem Gerät gespeichert und nur mit der Keyglot-Tastatur geteilt. Keyglot sieht sie nie.";
 "Add your %@ API key in Advanced." = "Füge deinen %@ API-Schlüssel unter Erweitert hinzu.";
+
+"Hold the phone between you. Press, let them speak, and read what they said." = "Halte das Telefon zwischen euch. Drücke, lass sie sprechen und lies, was sie gesagt haben.";
+"Go ahead, I'll stop when they do." = "Leg los, ich stoppe, wenn sie fertig sind.";
+"Usually two or three seconds" = "Meist zwei oder drei Sekunden";
+"What they said" = "Was sie gesagt haben";
+"Copy" = "Kopieren";
+"Copied" = "Kopiert";
+"It was too quiet to catch" = "Es war zu leise";
+"Try again a bit closer, or hold the phone toward them." = "Versuch es etwas näher noch mal, oder halte das Telefon zu ihnen hin.";

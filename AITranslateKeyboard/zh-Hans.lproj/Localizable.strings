@@ -187,3 +187,12 @@
 "Voice notes key" = "语音消息密钥";
 "Keys are stored in the iOS Keychain on this device and shared only with the Keyglot keyboard. Keyglot never sees them." = "密钥保存在本设备的 iOS 钥匙串中，仅与 Keyglot 键盘共享。Keyglot 永远不会看到它们。";
 "Add your %@ API key in Advanced." = "在“高级”中添加你的 %@ API 密钥。";
+
+"Hold the phone between you. Press, let them speak, and read what they said." = "把手机放在你们之间。按下，让对方说，然后读出他们说的话。";
+"Go ahead, I'll stop when they do." = "说吧，他们说完我就停。";
+"Usually two or three seconds" = "通常两三秒";
+"What they said" = "他们说的话";
+"Copy" = "复制";
+"Copied" = "已复制";
+"It was too quiet to catch" = "太安静，没听清";
+"Try again a bit closer, or hold the phone toward them." = "靠近一点再试，或把手机朝向他们。";

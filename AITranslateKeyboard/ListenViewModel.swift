@@ -13,12 +13,15 @@ final class ListenViewModel: NSObject, ObservableObject {
         case recording
         case processing
         case result(transcript: String, translation: String)
+        case noSpeech   // recorded, but nothing intelligible was heard (gentle "too quiet" state)
         case failed(String)
     }
 
     @Published var phase: Phase = .idle
     /// 0...1 mic level for the pulsing UI.
     @Published var level: CGFloat = 0
+    /// Seconds elapsed in the current recording, for the live timer.
+    @Published private(set) var elapsed: TimeInterval = 0
     @Published var selectedID = AppGroupStorage.shared.audioLanguageID
 
     private var recorder: AVAudioRecorder?
@@ -55,6 +58,13 @@ final class ListenViewModel: NSObject, ObservableObject {
         meterTimer?.invalidate(); meterTimer = nil
         recorder?.stop(); recorder = nil
         try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+        // Nothing was said, don't spend a request on silence, show the gentle "too quiet" state.
+        guard hasSpoken else {
+            if let fileURL { try? FileManager.default.removeItem(at: fileURL); self.fileURL = nil }
+            level = 0
+            phase = .noSpeech
+            return
+        }
         Task { await process() }
     }
 
@@ -100,6 +110,7 @@ final class ListenViewModel: NSObject, ObservableObject {
             silenceStart = nil
             hasSpoken = false
             level = 0
+            elapsed = 0
             phase = .recording
 
             meterTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
@@ -115,6 +126,7 @@ final class ListenViewModel: NSObject, ObservableObject {
         rec.updateMeters()
         let power = rec.averagePower(forChannel: 0)
         level = CGFloat(max(0, min(1, (power + 50) / 50)))
+        if let startedAt { elapsed = Date().timeIntervalSince(startedAt) }
 
         if let startedAt, Date().timeIntervalSince(startedAt) > maxDuration { stop(); return }
 
@@ -145,6 +157,12 @@ final class ListenViewModel: NSObject, ObservableObject {
                 targetLanguage: VoiceLanguage.deviceLanguageEnglishName,
                 sourceHint: VoiceLanguage.hint(for: selectedID)
             )
+            let transcript = result.transcript.trimmingCharacters(in: .whitespacesAndNewlines)
+            let translation = result.translation.trimmingCharacters(in: .whitespacesAndNewlines)
+            if transcript.isEmpty && translation.isEmpty {
+                phase = .noSpeech
+                return
+            }
             phase = .result(transcript: result.transcript, translation: result.translation)
             AppGroupStorage.shared.recordUse()
         } catch {

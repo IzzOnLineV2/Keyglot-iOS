@@ -187,3 +187,12 @@
 "Voice notes key" = "음성 메모 키";
 "Keys are stored in the iOS Keychain on this device and shared only with the Keyglot keyboard. Keyglot never sees them." = "키는 이 기기의 iOS 키체인에 저장되며 Keyglot 키보드와만 공유됩니다. Keyglot은 절대 볼 수 없습니다.";
 "Add your %@ API key in Advanced." = "%@ API 키를 고급에서 추가하세요.";
+
+"Hold the phone between you. Press, let them speak, and read what they said." = "휴대폰을 두 사람 사이에 두세요. 누르고, 상대가 말하게 한 뒤 내용을 읽어 보세요.";
+"Go ahead, I'll stop when they do." = "말씀하세요, 끝나면 멈출게요.";
+"Usually two or three seconds" = "보통 2~3초";
+"What they said" = "상대가 말한 내용";
+"Copy" = "복사";
+"Copied" = "복사됨";
+"It was too quiet to catch" = "너무 조용해서 못 들었어요";
+"Try again a bit closer, or hold the phone toward them." = "조금 더 가까이서, 또는 휴대폰을 상대 쪽으로 향해 다시 시도해 보세요.";

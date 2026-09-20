@@ -187,3 +187,12 @@
 "Voice notes key" = "音声メモ用キー";
 "Keys are stored in the iOS Keychain on this device and shared only with the Keyglot keyboard. Keyglot never sees them." = "キーはこの端末の iOS キーチェーンに保存され、Keyglot キーボードとだけ共有されます。Keyglot が見ることはありません。";
 "Add your %@ API key in Advanced." = "%@ の API キーを詳細設定で追加してください。";
+
+"Hold the phone between you. Press, let them speak, and read what they said." = "スマホを二人の間に。押して、相手に話してもらい、その内容を読みましょう。";
+"Go ahead, I'll stop when they do." = "どうぞ、相手が話し終えたら止めます。";
+"Usually two or three seconds" = "たいてい2、3秒です";
+"What they said" = "相手が言ったこと";
+"Copy" = "コピー";
+"Copied" = "コピーしました";
+"It was too quiet to catch" = "静かすぎて聞き取れませんでした";
+"Try again a bit closer, or hold the phone toward them." = "もう少し近づくか、スマホを相手に向けてもう一度お試しください。";
