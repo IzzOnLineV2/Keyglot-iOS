@@ -52,8 +52,22 @@ struct KeyGlotSession: Sendable {
         try await mint()
     }
 
+    /// Exchange a StoreKit signed transaction (JWS) for a session token (production path). Called
+    /// by the app while subscribed; the resulting token is cached in the shared Keychain so the
+    /// keyboard/share extensions reuse it.
+    @discardableResult
+    func exchange(jws: String) async throws -> String {
+        var request = URLRequest(url: baseURL.appendingPathComponent("v1/session"))
+        request.httpMethod = "POST"
+        request.timeoutInterval = 30
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try JSONEncoder().encode(["jws": jws])
+        return try await complete(request)
+    }
+
     private func mint() async throws -> String {
-        // DEV path: exchange the dev key for a session token. Replaced by StoreKit JWS at Step 3.
+        // DEV path: exchange the dev key for a session token. Superseded by `exchange(jws:)` once
+        // the user is subscribed; kept for testing until StoreKit is fully wired (Step 3b).
         guard let devKey = credentials.secret(Self.devKeyAccount) else { throw SessionError.devKeyMissing }
 
         var request = URLRequest(url: baseURL.appendingPathComponent("v1/session"))
@@ -62,7 +76,11 @@ struct KeyGlotSession: Sendable {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(devKey, forHTTPHeaderField: "x-dev-key")
         request.httpBody = try JSONEncoder().encode(["devSubject": storage.installID])
+        return try await complete(request)
+    }
 
+    /// Send a `/v1/session` request, decode `{ session }`, cache the token, and return it.
+    private func complete(_ request: URLRequest) async throws -> String {
         let data: Data
         let response: URLResponse
         do { (data, response) = try await http.data(for: request) }

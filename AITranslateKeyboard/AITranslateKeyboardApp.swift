@@ -16,6 +16,7 @@ struct AITranslateKeyboardApp: App {
 private struct RootView: View {
     @Environment(\.scenePhase) private var scenePhase
     @StateObject private var store = StoreManager()
+    @StateObject private var subscription = SubscriptionManager()
     @State private var isConfigured = RootView.computeConfigured()
     @State private var showListen = false
     @State private var showPaywall = false
@@ -42,6 +43,7 @@ private struct RootView: View {
                 OnboardingView(isConfigured: $isConfigured)
             }
         }
+        .environmentObject(subscription)
         .fullScreenCover(isPresented: $showListen) {
             NavigationStack {
                 ListenView()
@@ -57,6 +59,8 @@ private struct RootView: View {
         }
         .task {
             await store.load()
+            await subscription.load()
+            await refreshKeyGlotSessionIfSubscribed()
             maybeShowPaywall()
         }
         .onAppear(perform: consumePendingListen)
@@ -64,7 +68,17 @@ private struct RootView: View {
             if phase == .active {
                 consumePendingListen()
                 maybeShowPaywall()
+                Task { await refreshKeyGlotSessionIfSubscribed() }
             }
+        }
+    }
+
+    /// While subscribed and in KeyGlot mode, exchange the StoreKit JWS for a fresh session token
+    /// (stored in the shared Keychain) so the keyboard/share extensions can call the backend.
+    private func refreshKeyGlotSessionIfSubscribed() async {
+        guard AppGroupStorage.shared.aiMode == .keyglot else { return }
+        if let jws = await subscription.currentEntitlementJWS() {
+            _ = try? await KeyGlotSession().exchange(jws: jws)
         }
     }
 

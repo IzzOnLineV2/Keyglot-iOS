@@ -86,6 +86,14 @@ enum Configuration {
     /// KeyGlot (AI-included) mode; in Custom mode the app talks to the user's provider directly.
     static let keyglotBackendBaseURL = URL(string: "https://keyglot-backend.izzonline.workers.dev")!
 
+    /// Auto-renewable subscription products that unlock KeyGlot mode. Prices are set in App Store
+    /// Connect (and in `Keyglot.storekit` for local testing); the app never hardcodes a price.
+    /// NOTE: keep the backend's `EXPECTED_PRODUCT_IDS` in sync with these.
+    static let subscriptionProductIDs = [
+        "it.izzonline.keyglot.pro.monthly",
+        "it.izzonline.keyglot.pro.yearly",
+    ]
+
     // MARK: - OpenRouter (OpenAI-compatible gateway)
 
     static let openRouterURL = URL(string: "https://openrouter.ai/api/v1/chat/completions")!

@@ -1,8 +1,10 @@
 import SwiftUI
+import StoreKit
 
 /// Root screen of the companion app. The keyboard itself has no settings — everything
 /// is configured here and shared via the App Group.
 struct SettingsView: View {
+    @EnvironmentObject private var subscription: SubscriptionManager
     @State private var aiMode = AppGroupStorage.shared.aiMode
     @State private var selectedProvider = AppGroupStorage.shared.selectedProvider
     @State private var hasAPIKey = false
@@ -61,6 +63,30 @@ struct SettingsView: View {
                         Text("Default is Claude Sonnet for natural, native-sounding translations. Each provider stores its own API key.")
                     }
                 } else {
+                    Section {
+                        if subscription.isSubscribed {
+                            Label("KeyGlot Pro is active", systemImage: "checkmark.seal.fill")
+                                .foregroundStyle(.green)
+                        } else if subscription.products.isEmpty {
+                            Text("Loading plans…").foregroundStyle(.secondary)
+                        } else {
+                            ForEach(subscription.products, id: \.id) { product in
+                                Button {
+                                    Task { try? await subscription.purchase(product) }
+                                } label: {
+                                    LabeledContent(product.displayName.isEmpty ? product.id : product.displayName) {
+                                        Text(product.displayPrice)
+                                    }
+                                }
+                            }
+                            Button("Restore purchases") { Task { await subscription.restore() } }
+                        }
+                    } header: {
+                        Text("KeyGlot Pro")
+                    } footer: {
+                        Text("AI included — subscribe to use KeyGlot mode. Switch to Custom anytime to use your own key for free.")
+                    }
+
                     // Temporary: dev-key entry to exercise the KeyGlot backend before subscriptions.
                     Section {
                         TextField("Dev key", text: $devKey)
@@ -162,4 +188,5 @@ private struct SetupChecklist: View {
 
 #Preview {
     SettingsView()
+        .environmentObject(SubscriptionManager())
 }
