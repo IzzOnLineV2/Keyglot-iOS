@@ -13,3 +13,14 @@
 /* ===== Shared text ===== */
 "Original" = "原文";
 "Nothing to translate here." = "ここに翻訳するものがありません。";
+
+"Read aloud" = "読み上げ";
+"Stop" = "停止";
+"Copy" = "コピー";
+"Copied" = "コピーしました";
+"Word for word" = "逐語";
+"Dialects can take a moment longer." = "方言は少し時間がかかることがあります。";
+"If a dialect came out wrong" = "方言がうまくいかなかったら";
+"Pick the language above and Keyglot listens again, same recording, no re-sharing." = "上で言語を選ぶと、同じ録音のまま Keyglot がもう一度聞き取ります。再共有は不要です。";
+"Ready to answer?" = "返信しますか？";
+"Close this and use the Keyglot keyboard in the chat, right where you're typing." = "これを閉じて、チャットで Keyglot キーボードを使いましょう。入力する場所そのままで。";

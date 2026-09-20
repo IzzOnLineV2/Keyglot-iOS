@@ -13,3 +13,14 @@
 /* ===== Shared text ===== */
 "Original" = "원문";
 "Nothing to translate here." = "번역할 내용이 없습니다.";
+
+"Read aloud" = "읽어주기";
+"Stop" = "정지";
+"Copy" = "복사";
+"Copied" = "복사됨";
+"Word for word" = "단어 그대로";
+"Dialects can take a moment longer." = "방언은 조금 더 걸릴 수 있어요.";
+"If a dialect came out wrong" = "방언이 잘못 나왔다면";
+"Pick the language above and Keyglot listens again, same recording, no re-sharing." = "위에서 언어를 고르면 Keyglot이 같은 녹음으로 다시 들어요. 다시 공유할 필요 없어요.";
+"Ready to answer?" = "답장할까요?";
+"Close this and use the Keyglot keyboard in the chat, right where you're typing." = "이 창을 닫고 채팅에서 Keyglot 키보드를 사용하세요. 입력하는 바로 그 자리에서.";

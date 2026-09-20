@@ -72,7 +72,7 @@ struct SettingsView: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 Spacer(minLength: 8)
-                Image(systemName: "chevron.right").foregroundStyle(Color.white.opacity(0.6))
+                Image(systemName: "chevron.forward").foregroundStyle(Color.white.opacity(0.6))
             }
             .padding(16)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -173,7 +173,7 @@ struct SettingsView: View {
                 Text(planSubtitle).font(KGFont.caption).foregroundStyle(KGColor.ink3)
             }
             Spacer(minLength: 8)
-            Image(systemName: "chevron.right").font(.system(size: 13, weight: .semibold)).foregroundStyle(KGColor.ink3)
+            Image(systemName: "chevron.forward").font(.system(size: 13, weight: .semibold)).foregroundStyle(KGColor.ink3)
         }
         .contentShape(Rectangle())
     }

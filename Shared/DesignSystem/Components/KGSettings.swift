@@ -36,7 +36,7 @@ struct SettingsRow: View {
                 Text(value).font(KGFont.row).foregroundStyle(KGColor.ink2)
             }
             if showChevron {
-                Image(systemName: "chevron.right")
+                Image(systemName: "chevron.forward")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundStyle(KGColor.ink3)
             }

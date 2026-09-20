@@ -13,3 +13,14 @@
 /* ===== Shared text ===== */
 "Original" = "原文";
 "Nothing to translate here." = "这里没有可翻译的内容。";
+
+"Read aloud" = "朗读";
+"Stop" = "停止";
+"Copy" = "复制";
+"Copied" = "已复制";
+"Word for word" = "逐字";
+"Dialects can take a moment longer." = "方言可能需要多一点时间。";
+"If a dialect came out wrong" = "如果方言识别有误";
+"Pick the language above and Keyglot listens again, same recording, no re-sharing." = "在上方选择语言，Keyglot 会用同一段录音重新聆听，无需重新分享。";
+"Ready to answer?" = "准备回复？";
+"Close this and use the Keyglot keyboard in the chat, right where you're typing." = "关闭此页，在聊天里使用 Keyglot 键盘，就在你输入的地方。";

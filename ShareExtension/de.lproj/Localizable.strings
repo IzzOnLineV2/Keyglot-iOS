@@ -13,3 +13,14 @@
 /* ===== Shared text ===== */
 "Original" = "Original";
 "Nothing to translate here." = "Hier gibt es nichts zu übersetzen.";
+
+"Read aloud" = "Vorlesen";
+"Stop" = "Stopp";
+"Copy" = "Kopieren";
+"Copied" = "Kopiert";
+"Word for word" = "Wort für Wort";
+"Dialects can take a moment longer." = "Dialekte können einen Moment länger dauern.";
+"If a dialect came out wrong" = "Wenn ein Dialekt falsch war";
+"Pick the language above and Keyglot listens again, same recording, no re-sharing." = "Wähle oben die Sprache und Keyglot hört noch einmal zu, dieselbe Aufnahme, kein erneutes Teilen.";
+"Ready to answer?" = "Bereit zu antworten?";
+"Close this and use the Keyglot keyboard in the chat, right where you're typing." = "Schließe das und nutze die Keyglot-Tastatur im Chat, genau dort, wo du schreibst.";
