@@ -6,22 +6,25 @@ struct ListenView: View {
     @StateObject private var vm = ListenViewModel()
 
     var body: some View {
-        VStack(spacing: 20) {
-            languagePicker
-            Spacer(minLength: 0)
-            content
-            Spacer(minLength: 0)
+        ZStack {
+            KGColor.canvas.ignoresSafeArea()
+            VStack(spacing: 20) {
+                sourcePill
+                Spacer(minLength: 0)
+                content
+                Spacer(minLength: 0)
+            }
+            .padding()
         }
-        .padding()
         .navigationTitle(Text("Listen & translate"))
         .navigationBarTitleDisplayMode(.inline)
         .onAppear { if vm.phase == .idle { vm.start() } }
         .onDisappear { vm.cancel() }
     }
 
-    // MARK: - Language
+    // MARK: - Source language
 
-    private var languagePicker: some View {
+    private var sourcePill: some View {
         Menu {
             ForEach(VoiceLanguage.options) { lang in
                 Button {
@@ -35,18 +38,22 @@ struct ListenView: View {
                 }
             }
         } label: {
-            HStack(spacing: 6) {
-                Image(systemName: "globe")
-                Text("Audio language")
+            HStack(spacing: 8) {
+                Image(systemName: "globe").foregroundStyle(KGColor.accent)
+                Text("Audio language").foregroundStyle(KGColor.ink)
                 Spacer()
-                Text(VoiceLanguage.option(for: vm.selectedID).name)
-                    .foregroundStyle(.secondary)
-                Image(systemName: "chevron.up.chevron.down")
-                    .font(.caption2).foregroundStyle(.secondary)
+                Text(VoiceLanguage.option(for: vm.selectedID).name).foregroundStyle(KGColor.ink2)
+                Image(systemName: "chevron.up.chevron.down").font(.caption2).foregroundStyle(KGColor.ink3)
             }
-            .font(.subheadline)
+            .font(KGFont.row)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 12)
+            .background(KGColor.surface, in: RoundedRectangle(cornerRadius: KGRadius.button, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: KGRadius.button, style: .continuous)
+                    .strokeBorder(KGColor.border, lineWidth: 1)
+            )
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     // MARK: - Content
@@ -55,89 +62,44 @@ struct ListenView: View {
     private var content: some View {
         switch vm.phase {
         case .idle:
-            micButton(active: false, label: Text("Tap to listen")) { vm.start() }
+            VStack(spacing: 14) {
+                MicButton(state: .idle) { vm.start() }
+                Text("Press to listen").font(KGFont.body).fontWeight(.semibold).foregroundStyle(KGColor.ink)
+                Text("It stops on its own when the room goes quiet.")
+                    .font(KGFont.caption).foregroundStyle(KGColor.ink2).multilineTextAlignment(.center)
+            }
 
         case .recording:
-            VStack(spacing: 16) {
-                micButton(active: true, label: Text("Listening…")) { vm.stop() }
-                Button(role: .cancel) { vm.stop() } label: {
-                    Text("Stop").font(.headline)
-                }
-                .buttonStyle(.bordered)
+            VStack(spacing: 18) {
+                MicButton(state: .listening, level: vm.level) { vm.stop() }
+                Button("Stop now") { vm.stop() }.buttonStyle(.kgOutline).fixedSize()
             }
 
         case .processing:
-            VStack(spacing: 14) {
-                ProgressView()
-                Text("Translating…").foregroundStyle(.secondary)
+            VStack(spacing: 16) {
+                MicButton(state: .processing)
+                Text("Working out what that was…").font(KGFont.body).foregroundStyle(KGColor.ink2)
             }
 
         case .result(let transcript, let translation):
             VStack(spacing: 18) {
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 18) {
-                        section(title: Text("Translation"), text: translation, prominent: true)
-                        section(title: Text("Original"), text: transcript, prominent: false)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    TranslationResultCard(translation: translation, original: transcript)
                 }
                 Button { vm.start() } label: {
                     Label("Listen again", systemImage: "mic.fill")
-                        .font(.headline)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 4)
                 }
-                .buttonStyle(.borderedProminent)
+                .buttonStyle(.kgPrimary)
             }
 
         case .failed(let message):
             VStack(spacing: 16) {
-                Image(systemName: "exclamationmark.triangle")
-                    .font(.largeTitle).foregroundStyle(.orange)
+                Image(systemName: "exclamationmark.triangle.fill")
+                    .font(.largeTitle).foregroundStyle(KGColor.attention)
                 Text(message)
-                    .multilineTextAlignment(.center)
-                    .foregroundStyle(.secondary)
-                Button { vm.start() } label: { Text("Try again").font(.headline) }
-                    .buttonStyle(.bordered)
+                    .font(KGFont.body).foregroundStyle(KGColor.ink2).multilineTextAlignment(.center)
+                Button("Try again") { vm.start() }.buttonStyle(.kgSecondary).fixedSize()
             }
-        }
-    }
-
-    // MARK: - Pieces
-
-    private func micButton(active: Bool, label: Text, action: @escaping () -> Void) -> some View {
-        VStack(spacing: 14) {
-            Button(action: action) {
-                ZStack {
-                    Circle()
-                        .fill(active ? Color.red : Color.blue)
-                        .frame(width: 120, height: 120)
-                        .scaleEffect(active ? 1 + vm.level * 0.35 : 1)
-                        .shadow(color: (active ? Color.red : Color.blue).opacity(0.4), radius: 16)
-                        .animation(.easeOut(duration: 0.12), value: vm.level)
-                    Image(systemName: active ? "waveform" : "mic.fill")
-                        .font(.system(size: 42))
-                        .foregroundStyle(.white)
-                }
-            }
-            .buttonStyle(.plain)
-            label
-                .font(.headline)
-                .foregroundStyle(.secondary)
-        }
-    }
-
-    private func section(title: Text, text: String, prominent: Bool) -> some View {
-        VStack(alignment: .leading, spacing: 6) {
-            title
-                .font(.caption.weight(.semibold))
-                .foregroundStyle(.secondary)
-                .textCase(.uppercase)
-            Text(text)
-                .font(prominent ? .title3 : .callout)
-                .foregroundStyle(prominent ? .primary : .secondary)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .textSelection(.enabled)
         }
     }
 }

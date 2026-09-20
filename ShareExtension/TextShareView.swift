@@ -8,14 +8,18 @@ struct TextShareView: View {
 
     var body: some View {
         NavigationStack {
-            content
-                .navigationTitle("Keyglot")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .confirmationAction) {
-                        Button(String(localized: "Done"), action: onClose)
-                    }
+            ZStack {
+                KGColor.canvas.ignoresSafeArea()
+                content
+            }
+            .navigationTitle("Keyglot")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button(String(localized: "Done"), action: onClose)
+                        .foregroundStyle(KGColor.accent)
                 }
+            }
         }
     }
 
@@ -23,42 +27,27 @@ struct TextShareView: View {
     private var content: some View {
         switch model.phase {
         case .working(let label):
-            VStack(spacing: 14) {
-                ProgressView()
-                Text(label.isEmpty ? String(localized: "Working…") : label)
-                    .font(.callout).foregroundStyle(.secondary)
+            VStack(spacing: 16) {
+                SpinnerRing()
+                Text(label.isEmpty ? String(localized: "Translating…") : label)
+                    .font(KGFont.body).foregroundStyle(KGColor.ink2)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
 
         case .failed(let message):
             VStack(spacing: 14) {
-                Image(systemName: "exclamationmark.triangle")
-                    .font(.largeTitle).foregroundStyle(.orange)
+                Image(systemName: "exclamationmark.triangle.fill")
+                    .font(.largeTitle).foregroundStyle(KGColor.attention)
                 Text(message)
-                    .font(.callout).multilineTextAlignment(.center).foregroundStyle(.secondary)
+                    .font(KGFont.body).multilineTextAlignment(.center).foregroundStyle(KGColor.ink2)
             }
             .padding().frame(maxWidth: .infinity, maxHeight: .infinity)
 
         case .done(let original, let translation):
             ScrollView {
-                VStack(alignment: .leading, spacing: 18) {
-                    section(title: String(localized: "Translation"), text: translation, prominent: true)
-                    section(title: String(localized: "Original"), text: original, prominent: false)
-                }
-                .padding()
+                TranslationResultCard(translation: translation, original: original)
+                    .padding()
             }
-        }
-    }
-
-    private func section(title: String, text: String, prominent: Bool) -> some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text(title)
-                .font(.caption.weight(.semibold)).foregroundStyle(.secondary).textCase(.uppercase)
-            Text(text)
-                .font(prominent ? .body : .callout)
-                .foregroundStyle(prominent ? .primary : .secondary)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .textSelection(.enabled)
         }
     }
 }

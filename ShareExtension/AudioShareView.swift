@@ -1,37 +1,39 @@
 import SwiftUI
 
-/// The share extension's UI: a language selector at the top (auto by default), a spinner while
-/// transcribing/translating, then the translation (prominent) plus the original transcript, or
-/// an error. Changing the language re-runs on the same audio — handy when a dialect is misread.
+/// The share extension's UI for a received voice note: a source-language pill, an equalizer while
+/// transcribing/translating, then the translation (prominent) + original transcript, or an error.
+/// Changing the language re-runs on the same audio — handy when a dialect is misread.
 struct AudioShareView: View {
     @ObservedObject var model: AudioShareModel
     let onClose: () -> Void
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 0) {
-                languagePicker
-                    .padding(.horizontal)
-                    .padding(.vertical, 10)
-                Divider()
-                content
+            ZStack {
+                KGColor.canvas.ignoresSafeArea()
+                VStack(spacing: 14) {
+                    sourcePill
+                        .padding(.horizontal)
+                        .padding(.top, 12)
+                    content
+                }
             }
             .navigationTitle("Keyglot")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button(String(localized: "Done"), action: onClose)
+                        .foregroundStyle(KGColor.accent)
                 }
             }
         }
     }
 
     private var currentLanguageName: String {
-        VoiceLanguage.options.first { $0.id == model.selectedID }?.name
-            ?? VoiceLanguage.options[0].name
+        VoiceLanguage.option(for: model.selectedID).name
     }
 
-    private var languagePicker: some View {
+    private var sourcePill: some View {
         Menu {
             ForEach(VoiceLanguage.options) { lang in
                 Button {
@@ -45,17 +47,21 @@ struct AudioShareView: View {
                 }
             }
         } label: {
-            HStack(spacing: 6) {
-                Image(systemName: "globe")
-                Text(String(localized: "Audio language"))
+            HStack(spacing: 8) {
+                Image(systemName: "globe").foregroundStyle(KGColor.accent)
+                Text(String(localized: "Audio language")).foregroundStyle(KGColor.ink)
                 Spacer()
-                Text(currentLanguageName)
-                    .foregroundStyle(.secondary)
-                Image(systemName: "chevron.up.chevron.down")
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
+                Text(currentLanguageName).foregroundStyle(KGColor.ink2)
+                Image(systemName: "chevron.up.chevron.down").font(.caption2).foregroundStyle(KGColor.ink3)
             }
-            .font(.subheadline)
+            .font(KGFont.row)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 12)
+            .background(KGColor.surface, in: RoundedRectangle(cornerRadius: KGRadius.button, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: KGRadius.button, style: .continuous)
+                    .strokeBorder(KGColor.border, lineWidth: 1)
+            )
         }
     }
 
@@ -63,49 +69,32 @@ struct AudioShareView: View {
     private var content: some View {
         switch model.phase {
         case .working(let label):
-            VStack(spacing: 14) {
-                ProgressView()
-                Text(label.isEmpty ? String(localized: "Working…") : label)
-                    .font(.callout)
-                    .foregroundStyle(.secondary)
+            VStack(spacing: 16) {
+                EqualizerBars(color: KGColor.accent)
+                Text(label.isEmpty ? String(localized: "Translating…") : label)
+                    .font(KGFont.body).foregroundStyle(KGColor.ink2)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
 
         case .failed(let message):
             VStack(spacing: 14) {
-                Image(systemName: "exclamationmark.triangle")
-                    .font(.largeTitle)
-                    .foregroundStyle(.orange)
+                Image(systemName: "exclamationmark.triangle.fill")
+                    .font(.largeTitle).foregroundStyle(KGColor.attention)
                 Text(message)
-                    .font(.callout)
-                    .multilineTextAlignment(.center)
-                    .foregroundStyle(.secondary)
+                    .font(KGFont.body).multilineTextAlignment(.center).foregroundStyle(KGColor.ink2)
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
 
         case .done(let transcript, let translation):
             ScrollView {
-                VStack(alignment: .leading, spacing: 18) {
-                    section(title: String(localized: "Translation"), text: translation, prominent: true)
-                    section(title: String(localized: "Original transcript"), text: transcript, prominent: false)
-                }
+                TranslationResultCard(
+                    translation: translation,
+                    original: transcript,
+                    originalLabel: "Original transcript"
+                )
                 .padding()
             }
-        }
-    }
-
-    private func section(title: String, text: String, prominent: Bool) -> some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text(title)
-                .font(.caption.weight(.semibold))
-                .foregroundStyle(.secondary)
-                .textCase(.uppercase)
-            Text(text)
-                .font(prominent ? .body : .callout)
-                .foregroundStyle(prominent ? .primary : .secondary)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .textSelection(.enabled)
         }
     }
 }
