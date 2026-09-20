@@ -4,7 +4,9 @@ import SwiftUI
 /// keys, no jargon, the point is you never open the app to translate.
 struct WelcomeView: View {
     let onDone: () -> Void
+    @EnvironmentObject private var subscription: SubscriptionManager
     @State private var page = 0
+    @State private var showPro = false
 
     var body: some View {
         ZStack {
@@ -19,11 +21,25 @@ struct WelcomeView: View {
                 dots
 
                 Button(page == 0 ? "Show me how" : "Set up my keyboard") {
-                    if page == 0 { withAnimation { page = 1 } } else { onDone() }
+                    if page == 0 { withAnimation { page = 1 } } else { advance() }
                 }
                 .buttonStyle(.kgPrimary)
             }
             .padding(24)
+        }
+        .fullScreenCover(isPresented: $showPro) {
+            ProPaywallView(onClose: { showPro = false; onDone() })
+                .environmentObject(subscription)
+        }
+    }
+
+    /// After the two intro pages: new KeyGlot users see the Pro screen (design 05, screen 3); if
+    /// already subscribed or in Custom mode, go straight home.
+    private func advance() {
+        if AppGroupStorage.shared.aiMode == .keyglot && !subscription.isSubscribed {
+            showPro = true
+        } else {
+            onDone()
         }
     }
 
@@ -134,5 +150,5 @@ struct WelcomeView: View {
 }
 
 #Preview {
-    WelcomeView(onDone: {})
+    WelcomeView(onDone: {}).environmentObject(SubscriptionManager())
 }

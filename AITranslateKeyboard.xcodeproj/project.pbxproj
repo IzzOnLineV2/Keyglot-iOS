@@ -38,6 +38,7 @@
 		22A6F768A027B2A0334EF594 /* KGFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C832053CF46B1522E3117892 /* KGFont.swift */; };
 		23089448A6F9AD92E2AF3CB0 /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61F6E03979C64CDDAE9BA4 /* ToolbarView.swift */; };
 		23BB3A95C1BCEECF9F817A30 /* KGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6888F6EA8EAE18D15F1000 /* KGButton.swift */; };
+		26A10A308BE423A8D9CA9031 /* ProPaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF9AA56B740E7FCFC58FE5 /* ProPaywallView.swift */; };
 		26AA98E8C0C34E365A85764B /* ScriptText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B761F7007420924A6EF08F1 /* ScriptText.swift */; };
 		270F97CA50A1FCA1594588C3 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA005DFD19F76418AAC9C595 /* CredentialStore.swift */; };
 		289EEE85B0ABFF1D6EDC5860 /* VoiceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106247F43656D42D3CE5E2B9 /* VoiceLanguage.swift */; };
@@ -336,6 +337,7 @@
 		C0EC5BB3B9CFF6587069B9D0 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		C263B584837F8740AAFEEA9E /* AppGroupStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupStorage.swift; sourceTree = "<group>"; };
 		C2FF0EA91D0779EA3A9EB502 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C5DF9AA56B740E7FCFC58FE5 /* ProPaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPaywallView.swift; sourceTree = "<group>"; };
 		C70C7DFFE8583E8204555D15 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C832053CF46B1522E3117892 /* KGFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGFont.swift; sourceTree = "<group>"; };
 		C8BAA075D548E9B01C95C50C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 				E6E0FDBD9A5D9660BC529AB2 /* OnboardingView.swift */,
 				AD912243D496848B9060F93C /* PaywallView.swift */,
 				D3078FE5E9FC7D54D9B18267 /* PrivacyInfo.xcprivacy */,
+				C5DF9AA56B740E7FCFC58FE5 /* ProPaywallView.swift */,
 				68779465572FA00D02D77CFA /* SettingsView.swift */,
 				02ADE10290A901FF1FED49D8 /* StoreManager.swift */,
 				2E925DFD7DE51A88DF12D448 /* SubscriptionManager.swift */,
@@ -901,6 +904,7 @@
 				B195CC1280B48784F6985F99 /* OpenListenIntent.swift in Sources */,
 				0149A5192E25431E6907671C /* OpenRouterProvider.swift in Sources */,
 				E1D37B7D2ECDC3CBA1537A69 /* PaywallView.swift in Sources */,
+				26A10A308BE423A8D9CA9031 /* ProPaywallView.swift in Sources */,
 				E900DB1FF5574CE9892752F0 /* RewriteAction.swift in Sources */,
 				E4BA81F63FFE49C79198E456 /* ScriptText.swift in Sources */,
 				BC97377B4A4685BF090168EA /* SeamDivider.swift in Sources */,
@@ -1028,7 +1032,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 33;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1089,7 +1093,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 33;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
