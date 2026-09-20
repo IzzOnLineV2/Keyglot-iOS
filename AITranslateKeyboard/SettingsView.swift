@@ -14,6 +14,7 @@ struct SettingsView: View {
     // Temporary dev-key field for testing KeyGlot mode before StoreKit (Step 3).
     @State private var devKey = ""
     @State private var devKeySaved = false
+    @State private var showWelcomePreview = false
 
     var body: some View {
         NavigationStack {
@@ -25,10 +26,19 @@ struct SettingsView: View {
                     if aiMode == .custom { customSection } else { keyglotSection }
                     keyboardSection
                     aboutSection
+                    KGCard(padding: 0) {
+                        Button { showWelcomePreview = true } label: {
+                            SettingsRow(icon: "hand.wave.fill", title: "Show welcome again").padding(14)
+                        }
+                        .buttonStyle(.plain)
+                    }
                 }
                 .padding()
             }
             .background(KGColor.canvas)
+            .fullScreenCover(isPresented: $showWelcomePreview) {
+                WelcomeView(onDone: { showWelcomePreview = false })
+            }
             .toolbar(.hidden, for: .navigationBar)
             .onChange(of: aiMode) { _, newValue in
                 AppGroupStorage.shared.aiMode = newValue
@@ -59,7 +69,7 @@ struct SettingsView: View {
                     .overlay(Image(systemName: "mic.fill").font(.system(size: 22)).foregroundStyle(.white))
                 VStack(alignment: .leading, spacing: 3) {
                     Text("Listen & translate").font(KGFont.result).foregroundStyle(.white)
-                    Text("Press, speak, and hear it back in your language.")
+                    Text("Press, speak, and Keyglot translates what it hears into your language.")
                         .font(KGFont.caption).foregroundStyle(Color.white.opacity(0.75))
                         .fixedSize(horizontal: false, vertical: true)
                 }
