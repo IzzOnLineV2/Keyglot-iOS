@@ -5,7 +5,8 @@ struct KGPrimaryButtonStyle: ButtonStyle {
     func makeBody(configuration: ButtonStyleConfiguration) -> some View {
         configuration.label
             .font(.system(size: 16.5, weight: .semibold))
-            .foregroundStyle(.white)
+            .foregroundStyle(KGColor.onInk)
+            .padding(.horizontal, 18)
             .frame(maxWidth: .infinity)
             .frame(height: 52)
             .background(KGColor.ink, in: RoundedRectangle(cornerRadius: KGRadius.cta, style: .continuous))
@@ -19,6 +20,7 @@ struct KGGradientButtonStyle: ButtonStyle {
         configuration.label
             .font(.system(size: 16.5, weight: .semibold))
             .foregroundStyle(.white)
+            .padding(.horizontal, 18)
             .frame(maxWidth: .infinity)
             .frame(height: 52)
             .background(KGGradient.diagonal, in: RoundedRectangle(cornerRadius: KGRadius.cta, style: .continuous))
@@ -32,6 +34,7 @@ struct KGSecondaryButtonStyle: ButtonStyle {
         configuration.label
             .font(.system(size: 16, weight: .semibold))
             .foregroundStyle(KGColor.ink)
+            .padding(.horizontal, 18)
             .frame(maxWidth: .infinity)
             .frame(height: 50)
             .background(KGColor.fill, in: RoundedRectangle(cornerRadius: KGRadius.button, style: .continuous))
@@ -45,6 +48,7 @@ struct KGOutlineButtonStyle: ButtonStyle {
         configuration.label
             .font(.system(size: 16, weight: .semibold))
             .foregroundStyle(KGColor.ink)
+            .padding(.horizontal, 18)
             .frame(maxWidth: .infinity)
             .frame(height: 50)
             .background(

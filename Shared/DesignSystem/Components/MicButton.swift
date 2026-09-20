@@ -46,7 +46,7 @@ struct MicButton: View {
     private var content: some View {
         switch state {
         case .idle:
-            Image(systemName: "mic.fill").font(.system(size: 46)).foregroundStyle(.white)
+            Image(systemName: "mic.fill").font(.system(size: 46)).foregroundStyle(KGColor.onInk)
         case .listening:
             EqualizerBars(color: .white)
         case .processing:

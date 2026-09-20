@@ -17,7 +17,8 @@ enum KGColor {
     static let border        = dyn(0xE6E1DB, 0x2E2A3B)   // hairlines (1px)
 
     // Text
-    static let ink   = dyn(0x17151C, 0xF7F4FA)           // primary text / dark buttons
+    static let ink   = dyn(0x17151C, 0xF7F4FA)           // primary text / "ink" button background
+    static let onInk = dyn(0xFFFFFF, 0x17151C)           // text/icon ON an ink background (inverts in dark)
     static let ink2  = dyn(0x6B6572, 0xA79FB4)           // secondary text, autonyms, captions
     static let ink3  = dyn(0x9A939F, 0x756E82)           // tertiary / eyebrow muted / placeholders
 

@@ -62,7 +62,7 @@ struct SegmentedModePicker: View {
         let selected = mode == value
         return Text(title)
             .font(.system(size: 15, weight: .semibold))
-            .foregroundStyle(selected ? Color.white : KGColor.ink2)
+            .foregroundStyle(selected ? KGColor.onInk : KGColor.ink2)
             .frame(maxWidth: .infinity)
             .frame(height: 40)
             .background(

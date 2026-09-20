@@ -14,7 +14,7 @@ struct ToneActionButton: View {
             Text(glyph).font(.system(size: 16))
             Text(label)
                 .font(.system(size: 10, weight: .semibold))
-                .foregroundStyle(isActive ? Color.white : KGColor.ink2)
+                .foregroundStyle(isActive ? KGColor.onInk : KGColor.ink2)
                 .lineLimit(1)
                 .minimumScaleFactor(0.8)
                 .padding(.horizontal, 2)
