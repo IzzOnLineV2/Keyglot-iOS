@@ -1,22 +1,21 @@
 import SwiftUI
 import StoreKit
 
-/// Home / settings, the app's root screen (the keyboard has no settings of its own). Redesigned
-/// as a warm canvas with a Listen hero, the AI-mode toggle, and grouped cards.
+/// Home, the app's root screen (design 06). A product surface, not a Form of pickers: the Listen
+/// hero on top, then "Your keyboard" and "Your plan" as quiet cards. Custom (BYOK) lives behind
+/// "Advanced", so the home stays clean for the average user.
 struct SettingsView: View {
     @EnvironmentObject private var subscription: SubscriptionManager
-    @State private var aiMode = AppGroupStorage.shared.aiMode
-    @State private var selectedProvider = AppGroupStorage.shared.selectedProvider
-    @State private var hasAPIKey = false
     @State private var languageCount = AppGroupStorage.shared.selectedLanguageIDs.count
     @State private var languages = AppGroupStorage.shared.selectedLanguages
+    @State private var keyboardIsSetUp = AppGroupStorage.shared.keyboardIsSetUp
 
-#if DEBUG
-    // Dev-only field for testing KeyGlot mode via the backend dev-key path (compiled out of Release).
-    @State private var devKey = ""
-    @State private var devKeySaved = false
-#endif
     @State private var showWelcomePreview = false
+    @State private var showPro = false
+    @State private var showManage = false
+    @State private var showSetupSteps = false
+
+    private let maxLanguages = Configuration.maxKeyboardLanguages
 
     var body: some View {
         NavigationStack {
@@ -24,31 +23,28 @@ struct SettingsView: View {
                 VStack(alignment: .leading, spacing: 18) {
                     header
                     listenHero
-                    aiModeSection
-                    if aiMode == .custom { customSection } else { keyglotSection }
                     keyboardSection
-                    aboutSection
+                    planSection
+#if DEBUG
                     KGCard(padding: 0) {
                         Button { showWelcomePreview = true } label: {
                             SettingsRow(icon: "hand.wave.fill", title: "Show welcome again").padding(14)
                         }
                         .buttonStyle(.plain)
                     }
+#endif
                 }
                 .padding()
             }
             .background(KGColor.canvas)
-            .fullScreenCover(isPresented: $showWelcomePreview) {
-                WelcomeView(onDone: { showWelcomePreview = false })
-            }
             .toolbar(.hidden, for: .navigationBar)
-            .onChange(of: aiMode) { _, newValue in
-                AppGroupStorage.shared.aiMode = newValue
-                refresh()
+            .sheet(isPresented: $showPro) {
+                ProPaywallView(onClose: { showPro = false }).environmentObject(subscription)
             }
-            .onChange(of: selectedProvider) { _, newValue in
-                AppGroupStorage.shared.selectedProvider = newValue
-                refresh()
+            .sheet(isPresented: $showSetupSteps) { setupStepsSheet }
+            .manageSubscriptionsSheet(isPresented: $showManage)
+            .fullScreenCover(isPresented: $showWelcomePreview) {
+                WelcomeView(onDone: { showWelcomePreview = false }).environmentObject(subscription)
             }
             .onAppear(perform: refresh)
         }
@@ -90,159 +86,139 @@ struct SettingsView: View {
         .buttonStyle(.plain)
     }
 
-    // MARK: - AI Mode
-
-    private var aiModeSection: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("AI Mode").kgEyebrow()
-            KGCard {
-                VStack(alignment: .leading, spacing: 12) {
-                    SegmentedModePicker(mode: $aiMode)
-                    Text(aiMode == .keyglot
-                         ? "AI included. No setup required."
-                         : "You configure your own AI provider. No other difference.")
-                        .font(KGFont.caption).foregroundStyle(KGColor.ink2)
-                }
-            }
-        }
-    }
-
-    // MARK: - Custom (BYOK)
-
-    private var customSection: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("AI Provider").kgEyebrow()
-            KGCard(padding: 0) {
-                VStack(spacing: 0) {
-                    Menu {
-                        ForEach(AIProviderType.allCases) { provider in
-                            Button(provider.displayName) { selectedProvider = provider }
-                        }
-                    } label: {
-                        SettingsRow(icon: "cpu", title: "Provider", value: selectedProvider.displayName).padding(14)
-                    }
-                    Divider().overlay(KGColor.border)
-                    NavigationLink {
-                        ApiKeyView(provider: selectedProvider, hasAPIKey: $hasAPIKey)
-                    } label: {
-                        SettingsRow(
-                            icon: "key.fill",
-                            iconTint: hasAPIKey ? KGColor.success : KGColor.error,
-                            iconBg: hasAPIKey ? KGColor.successBg : KGColor.errorBg,
-                            title: "API Key",
-                            value: hasAPIKey ? String(localized: "Configured") : String(localized: "Not set")
-                        ).padding(14)
-                    }
-                    .buttonStyle(.plain)
-                }
-            }
-        }
-    }
-
-    // MARK: - KeyGlot (managed)
-
-    private var keyglotSection: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("KeyGlot Pro").kgEyebrow()
-            KGCard {
-                if subscription.isSubscribed {
-                    Label("KeyGlot Pro is active", systemImage: "checkmark.seal.fill")
-                        .font(KGFont.row).foregroundStyle(KGColor.success)
-                } else if subscription.products.isEmpty {
-                    Text("Loading plans…").font(KGFont.row).foregroundStyle(KGColor.ink2)
-                } else {
-                    VStack(spacing: 12) {
-                        ForEach(subscription.products, id: \.id) { product in
-                            Button { Task { try? await subscription.purchase(product) } } label: {
-                                HStack {
-                                    Text(product.displayName.isEmpty ? product.id : product.displayName)
-                                    Spacer()
-                                    Text(product.displayPrice)
-                                }
-                            }
-                            .buttonStyle(.kgPrimary)
-                        }
-                        Button("Restore purchases") { Task { await subscription.restore() } }
-                            .font(KGFont.caption).foregroundStyle(KGColor.ink2)
-                    }
-                }
-            }
-
-#if DEBUG
-            // Dev-only: exercise the KeyGlot backend via the dev-key path (backend DEV_MODE=1).
-            // Compiled out of Release builds, it never ships to TestFlight / the App Store. Once
-            // DEV_MODE=0 the server ignores this key anyway, real access is StoreKit + App Attest.
-            KGCard {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("KeyGlot dev key (debug only)").font(KGFont.caption).foregroundStyle(KGColor.ink3)
-                    HStack {
-                        TextField("Dev key", text: $devKey)
-                            .textInputAutocapitalization(.never).autocorrectionDisabled()
-                            .font(.system(.footnote, design: .monospaced))
-                        Button("Save") {
-                            devKeySaved = CredentialStore.shared.setSecret(devKey, account: KeyGlotSession.devKeyAccount)
-                        }
-                        .buttonStyle(.borderless)
-                        .disabled(devKey.trimmingCharacters(in: .whitespaces).isEmpty)
-                    }
-                    if devKeySaved {
-                        Label("Saved", systemImage: "checkmark.circle.fill")
-                            .font(.footnote).foregroundStyle(KGColor.success)
-                    }
-                }
-            }
-#endif
-        }
-    }
-
-    // MARK: - Keyboard
+    // MARK: - Your keyboard
 
     private var keyboardSection: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Your keyboard").kgEyebrow()
-            KGCard {
-                VStack(alignment: .leading, spacing: 12) {
+            KGCard(padding: 0) {
+                VStack(spacing: 0) {
                     NavigationLink { LanguageSelectionView() } label: {
-                        SettingsRow(icon: "globe", title: "Languages", value: String(localized: "\(languageCount) shown"))
-                    }
-                    .buttonStyle(.plain)
-                    if !languages.isEmpty {
-                        HStack(spacing: 7) {
-                            ForEach(languages.prefix(4)) { language in
-                                LanguageChip(flag: language.flag, name: language.name, height: 44)
+                        VStack(alignment: .leading, spacing: 12) {
+                            SettingsRow(icon: "globe", title: "Languages",
+                                        value: String(localized: "\(languageCount) of \(maxLanguages)"))
+                            if !languages.isEmpty {
+                                HStack(spacing: 7) {
+                                    ForEach(languages.prefix(4)) { language in
+                                        LanguageChip(flag: language.flag, name: language.name, height: 44)
+                                    }
+                                }
                             }
                         }
+                        .padding(14)
                     }
+                    .buttonStyle(.plain)
+                    Divider().overlay(KGColor.border)
+                    keyboardStatusRow
                 }
-            }
-            KGCard {
-                SetupChecklist(mode: aiMode, providerName: selectedProvider.displayName)
             }
         }
     }
 
-    private var aboutSection: some View {
-        KGCard(padding: 0) {
-            NavigationLink { AboutView() } label: {
-                SettingsRow(icon: "info.circle", title: "About Keyglot", showChevron: true).padding(14)
+    @ViewBuilder private var keyboardStatusRow: some View {
+        if keyboardIsSetUp {
+            HStack(spacing: 12) {
+                Image(systemName: "checkmark")
+                    .font(.system(size: 15, weight: .bold)).foregroundStyle(KGColor.success)
+                    .frame(width: 29, height: 29)
+                    .background(KGColor.successBg, in: RoundedRectangle(cornerRadius: 9, style: .continuous))
+                Text("Keyboard is set up").font(KGFont.row).foregroundStyle(KGColor.ink)
+                Spacer(minLength: 8)
+                Text("Full Access on").font(KGFont.caption).foregroundStyle(KGColor.ink3)
+            }
+            .padding(14)
+        } else {
+            Button { showSetupSteps = true } label: {
+                SettingsRow(icon: "keyboard", iconTint: KGColor.attention, iconBg: KGColor.attentionBg,
+                            title: "Set up the keyboard").padding(14)
             }
             .buttonStyle(.plain)
         }
     }
 
+    // MARK: - Your plan
+
+    private var planSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Your plan").kgEyebrow()
+            KGCard(padding: 0) {
+                VStack(spacing: 0) {
+                    Button {
+                        if subscription.isSubscribed { showManage = true } else { showPro = true }
+                    } label: {
+                        planProRow.padding(14)
+                    }
+                    .buttonStyle(.plain)
+                    Divider().overlay(KGColor.border)
+                    NavigationLink { AdvancedView() } label: {
+                        SettingsRow(icon: "slider.horizontal.3", title: "Advanced",
+                                    value: String(localized: "Use your own AI")).padding(14)
+                    }
+                    .buttonStyle(.plain)
+                    Divider().overlay(KGColor.border)
+                    NavigationLink { AboutView() } label: {
+                        SettingsRow(icon: "info.circle", title: "About Keyglot").padding(14)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+        }
+    }
+
+    private var planProRow: some View {
+        HStack(spacing: 12) {
+            LogoMark(size: 29)
+            VStack(alignment: .leading, spacing: 2) {
+                Text("KeyGlot Pro").font(KGFont.row).foregroundStyle(KGColor.ink)
+                Text(planSubtitle).font(KGFont.caption).foregroundStyle(KGColor.ink3)
+            }
+            Spacer(minLength: 8)
+            Image(systemName: "chevron.right").font(.system(size: 13, weight: .semibold)).foregroundStyle(KGColor.ink3)
+        }
+        .contentShape(Rectangle())
+    }
+
+    private var planSubtitle: String {
+        guard subscription.isSubscribed else { return String(localized: "AI included") }
+        let plan = (subscription.activeProductID?.hasSuffix("yearly") ?? false)
+            ? String(localized: "Yearly") : String(localized: "Monthly")
+        if let date = subscription.renewalDate {
+            let dateStr = date.formatted(date: .abbreviated, time: .omitted)
+            return "\(plan) · \(String(localized: "renews \(dateStr)"))"
+        }
+        return plan
+    }
+
+    // MARK: - Setup steps sheet
+
+    private var setupStepsSheet: some View {
+        NavigationStack {
+            ScrollView {
+                KGCard {
+                    SetupChecklist(mode: AppGroupStorage.shared.aiMode,
+                                   providerName: AppGroupStorage.shared.selectedProvider.displayName)
+                }
+                .padding()
+            }
+            .background(KGColor.canvas)
+            .navigationTitle("Set up the keyboard")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") { showSetupSteps = false }
+                }
+            }
+        }
+    }
+
     private func refresh() {
-        hasAPIKey = CredentialStore.shared.hasAPIKey(for: selectedProvider)
         languageCount = AppGroupStorage.shared.selectedLanguageIDs.count
         languages = AppGroupStorage.shared.selectedLanguages
-#if DEBUG
-        if devKey.isEmpty {
-            devKey = CredentialStore.shared.secret(KeyGlotSession.devKeyAccount) ?? ""
-        }
-#endif
+        keyboardIsSetUp = AppGroupStorage.shared.keyboardIsSetUp
     }
 }
 
-/// Step-by-step instructions for enabling the keyboard, shown inline in the setup card.
+/// Step-by-step instructions for enabling the keyboard, shown in the setup sheet.
 private struct SetupChecklist: View {
     let mode: AIMode
     let providerName: String
@@ -250,7 +226,7 @@ private struct SetupChecklist: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             if mode == .custom {
-                step(1, "Enter your \(providerName) API key above.")
+                step(1, "Add your \(providerName) API key in Advanced.")
             } else {
                 step(1, "You're on KeyGlot, AI is included, no API key needed.")
             }

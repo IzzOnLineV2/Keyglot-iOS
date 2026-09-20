@@ -170,3 +170,20 @@
 "Restore" = "복원";
 "Terms" = "약관";
 "Privacy" = "개인정보 처리방침";
+
+"%lld of %lld" = "%lld/%lld";
+"Keyboard is set up" = "키보드 설정 완료";
+"Full Access on" = "전체 접근 켜짐";
+"Set up the keyboard" = "키보드 설정하기";
+"Your plan" = "내 플랜";
+"AI included" = "AI 포함";
+"renews %@" = "%@에 갱신";
+"Use your own AI" = "내 AI 사용";
+"Advanced" = "고급";
+"Where the AI comes from" = "AI 출처";
+"**KeyGlot:** AI included with Pro, nothing to configure." = "**KeyGlot:** Pro에 AI가 포함되어 설정할 것이 없습니다.";
+"**Custom:** free forever, but you bring your own provider and key. Requests go straight from your phone to them." = "**Custom:** 영구 무료이지만 제공업체와 키는 직접 준비합니다. 요청은 기기에서 해당 업체로 바로 전송됩니다.";
+"Custom provider" = "Custom 제공업체";
+"Voice notes key" = "음성 메모 키";
+"Keys are stored in the iOS Keychain on this device and shared only with the Keyglot keyboard. Keyglot never sees them." = "키는 이 기기의 iOS 키체인에 저장되며 Keyglot 키보드와만 공유됩니다. Keyglot은 절대 볼 수 없습니다.";
+"Add your %@ API key in Advanced." = "%@ API 키를 고급에서 추가하세요.";

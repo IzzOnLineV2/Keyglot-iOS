@@ -176,6 +176,7 @@
 		D7E4DCF8A6C224157916652B /* KeyGlotSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2338CCF1A133976817C5F /* KeyGlotSession.swift */; };
 		D979851787264ED117CF51BC /* OpenAITranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */; };
 		DA6C55D65BC4637116A68228 /* GeminiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B7BD74777B6745934F80 /* GeminiProvider.swift */; };
+		DB30ADA44CFAC03A8ACDFAD4 /* AdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D193D8A992B515B050BAD385 /* AdvancedView.swift */; };
 		DD0B66398081EF3F70FAA5B9 /* InstrumentSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B34AFC284B9868045BB196F /* InstrumentSerif-Regular.ttf */; };
 		DDCF8079B1B1E2E726EF9163 /* KGFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C832053CF46B1522E3117892 /* KGFont.swift */; };
 		DF6F12EA20F4A15D655BD00E /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9018947EBABFDAD65F8865D /* AboutView.swift */; };
@@ -347,6 +348,7 @@
 		CF46F08B3523494C579DFE18 /* AITranslateKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AITranslateKeyboard.entitlements; sourceTree = "<group>"; };
 		CFD5BE4376CA7C5F2AD1F3CA /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
 		D0FA20717491EE64E9FDAE7F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D193D8A992B515B050BAD385 /* AdvancedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedView.swift; sourceTree = "<group>"; };
 		D3078FE5E9FC7D54D9B18267 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		D9160CA2C35B1FC7E053595A /* AudioShareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioShareModel.swift; sourceTree = "<group>"; };
 		DEF32F24C33E91B249EDA5FA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				B9018947EBABFDAD65F8865D /* AboutView.swift */,
+				D193D8A992B515B050BAD385 /* AdvancedView.swift */,
 				CF46F08B3523494C579DFE18 /* AITranslateKeyboard.entitlements */,
 				472966A37A5845747FD71D90 /* AITranslateKeyboardApp.swift */,
 				A714A644D549C6B896808DDD /* ApiKeyView.swift */,
@@ -874,6 +877,7 @@
 				5120E1CDCB52DD16286722BF /* AIProvider.swift in Sources */,
 				7A291A26FBA7498BF2C10BA3 /* AITranslateKeyboardApp.swift in Sources */,
 				DF6F12EA20F4A15D655BD00E /* AboutView.swift in Sources */,
+				DB30ADA44CFAC03A8ACDFAD4 /* AdvancedView.swift in Sources */,
 				58108E65F810C6940C3145AC /* ApiKeyView.swift in Sources */,
 				BAB4B0A3E19B7883D8FC7A98 /* AppAttestClient.swift in Sources */,
 				441B9E58278DE30C666D9F68 /* AppGroupStorage.swift in Sources */,
@@ -1032,7 +1036,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 34;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1093,7 +1097,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 34;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

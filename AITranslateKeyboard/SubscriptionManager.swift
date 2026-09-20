@@ -13,6 +13,9 @@ final class SubscriptionManager: ObservableObject {
     @Published private(set) var products: [Product] = []
     @Published private(set) var isSubscribed = false
     @Published private(set) var isLoading = false
+    /// The active subscription's product id and next renewal/expiry, for the "Your plan" row.
+    @Published private(set) var activeProductID: String?
+    @Published private(set) var renewalDate: Date?
 
     private var updatesTask: Task<Void, Never>?
 
@@ -39,14 +42,20 @@ final class SubscriptionManager: ObservableObject {
     /// Recompute `isSubscribed` from StoreKit's current entitlements.
     func refresh() async {
         var active = false
+        var productID: String?
+        var renews: Date?
         for await result in Transaction.currentEntitlements {
             guard case .verified(let t) = result,
                   Configuration.subscriptionProductIDs.contains(t.productID),
                   t.revocationDate == nil,
                   (t.expirationDate ?? .distantFuture) > Date() else { continue }
             active = true
+            productID = t.productID
+            renews = t.expirationDate
         }
         isSubscribed = active
+        activeProductID = productID
+        renewalDate = renews
     }
 
     /// Purchase a subscription. Returns true if it completed (verified).

@@ -30,6 +30,9 @@ final class KeyboardViewController: UIInputViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         refreshEnvironment()
+        // Full Access is required to reach the shared App Group, so recording here also tells the
+        // app the keyboard is installed and working (drives the "Keyboard is set up" status).
+        if hasFullAccess { AppGroupStorage.shared.recordKeyboardActive() }
         // Re-check in case the user changed the key or languages in the app and switched back.
         updateAPIKeyAvailability()
         updateLanguages()

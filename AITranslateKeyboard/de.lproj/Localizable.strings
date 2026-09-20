@@ -170,3 +170,20 @@
 "Restore" = "Wiederherstellen";
 "Terms" = "Nutzungsbedingungen";
 "Privacy" = "Datenschutz";
+
+"%lld of %lld" = "%lld von %lld";
+"Keyboard is set up" = "Tastatur eingerichtet";
+"Full Access on" = "Vollzugriff aktiv";
+"Set up the keyboard" = "Tastatur einrichten";
+"Your plan" = "Dein Abo";
+"AI included" = "KI inklusive";
+"renews %@" = "verlängert sich am %@";
+"Use your own AI" = "Eigene KI verwenden";
+"Advanced" = "Erweitert";
+"Where the AI comes from" = "Woher die KI kommt";
+"**KeyGlot:** AI included with Pro, nothing to configure." = "**KeyGlot:** KI mit Pro inbegriffen, nichts einzurichten.";
+"**Custom:** free forever, but you bring your own provider and key. Requests go straight from your phone to them." = "**Custom:** für immer kostenlos, aber du bringst deinen eigenen Anbieter und Schlüssel mit. Anfragen gehen direkt von deinem Telefon zu ihnen.";
+"Custom provider" = "Custom-Anbieter";
+"Voice notes key" = "Schlüssel für Sprachnachrichten";
+"Keys are stored in the iOS Keychain on this device and shared only with the Keyglot keyboard. Keyglot never sees them." = "Schlüssel werden im iOS-Schlüsselbund auf diesem Gerät gespeichert und nur mit der Keyglot-Tastatur geteilt. Keyglot sieht sie nie.";
+"Add your %@ API key in Advanced." = "Füge deinen %@ API-Schlüssel unter Erweitert hinzu.";

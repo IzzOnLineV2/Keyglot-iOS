@@ -170,3 +170,20 @@
 "Restore" = "恢复购买";
 "Terms" = "条款";
 "Privacy" = "隐私";
+
+"%lld of %lld" = "%lld/%lld";
+"Keyboard is set up" = "键盘已设置";
+"Full Access on" = "已开启完全访问";
+"Set up the keyboard" = "设置键盘";
+"Your plan" = "你的方案";
+"AI included" = "已含 AI";
+"renews %@" = "%@ 续订";
+"Use your own AI" = "使用你自己的 AI";
+"Advanced" = "高级";
+"Where the AI comes from" = "AI 来自哪里";
+"**KeyGlot:** AI included with Pro, nothing to configure." = "**KeyGlot：** Pro 已含 AI，无需配置。";
+"**Custom:** free forever, but you bring your own provider and key. Requests go straight from your phone to them." = "**Custom：** 永久免费，但需自备提供商和密钥。请求会从你的手机直接发送给他们。";
+"Custom provider" = "Custom 提供商";
+"Voice notes key" = "语音消息密钥";
+"Keys are stored in the iOS Keychain on this device and shared only with the Keyglot keyboard. Keyglot never sees them." = "密钥保存在本设备的 iOS 钥匙串中，仅与 Keyglot 键盘共享。Keyglot 永远不会看到它们。";
+"Add your %@ API key in Advanced." = "在“高级”中添加你的 %@ API 密钥。";

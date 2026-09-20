@@ -25,7 +25,25 @@ struct AppGroupStorage: @unchecked Sendable { // `UserDefaults` is documented th
         static let aiMode = "ai_mode"
         static let installID = "install_id"
         static let hasSeenOnboarding = "has_seen_onboarding"
+        static let keyboardLastActive = "keyboard_last_active"
     }
+
+    /// When the keyboard extension was last active with Full Access (it can only reach this shared
+    /// store when Full Access is on, so a recorded date means "installed and working"). Read by the
+    /// app to show the "Keyboard is set up" status. `nil` until the keyboard has run at least once.
+    var keyboardLastActive: Date? {
+        get {
+            let t = defaults.double(forKey: Keys.keyboardLastActive)
+            return t > 0 ? Date(timeIntervalSince1970: t) : nil
+        }
+        nonmutating set { defaults.set(newValue?.timeIntervalSince1970 ?? 0, forKey: Keys.keyboardLastActive) }
+    }
+
+    /// Whether the keyboard has ever been active with Full Access (proxy for "set up").
+    var keyboardIsSetUp: Bool { keyboardLastActive != nil }
+
+    /// Called by the keyboard extension (with Full Access) to record that it is installed and running.
+    func recordKeyboardActive() { keyboardLastActive = Date() }
 
     /// Whether the consumer welcome flow has been shown. Existing users (who already configured a
     /// provider key) are treated as having seen it, so an update doesn't re-show onboarding.

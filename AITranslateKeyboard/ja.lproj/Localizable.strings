@@ -170,3 +170,20 @@
 "Restore" = "復元";
 "Terms" = "利用規約";
 "Privacy" = "プライバシー";
+
+"%lld of %lld" = "%lld/%lld";
+"Keyboard is set up" = "キーボード設定済み";
+"Full Access on" = "フルアクセスがオン";
+"Set up the keyboard" = "キーボードを設定";
+"Your plan" = "プラン";
+"AI included" = "AI 込み";
+"renews %@" = "%@ に更新";
+"Use your own AI" = "自分のAIを使う";
+"Advanced" = "詳細設定";
+"Where the AI comes from" = "AI の提供元";
+"**KeyGlot:** AI included with Pro, nothing to configure." = "**KeyGlot：** Pro に AI が含まれ、設定は不要です。";
+"**Custom:** free forever, but you bring your own provider and key. Requests go straight from your phone to them." = "**Custom：** ずっと無料ですが、プロバイダーとキーはご自身で用意します。リクエストは端末から直接そのプロバイダーへ送られます。";
+"Custom provider" = "Custom プロバイダー";
+"Voice notes key" = "音声メモ用キー";
+"Keys are stored in the iOS Keychain on this device and shared only with the Keyglot keyboard. Keyglot never sees them." = "キーはこの端末の iOS キーチェーンに保存され、Keyglot キーボードとだけ共有されます。Keyglot が見ることはありません。";
+"Add your %@ API key in Advanced." = "%@ の API キーを詳細設定で追加してください。";
