@@ -192,6 +192,15 @@ Edit `Shared/Configuration.swift`:
 - On any API/network failure the banner shows the reason (e.g. *"Invalid API key"*, *"No
   credit — add billing"*) and your original text is left untouched.
 
+## Support
+
+Keyglot is free and open source. If it's useful to you, you can leave a small tip:
+
+- **In the app** — a one-time *Support Keyglot* purchase (€1,99).
+- **PayPal** — [paypal.me/st3fx](https://paypal.me/st3fx) — any amount, no App Store fee.
+
+Thank you 💚
+
 ## License
 
 Keyglot is released under the [MIT License](LICENSE) — you're free to use, modify, and

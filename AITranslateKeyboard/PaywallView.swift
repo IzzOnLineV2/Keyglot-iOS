@@ -9,7 +9,8 @@ struct PaywallView: View {
 
     @State private var busy = false
 
-    private var priceText: String { store.product?.displayPrice ?? "€4,99" }
+    // Fallback shown only until the real App Store Connect price loads (set the product to €1,99).
+    private var priceText: String { store.product?.displayPrice ?? "€1,99" }
 
     var body: some View {
         ZStack {
