@@ -11,6 +11,9 @@ final class KeyboardViewController: UIInputViewController {
     private let service = TranslationService()
     private var heightConstraint: NSLayoutConstraint?
 
+    /// The message before the last translation replaced it, so "Undo" can put it back.
+    private var lastOriginal: String?
+
     // Status hint + language row (flag + name) + rewrite caption + tone row (glyph + name).
     private static let keyboardHeight: CGFloat = 200
 
@@ -96,6 +99,9 @@ final class KeyboardViewController: UIInputViewController {
             onTranslateClipboard: { [weak self] in
                 self?.performClipboardTranslation()
             },
+            onUndo: { [weak self] in
+                self?.performUndo()
+            },
             configureNextKeyboardButton: { [weak self] button in
                 guard let self else { return }
                 button.addTarget(
@@ -176,6 +182,16 @@ final class KeyboardViewController: UIInputViewController {
         }
     }
 
+    /// Put the user's original words back after a translation (the "Undo" pill).
+    private func performUndo() {
+        guard let original = lastOriginal else { return }
+        let before = textDocumentProxy.documentContextBeforeInput ?? ""
+        let after = textDocumentProxy.documentContextAfterInput ?? ""
+        replaceMessage(before: before, after: after, with: original)
+        lastOriginal = nil
+        state.finishWork()
+    }
+
     /// Shared flow for both translation and rewriting: validate, read the exposed text, run the
     /// provider call, and replace the message in place. On failure the original text is untouched.
     private func runAction(
@@ -207,7 +223,12 @@ final class KeyboardViewController: UIInputViewController {
             do {
                 let result = try await work(self.service, fullText)
                 self.replaceMessage(before: before, after: after, with: result)
-                self.state.finishWork()
+                self.lastOriginal = fullText
+                if let languageID {
+                    self.state.showReplaced(languageID: languageID)
+                } else {
+                    self.state.finishWork()
+                }
                 AppGroupStorage.shared.recordUse()
             } catch {
                 // On failure we leave the user's original text untouched.

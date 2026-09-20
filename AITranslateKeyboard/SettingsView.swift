@@ -9,6 +9,7 @@ struct SettingsView: View {
     @State private var selectedProvider = AppGroupStorage.shared.selectedProvider
     @State private var hasAPIKey = false
     @State private var languageCount = AppGroupStorage.shared.selectedLanguageIDs.count
+    @State private var languages = AppGroupStorage.shared.selectedLanguages
 
     // Temporary dev-key field for testing KeyGlot mode before StoreKit (Step 3).
     @State private var devKey = ""
@@ -183,11 +184,20 @@ struct SettingsView: View {
     private var keyboardSection: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Your keyboard").kgEyebrow()
-            KGCard(padding: 0) {
-                NavigationLink { LanguageSelectionView() } label: {
-                    SettingsRow(icon: "globe", title: "Languages", value: String(localized: "\(languageCount) shown")).padding(14)
+            KGCard {
+                VStack(alignment: .leading, spacing: 12) {
+                    NavigationLink { LanguageSelectionView() } label: {
+                        SettingsRow(icon: "globe", title: "Languages", value: String(localized: "\(languageCount) shown"))
+                    }
+                    .buttonStyle(.plain)
+                    if !languages.isEmpty {
+                        HStack(spacing: 7) {
+                            ForEach(languages.prefix(4)) { language in
+                                LanguageChip(flag: language.flag, name: language.name, height: 44)
+                            }
+                        }
+                    }
                 }
-                .buttonStyle(.plain)
             }
             KGCard {
                 SetupChecklist(mode: aiMode, providerName: selectedProvider.displayName)
@@ -207,6 +217,7 @@ struct SettingsView: View {
     private func refresh() {
         hasAPIKey = CredentialStore.shared.hasAPIKey(for: selectedProvider)
         languageCount = AppGroupStorage.shared.selectedLanguageIDs.count
+        languages = AppGroupStorage.shared.selectedLanguages
         if devKey.isEmpty {
             devKey = CredentialStore.shared.secret(KeyGlotSession.devKeyAccount) ?? ""
         }

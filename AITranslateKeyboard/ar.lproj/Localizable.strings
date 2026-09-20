@@ -113,3 +113,17 @@
 "It stops on its own when the room goes quiet." = "يتوقّف تلقائيًا عندما يسود الهدوء.";
 "Stop now" = "أوقف الآن";
 "Working out what that was…" = "جارٍ تحليل ما قيل…";
+
+/* ===== Redesign additions (welcome + keyboard states) ===== */
+"Show me how" = "أرِني كيف";
+"Set up my keyboard" = "إعداد لوحة المفاتيح";
+"A friend writes in a language you don't speak — Keyglot translates it, and turns your reply into their language, right where you're already typing." = "يكتب لك صديق بلغة لا تعرفها — يترجمها Keyglot ويحوّل ردّك إلى لغته، في المكان نفسه الذي تكتب فيه.";
+"Three places Keyglot shows up" = "ثلاثة أماكن يظهر فيها Keyglot";
+"You'll never open this app to translate something. That's the point." = "لن تفتح هذا التطبيق لتترجم شيئًا أبدًا. هذا هو المقصود.";
+"Write it, then switch it" = "اكتبها ثم حوّلها";
+"Type in your language, tap a flag, and your message is replaced with a natural translation — inside WhatsApp." = "اكتب بلغتك، اضغط على عَلم، فتُستبدل رسالتك بترجمة طبيعية — داخل واتساب.";
+"Got a voice note you can't follow?" = "وصلتك رسالة صوتية لا تفهمها؟";
+"Share it to Keyglot and read what it says — dialects included." = "شاركها مع Keyglot واقرأ ما تقوله — حتى اللهجات.";
+"Talking face to face" = "التحدّث وجهًا لوجه";
+"Open Listen & translate, and hear what they said in your language." = "افتح ”استمع وترجم“ واسمع ما قيل بلغتك.";
+"AI is included. Nothing to set up." = "الذكاء الاصطناعي مضمّن. لا شيء لإعداده.";

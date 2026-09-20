@@ -48,3 +48,8 @@
 "Type your message, then pick a language." = "先输入消息，再选择语言。";
 "Tap a language to replace your message." = "点按一种语言即可替换你的消息。";
 "Translate what they sent" = "翻译收到的消息";
+
+/* ===== Redesign additions (welcome + keyboard states) ===== */
+"✓ Replaced — ready to send" = "✓ 已替换 — 可以发送";
+"Undo — put my words back" = "撤销 — 恢复我的原话";
+"Tone actions appear once you've typed" = "输入后会出现语气选项";

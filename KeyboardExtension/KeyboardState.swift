@@ -11,6 +11,8 @@ final class KeyboardState: ObservableObject {
         case idle
         /// Work in flight (translating or rewriting). The string is the progress label to show.
         case busy(String)
+        /// A brief success confirmation (e.g. "✓ Replaced — ready to send").
+        case success(String)
         case error(String)
     }
 
@@ -40,6 +42,10 @@ final class KeyboardState: ObservableObject {
     /// rewrite/clipboard actions or when idle.
     @Published var activeLanguageID: String? = nil
 
+    /// The language just used to replace the message (drives the "selected" chip + Undo pill).
+    /// Cleared automatically after the success confirmation fades.
+    @Published var replacedLanguageID: String? = nil
+
     /// Actions (translate/rewrite) only work with Full Access, a configured key, and no work
     /// in flight.
     var canTranslate: Bool {
@@ -52,17 +58,36 @@ final class KeyboardState: ObservableObject {
     func beginWork(_ label: String) {
         errorResetTask?.cancel()
         activeLanguageID = nil
+        replacedLanguageID = nil
         status = .busy(label)
     }
 
     func finishWork() {
         activeLanguageID = nil
+        replacedLanguageID = nil
         if case .busy = status { status = .idle }
+    }
+
+    /// Show a brief "✓ Replaced" confirmation, highlight the used chip, and reveal Undo. Auto-clears.
+    func showReplaced(languageID: String?) {
+        activeLanguageID = nil
+        replacedLanguageID = languageID
+        status = .success(String(localized: "✓ Replaced — ready to send"))
+        errorResetTask?.cancel()
+        errorResetTask = Task { [weak self] in
+            try? await Task.sleep(for: .seconds(4))
+            guard !Task.isCancelled else { return }
+            if case .success = self?.status {
+                self?.status = .idle
+                self?.replacedLanguageID = nil
+            }
+        }
     }
 
     /// Show a transient error banner that clears itself after a few seconds.
     func showError(_ message: String) {
         activeLanguageID = nil
+        replacedLanguageID = nil
         status = .error(message)
         errorResetTask?.cancel()
         errorResetTask = Task { [weak self] in

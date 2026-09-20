@@ -4,7 +4,7 @@ import SwiftUI
 /// "your keyboard" summary. Idle = surface card; active/working = the Glot gradient with white text
 /// (working adds an animated shimmer sweep).
 struct LanguageChip: View {
-    enum ChipState { case idle, active, working, disabled }
+    enum ChipState { case idle, active, working, selected, disabled }
 
     let flag: String
     let name: String
@@ -12,13 +12,20 @@ struct LanguageChip: View {
     var height: CGFloat = 54
 
     private var onGradient: Bool { chipState == .active || chipState == .working }
+    private var bordered: Bool { chipState == .active || chipState == .selected }
+
+    private var textColor: Color {
+        if onGradient { return .white }
+        if chipState == .selected { return KGColor.accent }
+        return KGColor.ink2
+    }
 
     var body: some View {
         VStack(spacing: 3) {
             Text(flag).font(.system(size: 19))
             Text(name)
                 .font(KGFont.chip)
-                .foregroundStyle(onGradient ? Color.white : KGColor.ink2)
+                .foregroundStyle(textColor)
                 .lineLimit(1)
                 .minimumScaleFactor(0.8)
                 .padding(.horizontal, 2)
@@ -31,7 +38,7 @@ struct LanguageChip: View {
         }
         .overlay(
             RoundedRectangle(cornerRadius: KGRadius.chip, style: .continuous)
-                .strokeBorder(chipState == .active ? KGColor.accent : .clear, lineWidth: 1.5)
+                .strokeBorder(bordered ? KGColor.accent : .clear, lineWidth: 1.5)
         )
         .clipShape(RoundedRectangle(cornerRadius: KGRadius.chip, style: .continuous))
         .kgShadow(onGradient ? .chipGlow : .card)
@@ -40,7 +47,9 @@ struct LanguageChip: View {
 
     @ViewBuilder
     private var background: some View {
-        if onGradient { KGGradient.diagonal } else { KGColor.surface }
+        if onGradient { KGGradient.diagonal }
+        else if chipState == .selected { KGColor.accentTint }
+        else { KGColor.surface }
     }
 }
 

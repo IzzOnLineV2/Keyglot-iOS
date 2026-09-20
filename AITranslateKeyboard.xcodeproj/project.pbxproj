@@ -190,6 +190,7 @@
 		F174E346979EA4E9C1581690 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 448D369B0CD394B4D0D2E710 /* PrivacyInfo.xcprivacy */; };
 		F226444E0E7EAD7520E1739D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68779465572FA00D02D77CFA /* SettingsView.swift */; };
 		F310090D3480C7CE39D2EABF /* KGStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926F71435FFDFFD1B022CAD6 /* KGStyle.swift */; };
+		F37A6E38DDC8C6931612A742 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778EAEB90F3B3842AD42CE8 /* WelcomeView.swift */; };
 		F4286BF92F10414A2D605708 /* MicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA0A8FF86F43AB2252963A8 /* MicButton.swift */; };
 		F4EE5C78AFB77C8018679498 /* KGFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C832053CF46B1522E3117892 /* KGFont.swift */; };
 		F549069EFC9FB40ED71AC0C7 /* KGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ABED9387352C66D97818EE /* KGColor.swift */; };
@@ -355,6 +356,7 @@
 		EF309E8F2FD223F7A0902EA9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F2B3368F0EE820F74CD141AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F598E2FEA6D89521EC3E7764 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		F778EAEB90F3B3842AD42CE8 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		FCD634269F4B9A34A1733CFB /* InstrumentSerif-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InstrumentSerif-Italic.ttf"; sourceTree = "<group>"; };
 		FFB7D1E4A2A62771E7E871BF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FFE6423DE8A9E04BBEE78E81 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 				68779465572FA00D02D77CFA /* SettingsView.swift */,
 				02ADE10290A901FF1FED49D8 /* StoreManager.swift */,
 				2E925DFD7DE51A88DF12D448 /* SubscriptionManager.swift */,
+				F778EAEB90F3B3842AD42CE8 /* WelcomeView.swift */,
 			);
 			path = AITranslateKeyboard;
 			sourceTree = "<group>";
@@ -898,6 +901,7 @@
 				BF922407ED2CB2E2F2A10341 /* ToneActionButton.swift in Sources */,
 				AEE2D2BC17AE5C274771FB57 /* TranslationResultCard.swift in Sources */,
 				3153B6E523E339C6B36FBF2C /* VoiceLanguage.swift in Sources */,
+				F37A6E38DDC8C6931612A742 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1014,7 +1018,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1075,7 +1079,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

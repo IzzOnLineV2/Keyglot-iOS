@@ -113,3 +113,17 @@
 "It stops on its own when the room goes quiet." = "安静下来时会自动停止。";
 "Stop now" = "立即停止";
 "Working out what that was…" = "正在识别内容…";
+
+/* ===== Redesign additions (welcome + keyboard states) ===== */
+"Show me how" = "看看怎么用";
+"Set up my keyboard" = "设置我的键盘";
+"A friend writes in a language you don't speak — Keyglot translates it, and turns your reply into their language, right where you're already typing." = "朋友用你不懂的语言写来，Keyglot 会翻译，并把你的回复转成他们的语言——就在你正在输入的地方。";
+"Three places Keyglot shows up" = "Keyglot 出现的三个地方";
+"You'll never open this app to translate something. That's the point." = "你永远不用打开这个 app 去翻译，这正是重点。";
+"Write it, then switch it" = "写下，再转换";
+"Type in your language, tap a flag, and your message is replaced with a natural translation — inside WhatsApp." = "用你的语言输入，点一下国旗，消息就会被替换成自然的译文——就在 WhatsApp 里。";
+"Got a voice note you can't follow?" = "有听不懂的语音消息？";
+"Share it to Keyglot and read what it says — dialects included." = "分享给 Keyglot，就能读懂内容——方言也不在话下。";
+"Talking face to face" = "面对面交谈";
+"Open Listen & translate, and hear what they said in your language." = "打开“聆听并翻译”，用你的语言听懂对方说了什么。";
+"AI is included. Nothing to set up." = "已含 AI，无需设置。";

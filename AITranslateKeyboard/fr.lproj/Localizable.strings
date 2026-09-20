@@ -113,3 +113,17 @@
 "It stops on its own when the room goes quiet." = "Il s'arrête tout seul quand le silence revient.";
 "Stop now" = "Arrêter";
 "Working out what that was…" = "Analyse en cours…";
+
+/* ===== Redesign additions (welcome + keyboard states) ===== */
+"Show me how" = "Montre-moi";
+"Set up my keyboard" = "Configurer mon clavier";
+"A friend writes in a language you don't speak — Keyglot translates it, and turns your reply into their language, right where you're already typing." = "Un ami écrit dans une langue que tu ne parles pas — Keyglot la traduit et transforme ta réponse dans sa langue, là où tu écris déjà.";
+"Three places Keyglot shows up" = "Trois endroits où Keyglot apparaît";
+"You'll never open this app to translate something. That's the point." = "Tu n'ouvriras jamais cette app pour traduire. C'est tout l'intérêt.";
+"Write it, then switch it" = "Écris, puis change";
+"Type in your language, tap a flag, and your message is replaced with a natural translation — inside WhatsApp." = "Écris dans ta langue, touche un drapeau et ton message est remplacé par une traduction naturelle — dans WhatsApp.";
+"Got a voice note you can't follow?" = "Un message vocal que tu ne comprends pas ?";
+"Share it to Keyglot and read what it says — dialects included." = "Partage-le à Keyglot et lis ce qu'il dit — dialectes compris.";
+"Talking face to face" = "Discussion en personne";
+"Open Listen & translate, and hear what they said in your language." = "Ouvre Écouter et traduire et entends ce qui a été dit dans ta langue.";
+"AI is included. Nothing to set up." = "L'IA est incluse. Rien à configurer.";

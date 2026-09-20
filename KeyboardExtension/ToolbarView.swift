@@ -14,6 +14,8 @@ struct ToolbarView: View {
     let onRewrite: (RewriteAction) -> Void
     /// Invoked when the "translate what they sent" (clipboard) action is tapped.
     let onTranslateClipboard: () -> Void
+    /// Invoked when the "Undo" pill is tapped (restore the user's original message).
+    let onUndo: () -> Void
     /// Wires the globe up to the system keyboard switcher (tap = advance, long-press = picker).
     let configureNextKeyboardButton: (UIButton) -> Void
 
@@ -79,6 +81,13 @@ struct ToolbarView: View {
             }
             .frame(minHeight: 20)
 
+        case .success(let message):
+            Text(verbatim: message)
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundStyle(KGColor.success)
+                .frame(maxWidth: .infinity)
+                .frame(minHeight: 20)
+
         case .error(let message):
             Text(message)
                 .font(.system(size: 12, weight: .semibold))
@@ -102,7 +111,13 @@ struct ToolbarView: View {
         if state.isBusy {
             return state.activeLanguageID == language.id ? .working : .disabled
         }
+        if state.replacedLanguageID == language.id { return .selected }
         return state.canTranslate ? .idle : .disabled
+    }
+
+    /// Tone actions only make sense once there's text — collapse to a hint when the field is empty.
+    private var showsToneHint: Bool {
+        state.canTranslate && !state.hasText && !state.isBusy && state.replacedLanguageID == nil
     }
 
     private var languageRow: some View {
@@ -122,19 +137,37 @@ struct ToolbarView: View {
         }
     }
 
+    @ViewBuilder
     private var toneRow: some View {
-        HStack(spacing: 7) {
-            ForEach(RewriteAction.all) { action in
-                Button { onRewrite(action) } label: {
-                    ToneActionButton(
-                        glyph: action.glyph,
-                        label: LocalizedStringKey(action.name),
-                        isDisabled: !state.canTranslate
-                    )
+        if showsToneHint {
+            HStack(spacing: 10) {
+                HStack(spacing: 10) {
+                    ForEach(RewriteAction.all) { Text($0.glyph) }
                 }
-                .buttonStyle(.plain)
-                .disabled(!state.canTranslate)
-                .accessibilityLabel(action.accessibilityLabel)
+                .font(.system(size: 16))
+                .opacity(0.45)
+                Text("Tone actions appear once you've typed")
+                    .font(.system(size: 11))
+                    .foregroundStyle(KGColor.ink3)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+            }
+            .frame(maxWidth: .infinity)
+            .frame(height: 48)
+        } else {
+            HStack(spacing: 7) {
+                ForEach(RewriteAction.all) { action in
+                    Button { onRewrite(action) } label: {
+                        ToneActionButton(
+                            glyph: action.glyph,
+                            label: LocalizedStringKey(action.name),
+                            isDisabled: !state.canTranslate
+                        )
+                    }
+                    .buttonStyle(.plain)
+                    .disabled(!state.canTranslate)
+                    .accessibilityLabel(action.accessibilityLabel)
+                }
             }
         }
     }
@@ -148,24 +181,43 @@ struct ToolbarView: View {
                     .clipShape(RoundedRectangle(cornerRadius: KGRadius.tone, style: .continuous))
             }
 
-            Button { onTranslateClipboard() } label: {
-                HStack(spacing: 6) {
-                    Text("📋").font(.system(size: 15))
-                    Text("Translate what they sent")
-                        .font(.system(size: 12.5, weight: .semibold))
-                        .foregroundStyle(KGColor.ink)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.8)
+            if state.replacedLanguageID != nil {
+                Button { onUndo() } label: {
+                    HStack(spacing: 6) {
+                        Text("↩︎").font(.system(size: 15))
+                        Text("Undo — put my words back")
+                            .font(.system(size: 12.5, weight: .semibold))
+                            .foregroundStyle(KGColor.onInk)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 44)
+                    .background(KGColor.ink)
+                    .clipShape(RoundedRectangle(cornerRadius: KGRadius.tone, style: .continuous))
                 }
-                .frame(maxWidth: .infinity)
-                .frame(height: 44)
-                .background(KGColor.barButtonFill)
-                .clipShape(RoundedRectangle(cornerRadius: KGRadius.tone, style: .continuous))
+                .buttonStyle(.plain)
+                .accessibilityLabel(Text("Undo — put my words back"))
+            } else {
+                Button { onTranslateClipboard() } label: {
+                    HStack(spacing: 6) {
+                        Text("📋").font(.system(size: 15))
+                        Text("Translate what they sent")
+                            .font(.system(size: 12.5, weight: .semibold))
+                            .foregroundStyle(KGColor.ink)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 44)
+                    .background(KGColor.barButtonFill)
+                    .clipShape(RoundedRectangle(cornerRadius: KGRadius.tone, style: .continuous))
+                }
+                .buttonStyle(.plain)
+                .disabled(!state.canTranslate)
+                .opacity(state.canTranslate ? 1 : 0.5)
+                .accessibilityLabel(Text("Translate a received message from the clipboard"))
             }
-            .buttonStyle(.plain)
-            .disabled(!state.canTranslate)
-            .opacity(state.canTranslate ? 1 : 0.5)
-            .accessibilityLabel(Text("Translate a received message from the clipboard"))
         }
     }
 

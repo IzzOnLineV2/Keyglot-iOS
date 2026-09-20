@@ -24,6 +24,19 @@ struct AppGroupStorage: @unchecked Sendable { // `UserDefaults` is documented th
         static let isSupporter = "is_supporter"
         static let aiMode = "ai_mode"
         static let installID = "install_id"
+        static let hasSeenOnboarding = "has_seen_onboarding"
+    }
+
+    /// Whether the consumer welcome flow has been shown. Existing users (who already configured a
+    /// provider key) are treated as having seen it, so an update doesn't re-show onboarding.
+    var hasSeenOnboarding: Bool {
+        get {
+            if defaults.object(forKey: Keys.hasSeenOnboarding) != nil {
+                return defaults.bool(forKey: Keys.hasSeenOnboarding)
+            }
+            return AIProviderType.allCases.contains { CredentialStore.shared.hasAPIKey(for: $0) }
+        }
+        nonmutating set { defaults.set(newValue, forKey: Keys.hasSeenOnboarding) }
     }
 
     /// How the app gets AI: `keyglot` (AI included via backend) or `custom` (user's own key).

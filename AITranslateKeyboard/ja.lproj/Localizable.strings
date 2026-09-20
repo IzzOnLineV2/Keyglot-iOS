@@ -113,3 +113,17 @@
 "It stops on its own when the room goes quiet." = "静かになると自動で停止します。";
 "Stop now" = "停止";
 "Working out what that was…" = "内容を解析中…";
+
+/* ===== Redesign additions (welcome + keyboard states) ===== */
+"Show me how" = "使い方を見る";
+"Set up my keyboard" = "キーボードを設定";
+"A friend writes in a language you don't speak — Keyglot translates it, and turns your reply into their language, right where you're already typing." = "友だちが知らない言語で書いてきても、Keyglot が翻訳し、あなたの返信を相手の言語に変換します。今入力している場所で。";
+"Three places Keyglot shows up" = "Keyglot が現れる3つの場所";
+"You'll never open this app to translate something. That's the point." = "翻訳のためにこのアプリを開くことはありません。それが狙いです。";
+"Write it, then switch it" = "書いて、切り替える";
+"Type in your language, tap a flag, and your message is replaced with a natural translation — inside WhatsApp." = "自分の言語で入力して旗をタップすると、メッセージが自然な翻訳に置き換わります — WhatsApp の中で。";
+"Got a voice note you can't follow?" = "聞き取れない音声メッセージ？";
+"Share it to Keyglot and read what it says — dialects included." = "Keyglot に共有すれば内容を読めます — 方言も対応。";
+"Talking face to face" = "対面で話すとき";
+"Open Listen & translate, and hear what they said in your language." = "「聞いて翻訳」を開けば、話した内容を自分の言語で確認できます。";
+"AI is included. Nothing to set up." = "AI 込み。設定は不要です。";

@@ -48,3 +48,8 @@
 "Type your message, then pick a language." = "メッセージを入力してから言語を選びます。";
 "Tap a language to replace your message." = "言語をタップするとメッセージが置き換わります。";
 "Translate what they sent" = "受け取ったメッセージを翻訳";
+
+/* ===== Redesign additions (welcome + keyboard states) ===== */
+"✓ Replaced — ready to send" = "✓ 置き換え完了 — 送信できます";
+"Undo — put my words back" = "元に戻す — 自分の言葉に戻す";
+"Tone actions appear once you've typed" = "入力するとトーン操作が表示されます";

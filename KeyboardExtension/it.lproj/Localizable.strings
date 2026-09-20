@@ -48,3 +48,8 @@
 "Type your message, then pick a language." = "Scrivi il messaggio, poi scegli una lingua.";
 "Tap a language to replace your message." = "Tocca una lingua per sostituire il messaggio.";
 "Translate what they sent" = "Traduci ciò che ti hanno mandato";
+
+/* ===== Redesign additions (welcome + keyboard states) ===== */
+"✓ Replaced — ready to send" = "✓ Sostituito — pronto da inviare";
+"Undo — put my words back" = "Annulla — rimetti le mie parole";
+"Tone actions appear once you've typed" = "Le azioni tono compaiono dopo che scrivi";

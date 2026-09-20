@@ -18,6 +18,7 @@ private struct RootView: View {
     @StateObject private var store = StoreManager()
     @StateObject private var subscription = SubscriptionManager()
     @State private var isConfigured = RootView.computeConfigured()
+    @State private var showWelcome = !AppGroupStorage.shared.hasSeenOnboarding
     @State private var showListen = false
     @State private var showPaywall = false
     @State private var paywallShownThisLaunch = false
@@ -37,7 +38,13 @@ private struct RootView: View {
 
     var body: some View {
         Group {
-            if isConfigured {
+            if showWelcome {
+                WelcomeView(onDone: {
+                    AppGroupStorage.shared.hasSeenOnboarding = true
+                    isConfigured = RootView.computeConfigured()
+                    withAnimation { showWelcome = false }
+                })
+            } else if isConfigured {
                 SettingsView()
             } else {
                 OnboardingView(isConfigured: $isConfigured)

@@ -113,3 +113,17 @@
 "It stops on its own when the room goes quiet." = "주변이 조용해지면 자동으로 멈춥니다.";
 "Stop now" = "지금 멈추기";
 "Working out what that was…" = "무슨 말인지 파악 중…";
+
+/* ===== Redesign additions (welcome + keyboard states) ===== */
+"Show me how" = "사용법 보기";
+"Set up my keyboard" = "키보드 설정하기";
+"A friend writes in a language you don't speak — Keyglot translates it, and turns your reply into their language, right where you're already typing." = "친구가 모르는 언어로 써도 Keyglot이 번역하고, 당신의 답장을 상대의 언어로 바꿔 줍니다 — 지금 입력하는 그 자리에서.";
+"Three places Keyglot shows up" = "Keyglot이 나타나는 세 곳";
+"You'll never open this app to translate something. That's the point." = "번역하려고 이 앱을 열 일은 없습니다. 그게 핵심이에요.";
+"Write it, then switch it" = "쓰고, 바꾸기";
+"Type in your language, tap a flag, and your message is replaced with a natural translation — inside WhatsApp." = "당신의 언어로 입력하고 국기를 탭하면 메시지가 자연스러운 번역으로 바뀝니다 — WhatsApp 안에서.";
+"Got a voice note you can't follow?" = "알아듣기 힘든 음성 메시지가 왔나요?";
+"Share it to Keyglot and read what it says — dialects included." = "Keyglot에 공유하면 내용을 읽을 수 있어요 — 방언도 포함.";
+"Talking face to face" = "얼굴을 맞대고 대화할 때";
+"Open Listen & translate, and hear what they said in your language." = "‘듣고 번역’을 열면 상대의 말을 당신의 언어로 들을 수 있어요.";
+"AI is included. Nothing to set up." = "AI 포함. 설정할 것이 없습니다.";

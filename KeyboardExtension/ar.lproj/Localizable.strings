@@ -48,3 +48,8 @@
 "Type your message, then pick a language." = "اكتب رسالتك ثم اختر لغة.";
 "Tap a language to replace your message." = "اضغط على لغة لاستبدال رسالتك.";
 "Translate what they sent" = "ترجم ما وصلك";
+
+/* ===== Redesign additions (welcome + keyboard states) ===== */
+"✓ Replaced — ready to send" = "✓ تم الاستبدال — جاهزة للإرسال";
+"Undo — put my words back" = "تراجع — أعِد كلماتي";
+"Tone actions appear once you've typed" = "تظهر أدوات النبرة بعد أن تكتب";
