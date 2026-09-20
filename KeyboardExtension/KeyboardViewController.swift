@@ -133,7 +133,7 @@ final class KeyboardViewController: UIInputViewController {
 
     private func performTranslation(to language: TargetLanguage) {
         let label = String(localized: "Translating to \(language.name)…")
-        runAction(label: label) { service, text in
+        runAction(label: label, languageID: language.id) { service, text in
             try await service.translate(text, to: language)
         }
     }
@@ -180,6 +180,7 @@ final class KeyboardViewController: UIInputViewController {
     /// provider call, and replace the message in place. On failure the original text is untouched.
     private func runAction(
         label: String,
+        languageID: String? = nil,
         _ work: @escaping @Sendable (TranslationService, String) async throws -> String
     ) {
         guard !state.isBusy else { return }
@@ -199,6 +200,7 @@ final class KeyboardViewController: UIInputViewController {
         }
 
         state.beginWork(label)
+        state.activeLanguageID = languageID
 
         Task { [weak self] in
             guard let self else { return }

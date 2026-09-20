@@ -98,6 +98,13 @@ struct ToolbarView: View {
 
     // MARK: - Rows
 
+    private func chipState(for language: TargetLanguage) -> LanguageChip.ChipState {
+        if state.isBusy {
+            return state.activeLanguageID == language.id ? .working : .disabled
+        }
+        return state.canTranslate ? .idle : .disabled
+    }
+
     private var languageRow: some View {
         HStack(spacing: 7) {
             ForEach(state.languages) { language in
@@ -105,7 +112,7 @@ struct ToolbarView: View {
                     LanguageChip(
                         flag: language.flag,
                         name: language.name,
-                        chipState: state.canTranslate ? .idle : .disabled
+                        chipState: chipState(for: language)
                     )
                 }
                 .buttonStyle(.plain)

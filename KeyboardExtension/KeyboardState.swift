@@ -36,6 +36,10 @@ final class KeyboardState: ObservableObject {
     /// When non-nil, the toolbar shows a read-only panel instead of the normal buttons.
     @Published var clipboardResult: String? = nil
 
+    /// The language chip currently being translated (drives the "working" shimmer). `nil` for
+    /// rewrite/clipboard actions or when idle.
+    @Published var activeLanguageID: String? = nil
+
     /// Actions (translate/rewrite) only work with Full Access, a configured key, and no work
     /// in flight.
     var canTranslate: Bool {
@@ -47,15 +51,18 @@ final class KeyboardState: ObservableObject {
     /// Enter the busy state with a progress label (e.g. "Translating to Français…", "Rewriting…").
     func beginWork(_ label: String) {
         errorResetTask?.cancel()
+        activeLanguageID = nil
         status = .busy(label)
     }
 
     func finishWork() {
+        activeLanguageID = nil
         if case .busy = status { status = .idle }
     }
 
     /// Show a transient error banner that clears itself after a few seconds.
     func showError(_ message: String) {
+        activeLanguageID = nil
         status = .error(message)
         errorResetTask?.cancel()
         errorResetTask = Task { [weak self] in
