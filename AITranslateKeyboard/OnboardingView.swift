@@ -1,7 +1,7 @@
 import SwiftUI
 
-/// Minimal first-run flow. Until a key for the chosen provider is saved, the app shows this
-/// screen instead of the settings — translation is gated on having a key.
+/// First-run flow for Custom (BYOK) users: until a key for the chosen provider is saved, the app
+/// shows this instead of the settings. (KeyGlot-mode installs skip straight to the home.)
 struct OnboardingView: View {
     /// The host (`RootView`) flips this to `true` once a key is saved.
     @Binding var isConfigured: Bool
@@ -17,80 +17,68 @@ struct OnboardingView: View {
     }
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 24) {
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("👋")
-                        .font(.system(size: 44))
-                    Text("Keyglot")
-                        .font(.largeTitle.bold())
-                    Text("AI Message Translator")
-                        .font(.headline)
-                        .foregroundStyle(.secondary)
-                    Text("Type in any language and replace your message with a natural translation — right inside WhatsApp, no copy/paste.")
-                        .font(.body)
-                        .foregroundStyle(.secondary)
-                }
-
-                VStack(alignment: .leading, spacing: 12) {
-                    Picker("Provider", selection: $provider) {
-                        ForEach(AIProviderType.allCases) { Text($0.displayName).tag($0) }
+        ZStack {
+            KGColor.canvas.ignoresSafeArea()
+            ScrollView {
+                VStack(alignment: .leading, spacing: 24) {
+                    VStack(alignment: .leading, spacing: 12) {
+                        LogoMark(size: 56)
+                        Text("Understand every message. Answer in your words.")
+                            .font(KGFont.serif(34, style: .largeTitle))
+                            .foregroundStyle(KGColor.ink)
+                        Text("Type in any language and replace your message with a natural translation — right inside WhatsApp, no copy/paste.")
+                            .font(KGFont.body).foregroundStyle(KGColor.ink2)
                     }
-                    .pickerStyle(.menu)
 
-                    Label("Add your \(provider.displayName) API key to get started.",
-                          systemImage: "key.fill")
-                        .font(.headline)
+                    KGCard {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Add your API key").kgEyebrow(KGColor.accent)
+                            Menu {
+                                ForEach(AIProviderType.allCases) { p in Button(p.displayName) { provider = p } }
+                            } label: {
+                                SettingsRow(icon: "cpu", title: "Provider", value: provider.displayName)
+                            }
 
-                    Group {
-                        if isRevealed {
-                            TextField(provider.apiKeyPlaceholder, text: $keyText)
-                        } else {
-                            SecureField(provider.apiKeyPlaceholder, text: $keyText)
+                            Group {
+                                if isRevealed {
+                                    TextField(provider.apiKeyPlaceholder, text: $keyText)
+                                } else {
+                                    SecureField(provider.apiKeyPlaceholder, text: $keyText)
+                                }
+                            }
+                            .textInputAutocapitalization(.never)
+                            .autocorrectionDisabled()
+                            .font(.system(.body, design: .monospaced))
+                            .padding(12)
+                            .background(KGColor.fill, in: RoundedRectangle(cornerRadius: KGRadius.sm, style: .continuous))
+                            .focused($keyFieldFocused)
+
+                            Toggle("Reveal key", isOn: $isRevealed)
+                                .font(KGFont.caption).tint(KGColor.accent)
+
+                            Link(destination: provider.apiKeyURL) {
+                                Label("Get a \(provider.displayName) API key", systemImage: "arrow.up.forward.square")
+                                    .font(KGFont.caption).foregroundStyle(KGColor.accent)
+                            }
+
+                            Text("Stored in the iOS Keychain on this device — shared only with the keyboard.")
+                                .font(KGFont.caption).foregroundStyle(KGColor.ink3)
                         }
                     }
-                    .textInputAutocapitalization(.never)
-                    .autocorrectionDisabled()
-                    .font(.system(.body, design: .monospaced))
-                    .padding(12)
-                    .background(
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .fill(Color(.secondarySystemBackground))
-                    )
-                    .focused($keyFieldFocused)
 
-                    Toggle("Reveal key", isOn: $isRevealed)
-                        .font(.subheadline)
-
-                    Link(destination: provider.apiKeyURL) {
-                        Label("Get a \(provider.displayName) API key", systemImage: "arrow.up.forward.square")
-                            .font(.subheadline)
-                    }
-
-                    Text("Stored securely in the iOS Keychain on this device — never in plain settings, and shared only with the keyboard.")
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
+                    Button("Get Started") { saveAndContinue() }
+                        .buttonStyle(.kgPrimary)
+                        .disabled(trimmedKey.isEmpty)
+                        .opacity(trimmedKey.isEmpty ? 0.5 : 1)
                 }
-
-                Button {
-                    saveAndContinue()
-                } label: {
-                    Text("Get Started")
-                        .font(.headline)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 6)
-                }
-                .buttonStyle(.borderedProminent)
-                .disabled(trimmedKey.isEmpty)
+                .padding(24)
             }
-            .padding(24)
         }
         .onAppear {
             keyText = CredentialStore.shared.apiKey(for: provider) ?? ""
             keyFieldFocused = true
         }
         .onChange(of: provider) { _, newProvider in
-            // Show the key already saved for the newly-selected provider (usually empty).
             keyText = CredentialStore.shared.apiKey(for: newProvider) ?? ""
         }
         .alert("Couldn't save the key", isPresented: $saveFailed) {
