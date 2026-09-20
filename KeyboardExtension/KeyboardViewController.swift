@@ -12,7 +12,7 @@ final class KeyboardViewController: UIInputViewController {
     private var heightConstraint: NSLayoutConstraint?
 
     // Status hint + language row (flag + name) + rewrite caption + tone row (glyph + name).
-    private static let keyboardHeight: CGFloat = 196
+    private static let keyboardHeight: CGFloat = 200
 
     // MARK: - Lifecycle
 
