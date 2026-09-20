@@ -6,7 +6,7 @@ import Foundation
 /// This beats literal speech-to-text (Whisper/`gpt-4o-transcribe`) on regional dialects such as
 /// Moroccan Darija: Gemini interprets the audio holistically instead of transcribing phonetically.
 /// The audio file is sent inline; pick the MIME type from the file (m4a → `audio/mp4`,
-/// opus → `audio/ogg`) — the wrong MIME makes Gemini mis-decode the audio.
+/// opus → `audio/ogg`), the wrong MIME makes Gemini mis-decode the audio.
 struct GeminiAudioTranslator: AudioTranslating, Sendable {
 
     let apiKey: String

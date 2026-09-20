@@ -1,11 +1,11 @@
 /* ===== Onboarding ===== */
 "AI Message Translator" = "AI 消息翻译";
-"Type in any language and replace your message with a natural translation — right inside WhatsApp, no copy/paste." = "用任何语言输入，将你的消息替换为自然的翻译——直接在 WhatsApp 中完成，无需复制粘贴。";
+"Type in any language and replace your message with a natural translation, right inside WhatsApp, no copy/paste." = "用任何语言输入，将你的消息替换为自然的翻译--直接在 WhatsApp 中完成，无需复制粘贴。";
 "Provider" = "提供商";
 "Add your %@ API key to get started." = "添加你的 %@ API 密钥即可开始。";
 "Reveal key" = "显示密钥";
 "Get a %@ API key" = "获取 %@ API 密钥";
-"Stored securely in the iOS Keychain on this device — never in plain settings, and shared only with the keyboard." = "安全存储在本设备的 iOS 钥匙串中——绝不以明文形式保存在设置里，仅与键盘共享。";
+"Stored securely in the iOS Keychain on this device, never in plain settings, and shared only with the keyboard." = "安全存储在本设备的 iOS 钥匙串中--绝不以明文形式保存在设置里，仅与键盘共享。";
 "Get Started" = "开始";
 "Couldn't save the key" = "无法保存密钥";
 "The key couldn't be written to the iOS Keychain. Run the app signed with your Team (from Xcode) or on a device, then try again." = "无法将密钥写入 iOS 钥匙串。请使用你的 Team 签名（通过 Xcode）运行 App 或在真机上运行，然后重试。";
@@ -32,7 +32,7 @@
 "Save" = "保存";
 "Test translation" = "测试翻译";
 "Remove key" = "移除密钥";
-"“Test” sends one short request to %@ and shows the exact result or error — handy to check the key, model and billing." = "“测试”会向 %@ 发送一次简短请求并显示确切的结果或错误——便于检查密钥、模型和计费。";
+"“Test” sends one short request to %@ and shows the exact result or error, handy to check the key, model and billing." = "“测试”会向 %@ 发送一次简短请求并显示确切的结果或错误--便于检查密钥、模型和计费。";
 "Saved" = "已保存";
 "Your %@ API key has been saved." = "你的 %@ API 密钥已保存。";
 "Test result" = "测试结果";
@@ -40,11 +40,11 @@
 "❌ Failed.\n\n%@" = "❌ 失败。\n\n%@";
 
 /* ===== About ===== */
-"Keyglot translates or rewrites the message you've already typed — in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language." = "Keyglot 可就地翻译或改写你已经输入的消息——无需复制粘贴。点按语言可获得自然的翻译（自动检测源语言），点按语气则可用同一种语言润色或改写你的文字。";
+"Keyglot translates or rewrites the message you've already typed, in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language." = "Keyglot 可就地翻译或改写你已经输入的消息--无需复制粘贴。点按语言可获得自然的翻译（自动检测源语言），点按语气则可用同一种语言润色或改写你的文字。";
 "How it works" = "工作原理";
 "Type your message in any app with your normal keyboard." = "用你平常的键盘在任意 App 中输入消息。";
 "Tap 🌐 to switch to the Keyglot keyboard." = "点按 🌐 切换到 Keyglot 键盘。";
-"Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite — the text is replaced in place." = "点按语言进行翻译，或点按语气（✨ 💼 😊 ❤️）进行改写——文本会就地替换。";
+"Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite, the text is replaced in place." = "点按语言进行翻译，或点按语气（✨ 💼 😊 ❤️）进行改写--文本会就地替换。";
 "Press Send." = "点按发送。";
 "Choose which languages appear in Settings → Keyboard → Languages." = "在设置 → 键盘 → 语言 中选择要显示的语言。";
 "Keyboard languages" = "键盘语言";
@@ -56,7 +56,7 @@
 "Developed by Stefania Izzo" = "由 Stefania Izzo 开发";
 
 /* ===== Keyboard Languages ===== */
-"On the keyboard — %lld/%lld" = "键盘上 — %lld/%lld";
+"On the keyboard, %lld/%lld" = "键盘上, %lld/%lld";
 "Swipe to remove; tap Edit to reorder. They appear left-to-right on the keyboard. At least one is required." = "滑动以移除；点按“编辑”重新排序。它们在键盘上从左到右显示。至少需要一个。";
 "Add a language" = "添加语言";
 "Remove one to add another (max %lld)." = "移除一个以添加另一个（最多 %lld 个）。";
@@ -81,10 +81,10 @@
 
 /* ===== More ways to translate (About) ===== */
 "More ways to translate" = "更多翻译方式";
-"🎧 Listen & translate — press, speak, and get a translation of what you hear (also from the widget)." = "🎧 聆听并翻译 — 按住说话，获得你听到内容的翻译（也可从小组件）。";
-"📋 Translate a message you've copied — tap 📋 on the keyboard." = "📋 翻译你复制的消息 — 点按键盘上的 📋。";
+"🎧 Listen & translate, press, speak, and get a translation of what you hear (also from the widget)." = "🎧 聆听并翻译, 按住说话，获得你听到内容的翻译（也可从小组件）。";
+"📋 Translate a message you've copied, tap 📋 on the keyboard." = "📋 翻译你复制的消息, 点按键盘上的 📋。";
 "📤 Share any text or voice note to Keyglot to translate it." = "📤 将任意文本或语音消息分享给 Keyglot 进行翻译。";
-"Audio (voice notes and live listening) uses Google Gemini — add a Gemini API key in Settings to use it." = "音频（语音消息和实时聆听）使用 Google Gemini — 请在设置中添加 Gemini API 密钥以使用。";
+"Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Settings to use it." = "音频（语音消息和实时聆听）使用 Google Gemini, 请在设置中添加 Gemini API 密钥以使用。";
 
 /* ===== Support / paywall ===== */
 "Support Keyglot" = "支持 Keyglot";
@@ -102,13 +102,13 @@
 "Loading plans…" = "正在加载套餐…";
 "Your keyboard" = "你的键盘";
 "About Keyglot" = "关于 Keyglot";
-"You're on KeyGlot — AI is included, no API key needed." = "你正在使用 KeyGlot — 已含 AI，无需 API 密钥。";
+"You're on KeyGlot, AI is included, no API key needed." = "你正在使用 KeyGlot, 已含 AI，无需 API 密钥。";
 "iOS Settings → General → Keyboard → Keyboards → add “Keyglot”." = "iOS 设置 → 通用 → 键盘 → 键盘 → 添加“Keyglot”。";
 "Tap “Keyglot” and turn on Allow Full Access (needed for network)." = "点按“Keyglot”并打开允许完全访问（联网所需）。";
 "In any chat, tap 🌐 to switch to Keyglot, then tap a language." = "在任意聊天中点按 🌐 切换到 Keyglot，然后点按一种语言。";
 "Understand every message. Answer in your words." = "读懂每条消息，用自己的话回复。";
 "Add your API key" = "添加你的 API 密钥";
-"Stored in the iOS Keychain on this device — shared only with the keyboard." = "保存在本设备的 iOS 钥匙串中，仅与键盘共享。";
+"Stored in the iOS Keychain on this device, shared only with the keyboard." = "保存在本设备的 iOS 钥匙串中，仅与键盘共享。";
 "Press to listen" = "按下开始聆听";
 "It stops on its own when the room goes quiet." = "安静下来时会自动停止。";
 "Stop now" = "立即停止";
@@ -117,15 +117,20 @@
 /* ===== Redesign additions (welcome + keyboard states) ===== */
 "Show me how" = "看看怎么用";
 "Set up my keyboard" = "设置我的键盘";
-"A friend writes in a language you don't speak — Keyglot translates it, and turns your reply into their language, right where you're already typing." = "朋友用你不懂的语言写来，Keyglot 会翻译，并把你的回复转成他们的语言——就在你正在输入的地方。";
+"A friend writes in a language you don't speak, Keyglot translates it, and turns your reply into their language, right where you're already typing." = "朋友用你不懂的语言写来，Keyglot 会翻译，并把你的回复转成他们的语言--就在你正在输入的地方。";
 "Three places Keyglot shows up" = "Keyglot 出现的三个地方";
 "You'll never open this app to translate something. That's the point." = "你永远不用打开这个 app 去翻译，这正是重点。";
 "Write it, then switch it" = "写下，再转换";
-"Type in your language, tap a flag, and your message is replaced with a natural translation — inside WhatsApp." = "用你的语言输入，点一下国旗，消息就会被替换成自然的译文——就在 WhatsApp 里。";
+"Type in your language, tap a flag, and your message is replaced with a natural translation, inside WhatsApp." = "用你的语言输入，点一下国旗，消息就会被替换成自然的译文--就在 WhatsApp 里。";
 "Got a voice note you can't follow?" = "有听不懂的语音消息？";
-"Share it to Keyglot and read what it says — dialects included." = "分享给 Keyglot，就能读懂内容——方言也不在话下。";
+"Share it to Keyglot and read what it says, dialects included." = "分享给 Keyglot，就能读懂内容--方言也不在话下。";
 "Talking face to face" = "面对面交谈";
 "Open Listen & translate, and hear what they said in your language." = "打开“聆听并翻译”，用你的语言听懂对方说了什么。";
 "AI is included. Nothing to set up." = "已含 AI，无需设置。";
 
 "Show welcome again" = "再看一次介绍";
+
+/* ===== Copy refinements (WhatsApp/quotes/widget) ===== */
+"Type in your language, tap a flag, and your message becomes a natural translation, right where you type: WhatsApp, Messages, email." = "用你的语言输入，点一下国旗，消息就会变成自然的译文，就在你输入的地方：WhatsApp、信息、邮件。";
+"Open “Listen & translate”, and hear what they said in your language. Add the widget for one-tap access." = "打开「聆听并翻译」，用你的语言听懂对方说了什么。添加小组件即可一键打开。";
+"Type in any language and replace your message with a natural translation, right where you type: WhatsApp, Messages, email." = "用任何语言输入，并把消息替换成自然的译文，就在你输入的地方：WhatsApp、信息、邮件。";

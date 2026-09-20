@@ -64,7 +64,7 @@ struct ApiKeyView: View {
                     Button("Remove key", role: .destructive) { clear() }
                 }
             } footer: {
-                Text("“Test” sends one short request to \(provider.displayName) and shows the exact result or error — handy to check the key, model and billing.")
+                Text("“Test” sends one short request to \(provider.displayName) and shows the exact result or error, handy to check the key, model and billing.")
             }
         }
         .navigationTitle(provider.displayName)

@@ -1,37 +1,37 @@
-# Keyglot — AI Translator
+# Keyglot, AI Translator
 
-Keyglot is an iPhone translation toolkit powered by **your own AI provider key** — no backend,
+Keyglot is an iPhone translation toolkit powered by **your own AI provider key**, no backend,
 nothing sensitive in this repo. It translates (and rewrites) wherever you need it:
 
-- ⌨️ a **keyboard** that translates or rewrites the message you've already typed — in place, no copy/paste
+- ⌨️ a **keyboard** that translates or rewrites the message you've already typed, in place, no copy/paste
 - 📋 translate a **received message** you've copied
 - 📤 a **share extension** that translates any shared **text** or **voice note** (WhatsApp included)
-- 🎧 **Listen & translate** — press, speak, and it translates what it hears
+- 🎧 **Listen & translate**, press, speak, and it translates what it hears
 - 📲 a **widget** that opens straight into listening
 
-The goal is **natural communication**, not literal translation — output should read as if a native
+The goal is **natural communication**, not literal translation, output should read as if a native
 speaker wrote it. Open source (**MIT**, see [`LICENSE`](LICENSE)); heading to TestFlight / the App Store.
 
 ## What it does
 
-Both features work the same way — they replace the text iOS exposes around the cursor with the
-AI result — and both flow through a single generic provider call.
+Both features work the same way, they replace the text iOS exposes around the cursor with the
+AI result, and both flow through a single generic provider call.
 
 ### 🌍 Translate
 
 Tap a language flag. The **source** language is auto-detected, so any language → any chosen
-target works. You pick which languages appear (and in what order) in the app — up to
+target works. You pick which languages appear (and in what order) in the app, up to
 `Configuration.maxKeyboardLanguages` (default 7) from a catalog of **18**:
 
-> English · Français · Modern Standard Arabic (العربية الفصحى) · Moroccan Darija — Arabic script
-> (الدارجة) · Moroccan Darija — Latin/Arabizi · Italiano · Español · Português (Brasil) · Deutsch ·
+> English · Français · Modern Standard Arabic (العربية الفصحى) · Moroccan Darija, Arabic script
+> (الدارجة) · Moroccan Darija, Latin/Arabizi · Italiano · Español · Português (Brasil) · Deutsch ·
 > Nederlands · Русский · 中文 (Simplified) · 日本語 · 한국어 · Türkçe · हिन्दी · Polski · Ελληνικά
 
 The five shown by default are English, French, MSA, and Moroccan Darija (Arabic + Latin).
 
 ### ✍️ Rewrite (same language)
 
-Tap a tone action to improve or restyle the text **without translating it** — the language is
+Tap a tone action to improve or restyle the text **without translating it**, the language is
 detected automatically and always preserved:
 
 | Action | | What it does |
@@ -39,13 +39,13 @@ detected automatically and always preserved:
 | ✨ | **Improve** | Fix grammar/spelling, make it more natural and fluent |
 | 💼 | **Professional** | Formal tone for work, clients, business |
 | 😊 | **Friendly** | Warmer, more conversational |
-| ❤️ | **Flirty** | Light and playful — never explicit |
+| ❤️ | **Flirty** | Light and playful, never explicit |
 
 ## AI provider
 
 Both translation and rewriting go through a single `AIProvider` protocol, so the keyboard never
-depends on a specific vendor. The method is intentionally generic — the caller supplies the full
-system prompt — so the same call powers translation (`TargetLanguage.prompt`) and rewriting
+depends on a specific vendor. The method is intentionally generic, the caller supplies the full
+system prompt, so the same call powers translation (`TargetLanguage.prompt`) and rewriting
 (`RewriteAction.prompt`); the provider never knows which feature invoked it:
 
 ```swift
@@ -58,10 +58,10 @@ Four providers are supported, each a small raw-HTTP `URLSession` client:
 
 | Provider | Type / API | Default model | Key from |
 |---|---|---|---|
-| **Claude Sonnet** (default) | `ClaudeProvider` — Anthropic Messages API | `claude-sonnet-4-6` | console.anthropic.com |
-| **OpenAI GPT** | `OpenAIProvider` — Responses API (`gpt-5-mini`→`gpt-5-nano` fallback) | `gpt-5-mini` | platform.openai.com |
-| **Google Gemini** | `GeminiProvider` — Generative Language API (`generateContent`) | `gemini-2.0-flash` | aistudio.google.com |
-| **OpenRouter** | `OpenRouterProvider` — OpenAI-compatible gateway (`chat/completions`) | `openai/gpt-4o-mini` | openrouter.ai |
+| **Claude Sonnet** (default) | `ClaudeProvider`, Anthropic Messages API | `claude-sonnet-4-6` | console.anthropic.com |
+| **OpenAI GPT** | `OpenAIProvider`, Responses API (`gpt-5-mini`→`gpt-5-nano` fallback) | `gpt-5-mini` | platform.openai.com |
+| **Google Gemini** | `GeminiProvider`, Generative Language API (`generateContent`) | `gemini-2.0-flash` | aistudio.google.com |
+| **OpenRouter** | `OpenRouterProvider`, OpenAI-compatible gateway (`chat/completions`) | `openai/gpt-4o-mini` | openrouter.ai |
 
 The provider is chosen in onboarding and in Settings (default Claude Sonnet); **each provider
 stores its own API key** in the Keychain. Default models live in `Configuration.swift` and are
@@ -81,13 +81,13 @@ A custom keyboard *replaces* the system keyboard, so the flow is:
 
 ## Beyond the keyboard
 
-The keyboard only sees the field you're typing in — these cover the rest:
+The keyboard only sees the field you're typing in, these cover the rest:
 
 ### 📋 Translate a received message
-Long-press a received message → **Copy**, switch to Keyglot, tap **📋** — it reads the clipboard,
+Long-press a received message → **Copy**, switch to Keyglot, tap **📋**, it reads the clipboard,
 translates into your language, and shows it in a read-only panel (never touching your reply).
 
-### 📤 Share to Keyglot — text *or* voice note
+### 📤 Share to Keyglot, text *or* voice note
 From any app, share a **text selection / note / link**, or a **voice note** (WhatsApp → *Forward →
 Share*), to Keyglot. Text is translated by your selected provider; **audio is transcribed +
 translated by Google Gemini**, which understands dialects like Moroccan Darija that literal
@@ -95,20 +95,20 @@ speech-to-text mishears. A source-language picker lets you force the language if
 
 ### 🎧 Listen & translate + widget
 **Listen & translate** (in the app, or from the home-screen **widget**) records immediately,
-auto-stops on silence, and shows Gemini's translation of what it heard — a quick conversation
+auto-stops on silence, and shows Gemini's translation of what it heard, a quick conversation
 interpreter. The widget's mic button opens the app straight into listening via an **App Intent**
 (no URL scheme). These audio features need a **Gemini** key.
 
 ## Project layout
 
 ```
-AITranslateKeyboard/        Main app (SwiftUI) — onboarding, provider/key, language picker,
+AITranslateKeyboard/        Main app (SwiftUI), onboarding, provider/key, language picker,
                             settings, About, and the "Listen & translate" screen (ListenView)
 KeyboardExtension/          The keyboard: toolbar (languages + tones), translate/rewrite +
                             "translate from clipboard" (📋) flow
-ShareExtension/             Share extension — translate shared text (selected provider) or a
+ShareExtension/             Share extension, translate shared text (selected provider) or a
                             voice note (Gemini): AudioShareModel / TextShareModel + views
-Widget/                     WidgetKit widget — a mic button that opens the app into listening
+Widget/                     WidgetKit widget, a mic button that opens the app into listening
                             (KeyglotListenWidget) via OpenListenIntent
 Shared/                     Compiled into every target:
                               AIProvider         protocol + AIProviderType + factory + errors
@@ -121,7 +121,7 @@ Shared/                     Compiled into every target:
                               KeychainStore / CredentialStore   provider keys (shared Keychain)
                               AppGroupStorage    non-secret settings (provider, languages, …)
                               Configuration      endpoints, model ids, constants
-project.yml                 XcodeGen spec — the source of truth for the Xcode project
+project.yml                 XcodeGen spec, the source of truth for the Xcode project
 AITranslateKeyboard.xcodeproj  Generated; open this in Xcode
 ```
 
@@ -156,21 +156,21 @@ xcodegen generate
 ```
 
 Source files live in folders (`Shared/`, `KeyboardExtension/`, `AITranslateKeyboard/`), so new
-files are picked up automatically on regenerate. You don't need XcodeGen just to build — the
+files are picked up automatically on regenerate. You don't need XcodeGen just to build, the
 generated `.xcodeproj` is self-contained.
 
 ## Configuration
 
 Edit `Shared/Configuration.swift`:
 
-- `defaultProvider` — `.claude`.
-- `requestTimeout` — per-request network timeout (default 30s).
-- `maxKeyboardLanguages` — how many languages the user can pin to the toolbar (default 7).
-- `claudeModel` / `claudeMaxTokens` / `anthropicVersion` — Anthropic request settings.
-- `openAIDefaultModel` / `openAIFallbackModel` / `openAIReasoningEffort` — OpenAI settings.
-- `geminiModel` — Google Gemini model (e.g. `gemini-2.5-flash`).
-- `openRouterModel` — any OpenRouter `vendor/model` id, plus optional attribution headers.
-- `appGroupIdentifier` — if you change this, update both `.entitlements` files and `project.yml`.
+- `defaultProvider`, `.claude`.
+- `requestTimeout`, per-request network timeout (default 30s).
+- `maxKeyboardLanguages`, how many languages the user can pin to the toolbar (default 7).
+- `claudeModel` / `claudeMaxTokens` / `anthropicVersion`, Anthropic request settings.
+- `openAIDefaultModel` / `openAIFallbackModel` / `openAIReasoningEffort`, OpenAI settings.
+- `geminiModel`, Google Gemini model (e.g. `gemini-2.5-flash`).
+- `openRouterModel`, any OpenRouter `vendor/model` id, plus optional attribution headers.
+- `appGroupIdentifier`, if you change this, update both `.entitlements` files and `project.yml`.
 
 ## Notes & limitations
 
@@ -178,7 +178,7 @@ Edit `Shared/Configuration.swift`:
   `AfterFirstUnlockThisDeviceOnly`), never in `UserDefaults`. They sit in a **shared Keychain
   access group** (`$(AppIdentifierPrefix)it.izzonline.keyglot.shared`, declared in both
   targets' entitlements) so the keyboard extension can read them. The code omits
-  `kSecAttrAccessGroup`, relying on the single-entry entitlement as the default group — so
+  `kSecAttrAccessGroup`, relying on the single-entry entitlement as the default group, so
   there's no hard-coded team-ID prefix to maintain. App Groups carry only the non-secret
   settings (selected provider, chosen language IDs + order).
 - **Both App Groups and Keychain sharing need a real signing team.** With a free personal Apple
@@ -190,20 +190,20 @@ Edit `Shared/Configuration.swift`:
   extensions (a privacy limit), so multi-paragraph messages process the current block, not
   necessarily the whole field. Works fully for single-block messages.
 - On any API/network failure the banner shows the reason (e.g. *"Invalid API key"*, *"No
-  credit — add billing"*) and your original text is left untouched.
+  credit, add billing"*) and your original text is left untouched.
 
 ## Support
 
 Keyglot is free and open source. If it's useful to you, you can leave a small tip:
 
-- **In the app** — a one-time *Support Keyglot* purchase (€1,99).
-- **PayPal** — [paypal.me/st3fx](https://paypal.me/st3fx) — any amount, no App Store fee.
+- **In the app**, a one-time *Support Keyglot* purchase (€1,99).
+- **PayPal**, [paypal.me/st3fx](https://paypal.me/st3fx), any amount, no App Store fee.
 
 Thank you 💚
 
 ## License
 
-Keyglot is released under the [MIT License](LICENSE) — you're free to use, modify, and
+Keyglot is released under the [MIT License](LICENSE), you're free to use, modify, and
 distribute the code. The **“Keyglot” name, icon, and branding are not covered by the license**
 and remain the property of IzzOnLine di Stefania Izzo; please don't publish a copy under the
 same identity.

@@ -1,11 +1,11 @@
 /* ===== Onboarding ===== */
 "AI Message Translator" = "KI-Nachrichtenübersetzer";
-"Type in any language and replace your message with a natural translation — right inside WhatsApp, no copy/paste." = "Schreibe in jeder Sprache und ersetze deine Nachricht durch eine natürliche Übersetzung — direkt in WhatsApp, ohne Kopieren und Einfügen.";
+"Type in any language and replace your message with a natural translation, right inside WhatsApp, no copy/paste." = "Schreibe in jeder Sprache und ersetze deine Nachricht durch eine natürliche Übersetzung, direkt in WhatsApp, ohne Kopieren und Einfügen.";
 "Provider" = "Anbieter";
 "Add your %@ API key to get started." = "Füge deinen %@ API-Schlüssel hinzu, um zu starten.";
 "Reveal key" = "Schlüssel anzeigen";
 "Get a %@ API key" = "%@ API-Schlüssel erhalten";
-"Stored securely in the iOS Keychain on this device — never in plain settings, and shared only with the keyboard." = "Sicher im iOS-Schlüsselbund auf diesem Gerät gespeichert — niemals im Klartext in den Einstellungen, und nur mit der Tastatur geteilt.";
+"Stored securely in the iOS Keychain on this device, never in plain settings, and shared only with the keyboard." = "Sicher im iOS-Schlüsselbund auf diesem Gerät gespeichert, niemals im Klartext in den Einstellungen, und nur mit der Tastatur geteilt.";
 "Get Started" = "Loslegen";
 "Couldn't save the key" = "Schlüssel konnte nicht gespeichert werden";
 "The key couldn't be written to the iOS Keychain. Run the app signed with your Team (from Xcode) or on a device, then try again." = "Der Schlüssel konnte nicht in den iOS-Schlüsselbund geschrieben werden. Starte die App signiert mit deinem Team (aus Xcode) oder auf einem Gerät und versuche es erneut.";
@@ -32,7 +32,7 @@
 "Save" = "Speichern";
 "Test translation" = "Übersetzung testen";
 "Remove key" = "Schlüssel entfernen";
-"“Test” sends one short request to %@ and shows the exact result or error — handy to check the key, model and billing." = "„Test“ sendet eine kurze Anfrage an %@ und zeigt das genaue Ergebnis oder den Fehler — praktisch, um Schlüssel, Modell und Abrechnung zu prüfen.";
+"“Test” sends one short request to %@ and shows the exact result or error, handy to check the key, model and billing." = "„Test“ sendet eine kurze Anfrage an %@ und zeigt das genaue Ergebnis oder den Fehler, praktisch, um Schlüssel, Modell und Abrechnung zu prüfen.";
 "Saved" = "Gespeichert";
 "Your %@ API key has been saved." = "Dein %@ API-Schlüssel wurde gespeichert.";
 "Test result" = "Testergebnis";
@@ -40,11 +40,11 @@
 "❌ Failed.\n\n%@" = "❌ Fehlgeschlagen.\n\n%@";
 
 /* ===== About ===== */
-"Keyglot translates or rewrites the message you've already typed — in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language." = "Keyglot übersetzt oder formuliert die bereits eingegebene Nachricht neu — direkt an Ort und Stelle, ohne Kopieren und Einfügen. Tippe auf eine Sprache für eine natürliche Übersetzung (Ausgangssprache automatisch erkannt) oder auf einen Ton, um deinen Text in derselben Sprache zu verbessern oder umzuformulieren.";
+"Keyglot translates or rewrites the message you've already typed, in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language." = "Keyglot übersetzt oder formuliert die bereits eingegebene Nachricht neu, direkt an Ort und Stelle, ohne Kopieren und Einfügen. Tippe auf eine Sprache für eine natürliche Übersetzung (Ausgangssprache automatisch erkannt) oder auf einen Ton, um deinen Text in derselben Sprache zu verbessern oder umzuformulieren.";
 "How it works" = "So funktioniert's";
 "Type your message in any app with your normal keyboard." = "Schreibe deine Nachricht in einer beliebigen App mit deiner normalen Tastatur.";
 "Tap 🌐 to switch to the Keyglot keyboard." = "Tippe auf 🌐, um zur Keyglot-Tastatur zu wechseln.";
-"Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite — the text is replaced in place." = "Tippe auf eine Sprache zum Übersetzen oder auf einen Ton (✨ 💼 😊 ❤️) zum Umformulieren — der Text wird direkt ersetzt.";
+"Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite, the text is replaced in place." = "Tippe auf eine Sprache zum Übersetzen oder auf einen Ton (✨ 💼 😊 ❤️) zum Umformulieren, der Text wird direkt ersetzt.";
 "Press Send." = "Tippe auf Senden.";
 "Choose which languages appear in Settings → Keyboard → Languages." = "Wähle die Sprachen unter Einstellungen → Tastatur → Sprachen.";
 "Keyboard languages" = "Tastatursprachen";
@@ -56,7 +56,7 @@
 "Developed by Stefania Izzo" = "Entwickelt von Stefania Izzo";
 
 /* ===== Keyboard Languages ===== */
-"On the keyboard — %lld/%lld" = "Auf der Tastatur — %lld/%lld";
+"On the keyboard, %lld/%lld" = "Auf der Tastatur, %lld/%lld";
 "Swipe to remove; tap Edit to reorder. They appear left-to-right on the keyboard. At least one is required." = "Zum Entfernen streichen; auf Bearbeiten tippen, um neu anzuordnen. Sie erscheinen von links nach rechts auf der Tastatur. Mindestens eine ist erforderlich.";
 "Add a language" = "Sprache hinzufügen";
 "Remove one to add another (max %lld)." = "Entferne eine, um eine andere hinzuzufügen (max. %lld).";
@@ -64,7 +64,7 @@
 
 /* ===== Listen & translate ===== */
 "Listen & translate" = "Hören & übersetzen";
-"Press, speak, and Keyglot translates what it hears into your language." = "Drücken, sprechen — Keyglot übersetzt, was es hört, in deine Sprache.";
+"Press, speak, and Keyglot translates what it hears into your language." = "Drücken, sprechen, Keyglot übersetzt, was es hört, in deine Sprache.";
 "Audio language" = "Audiosprache";
 "Automatic (detect)" = "Automatisch (erkennen)";
 "Tap to listen" = "Zum Zuhören tippen";
@@ -81,10 +81,10 @@
 
 /* ===== More ways to translate (About) ===== */
 "More ways to translate" = "Weitere Wege zum Übersetzen";
-"🎧 Listen & translate — press, speak, and get a translation of what you hear (also from the widget)." = "🎧 Hören & übersetzen — drücken, sprechen und eine Übersetzung des Gehörten erhalten (auch über das Widget).";
-"📋 Translate a message you've copied — tap 📋 on the keyboard." = "📋 Übersetze eine kopierte Nachricht — tippe auf der Tastatur auf 📋.";
+"🎧 Listen & translate, press, speak, and get a translation of what you hear (also from the widget)." = "🎧 Hören & übersetzen, drücken, sprechen und eine Übersetzung des Gehörten erhalten (auch über das Widget).";
+"📋 Translate a message you've copied, tap 📋 on the keyboard." = "📋 Übersetze eine kopierte Nachricht, tippe auf der Tastatur auf 📋.";
 "📤 Share any text or voice note to Keyglot to translate it." = "📤 Teile beliebigen Text oder eine Sprachnachricht mit Keyglot, um sie zu übersetzen.";
-"Audio (voice notes and live listening) uses Google Gemini — add a Gemini API key in Settings to use it." = "Audio (Sprachnachrichten und Live-Zuhören) nutzt Google Gemini — füge in den Einstellungen einen Gemini-API-Schlüssel hinzu, um es zu verwenden.";
+"Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Settings to use it." = "Audio (Sprachnachrichten und Live-Zuhören) nutzt Google Gemini, füge in den Einstellungen einen Gemini-API-Schlüssel hinzu, um es zu verwenden.";
 
 /* ===== Support / paywall ===== */
 "Support Keyglot" = "Keyglot unterstützen";
@@ -102,13 +102,13 @@
 "Loading plans…" = "Tarife werden geladen…";
 "Your keyboard" = "Deine Tastatur";
 "About Keyglot" = "Über Keyglot";
-"You're on KeyGlot — AI is included, no API key needed." = "Du bist im KeyGlot-Modus — KI inklusive, kein API-Schlüssel nötig.";
+"You're on KeyGlot, AI is included, no API key needed." = "Du bist im KeyGlot-Modus, KI inklusive, kein API-Schlüssel nötig.";
 "iOS Settings → General → Keyboard → Keyboards → add “Keyglot”." = "iOS-Einstellungen → Allgemein → Tastatur → Tastaturen → „Keyglot“ hinzufügen.";
 "Tap “Keyglot” and turn on Allow Full Access (needed for network)." = "Tippe auf „Keyglot“ und aktiviere Vollzugriff erlauben (für das Netzwerk nötig).";
 "In any chat, tap 🌐 to switch to Keyglot, then tap a language." = "Tippe in einem Chat auf 🌐, um zu Keyglot zu wechseln, und dann auf eine Sprache.";
 "Understand every message. Answer in your words." = "Verstehe jede Nachricht. Antworte in deinen Worten.";
 "Add your API key" = "API-Schlüssel hinzufügen";
-"Stored in the iOS Keychain on this device — shared only with the keyboard." = "Wird im iOS-Schlüsselbund dieses Geräts gespeichert – nur mit der Tastatur geteilt.";
+"Stored in the iOS Keychain on this device, shared only with the keyboard." = "Wird im iOS-Schlüsselbund dieses Geräts gespeichert – nur mit der Tastatur geteilt.";
 "Press to listen" = "Zum Zuhören tippen";
 "It stops on its own when the room goes quiet." = "Stoppt von selbst, wenn es still wird.";
 "Stop now" = "Jetzt stoppen";
@@ -117,15 +117,20 @@
 /* ===== Redesign additions (welcome + keyboard states) ===== */
 "Show me how" = "Zeig mir wie";
 "Set up my keyboard" = "Tastatur einrichten";
-"A friend writes in a language you don't speak — Keyglot translates it, and turns your reply into their language, right where you're already typing." = "Ein Freund schreibt in einer Sprache, die du nicht sprichst — Keyglot übersetzt sie und wandelt deine Antwort in seine Sprache um, direkt dort, wo du schon tippst.";
+"A friend writes in a language you don't speak, Keyglot translates it, and turns your reply into their language, right where you're already typing." = "Ein Freund schreibt in einer Sprache, die du nicht sprichst, Keyglot übersetzt sie und wandelt deine Antwort in seine Sprache um, direkt dort, wo du schon tippst.";
 "Three places Keyglot shows up" = "Drei Orte, an denen Keyglot auftaucht";
 "You'll never open this app to translate something. That's the point." = "Du wirst diese App nie öffnen, um etwas zu übersetzen. Genau das ist der Sinn.";
 "Write it, then switch it" = "Schreiben, dann umwandeln";
-"Type in your language, tap a flag, and your message is replaced with a natural translation — inside WhatsApp." = "Tippe in deiner Sprache, tippe auf eine Flagge, und deine Nachricht wird durch eine natürliche Übersetzung ersetzt — in WhatsApp.";
+"Type in your language, tap a flag, and your message is replaced with a natural translation, inside WhatsApp." = "Tippe in deiner Sprache, tippe auf eine Flagge, und deine Nachricht wird durch eine natürliche Übersetzung ersetzt, in WhatsApp.";
 "Got a voice note you can't follow?" = "Eine Sprachnachricht, der du nicht folgen kannst?";
-"Share it to Keyglot and read what it says — dialects included." = "Teile sie mit Keyglot und lies, was gesagt wird — Dialekte inklusive.";
+"Share it to Keyglot and read what it says, dialects included." = "Teile sie mit Keyglot und lies, was gesagt wird, Dialekte inklusive.";
 "Talking face to face" = "Von Angesicht zu Angesicht";
 "Open Listen & translate, and hear what they said in your language." = "Öffne Zuhören & übersetzen und höre in deiner Sprache, was gesagt wurde.";
 "AI is included. Nothing to set up." = "KI ist inklusive. Nichts einzurichten.";
 
 "Show welcome again" = "Einführung erneut ansehen";
+
+/* ===== Copy refinements (WhatsApp/quotes/widget) ===== */
+"Type in your language, tap a flag, and your message becomes a natural translation, right where you type: WhatsApp, Messages, email." = "Tippe in deiner Sprache, tippe auf eine Flagge, und deine Nachricht wird zu einer natürlichen Übersetzung, genau dort, wo du schreibst: WhatsApp, Nachrichten, E-Mail.";
+"Open “Listen & translate”, and hear what they said in your language. Add the widget for one-tap access." = "Öffne „Zuhören & übersetzen“ und höre in deiner Sprache, was gesagt wurde. Füge das Widget für schnellen Zugriff hinzu.";
+"Type in any language and replace your message with a natural translation, right where you type: WhatsApp, Messages, email." = "Schreib in jeder Sprache und ersetze deine Nachricht durch eine natürliche Übersetzung, genau dort, wo du schreibst: WhatsApp, Nachrichten, E-Mail.";

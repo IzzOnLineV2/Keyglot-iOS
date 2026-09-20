@@ -8,7 +8,7 @@ import Security
 ///
 /// We deliberately do **not** pass `kSecAttrAccessGroup` in the queries: when it's omitted,
 /// the system uses the *first* entry of the target's `keychain-access-groups` entitlement as
-/// the default group. Both targets list exactly one group — the shared one — so the item lands
+/// the default group. Both targets list exactly one group, the shared one, so the item lands
 /// in (and is read from) the shared group on each, with no hard-coded team-ID prefix in code.
 ///
 /// Accessibility is `AfterFirstUnlockThisDeviceOnly`: the key stays on this device and is

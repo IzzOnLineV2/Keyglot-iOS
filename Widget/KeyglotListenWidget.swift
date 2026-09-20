@@ -19,7 +19,7 @@ struct KeyglotEntry: TimelineEntry {
     let date: Date
 }
 
-/// The widget is static (no data) — it's just a launcher button.
+/// The widget is static (no data), it's just a launcher button.
 struct KeyglotProvider: TimelineProvider {
     func placeholder(in context: Context) -> KeyglotEntry { KeyglotEntry(date: Date()) }
 

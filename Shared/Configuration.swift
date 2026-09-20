@@ -2,7 +2,7 @@ import Foundation
 
 /// Central, compile-time configuration shared by the app and the keyboard extension.
 ///
-/// Nothing secret lives here — provider API keys are supplied by the user at runtime
+/// Nothing secret lives here, provider API keys are supplied by the user at runtime
 /// and stored in the shared App Group (see `AppGroupStorage`).
 enum Configuration {
 
@@ -31,7 +31,7 @@ enum Configuration {
     /// "Claude Sonnet" → the current Sonnet model id.
     static let claudeModel = "claude-sonnet-4-6"
 
-    /// Upper bound on the response length. A cap, not a target — short chat messages finish
+    /// Upper bound on the response length. A cap, not a target, short chat messages finish
     /// well under it, and it costs nothing extra, so it's set generously to avoid truncation.
     static let claudeMaxTokens = 4096
 
@@ -62,7 +62,7 @@ enum Configuration {
 
     static let geminiBaseURL = "https://generativelanguage.googleapis.com/v1beta/models"
 
-    /// Configurable — e.g. "gemini-3.6-flash". (`gemini-2.x` models now return HTTP 404
+    /// Configurable, e.g. "gemini-3.6-flash". (`gemini-2.x` models now return HTTP 404
     /// "no longer available to new users".)
     static let geminiModel = "gemini-3.6-flash"
 
@@ -98,7 +98,7 @@ enum Configuration {
 
     static let openRouterURL = URL(string: "https://openrouter.ai/api/v1/chat/completions")!
 
-    /// Configurable — any OpenRouter model id in `vendor/model` form.
+    /// Configurable, any OpenRouter model id in `vendor/model` form.
     static let openRouterModel = "openai/gpt-4o-mini"
 
     /// Optional attribution headers OpenRouter uses for ranking.

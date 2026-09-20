@@ -20,7 +20,7 @@ struct AboutView: View {
                         LogoMark(size: 48)
                         Text("Keyglot").font(KGFont.title).foregroundStyle(KGColor.ink)
                         Text("AI Message Translator").font(KGFont.row).foregroundStyle(KGColor.ink2)
-                        Text("Keyglot translates or rewrites the message you've already typed — in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language.")
+                        Text("Keyglot translates or rewrites the message you've already typed, in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language.")
                             .font(KGFont.body).foregroundStyle(KGColor.ink2)
                     }
                 }
@@ -51,7 +51,7 @@ struct AboutView: View {
                     VStack(alignment: .leading, spacing: 10) {
                         bullet("Type your message in any app with your normal keyboard.")
                         bullet("Tap 🌐 to switch to the Keyglot keyboard.")
-                        bullet("Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite — the text is replaced in place.")
+                        bullet("Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite, the text is replaced in place.")
                         bullet("Press Send.")
                         bullet("Choose which languages appear in Settings → Keyboard → Languages.")
                     }
@@ -59,10 +59,10 @@ struct AboutView: View {
 
                 section("More ways to translate") {
                     VStack(alignment: .leading, spacing: 10) {
-                        bullet("🎧 Listen & translate — press, speak, and get a translation of what you hear (also from the widget).")
-                        bullet("📋 Translate a message you've copied — tap 📋 on the keyboard.")
+                        bullet("🎧 Listen & translate, press, speak, and get a translation of what you hear (also from the widget).")
+                        bullet("📋 Translate a message you've copied, tap 📋 on the keyboard.")
                         bullet("📤 Share any text or voice note to Keyglot to translate it.")
-                        Text("Audio (voice notes and live listening) uses Google Gemini — add a Gemini API key in Settings to use it.")
+                        Text("Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Settings to use it.")
                             .font(KGFont.caption).foregroundStyle(KGColor.ink3)
                     }
                 }

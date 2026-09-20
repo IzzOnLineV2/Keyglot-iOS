@@ -38,7 +38,7 @@ struct OpenAITranscriptionService: Sendable {
         appendField("--\(boundary)\r\n")
         appendField("Content-Disposition: form-data; name=\"model\"\r\n\r\n")
         appendField("\(Configuration.openAITranscriptionModel)\r\n")
-        // language hint (optional ISO-639-1) — greatly improves accuracy for dialects like
+        // language hint (optional ISO-639-1), greatly improves accuracy for dialects like
         // Moroccan Darija (transcribe as "ar") when auto-detect gets the language wrong.
         if let language, !language.isEmpty {
             appendField("--\(boundary)\r\n")

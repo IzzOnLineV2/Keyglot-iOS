@@ -4,7 +4,7 @@ import AVFoundation
 /// Drives the in-app "Listen & translate" screen: record from the mic, auto-stop on silence, then
 /// send the clip to Gemini (which handles dialects like Darija) and show the translation.
 ///
-/// No live/streaming ASR and no Apple Speech — we record a short clip and let Gemini "listen".
+/// No live/streaming ASR and no Apple Speech, we record a short clip and let Gemini "listen".
 @MainActor
 final class ListenViewModel: NSObject, ObservableObject {
 

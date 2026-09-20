@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// The 2pt "translation seam" — the Glot gradient reading outward from the middle. The visual
+/// The 2pt "translation seam", the Glot gradient reading outward from the middle. The visual
 /// metaphor for "two scripts meeting". Does NOT mirror in RTL.
 struct SeamDivider: View {
     var body: some View {

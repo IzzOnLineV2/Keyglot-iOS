@@ -1,4 +1,4 @@
-/* ===== Share extension — audio voice message ===== */
+/* ===== Share extension, audio voice message ===== */
 "No audio found to translate." = "No se encontró audio para traducir.";
 "Couldn't read the audio." = "No se pudo leer el audio.";
 "Add a Google Gemini API key in the Keyglot app to translate voice messages." = "Añade una clave API de Google Gemini en la app Keyglot para traducir mensajes de voz.";

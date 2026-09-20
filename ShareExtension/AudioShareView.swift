@@ -2,7 +2,7 @@ import SwiftUI
 
 /// The share extension's UI for a received voice note: a source-language pill, an equalizer while
 /// transcribing/translating, then the translation (prominent) + original transcript, or an error.
-/// Changing the language re-runs on the same audio — handy when a dialect is misread.
+/// Changing the language re-runs on the same audio, handy when a dialect is misread.
 struct AudioShareView: View {
     @ObservedObject var model: AudioShareModel
     let onClose: () -> Void

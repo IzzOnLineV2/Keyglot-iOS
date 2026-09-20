@@ -1,6 +1,6 @@
 import Foundation
 
-/// The single place that reads/writes provider API keys. Backed by the shared Keychain —
+/// The single place that reads/writes provider API keys. Backed by the shared Keychain -
 /// API keys are **never** stored in `UserDefaults`.
 struct CredentialStore: Sendable {
 
@@ -19,7 +19,7 @@ struct CredentialStore: Sendable {
     }
 
     /// Returns `true` on success. A `false` here means the Keychain write was rejected
-    /// (most commonly `errSecMissingEntitlement` on an unsigned build) — the caller should
+    /// (most commonly `errSecMissingEntitlement` on an unsigned build), the caller should
     /// surface that rather than assume the key was stored.
     @discardableResult
     func setAPIKey(_ key: String?, for provider: AIProviderType) -> Bool {
@@ -38,7 +38,7 @@ struct CredentialStore: Sendable {
     // MARK: - Named secrets (non-provider)
 
     /// Read a named secret (e.g. the KeyGlot dev key or session token). Kept in the shared
-    /// Keychain like API keys — never in UserDefaults.
+    /// Keychain like API keys, never in UserDefaults.
     func secret(_ account: String) -> String? {
         keychain.string(account: account)?
             .trimmingCharacters(in: .whitespacesAndNewlines)

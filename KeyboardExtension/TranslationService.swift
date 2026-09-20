@@ -3,7 +3,7 @@ import Foundation
 /// High-level entry point used by the keyboard for both translation and rewriting.
 ///
 /// Resolves the user's selected provider (via `AIProviderFactory`) and delegates to it
-/// through the `AIProvider` protocol — the keyboard never knows which provider ran.
+/// through the `AIProvider` protocol, the keyboard never knows which provider ran.
 struct TranslationService: Sendable {
 
     enum ServiceError: Error, LocalizedError {

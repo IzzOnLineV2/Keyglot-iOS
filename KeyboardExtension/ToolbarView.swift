@@ -115,7 +115,7 @@ struct ToolbarView: View {
         return state.canTranslate ? .idle : .disabled
     }
 
-    /// Tone actions only make sense once there's text — collapse to a hint when the field is empty.
+    /// Tone actions only make sense once there's text, collapse to a hint when the field is empty.
     private var showsToneHint: Bool {
         state.canTranslate && !state.hasText && !state.isBusy && state.replacedLanguageID == nil
     }
@@ -185,7 +185,7 @@ struct ToolbarView: View {
                 Button { onUndo() } label: {
                     HStack(spacing: 6) {
                         Text("↩︎").font(.system(size: 15))
-                        Text("Undo — put my words back")
+                        Text("Undo, put my words back")
                             .font(.system(size: 12.5, weight: .semibold))
                             .foregroundStyle(KGColor.onInk)
                             .lineLimit(1)
@@ -197,7 +197,7 @@ struct ToolbarView: View {
                     .clipShape(RoundedRectangle(cornerRadius: KGRadius.tone, style: .continuous))
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel(Text("Undo — put my words back"))
+                .accessibilityLabel(Text("Undo, put my words back"))
             } else {
                 Button { onTranslateClipboard() } label: {
                     HStack(spacing: 6) {
@@ -250,7 +250,7 @@ struct ToolbarView: View {
 }
 
 /// A `UIButton`-backed globe that shows the system keyboard picker on long-press and
-/// advances to the next keyboard on tap — the standard custom-keyboard behaviour that
+/// advances to the next keyboard on tap, the standard custom-keyboard behaviour that
 /// SwiftUI alone cannot provide.
 private struct NextKeyboardButton: UIViewRepresentable {
     let configure: (UIButton) -> Void

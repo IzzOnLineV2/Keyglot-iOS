@@ -1,6 +1,6 @@
 import Foundation
 
-/// OpenRouter — an OpenAI-compatible gateway that fronts many models (`chat/completions`).
+/// OpenRouter, an OpenAI-compatible gateway that fronts many models (`chat/completions`).
 ///
 /// Raw-HTTP `URLSession` client. `final` + immutable `Sendable` stored properties make it
 /// `Sendable` for the keyboard's off-main-actor network call.

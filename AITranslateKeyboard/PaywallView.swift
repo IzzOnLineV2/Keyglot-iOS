@@ -1,7 +1,7 @@
 import SwiftUI
 import StoreKit
 
-/// The dismissible "Support Keyglot" reminder. Nothing is gated — the user can always continue for
+/// The dismissible "Support Keyglot" reminder. Nothing is gated, the user can always continue for
 /// free; a one-time purchase removes the reminder for good.
 struct PaywallView: View {
     @ObservedObject var store: StoreManager

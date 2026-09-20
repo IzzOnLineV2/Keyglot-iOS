@@ -11,14 +11,14 @@ final class KeyboardState: ObservableObject {
         case idle
         /// Work in flight (translating or rewriting). The string is the progress label to show.
         case busy(String)
-        /// A brief success confirmation (e.g. "✓ Replaced — ready to send").
+        /// A brief success confirmation (e.g. "✓ Replaced, ready to send").
         case success(String)
         case error(String)
     }
 
     @Published var status: Status = .idle
 
-    /// Languages shown on the toolbar, in order — driven by the user's settings.
+    /// Languages shown on the toolbar, in order, driven by the user's settings.
     @Published var languages: [TargetLanguage] = []
 
     /// Whether the host has granted Full Access. Network calls only work when this is true.
@@ -27,7 +27,7 @@ final class KeyboardState: ObservableObject {
     /// Whether an API key is configured for the selected provider. No key → buttons disabled.
     @Published var hasAPIKey: Bool = false
 
-    /// Whether the input field currently holds text — drives the contextual idle hint
+    /// Whether the input field currently holds text, drives the contextual idle hint
     /// (empty → "type on your keyboard first", non-empty → "tap a flag").
     @Published var hasText: Bool = false
 
@@ -72,7 +72,7 @@ final class KeyboardState: ObservableObject {
     func showReplaced(languageID: String?) {
         activeLanguageID = nil
         replacedLanguageID = languageID
-        status = .success(String(localized: "✓ Replaced — ready to send"))
+        status = .success(String(localized: "✓ Replaced, ready to send"))
         errorResetTask?.cancel()
         errorResetTask = Task { [weak self] in
             try? await Task.sleep(for: .seconds(4))

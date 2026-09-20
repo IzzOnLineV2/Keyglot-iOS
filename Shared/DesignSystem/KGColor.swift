@@ -6,7 +6,7 @@ import UIKit
 /// duplicating an asset catalog.
 ///
 /// Palette rule: the warm neutral base carries the UI; the "Glot" gradient (`KGGradient`) is used
-/// only for the mark, the active language chip, the translation seam, and CTA buttons — never as a
+/// only for the mark, the active language chip, the translation seam, and CTA buttons, never as a
 /// page background or behind body text.
 enum KGColor {
     // Surfaces
@@ -57,6 +57,6 @@ extension UIColor {
 }
 
 extension Color {
-    /// 0xRRGGBB — for one-off design values (gradient stops, etc.). Prefer `KGColor` tokens.
+    /// 0xRRGGBB, for one-off design values (gradient stops, etc.). Prefer `KGColor` tokens.
     init(hex: UInt32) { self.init(UIColor(rgb: hex)) }
 }

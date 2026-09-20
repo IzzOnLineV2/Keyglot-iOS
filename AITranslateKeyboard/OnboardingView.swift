@@ -26,7 +26,7 @@ struct OnboardingView: View {
                         Text("Understand every message. Answer in your words.")
                             .font(KGFont.serif(34, style: .largeTitle))
                             .foregroundStyle(KGColor.ink)
-                        Text("Type in any language and replace your message with a natural translation — right inside WhatsApp, no copy/paste.")
+                        Text("Type in any language and replace your message with a natural translation, right where you type: WhatsApp, Messages, email.")
                             .font(KGFont.body).foregroundStyle(KGColor.ink2)
                     }
 
@@ -61,7 +61,7 @@ struct OnboardingView: View {
                                     .font(KGFont.caption).foregroundStyle(KGColor.accent)
                             }
 
-                            Text("Stored in the iOS Keychain on this device — shared only with the keyboard.")
+                            Text("Stored in the iOS Keychain on this device, shared only with the keyboard.")
                                 .font(KGFont.caption).foregroundStyle(KGColor.ink3)
                         }
                     }

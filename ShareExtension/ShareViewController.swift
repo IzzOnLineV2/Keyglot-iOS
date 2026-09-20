@@ -78,7 +78,7 @@ final class ShareViewController: UIViewController {
                 return
             }
 
-            // The system URL is temporary — copy it, preserving the real extension so the MIME is
+            // The system URL is temporary, copy it, preserving the real extension so the MIME is
             // detected correctly (WhatsApp voice notes are .m4a / .opus).
             let ext = url.pathExtension.isEmpty
                 ? (UTType(typeID)?.preferredFilenameExtension ?? "m4a")

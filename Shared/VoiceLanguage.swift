@@ -1,6 +1,6 @@
 import Foundation
 
-/// Shared helpers for the voice/audio translation features — the share extension (received voice
+/// Shared helpers for the voice/audio translation features, the share extension (received voice
 /// notes) and the in-app "Listen & translate" screen. Keeps the source-language options and the
 /// audio MIME/target-language logic in one place.
 enum VoiceLanguage {
@@ -44,7 +44,7 @@ enum VoiceLanguage {
         case "wav": return "audio/wav"
         case "aiff", "aif": return "audio/aiff"
         case "flac": return "audio/flac"
-        default: return "audio/mp4"   // m4a / mp4 — WhatsApp's default and what we record
+        default: return "audio/mp4"   // m4a / mp4, WhatsApp's default and what we record
         }
     }
 

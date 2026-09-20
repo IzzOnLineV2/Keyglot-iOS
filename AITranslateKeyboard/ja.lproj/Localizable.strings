@@ -1,11 +1,11 @@
 /* ===== Onboarding ===== */
 "AI Message Translator" = "AIメッセージ翻訳";
-"Type in any language and replace your message with a natural translation — right inside WhatsApp, no copy/paste." = "どんな言語でも入力でき、メッセージを自然な翻訳に置き換えます — WhatsApp内で直接、コピペ不要。";
+"Type in any language and replace your message with a natural translation, right inside WhatsApp, no copy/paste." = "どんな言語でも入力でき、メッセージを自然な翻訳に置き換えます, WhatsApp内で直接、コピペ不要。";
 "Provider" = "プロバイダ";
 "Add your %@ API key to get started." = "%@のAPIキーを追加して始めましょう。";
 "Reveal key" = "キーを表示";
 "Get a %@ API key" = "%@のAPIキーを取得";
-"Stored securely in the iOS Keychain on this device — never in plain settings, and shared only with the keyboard." = "この端末のiOSキーチェーンに安全に保存されます — 設定に平文で保存されることはなく、キーボードとのみ共有されます。";
+"Stored securely in the iOS Keychain on this device, never in plain settings, and shared only with the keyboard." = "この端末のiOSキーチェーンに安全に保存されます, 設定に平文で保存されることはなく、キーボードとのみ共有されます。";
 "Get Started" = "始める";
 "Couldn't save the key" = "キーを保存できませんでした";
 "The key couldn't be written to the iOS Keychain. Run the app signed with your Team (from Xcode) or on a device, then try again." = "iOSキーチェーンにキーを書き込めませんでした。Teamで署名したアプリを（Xcodeから）または実機で実行して、もう一度お試しください。";
@@ -32,7 +32,7 @@
 "Save" = "保存";
 "Test translation" = "翻訳をテスト";
 "Remove key" = "キーを削除";
-"“Test” sends one short request to %@ and shows the exact result or error — handy to check the key, model and billing." = "「テスト」は%@に短いリクエストを1回送り、正確な結果またはエラーを表示します — キー・モデル・課金の確認に便利です。";
+"“Test” sends one short request to %@ and shows the exact result or error, handy to check the key, model and billing." = "「テスト」は%@に短いリクエストを1回送り、正確な結果またはエラーを表示します, キー・モデル・課金の確認に便利です。";
 "Saved" = "保存しました";
 "Your %@ API key has been saved." = "%@のAPIキーを保存しました。";
 "Test result" = "テスト結果";
@@ -40,11 +40,11 @@
 "❌ Failed.\n\n%@" = "❌ 失敗しました。\n\n%@";
 
 /* ===== About ===== */
-"Keyglot translates or rewrites the message you've already typed — in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language." = "Keyglot は、すでに入力したメッセージをその場で翻訳または書き換えます — コピペ不要。言語をタップすると自然な翻訳（元の言語は自動検出）、トーンをタップすると同じ言語のまま文章を改善・書き換えできます。";
+"Keyglot translates or rewrites the message you've already typed, in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language." = "Keyglot は、すでに入力したメッセージをその場で翻訳または書き換えます, コピペ不要。言語をタップすると自然な翻訳（元の言語は自動検出）、トーンをタップすると同じ言語のまま文章を改善・書き換えできます。";
 "How it works" = "使い方";
 "Type your message in any app with your normal keyboard." = "通常のキーボードで、任意のアプリにメッセージを入力します。";
 "Tap 🌐 to switch to the Keyglot keyboard." = "🌐をタップしてKeyglotキーボードに切り替えます。";
-"Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite — the text is replaced in place." = "言語をタップして翻訳、またはトーン（✨ 💼 😊 ❤️）をタップして書き換え — テキストはその場で置き換わります。";
+"Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite, the text is replaced in place." = "言語をタップして翻訳、またはトーン（✨ 💼 😊 ❤️）をタップして書き換え, テキストはその場で置き換わります。";
 "Press Send." = "送信を押します。";
 "Choose which languages appear in Settings → Keyboard → Languages." = "「設定」→「キーボード」→「言語」で表示する言語を選びます。";
 "Keyboard languages" = "キーボードの言語";
@@ -56,7 +56,7 @@
 "Developed by Stefania Izzo" = "開発: Stefania Izzo";
 
 /* ===== Keyboard Languages ===== */
-"On the keyboard — %lld/%lld" = "キーボード上 — %lld/%lld";
+"On the keyboard, %lld/%lld" = "キーボード上, %lld/%lld";
 "Swipe to remove; tap Edit to reorder. They appear left-to-right on the keyboard. At least one is required." = "スワイプで削除、「編集」をタップで並べ替え。キーボードでは左から右に表示されます。少なくとも1つ必要です。";
 "Add a language" = "言語を追加";
 "Remove one to add another (max %lld)." = "別の言語を追加するには1つ削除してください（最大%lld）。";
@@ -81,10 +81,10 @@
 
 /* ===== More ways to translate (About) ===== */
 "More ways to translate" = "他の翻訳方法";
-"🎧 Listen & translate — press, speak, and get a translation of what you hear (also from the widget)." = "🎧 聞いて翻訳 — 押して話すと、聞こえた内容の翻訳が得られます（ウィジェットからも）。";
-"📋 Translate a message you've copied — tap 📋 on the keyboard." = "📋 コピーしたメッセージを翻訳 — キーボードの 📋 をタップ。";
+"🎧 Listen & translate, press, speak, and get a translation of what you hear (also from the widget)." = "🎧 聞いて翻訳, 押して話すと、聞こえた内容の翻訳が得られます（ウィジェットからも）。";
+"📋 Translate a message you've copied, tap 📋 on the keyboard." = "📋 コピーしたメッセージを翻訳, キーボードの 📋 をタップ。";
 "📤 Share any text or voice note to Keyglot to translate it." = "📤 テキストや音声メッセージを Keyglot に共有して翻訳します。";
-"Audio (voice notes and live listening) uses Google Gemini — add a Gemini API key in Settings to use it." = "音声（音声メッセージとライブ聞き取り）は Google Gemini を使用します — 設定で Gemini の API キーを追加してください。";
+"Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Settings to use it." = "音声（音声メッセージとライブ聞き取り）は Google Gemini を使用します, 設定で Gemini の API キーを追加してください。";
 
 /* ===== Support / paywall ===== */
 "Support Keyglot" = "Keyglot をサポート";
@@ -102,13 +102,13 @@
 "Loading plans…" = "プランを読み込み中…";
 "Your keyboard" = "キーボード";
 "About Keyglot" = "Keyglot について";
-"You're on KeyGlot — AI is included, no API key needed." = "KeyGlot 使用中 — AI 込みで API キーは不要です。";
+"You're on KeyGlot, AI is included, no API key needed." = "KeyGlot 使用中, AI 込みで API キーは不要です。";
 "iOS Settings → General → Keyboard → Keyboards → add “Keyglot”." = "iOS 設定 → 一般 → キーボード → キーボード → 「Keyglot」を追加。";
 "Tap “Keyglot” and turn on Allow Full Access (needed for network)." = "「Keyglot」をタップし、フルアクセスを許可 をオンに（ネットワークに必要）。";
 "In any chat, tap 🌐 to switch to Keyglot, then tap a language." = "チャットで 🌐 をタップして Keyglot に切り替え、言語をタップします。";
 "Understand every message. Answer in your words." = "どのメッセージも理解。自分の言葉で返信。";
 "Add your API key" = "API キーを追加";
-"Stored in the iOS Keychain on this device — shared only with the keyboard." = "この端末の iOS キーチェーンに保存され、キーボードとのみ共有されます。";
+"Stored in the iOS Keychain on this device, shared only with the keyboard." = "この端末の iOS キーチェーンに保存され、キーボードとのみ共有されます。";
 "Press to listen" = "押して聞き取り";
 "It stops on its own when the room goes quiet." = "静かになると自動で停止します。";
 "Stop now" = "停止";
@@ -117,15 +117,20 @@
 /* ===== Redesign additions (welcome + keyboard states) ===== */
 "Show me how" = "使い方を見る";
 "Set up my keyboard" = "キーボードを設定";
-"A friend writes in a language you don't speak — Keyglot translates it, and turns your reply into their language, right where you're already typing." = "友だちが知らない言語で書いてきても、Keyglot が翻訳し、あなたの返信を相手の言語に変換します。今入力している場所で。";
+"A friend writes in a language you don't speak, Keyglot translates it, and turns your reply into their language, right where you're already typing." = "友だちが知らない言語で書いてきても、Keyglot が翻訳し、あなたの返信を相手の言語に変換します。今入力している場所で。";
 "Three places Keyglot shows up" = "Keyglot が現れる3つの場所";
 "You'll never open this app to translate something. That's the point." = "翻訳のためにこのアプリを開くことはありません。それが狙いです。";
 "Write it, then switch it" = "書いて、切り替える";
-"Type in your language, tap a flag, and your message is replaced with a natural translation — inside WhatsApp." = "自分の言語で入力して旗をタップすると、メッセージが自然な翻訳に置き換わります — WhatsApp の中で。";
+"Type in your language, tap a flag, and your message is replaced with a natural translation, inside WhatsApp." = "自分の言語で入力して旗をタップすると、メッセージが自然な翻訳に置き換わります, WhatsApp の中で。";
 "Got a voice note you can't follow?" = "聞き取れない音声メッセージ？";
-"Share it to Keyglot and read what it says — dialects included." = "Keyglot に共有すれば内容を読めます — 方言も対応。";
+"Share it to Keyglot and read what it says, dialects included." = "Keyglot に共有すれば内容を読めます, 方言も対応。";
 "Talking face to face" = "対面で話すとき";
 "Open Listen & translate, and hear what they said in your language." = "「聞いて翻訳」を開けば、話した内容を自分の言語で確認できます。";
 "AI is included. Nothing to set up." = "AI 込み。設定は不要です。";
 
 "Show welcome again" = "イントロをもう一度見る";
+
+/* ===== Copy refinements (WhatsApp/quotes/widget) ===== */
+"Type in your language, tap a flag, and your message becomes a natural translation, right where you type: WhatsApp, Messages, email." = "自分の言語で入力して旗をタップすると、メッセージが自然な翻訳になります。WhatsApp、メッセージ、メールなど、入力する場所で。";
+"Open “Listen & translate”, and hear what they said in your language. Add the widget for one-tap access." = "「聞いて翻訳」を開けば、話した内容を自分の言語で確認できます。ウィジェットを追加すればワンタップで開けます。";
+"Type in any language and replace your message with a natural translation, right where you type: WhatsApp, Messages, email." = "どの言語でも入力でき、メッセージを自然な翻訳に置き換えます。WhatsApp、メッセージ、メールなど、入力する場所で。";

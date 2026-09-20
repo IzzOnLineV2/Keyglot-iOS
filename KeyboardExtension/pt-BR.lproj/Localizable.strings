@@ -8,19 +8,19 @@
 "Translate to %@" = "Traduzir para %@";
 
 /* ===== Error banners ===== */
-"No API key set — add your %@ key in the Keyglot app." = "Nenhuma chave de API — adicione sua chave da %@ no app Keyglot.";
+"No API key set, add your %@ key in the Keyglot app." = "Nenhuma chave de API, adicione sua chave da %@ no app Keyglot.";
 "Type a message first, then tap a button." = "Digite uma mensagem primeiro e toque em um botão.";
-"Invalid API key — open the Keyglot app and check your %@ key." = "Chave de API inválida — abra o app Keyglot e verifique sua chave da %@.";
-"Billing issue — add credit to your %@ account." = "Problema de cobrança — adicione crédito à sua conta da %@.";
-"Access denied — your %@ key isn't allowed to do this." = "Acesso negado — sua chave da %@ não tem permissão para isso.";
-"Out of credit — add billing to your %@ account." = "Sem crédito — adicione um meio de pagamento à sua conta da %@.";
+"Invalid API key, open the Keyglot app and check your %@ key." = "Chave de API inválida, abra o app Keyglot e verifique sua chave da %@.";
+"Billing issue, add credit to your %@ account." = "Problema de cobrança, adicione crédito à sua conta da %@.";
+"Access denied, your %@ key isn't allowed to do this." = "Acesso negado, sua chave da %@ não tem permissão para isso.";
+"Out of credit, add billing to your %@ account." = "Sem crédito, adicione um meio de pagamento à sua conta da %@.";
 "%@ rejected the request: %@" = "%@ rejeitou a solicitação: %@";
 "Model not available for your %@ key." = "Modelo não disponível para sua chave da %@.";
-"Too many requests — wait a few seconds and try again." = "Muitas solicitações — aguarde alguns segundos e tente novamente.";
-"%@ is temporarily unavailable — try again shortly." = "%@ está temporariamente indisponível — tente novamente em breve.";
+"Too many requests, wait a few seconds and try again." = "Muitas solicitações, aguarde alguns segundos e tente novamente.";
+"%@ is temporarily unavailable, try again shortly." = "%@ está temporariamente indisponível, tente novamente em breve.";
 "%@ error %lld: %@" = "Erro da %@ %lld: %@";
-"No network — check your connection and that Full Access is on." = "Sem rede — verifique sua conexão e se o Acesso Total está ativado.";
-"%@ returned nothing — try again." = "%@ não retornou nada — tente novamente.";
+"No network, check your connection and that Full Access is on." = "Sem rede, verifique sua conexão e se o Acesso Total está ativado.";
+"%@ returned nothing, try again." = "%@ não retornou nada, tente novamente.";
 "Unexpected response from %@." = "Resposta inesperada da %@.";
 "Couldn't translate: %@" = "Não foi possível traduzir: %@";
 
@@ -50,6 +50,6 @@
 "Translate what they sent" = "Traduzir o que te enviaram";
 
 /* ===== Redesign additions (welcome + keyboard states) ===== */
-"✓ Replaced — ready to send" = "✓ Substituído — pronto para enviar";
-"Undo — put my words back" = "Desfazer — trazer minhas palavras de volta";
+"✓ Replaced, ready to send" = "✓ Substituído, pronto para enviar";
+"Undo, put my words back" = "Desfazer, trazer minhas palavras de volta";
 "Tone actions appear once you've typed" = "As ações de tom aparecem depois que você digita";

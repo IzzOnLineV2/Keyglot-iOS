@@ -5,7 +5,7 @@ import UIKit
 /// trailing-aligned, a touch larger (+8%) and with looser leading, so transcripts and translations
 /// in Arabic/Darija read naturally instead of being cramped left-to-right. Latin/CJK render normally.
 ///
-/// Instrument Sans has no Arabic glyphs, so CoreText substitutes the system Arabic font per run —
+/// Instrument Sans has no Arabic glyphs, so CoreText substitutes the system Arabic font per run -
 /// we only need to fix size + direction here.
 struct ScriptText: View {
     let text: String

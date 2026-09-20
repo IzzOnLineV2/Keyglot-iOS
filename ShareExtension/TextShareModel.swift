@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Translates shared **text** (a selection, a note, a link) into the user's device language,
-/// using the provider the user selected in the app (Claude by default) — no Gemini requirement.
+/// using the provider the user selected in the app (Claude by default), no Gemini requirement.
 @MainActor
 final class TextShareModel: ObservableObject {
 

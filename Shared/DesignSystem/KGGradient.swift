@@ -12,7 +12,7 @@ enum KGGradient {
     /// Mark, active chip, CTA buttons (~110–135°).
     static let diagonal = LinearGradient(stops: stops, startPoint: .topLeading, endPoint: .bottomTrailing)
 
-    /// The 2pt translation "seam" (90°). Does NOT mirror in RTL — reads outward from the middle.
+    /// The 2pt translation "seam" (90°). Does NOT mirror in RTL, reads outward from the middle.
     static let seam = LinearGradient(stops: stops, startPoint: .leading, endPoint: .trailing)
 
     /// Wider gradient for the animated shimmer on a "working" chip (animate the fill's offset).

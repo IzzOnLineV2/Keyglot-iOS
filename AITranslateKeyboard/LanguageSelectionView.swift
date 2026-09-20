@@ -20,7 +20,7 @@ struct LanguageSelectionView: View {
                     .onDelete(perform: remove)
                     .onMove(perform: move)
             } header: {
-                Text("On the keyboard — \(selectedIDs.count)/\(maxCount)")
+                Text("On the keyboard, \(selectedIDs.count)/\(maxCount)")
             } footer: {
                 Text("Swipe to remove; tap Edit to reorder. They appear left-to-right on the keyboard. At least one is required.")
             }

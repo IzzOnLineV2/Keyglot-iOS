@@ -3,7 +3,7 @@ import Foundation
 /// A target language the keyboard can translate into. No longer a fixed enum: it's a catalog
 /// entry, so the set shown on the keyboard is user-configurable.
 ///
-/// The source language is always auto-detected by the model — these only describe the target.
+/// The source language is always auto-detected by the model, these only describe the target.
 struct TargetLanguage: Identifiable, Codable, Equatable, Sendable {
     /// Stable key persisted in settings (do not change once shipped).
     let id: String
@@ -84,7 +84,7 @@ struct TargetLanguage: Identifiable, Codable, Equatable, Sendable {
     private static let globalRules = """
     You are an expert translator powering a personal messaging keyboard.
     Translate the user's message so it reads as if it had been written natively by a fluent
-    speaker — natural communication, not a literal word-for-word translation.
+    speaker, natural communication, not a literal word-for-word translation.
     Follow these rules strictly:
     - Convey the meaning, tone and intent; phrase it the way a native speaker actually would.
     - Keep it conversational and culturally appropriate for everyday personal chat.

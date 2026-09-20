@@ -8,19 +8,19 @@
 "Translate to %@" = "翻译为 %@";
 
 /* ===== Error banners ===== */
-"No API key set — add your %@ key in the Keyglot app." = "未设置 API 密钥——请在 Keyglot App 中添加你的 %@ 密钥。";
+"No API key set, add your %@ key in the Keyglot app." = "未设置 API 密钥--请在 Keyglot App 中添加你的 %@ 密钥。";
 "Type a message first, then tap a button." = "请先输入消息，然后点按一个按钮。";
-"Invalid API key — open the Keyglot app and check your %@ key." = "API 密钥无效——打开 Keyglot App 检查你的 %@ 密钥。";
-"Billing issue — add credit to your %@ account." = "计费问题——请为你的 %@ 账户充值。";
-"Access denied — your %@ key isn't allowed to do this." = "访问被拒绝——你的 %@ 密钥无权执行此操作。";
-"Out of credit — add billing to your %@ account." = "余额不足——请为你的 %@ 账户添加付款方式。";
+"Invalid API key, open the Keyglot app and check your %@ key." = "API 密钥无效--打开 Keyglot App 检查你的 %@ 密钥。";
+"Billing issue, add credit to your %@ account." = "计费问题--请为你的 %@ 账户充值。";
+"Access denied, your %@ key isn't allowed to do this." = "访问被拒绝--你的 %@ 密钥无权执行此操作。";
+"Out of credit, add billing to your %@ account." = "余额不足--请为你的 %@ 账户添加付款方式。";
 "%@ rejected the request: %@" = "%@ 拒绝了请求：%@";
 "Model not available for your %@ key." = "你的 %@ 密钥无法使用该模型。";
-"Too many requests — wait a few seconds and try again." = "请求过多——请等待几秒后重试。";
-"%@ is temporarily unavailable — try again shortly." = "%@ 暂时不可用——请稍后重试。";
+"Too many requests, wait a few seconds and try again." = "请求过多--请等待几秒后重试。";
+"%@ is temporarily unavailable, try again shortly." = "%@ 暂时不可用--请稍后重试。";
 "%@ error %lld: %@" = "%@ 错误 %lld：%@";
-"No network — check your connection and that Full Access is on." = "无网络——请检查你的连接以及是否已开启完全访问。";
-"%@ returned nothing — try again." = "%@ 未返回任何内容——请重试。";
+"No network, check your connection and that Full Access is on." = "无网络--请检查你的连接以及是否已开启完全访问。";
+"%@ returned nothing, try again." = "%@ 未返回任何内容--请重试。";
 "Unexpected response from %@." = "来自 %@ 的意外响应。";
 "Couldn't translate: %@" = "无法翻译：%@";
 
@@ -50,6 +50,6 @@
 "Translate what they sent" = "翻译收到的消息";
 
 /* ===== Redesign additions (welcome + keyboard states) ===== */
-"✓ Replaced — ready to send" = "✓ 已替换 — 可以发送";
-"Undo — put my words back" = "撤销 — 恢复我的原话";
+"✓ Replaced, ready to send" = "✓ 已替换, 可以发送";
+"Undo, put my words back" = "撤销, 恢复我的原话";
 "Tone actions appear once you've typed" = "输入后会出现语气选项";

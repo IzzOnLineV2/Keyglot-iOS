@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Consumer welcome shown once on first launch: what Keyglot does and where it shows up. No API
-/// keys, no jargon — the point is you never open the app to translate.
+/// keys, no jargon, the point is you never open the app to translate.
 struct WelcomeView: View {
     let onDone: () -> Void
     @State private var page = 0
@@ -27,7 +27,7 @@ struct WelcomeView: View {
         }
     }
 
-    // MARK: Page 1 — welcome
+    // MARK: Page 1, welcome
 
     private var welcomePage: some View {
         ScrollView {
@@ -37,7 +37,7 @@ struct WelcomeView: View {
                     Text("Understand every message. Answer in your words.")
                         .font(KGFont.serif(38, style: .largeTitle))
                         .foregroundStyle(KGColor.ink)
-                    Text("A friend writes in a language you don't speak — Keyglot translates it, and turns your reply into their language, right where you're already typing.")
+                    Text("A friend writes in a language you don't speak, Keyglot translates it, and turns your reply into their language, right where you're already typing.")
                         .font(KGFont.body).foregroundStyle(KGColor.ink2)
                 }
             }
@@ -75,7 +75,7 @@ struct WelcomeView: View {
         }
     }
 
-    // MARK: Page 2 — where it works
+    // MARK: Page 2, where it works
 
     private var placesPage: some View {
         ScrollView {
@@ -89,11 +89,11 @@ struct WelcomeView: View {
                 }
 
                 feature("⌨️", Color(hex: 0xEDE9FE), "Write it, then switch it",
-                        "Type in your language, tap a flag, and your message is replaced with a natural translation — inside WhatsApp.")
+                        "Type in your language, tap a flag, and your message becomes a natural translation, right where you type: WhatsApp, Messages, email.")
                 feature("🎧", Color(hex: 0xDFF4F7), "Got a voice note you can't follow?",
-                        "Share it to Keyglot and read what it says — dialects included.")
+                        "Share it to Keyglot and read what it says, dialects included.")
                 feature("🎙️", Color(hex: 0xFDE9F1), "Talking face to face",
-                        "Open Listen & translate, and hear what they said in your language.")
+                        "Open “Listen & translate”, and hear what they said in your language. Add the widget for one-tap access.")
 
                 HStack(spacing: 12) {
                     LogoMark(size: 30)

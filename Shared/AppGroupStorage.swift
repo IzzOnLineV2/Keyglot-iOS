@@ -3,7 +3,7 @@ import Foundation
 /// Non-secret settings shared between the main app and the keyboard extension via the App
 /// Group's `UserDefaults`.
 ///
-/// API keys are **not** kept here — they live in the shared Keychain (`CredentialStore`).
+/// API keys are **not** kept here, they live in the shared Keychain (`CredentialStore`).
 /// This type only carries the provider choice and the optional default language.
 struct AppGroupStorage: @unchecked Sendable { // `UserDefaults` is documented thread-safe.
 
@@ -104,7 +104,7 @@ struct AppGroupStorage: @unchecked Sendable { // `UserDefaults` is documented th
         nonmutating set { defaults.set(newValue, forKey: Keys.pendingListen) }
     }
 
-    /// Number of translations so far — drives the "support Keyglot" reminder. Counted across all
+    /// Number of translations so far, drives the "support Keyglot" reminder. Counted across all
     /// surfaces (keyboard, share, listen); frozen once the user has purchased.
     var useCount: Int {
         get { defaults.integer(forKey: Keys.useCount) }

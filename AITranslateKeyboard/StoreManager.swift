@@ -48,7 +48,7 @@ final class StoreManager: ObservableObject {
                 setSupporter(true)
             }
         } catch {
-            // User cancelled or the purchase failed — leave state unchanged.
+            // User cancelled or the purchase failed, leave state unchanged.
         }
     }
 

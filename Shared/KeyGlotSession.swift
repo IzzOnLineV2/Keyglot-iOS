@@ -4,7 +4,7 @@ import Foundation
 /// app and its extensions reuse the same token, and refreshes it when expired or rejected.
 ///
 /// MVP: mints via the **dev-key path** (`x-dev-key`). At Step 3 this is replaced by exchanging a
-/// StoreKit signed transaction (JWS) — the rest of the app is unaffected.
+/// StoreKit signed transaction (JWS), the rest of the app is unaffected.
 struct KeyGlotSession: Sendable {
 
     /// Keychain account for the temporary dev key pasted in Settings (Step 2 only).
@@ -39,7 +39,7 @@ struct KeyGlotSession: Sendable {
         }
     }
 
-    /// A valid bearer token — cached if still fresh, otherwise freshly minted.
+    /// A valid bearer token, cached if still fresh, otherwise freshly minted.
     func authorizedToken() async throws -> String {
         if let cached = credentials.secret(Self.tokenAccount), !Self.isExpired(cached) {
             return cached

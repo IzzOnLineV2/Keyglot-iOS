@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Primary CTA — ink fill, white label (52pt).
+/// Primary CTA, ink fill, white label (52pt).
 struct KGPrimaryButtonStyle: ButtonStyle {
     func makeBody(configuration: ButtonStyleConfiguration) -> some View {
         configuration.label
@@ -14,7 +14,7 @@ struct KGPrimaryButtonStyle: ButtonStyle {
     }
 }
 
-/// Gradient CTA — the Glot gradient, white label (52pt). For the paywall's subscribe action.
+/// Gradient CTA, the Glot gradient, white label (52pt). For the paywall's subscribe action.
 struct KGGradientButtonStyle: ButtonStyle {
     func makeBody(configuration: ButtonStyleConfiguration) -> some View {
         configuration.label
@@ -28,7 +28,7 @@ struct KGGradientButtonStyle: ButtonStyle {
     }
 }
 
-/// Secondary — neutral fill, ink label.
+/// Secondary, neutral fill, ink label.
 struct KGSecondaryButtonStyle: ButtonStyle {
     func makeBody(configuration: ButtonStyleConfiguration) -> some View {
         configuration.label
@@ -42,7 +42,7 @@ struct KGSecondaryButtonStyle: ButtonStyle {
     }
 }
 
-/// Outline — hairline border, ink label.
+/// Outline, hairline border, ink label.
 struct KGOutlineButtonStyle: ButtonStyle {
     func makeBody(configuration: ButtonStyleConfiguration) -> some View {
         configuration.label

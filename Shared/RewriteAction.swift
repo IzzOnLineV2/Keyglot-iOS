@@ -1,7 +1,7 @@
 import Foundation
 
 /// A same-language rewrite action: it improves or restyles the text the user already typed
-/// without translating it. This is the second half of Keyglot — alongside translation — that
+/// without translating it. This is the second half of Keyglot, alongside translation, that
 /// turns it into a universal AI writing assistant.
 ///
 /// Each action is just a glyph + a system prompt. The source language is auto-detected and
@@ -32,7 +32,7 @@ struct RewriteAction: Identifiable, Codable, Equatable, Sendable {
     // MARK: - Catalog
 
     /// The four fixed rewrite actions, in toolbar order: ✨ 💼 😊 ❤️.
-    /// Kept intentionally small — a focused first version, not dozens of tones.
+    /// Kept intentionally small, a focused first version, not dozens of tones.
     static let all: [RewriteAction] = [
         RewriteAction(id: "improve", glyph: "✨", name: "Improve", instruction: """
             Improve the message:
@@ -58,11 +58,11 @@ struct RewriteAction: Identifiable, Codable, Equatable, Sendable {
 
     // MARK: - Prompt
 
-    /// Rules that apply to every rewrite. The defining constraint: never translate — the output
+    /// Rules that apply to every rewrite. The defining constraint: never translate, the output
     /// must stay in the same language the user wrote in.
     private static let globalRules = """
     You are an expert writing assistant powering a personal messaging keyboard.
-    Rewrite the user's message IN THE SAME LANGUAGE it is written in — detect the language
+    Rewrite the user's message IN THE SAME LANGUAGE it is written in, detect the language
     automatically and never translate it to another language.
     Follow these rules strictly:
     - Keep the same language as the input.

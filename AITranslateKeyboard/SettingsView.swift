@@ -1,7 +1,7 @@
 import SwiftUI
 import StoreKit
 
-/// Home / settings — the app's root screen (the keyboard has no settings of its own). Redesigned
+/// Home / settings, the app's root screen (the keyboard has no settings of its own). Redesigned
 /// as a warm canvas with a Listen hero, the AI-mode toggle, and grouped cards.
 struct SettingsView: View {
     @EnvironmentObject private var subscription: SubscriptionManager
@@ -244,7 +244,7 @@ private struct SetupChecklist: View {
             if mode == .custom {
                 step(1, "Enter your \(providerName) API key above.")
             } else {
-                step(1, "You're on KeyGlot — AI is included, no API key needed.")
+                step(1, "You're on KeyGlot, AI is included, no API key needed.")
             }
             step(2, "iOS Settings → General → Keyboard → Keyboards → add “Keyglot”.")
             step(3, "Tap “Keyglot” and turn on Allow Full Access (needed for network).")

@@ -6,7 +6,7 @@ import StoreKit
 /// exchange it with the KeyGlot backend for a session token.
 ///
 /// Separate from `StoreManager` (which handles the optional one-time "support" tip). Prices come
-/// from App Store Connect / the local `.storekit` file — never hardcoded here.
+/// from App Store Connect / the local `.storekit` file, never hardcoded here.
 @MainActor
 final class SubscriptionManager: ObservableObject {
 

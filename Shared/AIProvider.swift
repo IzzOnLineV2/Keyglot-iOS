@@ -1,7 +1,7 @@
 import Foundation
 
 /// The single abstraction the keyboard depends on. Swapping providers (or adding new ones)
-/// never touches the keyboard logic — only this file's `AIProviderType`/`AIProviderFactory`.
+/// never touches the keyboard logic, only this file's `AIProviderType`/`AIProviderFactory`.
 ///
 /// `generate` is intentionally generic: the caller supplies the full system prompt, so the
 /// same method powers both translation (`TargetLanguage.prompt`) and rewriting
@@ -123,7 +123,7 @@ enum AIProviderFactory {
         return make(type, apiKey: apiKey)
     }
 
-    /// Build a provider for an explicit type + key — used by the in-app connection test.
+    /// Build a provider for an explicit type + key, used by the in-app connection test.
     static func make(_ type: AIProviderType, apiKey: String) -> any AIProvider {
         switch type {
         case .claude:     return ClaudeProvider(apiKey: apiKey)

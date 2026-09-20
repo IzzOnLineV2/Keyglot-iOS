@@ -1,11 +1,11 @@
 /* ===== Onboarding ===== */
 "AI Message Translator" = "AI 메시지 번역기";
-"Type in any language and replace your message with a natural translation — right inside WhatsApp, no copy/paste." = "어떤 언어로든 입력하고 메시지를 자연스러운 번역으로 바꾸세요 — WhatsApp 안에서 바로, 복사·붙여넣기 없이.";
+"Type in any language and replace your message with a natural translation, right inside WhatsApp, no copy/paste." = "어떤 언어로든 입력하고 메시지를 자연스러운 번역으로 바꾸세요, WhatsApp 안에서 바로, 복사·붙여넣기 없이.";
 "Provider" = "제공업체";
 "Add your %@ API key to get started." = "시작하려면 %@ API 키를 추가하세요.";
 "Reveal key" = "키 표시";
 "Get a %@ API key" = "%@ API 키 받기";
-"Stored securely in the iOS Keychain on this device — never in plain settings, and shared only with the keyboard." = "이 기기의 iOS 키체인에 안전하게 저장되며 — 설정에 평문으로 저장되지 않고 키보드와만 공유됩니다.";
+"Stored securely in the iOS Keychain on this device, never in plain settings, and shared only with the keyboard." = "이 기기의 iOS 키체인에 안전하게 저장되며, 설정에 평문으로 저장되지 않고 키보드와만 공유됩니다.";
 "Get Started" = "시작하기";
 "Couldn't save the key" = "키를 저장할 수 없습니다";
 "The key couldn't be written to the iOS Keychain. Run the app signed with your Team (from Xcode) or on a device, then try again." = "iOS 키체인에 키를 쓸 수 없습니다. Team으로 서명한 앱을 (Xcode에서) 또는 기기에서 실행한 후 다시 시도하세요.";
@@ -32,7 +32,7 @@
 "Save" = "저장";
 "Test translation" = "번역 테스트";
 "Remove key" = "키 제거";
-"“Test” sends one short request to %@ and shows the exact result or error — handy to check the key, model and billing." = "“테스트”는 %@에 짧은 요청을 한 번 보내고 정확한 결과나 오류를 보여줍니다 — 키, 모델, 청구를 확인하는 데 유용합니다.";
+"“Test” sends one short request to %@ and shows the exact result or error, handy to check the key, model and billing." = "“테스트”는 %@에 짧은 요청을 한 번 보내고 정확한 결과나 오류를 보여줍니다, 키, 모델, 청구를 확인하는 데 유용합니다.";
 "Saved" = "저장됨";
 "Your %@ API key has been saved." = "%@ API 키가 저장되었습니다.";
 "Test result" = "테스트 결과";
@@ -40,11 +40,11 @@
 "❌ Failed.\n\n%@" = "❌ 실패했습니다.\n\n%@";
 
 /* ===== About ===== */
-"Keyglot translates or rewrites the message you've already typed — in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language." = "Keyglot은 이미 입력한 메시지를 그 자리에서 번역하거나 다시 씁니다 — 복사·붙여넣기 없이. 언어를 탭하면 자연스러운 번역(원본 언어 자동 감지), 톤을 탭하면 같은 언어로 문장을 다듬거나 다시 쓸 수 있습니다.";
+"Keyglot translates or rewrites the message you've already typed, in place, without copy/paste. Tap a language for a natural translation (source language auto-detected), or tap a tone to improve or restyle your text in the same language." = "Keyglot은 이미 입력한 메시지를 그 자리에서 번역하거나 다시 씁니다, 복사·붙여넣기 없이. 언어를 탭하면 자연스러운 번역(원본 언어 자동 감지), 톤을 탭하면 같은 언어로 문장을 다듬거나 다시 쓸 수 있습니다.";
 "How it works" = "사용 방법";
 "Type your message in any app with your normal keyboard." = "평소 키보드로 아무 앱에서나 메시지를 입력하세요.";
 "Tap 🌐 to switch to the Keyglot keyboard." = "🌐를 탭해 Keyglot 키보드로 전환하세요.";
-"Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite — the text is replaced in place." = "언어를 탭해 번역, 톤(✨ 💼 😊 ❤️)을 탭해 다시 쓰기 — 텍스트가 그 자리에서 교체됩니다.";
+"Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite, the text is replaced in place." = "언어를 탭해 번역, 톤(✨ 💼 😊 ❤️)을 탭해 다시 쓰기, 텍스트가 그 자리에서 교체됩니다.";
 "Press Send." = "보내기를 누르세요.";
 "Choose which languages appear in Settings → Keyboard → Languages." = "설정 → 키보드 → 언어 에서 표시할 언어를 선택하세요.";
 "Keyboard languages" = "키보드 언어";
@@ -56,7 +56,7 @@
 "Developed by Stefania Izzo" = "개발: Stefania Izzo";
 
 /* ===== Keyboard Languages ===== */
-"On the keyboard — %lld/%lld" = "키보드에 — %lld/%lld";
+"On the keyboard, %lld/%lld" = "키보드에, %lld/%lld";
 "Swipe to remove; tap Edit to reorder. They appear left-to-right on the keyboard. At least one is required." = "쓸어넘겨 제거하고, 편집을 탭해 순서를 바꾸세요. 키보드에서 왼쪽부터 오른쪽으로 표시됩니다. 최소 하나가 필요합니다.";
 "Add a language" = "언어 추가";
 "Remove one to add another (max %lld)." = "다른 언어를 추가하려면 하나를 제거하세요 (최대 %lld).";
@@ -81,10 +81,10 @@
 
 /* ===== More ways to translate (About) ===== */
 "More ways to translate" = "번역하는 다른 방법";
-"🎧 Listen & translate — press, speak, and get a translation of what you hear (also from the widget)." = "🎧 듣고 번역 — 누르고 말하면 들리는 내용의 번역을 받습니다 (위젯에서도).";
-"📋 Translate a message you've copied — tap 📋 on the keyboard." = "📋 복사한 메시지를 번역 — 키보드에서 📋 를 탭하세요.";
+"🎧 Listen & translate, press, speak, and get a translation of what you hear (also from the widget)." = "🎧 듣고 번역, 누르고 말하면 들리는 내용의 번역을 받습니다 (위젯에서도).";
+"📋 Translate a message you've copied, tap 📋 on the keyboard." = "📋 복사한 메시지를 번역, 키보드에서 📋 를 탭하세요.";
 "📤 Share any text or voice note to Keyglot to translate it." = "📤 아무 텍스트나 음성 메시지를 Keyglot에 공유하여 번역하세요.";
-"Audio (voice notes and live listening) uses Google Gemini — add a Gemini API key in Settings to use it." = "오디오(음성 메시지 및 실시간 듣기)는 Google Gemini를 사용합니다 — 설정에서 Gemini API 키를 추가하세요.";
+"Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Settings to use it." = "오디오(음성 메시지 및 실시간 듣기)는 Google Gemini를 사용합니다, 설정에서 Gemini API 키를 추가하세요.";
 
 /* ===== Support / paywall ===== */
 "Support Keyglot" = "Keyglot 후원하기";
@@ -102,13 +102,13 @@
 "Loading plans…" = "요금제 불러오는 중…";
 "Your keyboard" = "키보드";
 "About Keyglot" = "Keyglot 정보";
-"You're on KeyGlot — AI is included, no API key needed." = "KeyGlot 사용 중 — AI가 포함되어 API 키가 필요 없습니다.";
+"You're on KeyGlot, AI is included, no API key needed." = "KeyGlot 사용 중, AI가 포함되어 API 키가 필요 없습니다.";
 "iOS Settings → General → Keyboard → Keyboards → add “Keyglot”." = "iOS 설정 → 일반 → 키보드 → 키보드 → “Keyglot” 추가.";
 "Tap “Keyglot” and turn on Allow Full Access (needed for network)." = "“Keyglot”을 탭하고 전체 접근 허용을 켜세요 (네트워크에 필요).";
 "In any chat, tap 🌐 to switch to Keyglot, then tap a language." = "채팅에서 🌐 을 탭해 Keyglot으로 전환한 뒤 언어를 탭하세요.";
 "Understand every message. Answer in your words." = "모든 메시지를 이해하고, 당신의 말로 답하세요.";
 "Add your API key" = "API 키 추가";
-"Stored in the iOS Keychain on this device — shared only with the keyboard." = "이 기기의 iOS 키체인에 저장되며 키보드하고만 공유됩니다.";
+"Stored in the iOS Keychain on this device, shared only with the keyboard." = "이 기기의 iOS 키체인에 저장되며 키보드하고만 공유됩니다.";
 "Press to listen" = "눌러서 듣기";
 "It stops on its own when the room goes quiet." = "주변이 조용해지면 자동으로 멈춥니다.";
 "Stop now" = "지금 멈추기";
@@ -117,15 +117,20 @@
 /* ===== Redesign additions (welcome + keyboard states) ===== */
 "Show me how" = "사용법 보기";
 "Set up my keyboard" = "키보드 설정하기";
-"A friend writes in a language you don't speak — Keyglot translates it, and turns your reply into their language, right where you're already typing." = "친구가 모르는 언어로 써도 Keyglot이 번역하고, 당신의 답장을 상대의 언어로 바꿔 줍니다 — 지금 입력하는 그 자리에서.";
+"A friend writes in a language you don't speak, Keyglot translates it, and turns your reply into their language, right where you're already typing." = "친구가 모르는 언어로 써도 Keyglot이 번역하고, 당신의 답장을 상대의 언어로 바꿔 줍니다, 지금 입력하는 그 자리에서.";
 "Three places Keyglot shows up" = "Keyglot이 나타나는 세 곳";
 "You'll never open this app to translate something. That's the point." = "번역하려고 이 앱을 열 일은 없습니다. 그게 핵심이에요.";
 "Write it, then switch it" = "쓰고, 바꾸기";
-"Type in your language, tap a flag, and your message is replaced with a natural translation — inside WhatsApp." = "당신의 언어로 입력하고 국기를 탭하면 메시지가 자연스러운 번역으로 바뀝니다 — WhatsApp 안에서.";
+"Type in your language, tap a flag, and your message is replaced with a natural translation, inside WhatsApp." = "당신의 언어로 입력하고 국기를 탭하면 메시지가 자연스러운 번역으로 바뀝니다, WhatsApp 안에서.";
 "Got a voice note you can't follow?" = "알아듣기 힘든 음성 메시지가 왔나요?";
-"Share it to Keyglot and read what it says — dialects included." = "Keyglot에 공유하면 내용을 읽을 수 있어요 — 방언도 포함.";
+"Share it to Keyglot and read what it says, dialects included." = "Keyglot에 공유하면 내용을 읽을 수 있어요, 방언도 포함.";
 "Talking face to face" = "얼굴을 맞대고 대화할 때";
 "Open Listen & translate, and hear what they said in your language." = "‘듣고 번역’을 열면 상대의 말을 당신의 언어로 들을 수 있어요.";
 "AI is included. Nothing to set up." = "AI 포함. 설정할 것이 없습니다.";
 
 "Show welcome again" = "소개 다시 보기";
+
+/* ===== Copy refinements (WhatsApp/quotes/widget) ===== */
+"Type in your language, tap a flag, and your message becomes a natural translation, right where you type: WhatsApp, Messages, email." = "당신의 언어로 입력하고 국기를 탭하면 메시지가 자연스러운 번역이 됩니다. WhatsApp, 메시지, 이메일 등 입력하는 곳에서.";
+"Open “Listen & translate”, and hear what they said in your language. Add the widget for one-tap access." = "「듣고 번역」을 열면 상대의 말을 당신의 언어로 들을 수 있어요. 위젯을 추가하면 한 번의 탭으로 열 수 있어요.";
+"Type in any language and replace your message with a natural translation, right where you type: WhatsApp, Messages, email." = "어떤 언어로도 입력하고 메시지를 자연스러운 번역으로 바꿔 보세요. WhatsApp, 메시지, 이메일 등 입력하는 곳에서.";

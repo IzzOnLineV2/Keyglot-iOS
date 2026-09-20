@@ -36,7 +36,7 @@ final class KeyboardViewController: UIInputViewController {
         updateHasText()
     }
 
-    /// Called by the system whenever the document's text changes — keeps `hasText` in sync so
+    /// Called by the system whenever the document's text changes, keeps `hasText` in sync so
     /// the idle hint can tell the user to type on their normal keyboard first.
     override func textDidChange(_ textInput: UITextInput?) {
         super.textDidChange(textInput)
@@ -57,7 +57,7 @@ final class KeyboardViewController: UIInputViewController {
         refreshEnvironment()
     }
 
-    /// Keep UI-affecting environment flags in sync with the host. Only assign on change —
+    /// Keep UI-affecting environment flags in sync with the host. Only assign on change -
     /// this runs on every layout pass and `@Published` fires regardless of equality.
     private func refreshEnvironment() {
         if state.hasFullAccess != hasFullAccess {
@@ -259,7 +259,7 @@ final class KeyboardViewController: UIInputViewController {
         let name = AppGroupStorage.shared.selectedProvider.displayName
 
         if error is AIProviderError {
-            return String(localized: "No API key set — add your \(name) key in the Keyglot app.")
+            return String(localized: "No API key set, add your \(name) key in the Keyglot app.")
         }
         if case TranslationService.ServiceError.emptyInput = error {
             return String(localized: "Type a message first, then tap a button.")
@@ -268,32 +268,32 @@ final class KeyboardViewController: UIInputViewController {
             let text = message.lowercased()
             switch status {
             case 401:
-                return String(localized: "Invalid API key — open the Keyglot app and check your \(name) key.")
+                return String(localized: "Invalid API key, open the Keyglot app and check your \(name) key.")
             case 403:
                 if text.contains("credit") || text.contains("billing") {
-                    return String(localized: "Billing issue — add credit to your \(name) account.")
+                    return String(localized: "Billing issue, add credit to your \(name) account.")
                 }
-                return String(localized: "Access denied — your \(name) key isn't allowed to do this.")
+                return String(localized: "Access denied, your \(name) key isn't allowed to do this.")
             case 400:
                 if text.contains("credit") {
-                    return String(localized: "Out of credit — add billing to your \(name) account.")
+                    return String(localized: "Out of credit, add billing to your \(name) account.")
                 }
                 return String(localized: "\(name) rejected the request: \(message)")
             case 404:
                 return String(localized: "Model not available for your \(name) key.")
             case 429:
-                return String(localized: "Too many requests — wait a few seconds and try again.")
+                return String(localized: "Too many requests, wait a few seconds and try again.")
             case 500...599:
-                return String(localized: "\(name) is temporarily unavailable — try again shortly.")
+                return String(localized: "\(name) is temporarily unavailable, try again shortly.")
             default:
                 return String(localized: "\(name) error \(status): \(message)")
             }
         }
         if case ProviderError.transport = error {
-            return String(localized: "No network — check your connection and that Full Access is on.")
+            return String(localized: "No network, check your connection and that Full Access is on.")
         }
         if case ProviderError.emptyOutput = error {
-            return String(localized: "\(name) returned nothing — try again.")
+            return String(localized: "\(name) returned nothing, try again.")
         }
         if case ProviderError.invalidResponse = error {
             return String(localized: "Unexpected response from \(name).")
