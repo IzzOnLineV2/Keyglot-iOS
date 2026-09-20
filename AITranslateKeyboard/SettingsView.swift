@@ -11,9 +11,11 @@ struct SettingsView: View {
     @State private var languageCount = AppGroupStorage.shared.selectedLanguageIDs.count
     @State private var languages = AppGroupStorage.shared.selectedLanguages
 
-    // Temporary dev-key field for testing KeyGlot mode before StoreKit (Step 3).
+#if DEBUG
+    // Dev-only field for testing KeyGlot mode via the backend dev-key path (compiled out of Release).
     @State private var devKey = ""
     @State private var devKeySaved = false
+#endif
     @State private var showWelcomePreview = false
 
     var body: some View {
@@ -166,10 +168,13 @@ struct SettingsView: View {
                 }
             }
 
-            // Temporary: dev-key entry to exercise the KeyGlot backend before subscriptions ship.
+#if DEBUG
+            // Dev-only: exercise the KeyGlot backend via the dev-key path (backend DEV_MODE=1).
+            // Compiled out of Release builds, it never ships to TestFlight / the App Store. Once
+            // DEV_MODE=0 the server ignores this key anyway, real access is StoreKit + App Attest.
             KGCard {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("KeyGlot dev key (temporary)").font(KGFont.caption).foregroundStyle(KGColor.ink3)
+                    Text("KeyGlot dev key (debug only)").font(KGFont.caption).foregroundStyle(KGColor.ink3)
                     HStack {
                         TextField("Dev key", text: $devKey)
                             .textInputAutocapitalization(.never).autocorrectionDisabled()
@@ -186,6 +191,7 @@ struct SettingsView: View {
                     }
                 }
             }
+#endif
         }
     }
 
@@ -228,9 +234,11 @@ struct SettingsView: View {
         hasAPIKey = CredentialStore.shared.hasAPIKey(for: selectedProvider)
         languageCount = AppGroupStorage.shared.selectedLanguageIDs.count
         languages = AppGroupStorage.shared.selectedLanguages
+#if DEBUG
         if devKey.isEmpty {
             devKey = CredentialStore.shared.secret(KeyGlotSession.devKeyAccount) ?? ""
         }
+#endif
     }
 }
 
