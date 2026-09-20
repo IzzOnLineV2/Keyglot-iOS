@@ -62,13 +62,19 @@ enum Configuration {
 
     static let geminiBaseURL = "https://generativelanguage.googleapis.com/v1beta/models"
 
-    /// Configurable — e.g. "gemini-2.5-flash".
-    static let geminiModel = "gemini-2.0-flash"
+    /// Configurable — e.g. "gemini-3.6-flash". (`gemini-2.x` models now return HTTP 404
+    /// "no longer available to new users".)
+    static let geminiModel = "gemini-3.6-flash"
 
     /// Gemini model used by the share extension to transcribe + translate voice messages from
     /// audio. Gemini "listens" to the clip, which handles dialects (e.g. Moroccan Darija) far
     /// better than literal speech-to-text.
-    static let geminiAudioModel = "gemini-flash-latest"
+    ///
+    /// Pinned to the GA `gemini-3.6-flash` (Google's recommended replacement after `gemini-2.5-flash`
+    /// began returning 404 "no longer available to new users"). Verified 2026-09-20 that 3.6-flash
+    /// accepts audio input and transcribes/translates Darija correctly. Prefer this GA id over the
+    /// `gemini-flash-latest` alias, which tracks a preview model prone to transient 503s.
+    static let geminiAudioModel = "gemini-3.6-flash"
 
     static func geminiURL(model: String = geminiModel) -> URL {
         URL(string: "\(geminiBaseURL)/\(model):generateContent")!

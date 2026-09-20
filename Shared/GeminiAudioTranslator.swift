@@ -58,15 +58,7 @@ struct GeminiAudioTranslator: Sendable {
         ])
         request.httpBody = try JSONEncoder().encode(payload)
 
-        let data: Data
-        let response: URLResponse
-        do {
-            (data, response) = try await session.data(for: request)
-        } catch {
-            throw ProviderError.transport(error)
-        }
-
-        guard let http = response as? HTTPURLResponse else { throw ProviderError.invalidResponse }
+        let (data, http) = try await sendWithRetry(request)
         guard (200..<300).contains(http.statusCode) else {
             let message = Self.decodeErrorMessage(from: data) ?? "request failed"
             throw ProviderError.http(status: http.statusCode, message: message)
@@ -76,6 +68,50 @@ struct GeminiAudioTranslator: Sendable {
         let text = decoded.extractedText.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !text.isEmpty else { throw ProviderError.emptyOutput }
         return Self.parse(text)
+    }
+
+    /// Send the request, retrying a few times when Gemini is momentarily overloaded.
+    ///
+    /// Gemini's `*-latest` alias points at a preview model that returns transient **503 "high
+    /// demand"** (and occasionally 429/500/502/504) during traffic spikes. Those clear on their
+    /// own, so a short exponential backoff turns a first-try failure into a success instead of an
+    /// error in the user's face. Timeouts are retried too. Non-transient HTTP errors return their
+    /// response so the caller can surface the real message.
+    private func sendWithRetry(_ request: URLRequest) async throws -> (Data, HTTPURLResponse) {
+        let maxAttempts = 3
+        var lastTransport: Error?
+        for attempt in 0..<maxAttempts {
+            let isLast = attempt == maxAttempts - 1
+            do {
+                let (data, response) = try await session.data(for: request)
+                guard let http = response as? HTTPURLResponse else { throw ProviderError.invalidResponse }
+                if Self.isTransient(http.statusCode), !isLast {
+                    try? await Task.sleep(nanoseconds: Self.backoffNanos(attempt))
+                    continue
+                }
+                return (data, http)
+            } catch is CancellationError {
+                throw CancellationError()
+            } catch {
+                lastTransport = error
+                if isLast { throw ProviderError.transport(error) }
+                try? await Task.sleep(nanoseconds: Self.backoffNanos(attempt))
+            }
+        }
+        throw ProviderError.transport(lastTransport ?? URLError(.unknown))
+    }
+
+    /// Server-side hiccups worth retrying: rate limit and the 5xx family (503 = "high demand").
+    private static func isTransient(_ status: Int) -> Bool {
+        status == 429 || status == 500 || status == 502 || status == 503 || status == 504
+    }
+
+    /// Exponential backoff with jitter: ~1s, then ~2s. Keeps total added wait under ~3s so the
+    /// share sheet still feels responsive.
+    private static func backoffNanos(_ attempt: Int) -> UInt64 {
+        let base = pow(2.0, Double(attempt))          // 1s, 2s, 4s…
+        let jitter = Double.random(in: 0...0.4)
+        return UInt64((base + jitter) * 1_000_000_000)
     }
 
     /// Split the "TRANSCRIPT: … / TRANSLATION: …" reply. If the model didn't follow the format,
