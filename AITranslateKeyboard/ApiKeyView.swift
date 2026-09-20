@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Enter, replace or clear the API key for a specific provider. The key is written to the
-/// shared App Group so the keyboard extension can read it.
+/// shared Keychain so the keyboard extension can read it.
 struct ApiKeyView: View {
     let provider: AIProviderType
     @Binding var hasAPIKey: Bool
@@ -21,50 +21,78 @@ struct ApiKeyView: View {
         self._keyText = State(initialValue: CredentialStore.shared.apiKey(for: provider) ?? "")
     }
 
+    private var trimmedKey: String { keyText.trimmingCharacters(in: .whitespacesAndNewlines) }
+
     var body: some View {
-        Form {
-            Section {
-                Group {
-                    if isRevealed {
-                        TextField(provider.apiKeyPlaceholder, text: $keyText)
-                    } else {
-                        SecureField(provider.apiKeyPlaceholder, text: $keyText)
+        ZStack {
+            KGColor.canvas.ignoresSafeArea()
+            ScrollView {
+                VStack(alignment: .leading, spacing: 16) {
+                    KGCard {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text(provider.apiKeyName).kgEyebrow(KGColor.accent)
+
+                            Group {
+                                if isRevealed {
+                                    TextField(provider.apiKeyPlaceholder, text: $keyText)
+                                } else {
+                                    SecureField(provider.apiKeyPlaceholder, text: $keyText)
+                                }
+                            }
+                            .textInputAutocapitalization(.never)
+                            .autocorrectionDisabled()
+                            .font(.system(.body, design: .monospaced))
+                            .padding(12)
+                            .background(KGColor.fill, in: RoundedRectangle(cornerRadius: KGRadius.sm, style: .continuous))
+
+                            Toggle("Reveal key", isOn: $isRevealed)
+                                .font(KGFont.caption).tint(KGColor.accent)
+
+                            Link(destination: provider.apiKeyURL) {
+                                Label("Get a \(provider.displayName) API key", systemImage: "arrow.up.forward.square")
+                                    .font(KGFont.caption).foregroundStyle(KGColor.accent)
+                            }
+
+                            Text("Stored securely in the iOS Keychain on this device. Sent only to \(provider.displayName).")
+                                .font(KGFont.caption).foregroundStyle(KGColor.ink3)
+
+                            Label {
+                                Text(provider == .gemini
+                                     ? "This key also powers “Listen & translate” and voice-note translation."
+                                     : "“Listen & translate” and voice notes always use Google Gemini. Add a Gemini key too to use them.")
+                            } icon: {
+                                Image(systemName: "waveform")
+                            }
+                            .font(KGFont.caption).foregroundStyle(KGColor.accent)
+                        }
                     }
-                }
-                .textInputAutocapitalization(.never)
-                .autocorrectionDisabled()
-                .font(.system(.body, design: .monospaced))
 
-                Toggle("Reveal key", isOn: $isRevealed)
+                    VStack(spacing: 12) {
+                        Button("Save") { save() }
+                            .buttonStyle(.kgPrimary)
+                            .disabled(trimmedKey.isEmpty)
+                            .opacity(trimmedKey.isEmpty ? 0.5 : 1)
 
-                Link(destination: provider.apiKeyURL) {
-                    Label("Get a \(provider.displayName) API key", systemImage: "arrow.up.forward.square")
-                }
-            } header: {
-                Text(provider.apiKeyName)
-            } footer: {
-                Text("Stored securely in the iOS Keychain on this device. Sent only to \(provider.displayName).")
-            }
+                        Button { runTest() } label: {
+                            HStack(spacing: 8) {
+                                if isTesting { SpinnerRing(size: 18) }
+                                Text("Test translation")
+                            }
+                        }
+                        .buttonStyle(.kgSecondary)
+                        .disabled(trimmedKey.isEmpty || isTesting)
 
-            Section {
-                Button("Save") { save() }
-                    .disabled(trimmedKey.isEmpty)
-
-                Button {
-                    runTest()
-                } label: {
-                    HStack {
-                        Text("Test translation")
-                        if isTesting { Spacer(); ProgressView() }
+                        if hasAPIKey {
+                            Button("Remove key") { clear() }
+                                .font(KGFont.row).foregroundStyle(KGColor.error)
+                                .padding(.top, 2)
+                        }
                     }
-                }
-                .disabled(trimmedKey.isEmpty || isTesting)
 
-                if hasAPIKey {
-                    Button("Remove key", role: .destructive) { clear() }
+                    Text("“Test” sends one short request to \(provider.displayName) and shows the exact result or error, handy to check the key, model and billing.")
+                        .font(KGFont.caption).foregroundStyle(KGColor.ink3)
                 }
-            } footer: {
-                Text("“Test” sends one short request to \(provider.displayName) and shows the exact result or error, handy to check the key, model and billing.")
+                .padding()
             }
         }
         .navigationTitle(provider.displayName)
@@ -106,10 +134,6 @@ struct ApiKeyView: View {
             isTesting = false
             showTestResult = true
         }
-    }
-
-    private var trimmedKey: String {
-        keyText.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
     private func save() {

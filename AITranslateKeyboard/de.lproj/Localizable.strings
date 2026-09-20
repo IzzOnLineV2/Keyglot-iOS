@@ -140,3 +140,6 @@
 "Keyglot is free and open source. If it helps you, buy us a coffee to support the work." = "Keyglot ist kostenlos und Open Source. Wenn es dir hilft, spendier uns einen Kaffee.";
 "Buy us a coffee · %@" = "Spendier uns einen Kaffee · %@";
 "The purchase removes the banner for good." = "Der Kauf entfernt den Hinweis dauerhaft.";
+
+"This key also powers “Listen & translate” and voice-note translation." = "Dieser Schlüssel treibt auch „Hören & übersetzen“ und die Übersetzung von Sprachnachrichten an.";
+"“Listen & translate” and voice notes always use Google Gemini. Add a Gemini key too to use them." = "„Hören & übersetzen“ und Sprachnachrichten nutzen immer Google Gemini. Füge auch einen Gemini-Schlüssel hinzu, um sie zu verwenden.";

@@ -19,16 +19,19 @@ struct LanguageSelectionView: View {
                 ForEach(selected) { row($0) }
                     .onDelete(perform: remove)
                     .onMove(perform: move)
+                    .listRowBackground(KGColor.surface)
             } header: {
-                Text("On the keyboard, \(selectedIDs.count)/\(maxCount)")
+                Text("On the keyboard, \(selectedIDs.count)/\(maxCount)").kgEyebrow()
             } footer: {
                 Text("Swipe to remove; tap Edit to reorder. They appear left-to-right on the keyboard. At least one is required.")
+                    .font(KGFont.caption).foregroundStyle(KGColor.ink3)
             }
 
-            Section("Add a language") {
+            Section {
                 if isFull {
                     Text("Remove one to add another (max \(maxCount)).")
-                        .foregroundStyle(.secondary)
+                        .font(KGFont.caption).foregroundStyle(KGColor.ink3)
+                        .listRowBackground(KGColor.surface)
                 }
                 ForEach(available) { language in
                     Button { add(language) } label: {
@@ -36,14 +39,21 @@ struct LanguageSelectionView: View {
                             row(language)
                             Spacer()
                             Image(systemName: "plus.circle.fill")
-                                .foregroundStyle(isFull ? Color.secondary : Color.accentColor)
+                                .font(.system(size: 20))
+                                .foregroundStyle(isFull ? KGColor.ink3 : KGColor.accent)
                         }
                     }
                     .buttonStyle(.plain)
                     .disabled(isFull)
+                    .listRowBackground(KGColor.surface)
                 }
+            } header: {
+                Text("Add a language").kgEyebrow()
             }
         }
+        .listStyle(.insetGrouped)
+        .scrollContentBackground(.hidden)
+        .background(KGColor.canvas)
         .navigationTitle("Keyboard Languages")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar { EditButton() }
@@ -55,7 +65,7 @@ struct LanguageSelectionView: View {
     private func row(_ language: TargetLanguage) -> some View {
         HStack(spacing: 12) {
             Text(language.flag).font(.title2)
-            Text(language.name)
+            Text(language.name).font(KGFont.row).foregroundStyle(KGColor.ink)
         }
     }
 
