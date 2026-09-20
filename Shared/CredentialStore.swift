@@ -34,6 +34,22 @@ struct CredentialStore: Sendable {
     private func account(for provider: AIProviderType) -> String {
         "api_key_\(provider.rawValue)"
     }
+
+    // MARK: - Named secrets (non-provider)
+
+    /// Read a named secret (e.g. the KeyGlot dev key or session token). Kept in the shared
+    /// Keychain like API keys — never in UserDefaults.
+    func secret(_ account: String) -> String? {
+        keychain.string(account: account)?
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .nilIfEmpty
+    }
+
+    /// Store (or clear, with `nil`) a named secret. Returns `false` if the Keychain write failed.
+    @discardableResult
+    func setSecret(_ value: String?, account: String) -> Bool {
+        keychain.set(value?.trimmingCharacters(in: .whitespacesAndNewlines), account: account)
+    }
 }
 
 private extension String {

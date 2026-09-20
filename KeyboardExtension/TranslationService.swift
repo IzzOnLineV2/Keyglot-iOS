@@ -36,7 +36,7 @@ struct TranslationService: Sendable {
         let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { throw ServiceError.emptyInput }
 
-        let provider = try AIProviderFactory.make(storage: storage)
+        let provider = try AIResolver.textProvider(storage: storage)
         return try await provider.generate(text: text, systemPrompt: systemPrompt)
     }
 }

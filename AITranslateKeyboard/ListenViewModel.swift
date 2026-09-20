@@ -136,14 +136,10 @@ final class ListenViewModel: NSObject, ObservableObject {
         guard let fileURL else { phase = .idle; return }
         defer { try? FileManager.default.removeItem(at: fileURL); self.fileURL = nil }
 
-        guard let key = CredentialStore.shared.apiKey(for: .gemini) else {
-            phase = .failed(String(localized: "Add a Google Gemini API key in Settings to translate what you hear."))
-            return
-        }
-
         phase = .processing
         do {
-            let result = try await GeminiAudioTranslator(apiKey: key).translate(
+            let translator = try AIResolver.audioTranslator()   // KeyGlot backend or user's Gemini key
+            let result = try await translator.translate(
                 fileURL: fileURL,
                 mimeType: "audio/mp4",
                 targetLanguage: VoiceLanguage.deviceLanguageEnglishName,

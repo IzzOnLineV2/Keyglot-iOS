@@ -24,7 +24,7 @@ final class TextShareModel: ObservableObject {
 
         phase = .working(String(localized: "Translating…"))
         do {
-            let provider = try AIProviderFactory.make()   // selected provider + its Keychain key
+            let provider = try AIResolver.textProvider()   // KeyGlot backend or the user's provider
             let translation = try await provider.generate(
                 text: trimmed,
                 systemPrompt: TargetLanguage.deviceLanguage.prompt

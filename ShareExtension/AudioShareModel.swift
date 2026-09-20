@@ -39,14 +39,10 @@ final class AudioShareModel: ObservableObject {
     private func process() async {
         guard let fileURL else { return }
 
-        guard let key = CredentialStore.shared.apiKey(for: .gemini) else {
-            phase = .failed(String(localized: "Add a Google Gemini API key in the Keyglot app to translate voice messages."))
-            return
-        }
-
         do {
             phase = .working(String(localized: "Translating…"))
-            let result = try await GeminiAudioTranslator(apiKey: key).translate(
+            let translator = try AIResolver.audioTranslator()   // KeyGlot backend or user's Gemini key
+            let result = try await translator.translate(
                 fileURL: fileURL,
                 mimeType: VoiceLanguage.mimeType(for: fileURL),
                 targetLanguage: VoiceLanguage.deviceLanguageEnglishName,

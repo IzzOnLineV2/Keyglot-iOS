@@ -12,6 +12,8 @@
 		02BCB3AAA9EAECB266D1E185 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00AC4B784E4E8FFCF44D1CC8 /* Localizable.strings */; };
 		0544B6226AEF898AFFC02CDD /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA005DFD19F76418AAC9C595 /* CredentialStore.swift */; };
 		09616E7141296842E44F5F7A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = D3078FE5E9FC7D54D9B18267 /* PrivacyInfo.xcprivacy */; };
+		0B1C9FB9926282348E1C5AB1 /* AIMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB99DA7772F4D55846AE75 /* AIMode.swift */; };
+		0F997B906C549466ECCB968A /* KeyGlotSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2338CCF1A133976817C5F /* KeyGlotSession.swift */; };
 		103C5D0241F1F3854BD70B6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0FA20717491EE64E9FDAE7F /* Localizable.strings */; };
 		118E6C8613ACE6F117871555 /* RewriteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFA86C9FFE001D68E40C52 /* RewriteAction.swift */; };
 		13FAC8293C81C1ED475D4DC0 /* OpenAIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */; };
@@ -23,6 +25,8 @@
 		1E5FE6656465A2D8B3237D84 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F598E2FEA6D89521EC3E7764 /* KeychainStore.swift */; };
 		1EAC49D537841C9691F0A349 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEF32F24C33E91B249EDA5FA /* Localizable.strings */; };
 		202E116BCA1E3E27CDC9CF74 /* ListenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4B2C4CA5670AC23646B5D /* ListenView.swift */; };
+		211B2BD40C8C532FB96A70A1 /* AIMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB99DA7772F4D55846AE75 /* AIMode.swift */; };
+		227DBF2577EAFCAF6D139B68 /* AIMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB99DA7772F4D55846AE75 /* AIMode.swift */; };
 		23089448A6F9AD92E2AF3CB0 /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61F6E03979C64CDDAE9BA4 /* ToolbarView.swift */; };
 		270F97CA50A1FCA1594588C3 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA005DFD19F76418AAC9C595 /* CredentialStore.swift */; };
 		289EEE85B0ABFF1D6EDC5860 /* VoiceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106247F43656D42D3CE5E2B9 /* VoiceLanguage.swift */; };
@@ -56,6 +60,7 @@
 		56BB5C048E46AC6826D7498D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA41021236A7FA81E1811D89 /* Localizable.strings */; };
 		58108E65F810C6940C3145AC /* ApiKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714A644D549C6B896808DDD /* ApiKeyView.swift */; };
 		58E2CB913ACE9CBBAEA8FF42 /* OpenAITranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */; };
+		592D7A24F3C258B9DB14B9B2 /* AudioTranslating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63CB51C0881F2B60209D4D /* AudioTranslating.swift */; };
 		5F45BC5E22FA70C28D092CC0 /* GeminiAudioTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33D60467799B0A208D4655 /* GeminiAudioTranslator.swift */; };
 		5FAC1F9297102364A2E16358 /* RewriteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFA86C9FFE001D68E40C52 /* RewriteAction.swift */; };
 		628EBD817D6441F22B96C431 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79400FF888540EC3B4BAA3B0 /* Configuration.swift */; };
@@ -72,12 +77,16 @@
 		76532D56B412EF5EF9B02F0E /* OpenRouterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEA0022FE2B4338974E591 /* OpenRouterProvider.swift */; };
 		7A291A26FBA7498BF2C10BA3 /* AITranslateKeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472966A37A5845747FD71D90 /* AITranslateKeyboardApp.swift */; };
 		7C7B776065E04C9DC20818A9 /* OpenAIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */; };
+		80E3171766A153ED527F9BB1 /* AudioTranslating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63CB51C0881F2B60209D4D /* AudioTranslating.swift */; };
 		8233188AFB4C40203C67D193 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3C7AB1D21F62C5AE8F10113 /* Localizable.strings */; };
 		8251ECEEEEAE354200488433 /* AITranslateKeyboardShare.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A32263EF88BCA30284D392CB /* AITranslateKeyboardShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		88BB88E905C0528DA39671B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4499155DA7481A15BC1517A6 /* Localizable.strings */; };
+		88E23AE94BB6C1AA4747CA81 /* KeyGlotProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B605C3B1AD0EA128D557CE /* KeyGlotProvider.swift */; };
+		8A5702FEC72796DB13D00335 /* KeyGlotSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2338CCF1A133976817C5F /* KeyGlotSession.swift */; };
 		9024FDF5F51462DDE881B7DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A75B0380350902E079D77E49 /* Localizable.strings */; };
 		9053DDD23F15CFA7E9CF4315 /* OpenAITranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */; };
 		920FCE902AC6AE00FE6BE741 /* GeminiAudioTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33D60467799B0A208D4655 /* GeminiAudioTranslator.swift */; };
+		95C7175EBFA125434C9667E7 /* AudioTranslating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63CB51C0881F2B60209D4D /* AudioTranslating.swift */; };
 		96A128C7DBAD1B9542A45546 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5448DCCB377FFFA4E5DB8D85 /* Localizable.strings */; };
 		9711C73C33FAE736AB986301 /* ClaudeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC290A1B0B21A88A9D580A /* ClaudeProvider.swift */; };
 		A143C1FB4066C2542C8EF2D3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B73E045D3EBFCEA1ED6CB0C /* Localizable.strings */; };
@@ -94,17 +103,22 @@
 		C006C18F8F45181EE4B271E5 /* OpenRouterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBEA0022FE2B4338974E591 /* OpenRouterProvider.swift */; };
 		C16D643BE861994AE3E84940 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA005DFD19F76418AAC9C595 /* CredentialStore.swift */; };
 		C3BEFFE194ADAEB6520BBCF9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A524744C078EFFCCAE35EE01 /* Localizable.strings */; };
+		C430CCD668C9AEB79837D25D /* KeyGlotProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B605C3B1AD0EA128D557CE /* KeyGlotProvider.swift */; };
 		C462E369B3DCA31B241817B4 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79400FF888540EC3B4BAA3B0 /* Configuration.swift */; };
 		C5BF793A1FBDCDCBECD7CBAB /* OpenAIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */; };
 		C614D4DCBE100F15798CF66B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79400FF888540EC3B4BAA3B0 /* Configuration.swift */; };
+		C77D23FE2BD4FC7FC4A646A5 /* AudioTranslating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63CB51C0881F2B60209D4D /* AudioTranslating.swift */; };
 		C9258BF0C957557FEF43A100 /* OpenListenIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD83467D28C137D8C6CDAC /* OpenListenIntent.swift */; };
 		CB7E2C88ABC81637F2B6D976 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2FF0EA91D0779EA3A9EB502 /* Localizable.strings */; };
 		CC1084AF88AA812E801F4E05 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B81CCAAFE87D4E4017C2F736 /* Localizable.strings */; };
 		CCC0761882CD8441CDBA226A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C70C7DFFE8583E8204555D15 /* Localizable.strings */; };
 		CCF9FD913FE41F4F25D1BBAE /* ClaudeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC290A1B0B21A88A9D580A /* ClaudeProvider.swift */; };
+		CE2643412E78EAFDFDBAD61B /* AIMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB99DA7772F4D55846AE75 /* AIMode.swift */; };
 		D0AF9A59D9E316F4527F3AF9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5710321427126FBF656EF4C1 /* Localizable.strings */; };
+		D370749B18C1D1C009A14CA9 /* KeyGlotProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B605C3B1AD0EA128D557CE /* KeyGlotProvider.swift */; };
 		D3AC994AE2AED5AF0E5D4E36 /* AITranslateKeyboardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CB3A17DBE7EEE22E2F91B123 /* AITranslateKeyboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D556BCBABC9D89E00AAEC13C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83C4D8CEA55218F990B69397 /* Localizable.strings */; };
+		D7E4DCF8A6C224157916652B /* KeyGlotSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2338CCF1A133976817C5F /* KeyGlotSession.swift */; };
 		D979851787264ED117CF51BC /* OpenAITranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */; };
 		DA6C55D65BC4637116A68228 /* GeminiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B7BD74777B6745934F80 /* GeminiProvider.swift */; };
 		DF6F12EA20F4A15D655BD00E /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9018947EBABFDAD65F8865D /* AboutView.swift */; };
@@ -119,6 +133,7 @@
 		EEA21F58A9A60591D370429E /* GeminiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B7BD74777B6745934F80 /* GeminiProvider.swift */; };
 		F174E346979EA4E9C1581690 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 448D369B0CD394B4D0D2E710 /* PrivacyInfo.xcprivacy */; };
 		F226444E0E7EAD7520E1739D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68779465572FA00D02D77CFA /* SettingsView.swift */; };
+		F568DA9106BD3F4C9F4CA829 /* KeyGlotProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B605C3B1AD0EA128D557CE /* KeyGlotProvider.swift */; };
 		F571AA6C3102D1C5DAF782F0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C5C936B7D51CBD497C36AFF /* Localizable.strings */; };
 		F610962FAEF1F065FA1274B6 /* ListenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729D34B482498EE6CBBC894 /* ListenViewModel.swift */; };
 		F79CEC7EF03C2BD24208453D /* KeyboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0DABECCD383B4928A1D956 /* KeyboardState.swift */; };
@@ -130,6 +145,7 @@
 		FCF8BA642136B890CAA31D8A /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ADE10290A901FF1FED49D8 /* StoreManager.swift */; };
 		FD2B8B74E7015E8316054DB0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44C287346EC30F500716A10D /* Localizable.strings */; };
 		FDED827BFD57B8BCC35CBC0E /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F598E2FEA6D89521EC3E7764 /* KeychainStore.swift */; };
+		FE640BC1C76C75BEB4BFE81F /* KeyGlotSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2338CCF1A133976817C5F /* KeyGlotSession.swift */; };
 		FEEA8F75F46566C664DA07AC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72ABD87571F13FEB3A75A800 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +208,7 @@
 		2C5C936B7D51CBD497C36AFF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2FBA9813688578722924E4FD /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
 		39B7ED501F36F3459C0EC2BF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		39BB99DA7772F4D55846AE75 /* AIMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMode.swift; sourceTree = "<group>"; };
 		3A0DABECCD383B4928A1D956 /* KeyboardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardState.swift; sourceTree = "<group>"; };
 		3ECB221273276FF80B56D6D3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		448D369B0CD394B4D0D2E710 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -213,7 +230,9 @@
 		79400FF888540EC3B4BAA3B0 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		7A33D60467799B0A208D4655 /* GeminiAudioTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiAudioTranslator.swift; sourceTree = "<group>"; };
 		7CD73687E6A686F7E004B2FB /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionView.swift; sourceTree = "<group>"; };
+		7D63CB51C0881F2B60209D4D /* AudioTranslating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTranslating.swift; sourceTree = "<group>"; };
 		829946E1E962DEE87D91EC63 /* KeyglotWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyglotWidgetBundle.swift; sourceTree = "<group>"; };
+		83B605C3B1AD0EA128D557CE /* KeyGlotProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyGlotProvider.swift; sourceTree = "<group>"; };
 		83BE2A110F93D6B7B22D15CC /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		83C4D8CEA55218F990B69397 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIProvider.swift; sourceTree = "<group>"; };
@@ -256,6 +275,7 @@
 		EB087C899BA56C116E84E233 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC60FF94C04102412CFDEC1E /* TextShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextShareView.swift; sourceTree = "<group>"; };
 		ED94C6151650248393EB1C9B /* KeyboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardExtension.entitlements; sourceTree = "<group>"; };
+		EED2338CCF1A133976817C5F /* KeyGlotSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyGlotSession.swift; sourceTree = "<group>"; };
 		EF309E8F2FD223F7A0902EA9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F2B3368F0EE820F74CD141AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F598E2FEA6D89521EC3E7764 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
@@ -339,14 +359,18 @@
 		C8E188A13622625BCB4DB909 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				39BB99DA7772F4D55846AE75 /* AIMode.swift */,
 				E4429600700EA0481935F48E /* AIProvider.swift */,
 				C263B584837F8740AAFEEA9E /* AppGroupStorage.swift */,
+				7D63CB51C0881F2B60209D4D /* AudioTranslating.swift */,
 				01EC290A1B0B21A88A9D580A /* ClaudeProvider.swift */,
 				79400FF888540EC3B4BAA3B0 /* Configuration.swift */,
 				CA005DFD19F76418AAC9C595 /* CredentialStore.swift */,
 				7A33D60467799B0A208D4655 /* GeminiAudioTranslator.swift */,
 				4A77B7BD74777B6745934F80 /* GeminiProvider.swift */,
 				F598E2FEA6D89521EC3E7764 /* KeychainStore.swift */,
+				83B605C3B1AD0EA128D557CE /* KeyGlotProvider.swift */,
+				EED2338CCF1A133976817C5F /* KeyGlotSession.swift */,
 				900DF980202C946D6B599F01 /* Models.swift */,
 				8F88C40B56C1FD7968BD6874 /* OpenAIProvider.swift */,
 				2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */,
@@ -618,13 +642,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				211B2BD40C8C532FB96A70A1 /* AIMode.swift in Sources */,
 				39399668F8D2A68E2C90D021 /* AIProvider.swift in Sources */,
 				B92C851F4C62CB2C2C5BD6A9 /* AppGroupStorage.swift in Sources */,
+				592D7A24F3C258B9DB14B9B2 /* AudioTranslating.swift in Sources */,
 				B282B84F8B9F2C90807B2118 /* ClaudeProvider.swift in Sources */,
 				628EBD817D6441F22B96C431 /* Configuration.swift in Sources */,
 				C16D643BE861994AE3E84940 /* CredentialStore.swift in Sources */,
 				A33C2AAF6A521CFA53F6251C /* GeminiAudioTranslator.swift in Sources */,
 				33B8DF838CC8E30B91CA11D0 /* GeminiProvider.swift in Sources */,
+				D370749B18C1D1C009A14CA9 /* KeyGlotProvider.swift in Sources */,
+				0F997B906C549466ECCB968A /* KeyGlotSession.swift in Sources */,
 				F79CEC7EF03C2BD24208453D /* KeyboardState.swift in Sources */,
 				BF2DEC73C258B3B6188894B3 /* KeyboardViewController.swift in Sources */,
 				FDED827BFD57B8BCC35CBC0E /* KeychainStore.swift in Sources */,
@@ -644,15 +672,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2643412E78EAFDFDBAD61B /* AIMode.swift in Sources */,
 				BEB817753944AD1987AA1943 /* AIProvider.swift in Sources */,
 				3481BB73DFF56737B108A4EB /* AppGroupStorage.swift in Sources */,
 				1573702B69B68219F688FEF5 /* AudioShareModel.swift in Sources */,
 				3C24C2A52A5850DF28C16421 /* AudioShareView.swift in Sources */,
+				80E3171766A153ED527F9BB1 /* AudioTranslating.swift in Sources */,
 				CCF9FD913FE41F4F25D1BBAE /* ClaudeProvider.swift in Sources */,
 				BF267554296C53C7BCAE3E62 /* Configuration.swift in Sources */,
 				0544B6226AEF898AFFC02CDD /* CredentialStore.swift in Sources */,
 				920FCE902AC6AE00FE6BE741 /* GeminiAudioTranslator.swift in Sources */,
 				2D9E55FC7C0338BEA88B7D5B /* GeminiProvider.swift in Sources */,
+				88E23AE94BB6C1AA4747CA81 /* KeyGlotProvider.swift in Sources */,
+				FE640BC1C76C75BEB4BFE81F /* KeyGlotSession.swift in Sources */,
 				6B5CB758D9CF27B464BA901F /* KeychainStore.swift in Sources */,
 				4FA5622D415098D47F08441C /* Models.swift in Sources */,
 				6304AA886DE39B0118FCC9A9 /* OpenAIProvider.swift in Sources */,
@@ -671,16 +703,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1C9FB9926282348E1C5AB1 /* AIMode.swift in Sources */,
 				5120E1CDCB52DD16286722BF /* AIProvider.swift in Sources */,
 				7A291A26FBA7498BF2C10BA3 /* AITranslateKeyboardApp.swift in Sources */,
 				DF6F12EA20F4A15D655BD00E /* AboutView.swift in Sources */,
 				58108E65F810C6940C3145AC /* ApiKeyView.swift in Sources */,
 				441B9E58278DE30C666D9F68 /* AppGroupStorage.swift in Sources */,
+				C77D23FE2BD4FC7FC4A646A5 /* AudioTranslating.swift in Sources */,
 				9711C73C33FAE736AB986301 /* ClaudeProvider.swift in Sources */,
 				C462E369B3DCA31B241817B4 /* Configuration.swift in Sources */,
 				270F97CA50A1FCA1594588C3 /* CredentialStore.swift in Sources */,
 				F9AB11F18EEA73D1563495C9 /* GeminiAudioTranslator.swift in Sources */,
 				DA6C55D65BC4637116A68228 /* GeminiProvider.swift in Sources */,
+				F568DA9106BD3F4C9F4CA829 /* KeyGlotProvider.swift in Sources */,
+				8A5702FEC72796DB13D00335 /* KeyGlotSession.swift in Sources */,
 				3BE72969717A0BDCF965AB27 /* KeychainStore.swift in Sources */,
 				4991DC13590E151A49038A29 /* LanguageSelectionView.swift in Sources */,
 				202E116BCA1E3E27CDC9CF74 /* ListenView.swift in Sources */,
@@ -703,13 +739,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227DBF2577EAFCAF6D139B68 /* AIMode.swift in Sources */,
 				74A1462BF42288C3F2AB010D /* AIProvider.swift in Sources */,
 				5569D952140CE5CCC75CD81C /* AppGroupStorage.swift in Sources */,
+				95C7175EBFA125434C9667E7 /* AudioTranslating.swift in Sources */,
 				49747FBFD9319BDC3CC3F71B /* ClaudeProvider.swift in Sources */,
 				C614D4DCBE100F15798CF66B /* Configuration.swift in Sources */,
 				762EA1BCBC9E2C1E92979245 /* CredentialStore.swift in Sources */,
 				5F45BC5E22FA70C28D092CC0 /* GeminiAudioTranslator.swift in Sources */,
 				EEA21F58A9A60591D370429E /* GeminiProvider.swift in Sources */,
+				C430CCD668C9AEB79837D25D /* KeyGlotProvider.swift in Sources */,
+				D7E4DCF8A6C224157916652B /* KeyGlotSession.swift in Sources */,
 				1E5FE6656465A2D8B3237D84 /* KeychainStore.swift in Sources */,
 				E03AEC3E65029C2CB2F9BFDE /* KeyglotListenWidget.swift in Sources */,
 				AB526FBEAAD342153548F9A3 /* KeyglotWidgetBundle.swift in Sources */,
@@ -796,7 +836,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -857,7 +897,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

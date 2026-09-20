@@ -7,12 +7,7 @@ import Foundation
 /// Moroccan Darija: Gemini interprets the audio holistically instead of transcribing phonetically.
 /// The audio file is sent inline; pick the MIME type from the file (m4a → `audio/mp4`,
 /// opus → `audio/ogg`) — the wrong MIME makes Gemini mis-decode the audio.
-struct GeminiAudioTranslator: Sendable {
-
-    struct Result: Sendable {
-        let transcript: String
-        let translation: String
-    }
+struct GeminiAudioTranslator: AudioTranslating, Sendable {
 
     let apiKey: String
     let session: URLSession
@@ -27,7 +22,7 @@ struct GeminiAudioTranslator: Sendable {
     ///   - mimeType: Gemini audio MIME (e.g. `audio/mp4`, `audio/ogg`).
     ///   - targetLanguage: English name of the language to translate into (e.g. "Italian").
     ///   - sourceHint: optional English name of the likely source language (from the picker).
-    func translate(fileURL: URL, mimeType: String, targetLanguage: String, sourceHint: String?) async throws -> Result {
+    func translate(fileURL: URL, mimeType: String, targetLanguage: String, sourceHint: String?) async throws -> AudioTranslation {
         let audioBase64: String
         do {
             audioBase64 = try Data(contentsOf: fileURL).base64EncodedString()
@@ -116,7 +111,7 @@ struct GeminiAudioTranslator: Sendable {
 
     /// Split the "TRANSCRIPT: … / TRANSLATION: …" reply. If the model didn't follow the format,
     /// fall back to showing the whole reply as the translation.
-    static func parse(_ text: String) -> Result {
+    static func parse(_ text: String) -> AudioTranslation {
         var transcript = "", translation = ""
         var bucket = 0   // 1 = transcript, 2 = translation
         for rawLine in text.split(separator: "\n", omittingEmptySubsequences: false) {
@@ -135,7 +130,7 @@ struct GeminiAudioTranslator: Sendable {
         }
         transcript = transcript.trimmingCharacters(in: .whitespacesAndNewlines)
         translation = translation.trimmingCharacters(in: .whitespacesAndNewlines)
-        return Result(
+        return AudioTranslation(
             transcript: transcript.isEmpty ? text : transcript,
             translation: translation.isEmpty ? text : translation
         )

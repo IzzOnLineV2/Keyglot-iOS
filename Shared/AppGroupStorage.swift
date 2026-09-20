@@ -22,6 +22,32 @@ struct AppGroupStorage: @unchecked Sendable { // `UserDefaults` is documented th
         static let pendingListen = "pending_listen"
         static let useCount = "use_count"
         static let isSupporter = "is_supporter"
+        static let aiMode = "ai_mode"
+        static let installID = "install_id"
+    }
+
+    /// How the app gets AI: `keyglot` (AI included via backend) or `custom` (user's own key).
+    /// Until the user chooses explicitly, the default is safe for everyone: **existing users**
+    /// (who already have a provider key) stay on Custom (no regression), **new installs** get
+    /// KeyGlot. Correct in the app *and* the extensions without a separate migration step.
+    var aiMode: AIMode {
+        get {
+            if let raw = defaults.string(forKey: Keys.aiMode), let mode = AIMode(rawValue: raw) {
+                return mode
+            }
+            let hasAnyKey = AIProviderType.allCases.contains { CredentialStore.shared.hasAPIKey(for: $0) }
+            return hasAnyKey ? .custom : .keyglot
+        }
+        nonmutating set { defaults.set(newValue.rawValue, forKey: Keys.aiMode) }
+    }
+
+    /// Stable random id for this install, used as the KeyGlot subject before StoreKit identity
+    /// exists. Generated once and shared across the app + extensions via the App Group.
+    var installID: String {
+        if let existing = defaults.string(forKey: Keys.installID), !existing.isEmpty { return existing }
+        let id = UUID().uuidString
+        defaults.set(id, forKey: Keys.installID)
+        return id
     }
 
     /// The AI provider the keyboard uses. Defaults to `Configuration.defaultProvider` (Claude).

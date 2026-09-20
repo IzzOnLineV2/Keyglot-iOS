@@ -16,14 +16,23 @@ struct AITranslateKeyboardApp: App {
 private struct RootView: View {
     @Environment(\.scenePhase) private var scenePhase
     @StateObject private var store = StoreManager()
-    @State private var isConfigured = CredentialStore.shared
-        .hasAPIKey(for: AppGroupStorage.shared.selectedProvider)
+    @State private var isConfigured = RootView.computeConfigured()
     @State private var showListen = false
     @State private var showPaywall = false
     @State private var paywallShownThisLaunch = false
 
     /// Show the reminder after this many translations.
     private let paywallThreshold = 6
+
+    /// In KeyGlot mode the app is usable without any API key; in Custom mode it still needs the
+    /// selected provider's key (so existing BYOK users keep the same onboarding).
+    static func computeConfigured() -> Bool {
+        let storage = AppGroupStorage.shared
+        switch storage.aiMode {
+        case .keyglot: return true
+        case .custom:  return CredentialStore.shared.hasAPIKey(for: storage.selectedProvider)
+        }
+    }
 
     var body: some View {
         Group {

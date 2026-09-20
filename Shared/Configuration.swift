@@ -80,6 +80,12 @@ enum Configuration {
         URL(string: "\(geminiBaseURL)/\(model):generateContent")!
     }
 
+    // MARK: - KeyGlot managed backend
+
+    /// Base URL of the KeyGlot managed-mode backend proxy (Cloudflare Worker). Used only in
+    /// KeyGlot (AI-included) mode; in Custom mode the app talks to the user's provider directly.
+    static let keyglotBackendBaseURL = URL(string: "https://keyglot-backend.izzonline.workers.dev")!
+
     // MARK: - OpenRouter (OpenAI-compatible gateway)
 
     static let openRouterURL = URL(string: "https://openrouter.ai/api/v1/chat/completions")!
