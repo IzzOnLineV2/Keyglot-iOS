@@ -96,10 +96,9 @@ struct SettingsView: View {
                             SettingsRow(icon: "globe", title: "Languages",
                                         value: String(localized: "\(languageCount) of \(maxLanguages)"))
                             if !languages.isEmpty {
-                                LazyVGrid(
-                                    columns: Array(repeating: GridItem(.flexible(), spacing: 6), count: 7),
-                                    spacing: 6
-                                ) {
+                                // One row, like the keyboard bar: as many equal-width columns as
+                                // there are selected languages, so the chip count matches "N of 7".
+                                HStack(spacing: 6) {
                                     ForEach(languages) { language in
                                         LanguageChip(flag: language.flag, name: language.name, height: 44)
                                     }
