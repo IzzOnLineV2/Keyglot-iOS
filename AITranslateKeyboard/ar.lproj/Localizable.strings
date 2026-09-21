@@ -201,3 +201,8 @@
 "you read" = "تقرأ";
 "Your language" = "لغتك";
 "Read aloud" = "اقرأ بصوت عالٍ";
+
+"You're on Pro" = "أنت مشترك Pro";
+"Switch to KeyGlot to use the AI included in your plan." = "بدّل إلى KeyGlot لاستخدام الذكاء الاصطناعي المضمّن في خطتك.";
+"KeyGlot needs Pro" = "يتطلب KeyGlot اشتراك Pro";
+"Subscribe to use the included AI, or switch to Custom with your own key." = "اشترك لاستخدام الذكاء الاصطناعي المضمّن، أو بدّل إلى Custom بمفتاحك الخاص.";

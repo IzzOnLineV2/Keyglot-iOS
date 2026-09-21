@@ -201,3 +201,8 @@
 "you read" = "읽는 언어";
 "Your language" = "내 언어";
 "Read aloud" = "읽어주기";
+
+"You're on Pro" = "Pro 사용 중";
+"Switch to KeyGlot to use the AI included in your plan." = "플랜에 포함된 AI를 사용하려면 KeyGlot으로 전환하세요.";
+"KeyGlot needs Pro" = "KeyGlot에는 Pro가 필요해요";
+"Subscribe to use the included AI, or switch to Custom with your own key." = "구독하고 포함된 AI를 쓰거나, 내 키로 Custom으로 전환하세요.";

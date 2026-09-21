@@ -4,16 +4,33 @@ import SwiftUI
 /// Custom lives here, two taps from the home and mentioned nowhere else, so the home stays a
 /// clean product surface while BYOK stays fully available.
 struct AdvancedView: View {
+    @EnvironmentObject private var subscription: SubscriptionManager
     @State private var aiMode = AppGroupStorage.shared.aiMode
     @State private var selectedProvider = AppGroupStorage.shared.selectedProvider
     @State private var hasAPIKey = false
     @State private var hasGeminiKey = false
+    @State private var showPro = false
 #if DEBUG
     @State private var devKey = ""
     @State private var devKeySaved = false
 #endif
 
     private var isCustom: Bool { aiMode == .custom }
+
+    /// Selecting KeyGlot requires Pro: without a subscription, tapping it opens the paywall instead
+    /// of switching (you can't use the included AI you don't have).
+    private var modeBinding: Binding<AIMode> {
+        Binding(
+            get: { aiMode },
+            set: { newValue in
+                if newValue == .keyglot && !subscription.isSubscribed {
+                    showPro = true
+                } else {
+                    aiMode = newValue
+                }
+            }
+        )
+    }
 
     var body: some View {
         ZStack {
@@ -32,6 +49,13 @@ struct AdvancedView: View {
         }
         .navigationTitle("Advanced")
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $showPro) {
+            ProPaywallView(onClose: {
+                showPro = false
+                aiMode = AppGroupStorage.shared.aiMode   // reflect the switch a purchase makes
+            })
+            .environmentObject(subscription)
+        }
         .onChange(of: aiMode) { _, newValue in
             AppGroupStorage.shared.aiMode = newValue
         }
@@ -49,7 +73,13 @@ struct AdvancedView: View {
             Text("Where the AI comes from").kgEyebrow()
             KGCard {
                 VStack(alignment: .leading, spacing: 14) {
-                    SegmentedModePicker(mode: $aiMode)
+                    SegmentedModePicker(mode: modeBinding)
+                    if subscription.isSubscribed && aiMode == .custom {
+                        proNudge
+                    }
+                    if aiMode == .keyglot && !subscription.isSubscribed {
+                        needsProNudge
+                    }
                     VStack(alignment: .leading, spacing: 6) {
                         Text("**KeyGlot:** AI included with Pro, nothing to configure.")
                         Text("**Custom:** free forever, but you bring your own provider and key. Requests go straight from your phone to them.")
@@ -59,6 +89,46 @@ struct AdvancedView: View {
                 }
             }
         }
+    }
+
+    /// Pro user currently on Custom: nudge them to use what they pay for.
+    private var proNudge: some View {
+        Button { aiMode = .keyglot } label: {
+            HStack(alignment: .top, spacing: 11) {
+                Image(systemName: "sparkles").font(.system(size: 14)).foregroundStyle(KGColor.accent)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("You're on Pro").font(KGFont.caption.weight(.semibold)).foregroundStyle(KGColor.ink)
+                    Text("Switch to KeyGlot to use the AI included in your plan.")
+                        .font(KGFont.caption).foregroundStyle(KGColor.ink2)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 0)
+            }
+            .padding(12)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(KGColor.accentTint, in: RoundedRectangle(cornerRadius: KGRadius.group, style: .continuous))
+        }
+        .buttonStyle(.plain)
+    }
+
+    /// KeyGlot selected but no subscription: KeyGlot needs Pro.
+    private var needsProNudge: some View {
+        Button { showPro = true } label: {
+            HStack(alignment: .top, spacing: 11) {
+                Image(systemName: "lock.fill").font(.system(size: 14)).foregroundStyle(KGColor.attention)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("KeyGlot needs Pro").font(KGFont.caption.weight(.semibold)).foregroundStyle(KGColor.ink)
+                    Text("Subscribe to use the included AI, or switch to Custom with your own key.")
+                        .font(KGFont.caption).foregroundStyle(KGColor.ink2)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 0)
+            }
+            .padding(12)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(KGColor.attentionBg, in: RoundedRectangle(cornerRadius: KGRadius.group, style: .continuous))
+        }
+        .buttonStyle(.plain)
     }
 
     // MARK: - Custom provider (dimmed until Custom is on)
@@ -149,5 +219,5 @@ struct AdvancedView: View {
 }
 
 #Preview {
-    NavigationStack { AdvancedView() }
+    NavigationStack { AdvancedView() }.environmentObject(SubscriptionManager())
 }

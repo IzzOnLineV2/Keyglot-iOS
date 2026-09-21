@@ -201,3 +201,8 @@
 "you read" = "読む言語";
 "Your language" = "あなたの言語";
 "Read aloud" = "読み上げ";
+
+"You're on Pro" = "Pro をご利用中";
+"Switch to KeyGlot to use the AI included in your plan." = "プランに含まれる AI を使うには KeyGlot に切り替えてください。";
+"KeyGlot needs Pro" = "KeyGlot には Pro が必要です";
+"Subscribe to use the included AI, or switch to Custom with your own key." = "登録して含まれる AI を使うか、自分のキーで Custom に切り替えてください。";

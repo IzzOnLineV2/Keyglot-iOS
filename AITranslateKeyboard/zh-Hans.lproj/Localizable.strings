@@ -201,3 +201,8 @@
 "you read" = "你读";
 "Your language" = "你的语言";
 "Read aloud" = "朗读";
+
+"You're on Pro" = "你是 Pro 用户";
+"Switch to KeyGlot to use the AI included in your plan." = "切换到 KeyGlot 以使用你套餐中包含的 AI。";
+"KeyGlot needs Pro" = "KeyGlot 需要 Pro";
+"Subscribe to use the included AI, or switch to Custom with your own key." = "订阅以使用包含的 AI，或用自己的密钥切换到 Custom。";
