@@ -97,8 +97,8 @@ struct SettingsView: View {
                                         value: String(localized: "\(languageCount) of \(maxLanguages)"))
                             if !languages.isEmpty {
                                 LazyVGrid(
-                                    columns: Array(repeating: GridItem(.flexible(), spacing: 7), count: 4),
-                                    spacing: 7
+                                    columns: Array(repeating: GridItem(.flexible(), spacing: 6), count: 7),
+                                    spacing: 6
                                 ) {
                                     ForEach(languages) { language in
                                         LanguageChip(flag: language.flag, name: language.name, height: 44)

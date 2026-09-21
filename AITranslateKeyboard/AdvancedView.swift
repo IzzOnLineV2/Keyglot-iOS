@@ -21,12 +21,13 @@ struct AdvancedView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 22) {
                     modeSection
-                    customSection
+                    if isCustom { customSection }
 #if DEBUG
                     devKeyCard
 #endif
                 }
                 .padding()
+                .animation(.easeInOut(duration: 0.2), value: isCustom)
             }
         }
         .navigationTitle("Advanced")
@@ -111,8 +112,7 @@ struct AdvancedView: View {
             .font(KGFont.caption).foregroundStyle(KGColor.ink3)
             .padding(.horizontal, 2)
         }
-        .opacity(isCustom ? 1 : 0.5)
-        .allowsHitTesting(isCustom)
+        .transition(.opacity.combined(with: .move(edge: .top)))
     }
 
 #if DEBUG
