@@ -46,7 +46,6 @@
 		2A90FAF6A65754B435A4F492 /* KGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ABED9387352C66D97818EE /* KGColor.swift */; };
 		2D9E55FC7C0338BEA88B7D5B /* GeminiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B7BD74777B6745934F80 /* GeminiProvider.swift */; };
 		2E647C7B749163467EF08236 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A0A6080287F6361BB1F5ECF /* Localizable.strings */; };
-		2F95CA4AF0A448EEE5ACE8F1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E0FDBD9A5D9660BC529AB2 /* OnboardingView.swift */; };
 		2FFD7F657753AD83CBDA9711 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF309E8F2FD223F7A0902EA9 /* Localizable.strings */; };
 		30D312DA7E8BCA3476FDC0CB /* LanguageChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF259BFFC55A686F82F29B2 /* LanguageChip.swift */; };
 		3153B6E523E339C6B36FBF2C /* VoiceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106247F43656D42D3CE5E2B9 /* VoiceLanguage.swift */; };
@@ -360,7 +359,6 @@
 		E2CE73AE13BFFDE0A24CC554 /* TextShareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextShareModel.swift; sourceTree = "<group>"; };
 		E31E87EA0880A20B700CA5DE /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E4429600700EA0481935F48E /* AIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProvider.swift; sourceTree = "<group>"; };
-		E6E0FDBD9A5D9660BC529AB2 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		E75B7B15F0807FD15D831074 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA5261FF3F6DFD8F4F0529BE /* AudioShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioShareView.swift; sourceTree = "<group>"; };
 		EB087C899BA56C116E84E233 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -458,7 +456,6 @@
 				1B1F6C3139BC3016BC633C32 /* Localizable.strings */,
 				A021352BEA614D1A2DE2DEDB /* Localizable.strings */,
 				D0FA20717491EE64E9FDAE7F /* Localizable.strings */,
-				E6E0FDBD9A5D9660BC529AB2 /* OnboardingView.swift */,
 				AD912243D496848B9060F93C /* PaywallView.swift */,
 				D3078FE5E9FC7D54D9B18267 /* PrivacyInfo.xcprivacy */,
 				C5DF9AA56B740E7FCFC58FE5 /* ProPaywallView.swift */,
@@ -910,7 +907,6 @@
 				F610962FAEF1F065FA1274B6 /* ListenViewModel.swift in Sources */,
 				D3260D6D511E20FC8FAB35DB /* MicButton.swift in Sources */,
 				B23183E16F2228F47354D991 /* Models.swift in Sources */,
-				2F95CA4AF0A448EEE5ACE8F1 /* OnboardingView.swift in Sources */,
 				7C7B776065E04C9DC20818A9 /* OpenAIProvider.swift in Sources */,
 				58E2CB913ACE9CBBAEA8FF42 /* OpenAITranscriptionService.swift in Sources */,
 				B195CC1280B48784F6985F99 /* OpenListenIntent.swift in Sources */,
@@ -1046,7 +1042,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 49;
+				CURRENT_PROJECT_VERSION = 50;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1107,7 +1103,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 49;
+				CURRENT_PROJECT_VERSION = 50;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

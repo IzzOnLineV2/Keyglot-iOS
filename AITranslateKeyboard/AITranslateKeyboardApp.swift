@@ -17,7 +17,6 @@ private struct RootView: View {
     @Environment(\.scenePhase) private var scenePhase
     @StateObject private var store = StoreManager()
     @StateObject private var subscription = SubscriptionManager()
-    @State private var isConfigured = RootView.computeConfigured()
     @State private var showWelcome = !AppGroupStorage.shared.hasSeenOnboarding
     @State private var showListen = false
     @State private var showPaywall = false
@@ -26,28 +25,18 @@ private struct RootView: View {
     /// Show the reminder after this many translations.
     private let paywallThreshold = 10
 
-    /// In KeyGlot mode the app is usable without any API key; in Custom mode it still needs the
-    /// selected provider's key (so existing BYOK users keep the same onboarding).
-    static func computeConfigured() -> Bool {
-        let storage = AppGroupStorage.shared
-        switch storage.aiMode {
-        case .keyglot: return true
-        case .custom:  return CredentialStore.shared.hasAPIKey(for: storage.selectedProvider)
-        }
-    }
-
     var body: some View {
         Group {
             if showWelcome {
                 WelcomeView(onDone: {
                     AppGroupStorage.shared.hasSeenOnboarding = true
-                    isConfigured = RootView.computeConfigured()
                     withAnimation { showWelcome = false }
                 })
-            } else if isConfigured {
-                SettingsView()
             } else {
-                OnboardingView(isConfigured: $isConfigured)
+                // Always land on the Home after onboarding. Configuration (Custom key or Pro) lives
+                // in Advanced/Pro; the keyboard guides the user when a key is missing. No full screen
+                // gate that could trap a user (e.g. reinstalling with a leftover Keychain key).
+                SettingsView()
             }
         }
         .environmentObject(subscription)
