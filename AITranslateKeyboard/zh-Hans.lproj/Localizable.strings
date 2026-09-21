@@ -84,7 +84,6 @@
 "🎧 Listen & translate, press, speak, and get a translation of what you hear (also from the widget)." = "🎧 聆听并翻译, 按住说话，获得你听到内容的翻译（也可从小组件）。";
 "📋 Translate a message you've copied, tap 📋 on the keyboard." = "📋 翻译你复制的消息, 点按键盘上的 📋。";
 "📤 Share any text or voice note to Keyglot to translate it." = "📤 将任意文本或语音消息分享给 Keyglot 进行翻译。";
-"Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Settings to use it." = "音频（语音消息和实时聆听）使用 Google Gemini, 请在设置中添加 Gemini API 密钥以使用。";
 
 /* ===== Support / paywall ===== */
 "Support Keyglot" = "支持 Keyglot";
@@ -166,7 +165,6 @@
 "Save %@" = "省 %@";
 "Subscribe · %@" = "订阅 · %@";
 "Continue" = "继续";
-"No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Settings." = "没有容易忘记的免费试用，没有广告。想用自己的 AI 密钥？Custom 模式免费，在“设置”中。";
 "Restore" = "恢复购买";
 "Terms" = "条款";
 "Privacy" = "隐私";
@@ -206,3 +204,6 @@
 "Switch to KeyGlot to use the AI included in your plan." = "切换到 KeyGlot 以使用你套餐中包含的 AI。";
 "KeyGlot needs Pro" = "KeyGlot 需要 Pro";
 "Subscribe to use the included AI, or switch to Custom with your own key." = "订阅以使用包含的 AI，或用自己的密钥切换到 Custom。";
+
+"No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Advanced." = "没有容易忘记的免费试用，没有广告。想用自己的 AI 密钥？Custom 模式免费，在“高级”中。";
+"Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Advanced to use it." = "音频（语音消息和实时聆听）使用 Google Gemini，请在“高级”中添加 Gemini API 密钥以使用。";

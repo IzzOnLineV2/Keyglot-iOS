@@ -75,7 +75,7 @@ struct AboutView: View {
                         bullet("🎧 Listen & translate, press, speak, and get a translation of what you hear (also from the widget).")
                         bullet("📋 Translate a message you've copied, tap 📋 on the keyboard.")
                         bullet("📤 Share any text or voice note to Keyglot to translate it.")
-                        Text("Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Settings to use it.")
+                        Text("Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Advanced to use it.")
                             .font(KGFont.caption).foregroundStyle(KGColor.ink3)
                     }
                 }

@@ -84,7 +84,6 @@
 "🎧 Listen & translate, press, speak, and get a translation of what you hear (also from the widget)." = "🎧 Écouter et traduire, appuyez, parlez et obtenez la traduction de ce que vous entendez (aussi depuis le widget).";
 "📋 Translate a message you've copied, tap 📋 on the keyboard." = "📋 Traduisez un message que vous avez copié, touchez 📋 sur le clavier.";
 "📤 Share any text or voice note to Keyglot to translate it." = "📤 Partagez n'importe quel texte ou message vocal avec Keyglot pour le traduire.";
-"Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Settings to use it." = "L'audio (messages vocaux et écoute en direct) utilise Google Gemini, ajoutez une clé API Gemini dans Réglages pour l'utiliser.";
 
 /* ===== Support / paywall ===== */
 "Support Keyglot" = "Soutenir Keyglot";
@@ -166,7 +165,6 @@
 "Save %@" = "Économisez %@";
 "Subscribe · %@" = "S'abonner · %@";
 "Continue" = "Continuer";
-"No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Settings." = "Pas d'essai gratuit à oublier, pas de pub. Vous préférez votre propre clé IA ? Le mode Custom est gratuit, dans les Réglages.";
 "Restore" = "Restaurer";
 "Terms" = "Conditions";
 "Privacy" = "Confidentialité";
@@ -206,3 +204,6 @@
 "Switch to KeyGlot to use the AI included in your plan." = "Passez à KeyGlot pour utiliser l'IA incluse dans votre abonnement.";
 "KeyGlot needs Pro" = "KeyGlot nécessite Pro";
 "Subscribe to use the included AI, or switch to Custom with your own key." = "Abonnez-vous pour utiliser l'IA incluse, ou passez à Custom avec votre propre clé.";
+
+"No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Advanced." = "Pas d'essai gratuit à oublier, pas de pub. Vous préférez votre propre clé IA ? Le mode Custom est gratuit, dans Avancé.";
+"Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Advanced to use it." = "L'audio (messages vocaux et écoute en direct) utilise Google Gemini, ajoutez une clé API Gemini dans Avancé pour l'utiliser.";

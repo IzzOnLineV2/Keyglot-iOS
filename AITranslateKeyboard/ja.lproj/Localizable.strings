@@ -84,7 +84,6 @@
 "🎧 Listen & translate, press, speak, and get a translation of what you hear (also from the widget)." = "🎧 聞いて翻訳, 押して話すと、聞こえた内容の翻訳が得られます（ウィジェットからも）。";
 "📋 Translate a message you've copied, tap 📋 on the keyboard." = "📋 コピーしたメッセージを翻訳, キーボードの 📋 をタップ。";
 "📤 Share any text or voice note to Keyglot to translate it." = "📤 テキストや音声メッセージを Keyglot に共有して翻訳します。";
-"Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Settings to use it." = "音声（音声メッセージとライブ聞き取り）は Google Gemini を使用します, 設定で Gemini の API キーを追加してください。";
 
 /* ===== Support / paywall ===== */
 "Support Keyglot" = "Keyglot をサポート";
@@ -166,7 +165,6 @@
 "Save %@" = "%@ お得";
 "Subscribe · %@" = "登録 · %@";
 "Continue" = "続ける";
-"No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Settings." = "忘れがちな無料トライアルなし、広告なし。自分のAIキーを使いたいですか？Customモードは無料です（設定内）。";
 "Restore" = "復元";
 "Terms" = "利用規約";
 "Privacy" = "プライバシー";
@@ -206,3 +204,6 @@
 "Switch to KeyGlot to use the AI included in your plan." = "プランに含まれる AI を使うには KeyGlot に切り替えてください。";
 "KeyGlot needs Pro" = "KeyGlot には Pro が必要です";
 "Subscribe to use the included AI, or switch to Custom with your own key." = "登録して含まれる AI を使うか、自分のキーで Custom に切り替えてください。";
+
+"No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Advanced." = "忘れがちな無料トライアルなし、広告なし。自分のAIキーを使いたいですか？Customモードは無料です（詳細設定）。";
+"Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Advanced to use it." = "音声（音声メモとライブ再生）は Google Gemini を使います。利用するには詳細設定で Gemini API キーを追加してください。";

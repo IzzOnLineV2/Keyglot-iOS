@@ -149,7 +149,7 @@ struct ProPaywallView: View {
             .disabled(busy || subscription.products.isEmpty)
             .overlay { if busy { SpinnerRing(size: 22) } }
 
-            Text("No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Settings.")
+            Text("No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Advanced.")
                 .font(KGFont.caption).foregroundStyle(KGColor.ink3)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)

@@ -84,7 +84,6 @@
 "🎧 Listen & translate, press, speak, and get a translation of what you hear (also from the widget)." = "🎧 듣고 번역, 누르고 말하면 들리는 내용의 번역을 받습니다 (위젯에서도).";
 "📋 Translate a message you've copied, tap 📋 on the keyboard." = "📋 복사한 메시지를 번역, 키보드에서 📋 를 탭하세요.";
 "📤 Share any text or voice note to Keyglot to translate it." = "📤 아무 텍스트나 음성 메시지를 Keyglot에 공유하여 번역하세요.";
-"Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Settings to use it." = "오디오(음성 메시지 및 실시간 듣기)는 Google Gemini를 사용합니다, 설정에서 Gemini API 키를 추가하세요.";
 
 /* ===== Support / paywall ===== */
 "Support Keyglot" = "Keyglot 후원하기";
@@ -166,7 +165,6 @@
 "Save %@" = "%@ 절약";
 "Subscribe · %@" = "구독 · %@";
 "Continue" = "계속";
-"No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Settings." = "잊어버릴 무료 체험 없음, 광고 없음. 직접 AI 키를 쓰고 싶으세요? Custom 모드는 무료입니다, 설정에서.";
 "Restore" = "복원";
 "Terms" = "약관";
 "Privacy" = "개인정보 처리방침";
@@ -206,3 +204,6 @@
 "Switch to KeyGlot to use the AI included in your plan." = "플랜에 포함된 AI를 사용하려면 KeyGlot으로 전환하세요.";
 "KeyGlot needs Pro" = "KeyGlot에는 Pro가 필요해요";
 "Subscribe to use the included AI, or switch to Custom with your own key." = "구독하고 포함된 AI를 쓰거나, 내 키로 Custom으로 전환하세요.";
+
+"No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Advanced." = "잊어버릴 무료 체험 없음, 광고 없음. 직접 AI 키를 쓰고 싶으세요? Custom 모드는 무료입니다, 고급에서.";
+"Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Advanced to use it." = "오디오(음성 메모와 실시간 듣기)는 Google Gemini를 사용해요. 사용하려면 고급에서 Gemini API 키를 추가하세요.";

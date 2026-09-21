@@ -84,7 +84,6 @@
 "🎧 Listen & translate, press, speak, and get a translation of what you hear (also from the widget)." = "🎧 Ascolta e traduci, premi, parla e ottieni la traduzione di ciò che senti (anche dal widget).";
 "📋 Translate a message you've copied, tap 📋 on the keyboard." = "📋 Traduci un messaggio che hai copiato, tocca 📋 sulla tastiera.";
 "📤 Share any text or voice note to Keyglot to translate it." = "📤 Condividi qualsiasi testo o nota vocale a Keyglot per tradurlo.";
-"Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Settings to use it." = "L'audio (note vocali e ascolto dal vivo) usa Google Gemini, aggiungi una chiave API Gemini nelle Impostazioni per usarlo.";
 
 /* ===== Support / paywall ===== */
 "Support Keyglot" = "Sostieni Keyglot";
@@ -166,7 +165,6 @@
 "Save %@" = "Risparmi %@";
 "Subscribe · %@" = "Abbonati · %@";
 "Continue" = "Continua";
-"No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Settings." = "Nessuna prova gratuita da ricordare, nessuna pubblicità. Preferisci la tua chiave AI? La modalità Custom è gratis, nelle Impostazioni.";
 "Restore" = "Ripristina";
 "Terms" = "Termini";
 "Privacy" = "Privacy";
@@ -206,3 +204,6 @@
 "Switch to KeyGlot to use the AI included in your plan." = "Passa a KeyGlot per usare l'AI inclusa nel tuo abbonamento.";
 "KeyGlot needs Pro" = "KeyGlot richiede Pro";
 "Subscribe to use the included AI, or switch to Custom with your own key." = "Abbonati per usare l'AI inclusa, oppure passa a Custom con la tua chiave.";
+
+"No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Advanced." = "Nessuna prova gratuita da ricordare, nessuna pubblicità. Preferisci la tua chiave AI? La modalità Custom è gratis, in Avanzate.";
+"Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Advanced to use it." = "L'audio (note vocali e ascolto dal vivo) usa Google Gemini, aggiungi una chiave API Gemini in Avanzate per usarlo.";
