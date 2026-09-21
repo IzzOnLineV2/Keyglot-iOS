@@ -9,6 +9,7 @@ struct SettingsView: View {
     @State private var languageCount = AppGroupStorage.shared.selectedLanguageIDs.count
     @State private var languages = AppGroupStorage.shared.selectedLanguages
     @State private var keyboardIsSetUp = AppGroupStorage.shared.keyboardIsSetUp
+    @State private var aiMode = AppGroupStorage.shared.aiMode
 
     @State private var showWelcomePreview = false
     @State private var showPro = false
@@ -153,7 +154,9 @@ struct SettingsView: View {
                     Divider().overlay(KGColor.border)
                     NavigationLink { AdvancedView() } label: {
                         SettingsRow(icon: "slider.horizontal.3", title: "Advanced",
-                                    value: String(localized: "Use your own AI")).padding(14)
+                                    value: aiMode == .keyglot
+                                        ? String(localized: "Keyglot AI")
+                                        : String(localized: "Custom AI")).padding(14)
                     }
                     .buttonStyle(.plain)
                     Divider().overlay(KGColor.border)
@@ -216,6 +219,7 @@ struct SettingsView: View {
         languageCount = AppGroupStorage.shared.selectedLanguageIDs.count
         languages = AppGroupStorage.shared.selectedLanguages
         keyboardIsSetUp = AppGroupStorage.shared.keyboardIsSetUp
+        aiMode = AppGroupStorage.shared.aiMode
     }
 }
 

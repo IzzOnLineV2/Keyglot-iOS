@@ -51,8 +51,8 @@ struct SegmentedModePicker: View {
 
     var body: some View {
         HStack(spacing: 4) {
-            segment(.keyglot, "KeyGlot")
-            segment(.custom, "Custom")
+            segment(.keyglot, "Keyglot AI")
+            segment(.custom, "Custom AI")
         }
         .padding(4)
         .background(KGColor.fill, in: RoundedRectangle(cornerRadius: KGRadius.group, style: .continuous))
