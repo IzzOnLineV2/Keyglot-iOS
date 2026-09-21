@@ -63,7 +63,7 @@ enum AIProviderType: String, CaseIterable, Identifiable, Codable, Sendable {
     /// Where the user can create an API key for this provider.
     var apiKeyURL: URL {
         switch self {
-        case .claude:     return URL(string: "https://console.anthropic.com/settings/keys")!
+        case .claude:     return URL(string: "https://platform.claude.com/settings/keys")!
         case .openai:     return URL(string: "https://platform.openai.com/api-keys")!
         case .gemini:     return URL(string: "https://aistudio.google.com/app/apikey")!
         case .openrouter: return URL(string: "https://openrouter.ai/keys")!

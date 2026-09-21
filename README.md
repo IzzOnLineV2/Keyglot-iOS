@@ -58,7 +58,7 @@ Four providers are supported, each a small raw-HTTP `URLSession` client:
 
 | Provider | Type / API | Default model | Key from |
 |---|---|---|---|
-| **Claude Sonnet** (default) | `ClaudeProvider`, Anthropic Messages API | `claude-sonnet-4-6` | console.anthropic.com |
+| **Claude Sonnet** (default) | `ClaudeProvider`, Anthropic Messages API | `claude-sonnet-4-6` | platform.claude.com |
 | **OpenAI GPT** | `OpenAIProvider`, Responses API (`gpt-5-mini`→`gpt-5-nano` fallback) | `gpt-5-mini` | platform.openai.com |
 | **Google Gemini** | `GeminiProvider`, Generative Language API (`generateContent`) | `gemini-2.0-flash` | aistudio.google.com |
 | **OpenRouter** | `OpenRouterProvider`, OpenAI-compatible gateway (`chat/completions`) | `openai/gpt-4o-mini` | openrouter.ai |
