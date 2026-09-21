@@ -19,3 +19,6 @@ xcuserdata/
 # Secrets — never commit your OpenAI key.
 *.env
 Secrets.xcconfig
+
+# Generated App Store poster PNGs (rerun AppStore/render-posters.sh)
+AppStore/screenshots/
