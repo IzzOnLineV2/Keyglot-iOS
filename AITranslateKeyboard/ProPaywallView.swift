@@ -171,8 +171,19 @@ struct ProPaywallView: View {
         Task {
             busy = true
             _ = try? await subscription.purchase(product)
+            if subscription.isSubscribed { await activateKeyGlot() }
             busy = false
             if subscription.isSubscribed { onClose() }
+        }
+    }
+
+    /// Buying Pro means you want the included AI: switch to KeyGlot mode (a Custom user's key stays
+    /// in the Keychain, so they can switch back in Advanced) and mint the backend session now so the
+    /// keyboard/extensions work immediately, without waiting for the next app launch.
+    private func activateKeyGlot() async {
+        AppGroupStorage.shared.aiMode = .keyglot
+        if let jws = await subscription.currentEntitlementJWS() {
+            _ = try? await KeyGlotSession().exchange(jws: jws)
         }
     }
 
