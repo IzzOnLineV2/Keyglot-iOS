@@ -46,7 +46,6 @@
 "Tap 🌐 to switch to the Keyglot keyboard." = "🌐をタップしてKeyglotキーボードに切り替えます。";
 "Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite, the text is replaced in place." = "言語をタップして翻訳、またはトーン（✨ 💼 😊 ❤️）をタップして書き換え, テキストはその場で置き換わります。";
 "Press Send." = "送信を押します。";
-"Choose which languages appear in Settings → Keyboard → Languages." = "「設定」→「キーボード」→「言語」で表示する言語を選びます。";
 "Keyboard languages" = "キーボードの言語";
 "Version" = "バージョン";
 "Model" = "モデル";
@@ -207,3 +206,5 @@
 
 "No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Advanced." = "忘れがちな無料トライアルなし、広告なし。自分のAIキーを使いたいですか？Customモードは無料です（詳細設定）。";
 "Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Advanced to use it." = "音声（音声メモとライブ再生）は Google Gemini を使います。利用するには詳細設定で Gemini API キーを追加してください。";
+
+"Choose which languages appear in Your keyboard → Languages." = "表示する言語は「キーボード → 言語」で選べます。";

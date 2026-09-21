@@ -46,7 +46,6 @@
 "Tap 🌐 to switch to the Keyglot keyboard." = "Tippe auf 🌐, um zur Keyglot-Tastatur zu wechseln.";
 "Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite, the text is replaced in place." = "Tippe auf eine Sprache zum Übersetzen oder auf einen Ton (✨ 💼 😊 ❤️) zum Umformulieren, der Text wird direkt ersetzt.";
 "Press Send." = "Tippe auf Senden.";
-"Choose which languages appear in Settings → Keyboard → Languages." = "Wähle die Sprachen unter Einstellungen → Tastatur → Sprachen.";
 "Keyboard languages" = "Tastatursprachen";
 "Version" = "Version";
 "Model" = "Modell";
@@ -207,3 +206,5 @@
 
 "No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Advanced." = "Keine kostenlose Testphase zum Vergessen, keine Werbung. Lieber deinen eigenen KI-Schlüssel? Der Custom-Modus ist kostenlos, unter Erweitert.";
 "Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Advanced to use it." = "Audio (Sprachnachrichten und Live-Hören) nutzt Google Gemini, füge unter Erweitert einen Gemini-API-Schlüssel hinzu, um es zu verwenden.";
+
+"Choose which languages appear in Your keyboard → Languages." = "Wähle unter Deine Tastatur → Sprachen, welche Sprachen erscheinen.";

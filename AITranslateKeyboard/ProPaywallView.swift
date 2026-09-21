@@ -156,8 +156,8 @@ struct ProPaywallView: View {
 
             HStack(spacing: 18) {
                 Button("Restore") { Task { busy = true; await subscription.restore(); busy = false } }
-                Link("Terms", destination: URL(string: "https://izzonline.it")!)
-                Link("Privacy", destination: URL(string: "https://izzonline.it")!)
+                Link("Terms", destination: URL(string: "https://www.izzonline.it/support")!)
+                Link("Privacy", destination: URL(string: "https://www.izzonline.it/support")!)
             }
             .font(KGFont.caption).foregroundStyle(KGColor.ink3)
         }

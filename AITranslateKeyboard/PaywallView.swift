@@ -62,7 +62,7 @@ struct PaywallView: View {
                     .font(KGFont.caption).foregroundStyle(KGColor.ink3)
                 }
 
-                Link("Terms & Privacy", destination: URL(string: "https://izzonline.it")!)
+                Link("Terms & Privacy", destination: URL(string: "https://www.izzonline.it/support")!)
                     .font(KGFont.caption).foregroundStyle(KGColor.ink3)
                     .padding(.top, 2)
             }

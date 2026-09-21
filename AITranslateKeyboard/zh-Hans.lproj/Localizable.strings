@@ -46,7 +46,6 @@
 "Tap 🌐 to switch to the Keyglot keyboard." = "点按 🌐 切换到 Keyglot 键盘。";
 "Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite, the text is replaced in place." = "点按语言进行翻译，或点按语气（✨ 💼 😊 ❤️）进行改写--文本会就地替换。";
 "Press Send." = "点按发送。";
-"Choose which languages appear in Settings → Keyboard → Languages." = "在设置 → 键盘 → 语言 中选择要显示的语言。";
 "Keyboard languages" = "键盘语言";
 "Version" = "版本";
 "Model" = "模型";
@@ -207,3 +206,5 @@
 
 "No free trial to forget about, no ads. Prefer your own AI key? Custom mode is free, in Advanced." = "没有容易忘记的免费试用，没有广告。想用自己的 AI 密钥？Custom 模式免费，在“高级”中。";
 "Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Advanced to use it." = "音频（语音消息和实时聆听）使用 Google Gemini，请在“高级”中添加 Gemini API 密钥以使用。";
+
+"Choose which languages appear in Your keyboard → Languages." = "在“你的键盘 → 语言”中选择显示哪些语言。";

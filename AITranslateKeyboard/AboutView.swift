@@ -53,7 +53,7 @@ struct AboutView: View {
                         bullet("Tap 🌐 to switch to the Keyglot keyboard.")
                         bullet("Tap a language to translate, or a tone (✨ 💼 😊 ❤️) to rewrite, the text is replaced in place.")
                         bullet("Press Send.")
-                        bullet("Choose which languages appear in Settings → Keyboard → Languages.")
+                        bullet("Choose which languages appear in Your keyboard → Languages.")
                     }
                 }
 
