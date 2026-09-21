@@ -4,6 +4,10 @@ import SwiftUI
 /// keys, no jargon, the point is you never open the app to translate.
 struct WelcomeView: View {
     let onDone: () -> Void
+    /// Whether finishing offers the KeyGlot Pro screen. True only for the real first-run onboarding;
+    /// false when replaying the intro from Settings ("Show welcome again"), where nudging to pay is
+    /// unwanted, especially for existing Pro users.
+    var promptsPaywall: Bool = true
     @EnvironmentObject private var subscription: SubscriptionManager
     @State private var page = 0
     @State private var showPro = false
@@ -36,7 +40,7 @@ struct WelcomeView: View {
     /// After the two intro pages: new KeyGlot users see the Pro screen (design 05, screen 3); if
     /// already subscribed or in Custom mode, go straight home.
     private func advance() {
-        if AppGroupStorage.shared.aiMode == .keyglot && !subscription.isSubscribed {
+        if promptsPaywall && AppGroupStorage.shared.aiMode == .keyglot && !subscription.isSubscribed {
             showPro = true
         } else {
             onDone()
