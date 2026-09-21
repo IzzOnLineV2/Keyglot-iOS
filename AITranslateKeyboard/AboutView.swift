@@ -106,8 +106,8 @@ struct AboutView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Developed by Stefania Izzo").font(KGFont.row).foregroundStyle(KGColor.ink)
                         Text("IzzOnLine di Stefania Izzo").font(KGFont.caption).foregroundStyle(KGColor.ink2)
-                        Link(destination: URL(string: "https://izzonline.it")!) {
-                            Label("izzonline.it", systemImage: "globe").font(KGFont.row).foregroundStyle(KGColor.accent)
+                        Link(destination: URL(string: "https://www.izzonline.it/support")!) {
+                            Label("izzonline.it/support", systemImage: "globe").font(KGFont.row).foregroundStyle(KGColor.accent)
                         }
                     }
                 }
