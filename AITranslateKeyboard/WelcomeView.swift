@@ -114,15 +114,6 @@ struct WelcomeView: View {
                         "Share it to Keyglot and read what it says, dialects included.")
                 feature("🎙️", Color(hex: 0xFDE9F1), "Talking face to face",
                         "Open “Listen & translate”, and hear what they said in your language. Add the widget for one-tap access.")
-
-                HStack(spacing: 12) {
-                    LogoMark(size: 30)
-                    Text("AI is included. Nothing to set up.")
-                        .font(KGFont.row).foregroundStyle(KGColor.ink)
-                }
-                .padding(14)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(KGColor.barButtonFill, in: RoundedRectangle(cornerRadius: KGRadius.group, style: .continuous))
             }
             .padding(.top, 8)
         }
