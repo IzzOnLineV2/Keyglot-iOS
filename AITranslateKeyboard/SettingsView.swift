@@ -223,21 +223,36 @@ struct SettingsView: View {
     }
 }
 
-/// Step-by-step instructions for enabling the keyboard, shown in the setup sheet.
+/// Step-by-step instructions for enabling the keyboard, shown in the setup sheet. Adapts to the
+/// current AI mode and makes the two modes (and which keys cover text vs voice) explicit.
 private struct SetupChecklist: View {
     let mode: AIMode
     let providerName: String
 
+    private var steps: [LocalizedStringKey] {
+        var s: [LocalizedStringKey] = []
+        if mode == .custom {
+            s.append("Add your \(providerName) API key in Advanced, it powers text translation and rewrites.")
+            s.append("For voice notes and “Listen & translate”, add a Gemini key too (Advanced → Voice notes key).")
+        } else {
+            s.append("You're on KeyGlot Pro, the AI is included for text and voice, no keys to add.")
+        }
+        s.append("iOS Settings → General → Keyboard → Keyboards → add “Keyglot”.")
+        s.append("Tap “Keyglot” and turn on Allow Full Access (needed for network).")
+        s.append("In any chat, tap 🌐 to switch to Keyglot, then tap a language.")
+        return s
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            if mode == .custom {
-                step(1, "Add your \(providerName) API key in Advanced.")
-            } else {
-                step(1, "You're on KeyGlot, AI is included, no API key needed.")
+            Text(mode == .custom
+                 ? "You're using Custom, your own AI. KeyGlot Pro, with the AI included, is in Advanced."
+                 : "You're on KeyGlot, the AI is included. Prefer your own key? Switch to Custom in Advanced.")
+                .font(KGFont.caption).foregroundStyle(KGColor.ink3)
+                .fixedSize(horizontal: false, vertical: true)
+            ForEach(Array(steps.enumerated()), id: \.offset) { index, text in
+                step(index + 1, text)
             }
-            step(2, "iOS Settings → General → Keyboard → Keyboards → add “Keyglot”.")
-            step(3, "Tap “Keyglot” and turn on Allow Full Access (needed for network).")
-            step(4, "In any chat, tap 🌐 to switch to Keyglot, then tap a language.")
         }
         .font(KGFont.caption)
         .foregroundStyle(KGColor.ink2)

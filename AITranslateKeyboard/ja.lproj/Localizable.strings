@@ -208,3 +208,9 @@
 "Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Advanced to use it." = "音声（音声メモとライブ再生）は Google Gemini を使います。利用するには詳細設定で Gemini API キーを追加してください。";
 
 "Choose which languages appear in Your keyboard → Languages." = "表示する言語は「キーボード → 言語」で選べます。";
+
+"Add your %@ API key in Advanced, it powers text translation and rewrites." = "%@ の API キーを詳細設定で追加してください。テキストの翻訳と書き換えに使われます。";
+"For voice notes and “Listen & translate”, add a Gemini key too (Advanced → Voice notes key)." = "音声メモと「聞いて翻訳」には Gemini キーも追加してください（詳細設定 → 音声メモ用キー）。";
+"You're on KeyGlot Pro, the AI is included for text and voice, no keys to add." = "KeyGlot Pro をご利用中です。AI はテキストと音声に含まれ、追加するキーはありません。";
+"You're using Custom, your own AI. KeyGlot Pro, with the AI included, is in Advanced." = "Custom（自分の AI）を使用中です。AI 込みの KeyGlot Pro は詳細設定にあります。";
+"You're on KeyGlot, the AI is included. Prefer your own key? Switch to Custom in Advanced." = "KeyGlot をご利用中で、AI は込みです。自分のキーがよいですか？詳細設定で Custom に切り替えられます。";

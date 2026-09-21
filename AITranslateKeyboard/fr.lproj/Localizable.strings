@@ -208,3 +208,9 @@
 "Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Advanced to use it." = "L'audio (messages vocaux et écoute en direct) utilise Google Gemini, ajoutez une clé API Gemini dans Avancé pour l'utiliser.";
 
 "Choose which languages appear in Your keyboard → Languages." = "Choisissez les langues affichées dans Ton clavier → Langues.";
+
+"Add your %@ API key in Advanced, it powers text translation and rewrites." = "Ajoutez votre clé API %@ dans Avancé, elle alimente la traduction et la réécriture de texte.";
+"For voice notes and “Listen & translate”, add a Gemini key too (Advanced → Voice notes key)." = "Pour les messages vocaux et « Écouter et traduire », ajoutez aussi une clé Gemini (Avancé → Clé pour messages vocaux).";
+"You're on KeyGlot Pro, the AI is included for text and voice, no keys to add." = "Vous êtes sur KeyGlot Pro, l'IA est incluse pour le texte et la voix, aucune clé à ajouter.";
+"You're using Custom, your own AI. KeyGlot Pro, with the AI included, is in Advanced." = "Vous utilisez Custom, votre propre IA. KeyGlot Pro, avec l'IA incluse, est dans Avancé.";
+"You're on KeyGlot, the AI is included. Prefer your own key? Switch to Custom in Advanced." = "Vous êtes sur KeyGlot, l'IA est incluse. Vous préférez votre clé ? Passez à Custom dans Avancé.";

@@ -208,3 +208,9 @@
 "Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Advanced to use it." = "يستخدم الصوت (الرسائل الصوتية والاستماع المباشر) Google Gemini، أضف مفتاح API الخاص بـ Gemini في المتقدّم لاستخدامه.";
 
 "Choose which languages appear in Your keyboard → Languages." = "اختر اللغات التي تظهر من لوحة مفاتيحك → اللغات.";
+
+"Add your %@ API key in Advanced, it powers text translation and rewrites." = "أضف مفتاح API الخاص بـ %@ في المتقدّم، فهو يشغّل ترجمة النص وإعادة صياغته.";
+"For voice notes and “Listen & translate”, add a Gemini key too (Advanced → Voice notes key)." = "للرسائل الصوتية و«استمع وترجم» أضف مفتاح Gemini أيضًا (المتقدّم ← مفتاح الرسائل الصوتية).";
+"You're on KeyGlot Pro, the AI is included for text and voice, no keys to add." = "أنت على KeyGlot Pro، الذكاء الاصطناعي مضمّن للنص والصوت، لا مفاتيح لإضافتها.";
+"You're using Custom, your own AI. KeyGlot Pro, with the AI included, is in Advanced." = "تستخدم Custom، الذكاء الاصطناعي الخاص بك. KeyGlot Pro، مع الذكاء الاصطناعي المضمّن، في المتقدّم.";
+"You're on KeyGlot, the AI is included. Prefer your own key? Switch to Custom in Advanced." = "أنت على KeyGlot، الذكاء الاصطناعي مضمّن. تفضّل مفتاحك؟ بدّل إلى Custom في المتقدّم.";

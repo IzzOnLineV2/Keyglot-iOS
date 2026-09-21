@@ -208,3 +208,9 @@
 "Audio (voice notes and live listening) uses Google Gemini, add a Gemini API key in Advanced to use it." = "音频（语音消息和实时聆听）使用 Google Gemini，请在“高级”中添加 Gemini API 密钥以使用。";
 
 "Choose which languages appear in Your keyboard → Languages." = "在“你的键盘 → 语言”中选择显示哪些语言。";
+
+"Add your %@ API key in Advanced, it powers text translation and rewrites." = "在“高级”中添加你的 %@ API 密钥，用于文本翻译和改写。";
+"For voice notes and “Listen & translate”, add a Gemini key too (Advanced → Voice notes key)." = "语音消息和“聆听并翻译”还需添加 Gemini 密钥（高级 → 语音消息密钥）。";
+"You're on KeyGlot Pro, the AI is included for text and voice, no keys to add." = "你在 KeyGlot Pro，文本和语音的 AI 已包含，无需添加密钥。";
+"You're using Custom, your own AI. KeyGlot Pro, with the AI included, is in Advanced." = "你正在使用 Custom（你自己的 AI）。含 AI 的 KeyGlot Pro 在“高级”中。";
+"You're on KeyGlot, the AI is included. Prefer your own key? Switch to Custom in Advanced." = "你在 KeyGlot，AI 已包含。想用自己的密钥？在“高级”中切换到 Custom。";
