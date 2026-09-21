@@ -25,14 +25,12 @@ struct SettingsView: View {
                     listenHero
                     keyboardSection
                     planSection
-#if DEBUG
                     KGCard(padding: 0) {
                         Button { showWelcomePreview = true } label: {
                             SettingsRow(icon: "hand.wave.fill", title: "Show welcome again").padding(14)
                         }
                         .buttonStyle(.plain)
                     }
-#endif
                 }
                 .padding()
             }
@@ -98,8 +96,11 @@ struct SettingsView: View {
                             SettingsRow(icon: "globe", title: "Languages",
                                         value: String(localized: "\(languageCount) of \(maxLanguages)"))
                             if !languages.isEmpty {
-                                HStack(spacing: 7) {
-                                    ForEach(languages.prefix(4)) { language in
+                                LazyVGrid(
+                                    columns: Array(repeating: GridItem(.flexible(), spacing: 7), count: 4),
+                                    spacing: 7
+                                ) {
+                                    ForEach(languages) { language in
                                         LanguageChip(flag: language.flag, name: language.name, height: 44)
                                     }
                                 }
