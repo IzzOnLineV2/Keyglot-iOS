@@ -160,10 +160,10 @@ final class KeyboardViewController: UIInputViewController {
         UIView.animate(withDuration: 0.22) { self.view.superview?.layoutIfNeeded(); self.view.layoutIfNeeded() }
     }
 
-    /// About 60% of the screen (capped), enough to read a long received message.
+    /// About 55% of the screen (capped), enough to read a long received message comfortably.
     private var expandedHeight: CGFloat {
         let screenH = view.window?.screen.bounds.height ?? 800
-        return min(max(Self.keyboardHeight, screenH * 0.6), 520)
+        return min(max(Self.keyboardHeight, screenH * 0.55), 470)
     }
 
     // MARK: - Translation & rewrite flow

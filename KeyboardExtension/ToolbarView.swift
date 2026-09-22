@@ -243,9 +243,9 @@ struct ToolbarView: View {
             ScrollView {
                 ScriptText(text: text, size: 17, style: .body, color: KGColor.ink)
                     .frame(maxWidth: .infinity, alignment: .topLeading)
-                    .padding(.bottom, 8)
             }
             .defaultScrollAnchor(.top)
+            .contentMargins(.vertical, 10, for: .scrollContent)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
