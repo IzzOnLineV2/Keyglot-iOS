@@ -241,10 +241,14 @@ struct ToolbarView: View {
                 .accessibilityLabel(Text("Close"))
             }
             ScrollView {
-                ScriptText(text: text, size: 16, style: .body, color: KGColor.ink)
+                ScriptText(text: text, size: 17, style: .body, color: KGColor.ink)
+                    .frame(maxWidth: .infinity, alignment: .topLeading)
+                    .padding(.bottom, 8)
             }
-            .frame(maxHeight: .infinity)
+            .defaultScrollAnchor(.top)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .padding(.horizontal, 4)
     }
 }

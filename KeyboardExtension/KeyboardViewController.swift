@@ -1,5 +1,6 @@
 import UIKit
 import SwiftUI
+import Combine
 
 /// The keyboard extension's principal class.
 ///
@@ -10,6 +11,7 @@ final class KeyboardViewController: UIInputViewController {
     private let state = KeyboardState()
     private let service = TranslationService()
     private var heightConstraint: NSLayoutConstraint?
+    private var cancellables = Set<AnyCancellable>()
 
     /// The message before the last translation replaced it, so "Undo" can put it back.
     private var lastOriginal: String?
@@ -23,6 +25,7 @@ final class KeyboardViewController: UIInputViewController {
         super.viewDidLoad()
         installToolbar()
         installHeightConstraint()
+        observeClipboardPanel()
         updateAPIKeyAvailability()
         updateLanguages()
     }
@@ -136,6 +139,31 @@ final class KeyboardViewController: UIInputViewController {
         constraint.priority = UILayoutPriority(999)
         constraint.isActive = true
         heightConstraint = constraint
+    }
+
+    /// Grow the keyboard while the "translate a received message" panel is open, so a long message
+    /// is comfortable to read, then shrink back to the normal bar height when it's closed.
+    private func observeClipboardPanel() {
+        state.$clipboardResult
+            .map { $0 != nil }
+            .removeDuplicates()
+            .receive(on: RunLoop.main)
+            .sink { [weak self] expanded in self?.setExpanded(expanded) }
+            .store(in: &cancellables)
+    }
+
+    private func setExpanded(_ expanded: Bool) {
+        guard let heightConstraint else { return }
+        let target = expanded ? expandedHeight : Self.keyboardHeight
+        guard heightConstraint.constant != target else { return }
+        heightConstraint.constant = target
+        UIView.animate(withDuration: 0.22) { self.view.superview?.layoutIfNeeded(); self.view.layoutIfNeeded() }
+    }
+
+    /// About 60% of the screen (capped), enough to read a long received message.
+    private var expandedHeight: CGFloat {
+        let screenH = view.window?.screen.bounds.height ?? 800
+        return min(max(Self.keyboardHeight, screenH * 0.6), 520)
     }
 
     // MARK: - Translation & rewrite flow
