@@ -35,10 +35,13 @@ final class ListenViewModel: NSObject, ObservableObject {
     private var startedAt: Date?
     private var silenceStart: Date?
     private var hasSpoken = false
+    /// Loudest peak seen during the recording, to tell a real recording from true silence.
+    private var maxPeak: Float = -160
 
-    // Silence auto-stop tuning (dBFS; recorder power runs roughly -60…0).
-    private let speechThreshold: Float = -22
-    private let silenceThreshold: Float = -35
+    // Silence auto-stop tuning, using PEAK power (dBFS; peaks for close speech reach roughly -25…-10).
+    private let speechThreshold: Float = -30   // above this a peak counts as speech
+    private let silenceThreshold: Float = -45  // below this counts as silence (for auto-stop)
+    private let noiseFloor: Float = -50        // if the loudest peak stays under this, it was true silence
     private let silenceDuration: TimeInterval = 1.4
     private let maxDuration: TimeInterval = 30
 
@@ -69,8 +72,10 @@ final class ListenViewModel: NSObject, ObservableObject {
         meterTimer?.invalidate(); meterTimer = nil
         recorder?.stop(); recorder = nil
         try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
-        // Nothing was said, don't spend a request on silence, show the gentle "too quiet" state.
-        guard hasSpoken else {
+        // Only treat it as silence if the loudest peak never rose above the noise floor. This is
+        // permissive on purpose: if there was any real sound we send it and let the model decide,
+        // rather than wrongly rejecting valid speech.
+        guard maxPeak > noiseFloor else {
             if let fileURL { try? FileManager.default.removeItem(at: fileURL); self.fileURL = nil }
             level = 0
             phase = .noSpeech
@@ -145,6 +150,7 @@ final class ListenViewModel: NSObject, ObservableObject {
             startedAt = Date()
             silenceStart = nil
             hasSpoken = false
+            maxPeak = -160
             level = 0
             elapsed = 0
             phase = .recording
@@ -160,16 +166,20 @@ final class ListenViewModel: NSObject, ObservableObject {
     private func tick() {
         guard let rec = recorder, rec.isRecording else { return }
         rec.updateMeters()
-        let power = rec.averagePower(forChannel: 0)
-        level = CGFloat(max(0, min(1, (power + 50) / 50)))
+        let peak = rec.peakPower(forChannel: 0)
+        maxPeak = max(maxPeak, peak)
+        level = CGFloat(max(0, min(1, (peak + 50) / 50)))
         if let startedAt { elapsed = Date().timeIntervalSince(startedAt) }
 
         if let startedAt, Date().timeIntervalSince(startedAt) > maxDuration { stop(); return }
 
-        if power > speechThreshold {
+        // Don't arm the silence auto-stop in the first second (meters read low right after record()).
+        let warmedUp = (startedAt.map { Date().timeIntervalSince($0) > 1.0 }) ?? false
+
+        if peak > speechThreshold {
             hasSpoken = true
             silenceStart = nil
-        } else if hasSpoken, power < silenceThreshold {
+        } else if hasSpoken, warmedUp, peak < silenceThreshold {
             if let s = silenceStart {
                 if Date().timeIntervalSince(s) > silenceDuration { stop() }
             } else {
