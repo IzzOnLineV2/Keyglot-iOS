@@ -42,6 +42,9 @@ struct SettingsView: View {
             }
             .sheet(isPresented: $showSetupSteps) { setupStepsSheet }
             .manageSubscriptionsSheet(isPresented: $showManage)
+            .onChange(of: showManage) { _, shown in
+                if !shown { Task { await subscription.refresh(); refresh() } }
+            }
             .fullScreenCover(isPresented: $showWelcomePreview) {
                 WelcomeView(onDone: { showWelcomePreview = false }, promptsPaywall: false)
                     .environmentObject(subscription)

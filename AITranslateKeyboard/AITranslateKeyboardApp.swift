@@ -64,7 +64,10 @@ private struct RootView: View {
             if phase == .active {
                 consumePendingListen()
                 maybeShowPaywall()
-                Task { await refreshKeyGlotSessionIfSubscribed() }
+                Task {
+                    await subscription.refresh()            // pick up plan changes made outside the app
+                    await refreshKeyGlotSessionIfSubscribed()
+                }
             }
         }
     }
