@@ -214,3 +214,9 @@
 "You're on KeyGlot Pro, the AI is included for text and voice, no keys to add." = "KeyGlot Pro 사용 중이에요. AI가 텍스트와 음성에 포함되어 추가할 키가 없어요.";
 "You're using Custom, your own AI. KeyGlot Pro, with the AI included, is in Advanced." = "Custom(내 AI)을 사용 중이에요. AI가 포함된 KeyGlot Pro는 고급에 있어요.";
 "You're on KeyGlot, the AI is included. Prefer your own key? Switch to Custom in Advanced." = "KeyGlot 사용 중이고 AI가 포함돼요. 내 키가 좋으세요? 고급에서 Custom으로 전환하세요.";
+
+"KeyGlot needs an active Pro subscription. Subscribe, or switch to Custom in Advanced with your own AI key." = "KeyGlot에는 활성 Pro 구독이 필요해요. 구독하거나, 고급에서 내 AI 키로 Custom으로 전환하세요.";
+"Set up Keyglot to start" = "시작하려면 Keyglot을 설정하세요";
+"Voice needs a Google Gemini key. Add one in Advanced → Voice notes key." = "오디오에는 Google Gemini 키가 필요해요. 고급 → 음성 메모 키에서 추가하세요.";
+"Voice is included with KeyGlot Pro. Subscribe to use it, or switch to Custom in Advanced with your own Gemini key." = "오디오는 KeyGlot Pro에 포함돼요. 구독해서 사용하거나, 고급에서 내 Gemini 키로 Custom으로 전환하세요.";
+"Get KeyGlot Pro" = "KeyGlot Pro 받기";

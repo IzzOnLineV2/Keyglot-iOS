@@ -214,3 +214,9 @@
 "You're on KeyGlot Pro, the AI is included for text and voice, no keys to add." = "你在 KeyGlot Pro，文本和语音的 AI 已包含，无需添加密钥。";
 "You're using Custom, your own AI. KeyGlot Pro, with the AI included, is in Advanced." = "你正在使用 Custom（你自己的 AI）。含 AI 的 KeyGlot Pro 在“高级”中。";
 "You're on KeyGlot, the AI is included. Prefer your own key? Switch to Custom in Advanced." = "你在 KeyGlot，AI 已包含。想用自己的密钥？在“高级”中切换到 Custom。";
+
+"KeyGlot needs an active Pro subscription. Subscribe, or switch to Custom in Advanced with your own AI key." = "KeyGlot 需要有效的 Pro 订阅。请订阅，或在“高级”中使用你自己的 AI 密钥切换到 Custom。";
+"Set up Keyglot to start" = "设置 Keyglot 以开始";
+"Voice needs a Google Gemini key. Add one in Advanced → Voice notes key." = "音频需要 Google Gemini 密钥。请在“高级 → 语音消息密钥”中添加。";
+"Voice is included with KeyGlot Pro. Subscribe to use it, or switch to Custom in Advanced with your own Gemini key." = "语音已包含在 KeyGlot Pro 中。订阅即可使用，或在“高级”中使用你自己的 Gemini 密钥切换到 Custom。";
+"Get KeyGlot Pro" = "获取 KeyGlot Pro";

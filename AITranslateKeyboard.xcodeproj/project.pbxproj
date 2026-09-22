@@ -26,6 +26,7 @@
 		15A4F1D86B41A4B975D9AF6C /* AITranslateKeyboardWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0095B73241D3D5B02752A575 /* AITranslateKeyboardWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		16420536D82E608EB457B0AD /* ToneActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CA6BF6F4F38FE6ADD65FB6 /* ToneActionButton.swift */; };
 		169227BC53021AA01ADF5AA0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8BAA075D548E9B01C95C50C /* Localizable.strings */; };
+		17F25E3FB541642AD9B299C1 /* SetupRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40240FCB1EBC6CA2531468CA /* SetupRequiredView.swift */; };
 		196BBBA10622B8592D589B35 /* ToneActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CA6BF6F4F38FE6ADD65FB6 /* ToneActionButton.swift */; };
 		1DC1DBC0CAEBAE9F2B70EF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148544529EF65F107A323578 /* Assets.xcassets */; };
 		1DEA682BBE56B1845562AB01 /* RewriteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFA86C9FFE001D68E40C52 /* RewriteAction.swift */; };
@@ -62,6 +63,7 @@
 		3C24C2A52A5850DF28C16421 /* AudioShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5261FF3F6DFD8F4F0529BE /* AudioShareView.swift */; };
 		3D5E3D1A3A73054FD743D919 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFB7D1E4A2A62771E7E871BF /* Localizable.strings */; };
 		3DF0FCF5FA68732359812450 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1B3BDBDC2714DE93A91CF631 /* PrivacyInfo.xcprivacy */; };
+		3F28FC494D6AEFB7703E6B68 /* SetupRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40240FCB1EBC6CA2531468CA /* SetupRequiredView.swift */; };
 		4357DE8F6D2ACA5589DB18A9 /* OpenAITranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABC2F65F05AC9154492AEB9 /* OpenAITranscriptionService.swift */; };
 		43AA741B3FFFC2E2F5C31139 /* KGGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19036B543E3E8BB8DFE50C01 /* KGGradient.swift */; };
 		441B9E58278DE30C666D9F68 /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263B584837F8740AAFEEA9E /* AppGroupStorage.swift */; };
@@ -74,6 +76,7 @@
 		4B553E11246F6B5934677C62 /* KGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6888F6EA8EAE18D15F1000 /* KGButton.swift */; };
 		4C443AB0B8248356DA8CF2FB /* KGGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19036B543E3E8BB8DFE50C01 /* KGGradient.swift */; };
 		4C936F396C67D7E6A741987A /* LanguageChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF259BFFC55A686F82F29B2 /* LanguageChip.swift */; };
+		4CD0048998D55B0CE9BD74C7 /* SetupRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40240FCB1EBC6CA2531468CA /* SetupRequiredView.swift */; };
 		4CF2A822CABE7CF891ABD627 /* KGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ABED9387352C66D97818EE /* KGColor.swift */; };
 		4FA5622D415098D47F08441C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900DF980202C946D6B599F01 /* Models.swift */; };
 		4FD82C2DB1BE0208A8D206D3 /* KGStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926F71435FFDFFD1B022CAD6 /* KGStyle.swift */; };
@@ -194,6 +197,7 @@
 		E9A7F55A712B1E54EBAB7CDE /* TextShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC60FF94C04102412CFDEC1E /* TextShareView.swift */; };
 		EC7015D3CE85A109DE27FDC5 /* InstrumentSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B34AFC284B9868045BB196F /* InstrumentSerif-Regular.ttf */; };
 		EEA21F58A9A60591D370429E /* GeminiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B7BD74777B6745934F80 /* GeminiProvider.swift */; };
+		EEBE710AE673851FC2551B50 /* SetupRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40240FCB1EBC6CA2531468CA /* SetupRequiredView.swift */; };
 		EF2B191D85A62B48CB60C041 /* KGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6888F6EA8EAE18D15F1000 /* KGButton.swift */; };
 		F174E346979EA4E9C1581690 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 448D369B0CD394B4D0D2E710 /* PrivacyInfo.xcprivacy */; };
 		F226444E0E7EAD7520E1739D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68779465572FA00D02D77CFA /* SettingsView.swift */; };
@@ -292,6 +296,7 @@
 		3A0DABECCD383B4928A1D956 /* KeyboardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardState.swift; sourceTree = "<group>"; };
 		3E4759F4C917EB5736C08DBC /* TranslationResultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationResultCard.swift; sourceTree = "<group>"; };
 		3ECB221273276FF80B56D6D3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		40240FCB1EBC6CA2531468CA /* SetupRequiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupRequiredView.swift; sourceTree = "<group>"; };
 		448D369B0CD394B4D0D2E710 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		4499155DA7481A15BC1517A6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		44C287346EC30F500716A10D /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -405,6 +410,7 @@
 				9BA0A8FF86F43AB2252963A8 /* MicButton.swift */,
 				8B761F7007420924A6EF08F1 /* ScriptText.swift */,
 				06AE78B070659901E5508CB1 /* SeamDivider.swift */,
+				40240FCB1EBC6CA2531468CA /* SetupRequiredView.swift */,
 				31CA6BF6F4F38FE6ADD65FB6 /* ToneActionButton.swift */,
 				3E4759F4C917EB5736C08DBC /* TranslationResultCard.swift */,
 			);
@@ -820,6 +826,7 @@
 				5FAC1F9297102364A2E16358 /* RewriteAction.swift in Sources */,
 				26AA98E8C0C34E365A85764B /* ScriptText.swift in Sources */,
 				C11EFE2D47508B0A8B80E1A5 /* SeamDivider.swift in Sources */,
+				17F25E3FB541642AD9B299C1 /* SetupRequiredView.swift in Sources */,
 				F367867976340DF2BB89AE48 /* SpeechReader.swift in Sources */,
 				44D0D1CCFADA941AD7FC382F /* ToneActionButton.swift in Sources */,
 				23089448A6F9AD92E2AF3CB0 /* ToolbarView.swift in Sources */,
@@ -864,6 +871,7 @@
 				1DEA682BBE56B1845562AB01 /* RewriteAction.swift in Sources */,
 				570D12F2D0053039EDFC6243 /* ScriptText.swift in Sources */,
 				880FCFAD10FE4F40967D16F0 /* SeamDivider.swift in Sources */,
+				4CD0048998D55B0CE9BD74C7 /* SetupRequiredView.swift in Sources */,
 				6F2C176E9A5915A2D25C2396 /* ShareViewController.swift in Sources */,
 				DA3A94B04A9C58C41DA8E8A8 /* SpeechReader.swift in Sources */,
 				45E96E5EC0DADA0975EA4BFB /* TextShareModel.swift in Sources */,
@@ -917,6 +925,7 @@
 				E4BA81F63FFE49C79198E456 /* ScriptText.swift in Sources */,
 				BC97377B4A4685BF090168EA /* SeamDivider.swift in Sources */,
 				F226444E0E7EAD7520E1739D /* SettingsView.swift in Sources */,
+				3F28FC494D6AEFB7703E6B68 /* SetupRequiredView.swift in Sources */,
 				340326C6C00C322D819233A4 /* SpeechReader.swift in Sources */,
 				FCF8BA642136B890CAA31D8A /* StoreManager.swift in Sources */,
 				510CA9A24BFB8F316FCF0764 /* SubscriptionManager.swift in Sources */,
@@ -962,6 +971,7 @@
 				118E6C8613ACE6F117871555 /* RewriteAction.swift in Sources */,
 				6C88C1D65B81279F2E6832A7 /* ScriptText.swift in Sources */,
 				FC536C2DBF39CBBCCCD1D39C /* SeamDivider.swift in Sources */,
+				EEBE710AE673851FC2551B50 /* SetupRequiredView.swift in Sources */,
 				39A9C26D257ECB76911D4913 /* SpeechReader.swift in Sources */,
 				196BBBA10622B8592D589B35 /* ToneActionButton.swift in Sources */,
 				0261CF209EB8EBC6CB2D1CCC /* TranslationResultCard.swift in Sources */,
@@ -1042,7 +1052,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 51;
+				CURRENT_PROJECT_VERSION = 52;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1103,7 +1113,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 51;
+				CURRENT_PROJECT_VERSION = 52;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = WF6Z643R96;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

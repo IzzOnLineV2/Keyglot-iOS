@@ -214,3 +214,9 @@
 "You're on KeyGlot Pro, the AI is included for text and voice, no keys to add." = "أنت على KeyGlot Pro، الذكاء الاصطناعي مضمّن للنص والصوت، لا مفاتيح لإضافتها.";
 "You're using Custom, your own AI. KeyGlot Pro, with the AI included, is in Advanced." = "تستخدم Custom، الذكاء الاصطناعي الخاص بك. KeyGlot Pro، مع الذكاء الاصطناعي المضمّن، في المتقدّم.";
 "You're on KeyGlot, the AI is included. Prefer your own key? Switch to Custom in Advanced." = "أنت على KeyGlot، الذكاء الاصطناعي مضمّن. تفضّل مفتاحك؟ بدّل إلى Custom في المتقدّم.";
+
+"KeyGlot needs an active Pro subscription. Subscribe, or switch to Custom in Advanced with your own AI key." = "يتطلب KeyGlot اشتراك Pro نشطًا. اشترك، أو بدّل إلى Custom في المتقدّم بمفتاح الذكاء الاصطناعي الخاص بك.";
+"Set up Keyglot to start" = "إعداد Keyglot للبدء";
+"Voice needs a Google Gemini key. Add one in Advanced → Voice notes key." = "يحتاج الصوت إلى مفتاح Google Gemini. أضف واحدًا في المتقدّم ← مفتاح الرسائل الصوتية.";
+"Voice is included with KeyGlot Pro. Subscribe to use it, or switch to Custom in Advanced with your own Gemini key." = "الصوت مضمّن مع KeyGlot Pro. اشترك لاستخدامه، أو بدّل إلى Custom في المتقدّم بمفتاح Gemini الخاص بك.";
+"Get KeyGlot Pro" = "احصل على KeyGlot Pro";

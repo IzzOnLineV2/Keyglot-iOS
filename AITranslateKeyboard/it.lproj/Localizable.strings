@@ -214,3 +214,9 @@
 "You're on KeyGlot Pro, the AI is included for text and voice, no keys to add." = "Sei su KeyGlot Pro, l'AI è inclusa per testo e voce, nessuna chiave da aggiungere.";
 "You're using Custom, your own AI. KeyGlot Pro, with the AI included, is in Advanced." = "Stai usando Custom, la tua AI. KeyGlot Pro, con l'AI inclusa, è in Avanzate.";
 "You're on KeyGlot, the AI is included. Prefer your own key? Switch to Custom in Advanced." = "Sei su KeyGlot, l'AI è inclusa. Preferisci la tua chiave? Passa a Custom in Avanzate.";
+
+"KeyGlot needs an active Pro subscription. Subscribe, or switch to Custom in Advanced with your own AI key." = "KeyGlot richiede un abbonamento Pro attivo. Abbonati, oppure passa a Custom in Avanzate con la tua chiave AI.";
+"Set up Keyglot to start" = "Configura Keyglot per iniziare";
+"Voice needs a Google Gemini key. Add one in Advanced → Voice notes key." = "Per l'audio serve una chiave Google Gemini. Aggiungila in Avanzate → Chiave note vocali.";
+"Voice is included with KeyGlot Pro. Subscribe to use it, or switch to Custom in Advanced with your own Gemini key." = "L'audio è incluso con KeyGlot Pro. Abbonati per usarlo, oppure passa a Custom in Avanzate con la tua chiave Gemini.";
+"Get KeyGlot Pro" = "Attiva KeyGlot Pro";

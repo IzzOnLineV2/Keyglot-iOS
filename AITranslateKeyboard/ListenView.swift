@@ -4,23 +4,61 @@ import UIKit
 /// "Listen & translate": opens (from Settings or the widget deep link), starts recording
 /// immediately, auto-stops on silence, and shows Gemini's translation of what it heard.
 struct ListenView: View {
+    @EnvironmentObject private var subscription: SubscriptionManager
     @StateObject private var vm = ListenViewModel()
     @State private var copied = false
+    @State private var showPro = false
 
     // Fixed dark surface for the "listening" state (design 07), independent of light/dark mode.
     private let listenBg = Color(hex: 0x0F0E13)
     private let listenInk = Color(hex: 0xF7F4FA)
     private let listenInk2 = Color(hex: 0xA79FB4)
 
+    /// The audio features need either KeyGlot Pro (managed) or, in Custom mode, a Gemini key.
+    private var needsSetup: Bool {
+        switch AppGroupStorage.shared.aiMode {
+        case .keyglot: return !subscription.isSubscribed
+        case .custom:  return !CredentialStore.shared.hasAPIKey(for: .gemini)
+        }
+    }
+
+    private var isCustom: Bool { AppGroupStorage.shared.aiMode == .custom }
+
     var body: some View {
+        Group {
+            if needsSetup { setupScreen } else { listenScreen }
+        }
+        .navigationTitle("")
+        .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $showPro) {
+            ProPaywallView(onClose: { showPro = false }).environmentObject(subscription)
+        }
+        .onAppear { if !needsSetup && vm.phase == .idle { vm.start() } }
+        .onChange(of: subscription.isSubscribed) { _, subscribed in
+            if subscribed && vm.phase == .idle { vm.start() }
+        }
+        .onDisappear { vm.cancel() }
+    }
+
+    // MARK: - Setup required (nice screen instead of an error)
+
+    private var setupScreen: some View {
+        SetupRequiredView(
+            icon: isCustom ? "key.fill" : "sparkles",
+            title: "Set up Keyglot to start",
+            message: isCustom
+                ? "Voice needs a Google Gemini key. Add one in Advanced → Voice notes key."
+                : "Voice is included with KeyGlot Pro. Subscribe to use it, or switch to Custom in Advanced with your own Gemini key.",
+            actionTitle: isCustom ? nil : "Get KeyGlot Pro",
+            action: isCustom ? nil : { showPro = true }
+        )
+    }
+
+    private var listenScreen: some View {
         ZStack {
             (isRecording ? listenBg : KGColor.canvas).ignoresSafeArea()
             content.padding()
         }
-        .navigationTitle("")
-        .navigationBarTitleDisplayMode(.inline)
-        .onAppear { if vm.phase == .idle { vm.start() } }
-        .onDisappear { vm.cancel() }
     }
 
     private var isRecording: Bool { vm.phase == .recording }
@@ -209,5 +247,5 @@ struct ListenView: View {
 }
 
 #Preview {
-    NavigationStack { ListenView() }
+    NavigationStack { ListenView() }.environmentObject(SubscriptionManager())
 }

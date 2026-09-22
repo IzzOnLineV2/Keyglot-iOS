@@ -53,3 +53,5 @@
 "✓ Replaced, ready to send" = "✓ 置き換え完了, 送信できます";
 "Undo, put my words back" = "元に戻す, 自分の言葉に戻す";
 "Tone actions appear once you've typed" = "入力するとトーン操作が表示されます";
+
+"KeyGlot needs an active Pro subscription. Subscribe, or switch to Custom in Advanced with your own AI key." = "KeyGlot には有効な Pro のサブスクリプションが必要です。登録するか、詳細設定で自分の AI キーを使って Custom に切り替えてください。";

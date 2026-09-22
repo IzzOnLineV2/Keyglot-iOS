@@ -214,3 +214,9 @@
 "You're on KeyGlot Pro, the AI is included for text and voice, no keys to add." = "KeyGlot Pro をご利用中です。AI はテキストと音声に含まれ、追加するキーはありません。";
 "You're using Custom, your own AI. KeyGlot Pro, with the AI included, is in Advanced." = "Custom（自分の AI）を使用中です。AI 込みの KeyGlot Pro は詳細設定にあります。";
 "You're on KeyGlot, the AI is included. Prefer your own key? Switch to Custom in Advanced." = "KeyGlot をご利用中で、AI は込みです。自分のキーがよいですか？詳細設定で Custom に切り替えられます。";
+
+"KeyGlot needs an active Pro subscription. Subscribe, or switch to Custom in Advanced with your own AI key." = "KeyGlot には有効な Pro のサブスクリプションが必要です。登録するか、詳細設定で自分の AI キーを使って Custom に切り替えてください。";
+"Set up Keyglot to start" = "始めるには Keyglot を設定してください";
+"Voice needs a Google Gemini key. Add one in Advanced → Voice notes key." = "音声には Google Gemini のキーが必要です。詳細設定 → 音声メモ用キー で追加してください。";
+"Voice is included with KeyGlot Pro. Subscribe to use it, or switch to Custom in Advanced with your own Gemini key." = "音声は KeyGlot Pro に含まれています。登録して使うか、詳細設定で自分の Gemini キーを使って Custom に切り替えてください。";
+"Get KeyGlot Pro" = "KeyGlot Pro を入手";

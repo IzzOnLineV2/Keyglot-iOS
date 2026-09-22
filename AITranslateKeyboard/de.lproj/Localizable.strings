@@ -214,3 +214,9 @@
 "You're on KeyGlot Pro, the AI is included for text and voice, no keys to add." = "Du bist bei KeyGlot Pro, die KI ist für Text und Sprache inklusive, keine Schlüssel nötig.";
 "You're using Custom, your own AI. KeyGlot Pro, with the AI included, is in Advanced." = "Du nutzt Custom, deine eigene KI. KeyGlot Pro, mit inbegriffener KI, ist unter Erweitert.";
 "You're on KeyGlot, the AI is included. Prefer your own key? Switch to Custom in Advanced." = "Du bist bei KeyGlot, die KI ist inklusive. Lieber dein eigener Schlüssel? Wechsle unter Erweitert zu Custom.";
+
+"KeyGlot needs an active Pro subscription. Subscribe, or switch to Custom in Advanced with your own AI key." = "KeyGlot erfordert ein aktives Pro-Abo. Abonniere, oder wechsle zu Custom unter Erweitert mit deinem eigenen KI-Schlüssel.";
+"Set up Keyglot to start" = "Richte Keyglot ein, um zu starten";
+"Voice needs a Google Gemini key. Add one in Advanced → Voice notes key." = "Audio braucht einen Google-Gemini-Schlüssel. Füge einen unter Erweitert → Schlüssel für Sprachnachrichten hinzu.";
+"Voice is included with KeyGlot Pro. Subscribe to use it, or switch to Custom in Advanced with your own Gemini key." = "Audio ist in KeyGlot Pro enthalten. Abonniere, um es zu nutzen, oder wechsle zu Custom unter Erweitert mit deinem eigenen Gemini-Schlüssel.";
+"Get KeyGlot Pro" = "KeyGlot Pro holen";

@@ -24,3 +24,5 @@
 "Pick the language above and Keyglot listens again, same recording, no re-sharing." = "上で言語を選ぶと、同じ録音のまま Keyglot がもう一度聞き取ります。再共有は不要です。";
 "Ready to answer?" = "返信しますか？";
 "Close this and use the Keyglot keyboard in the chat, right where you're typing." = "これを閉じて、チャットで Keyglot キーボードを使いましょう。入力する場所そのままで。";
+
+"KeyGlot needs an active Pro subscription. Subscribe, or switch to Custom in Advanced with your own AI key." = "KeyGlot には有効な Pro のサブスクリプションが必要です。登録するか、詳細設定で自分の AI キーを使って Custom に切り替えてください。";

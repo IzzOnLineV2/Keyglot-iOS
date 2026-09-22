@@ -1,10 +1,12 @@
 import Foundation
+import StoreKit
 
 /// Manages the KeyGlot backend session token: mints it, caches it in the shared Keychain so the
 /// app and its extensions reuse the same token, and refreshes it when expired or rejected.
 ///
-/// MVP: mints via the **dev-key path** (`x-dev-key`). At Step 3 this is replaced by exchanging a
-/// StoreKit signed transaction (JWS), the rest of the app is unaffected.
+/// Production: the session is built from the active StoreKit subscription (a signed transaction,
+/// JWS, verified server-side, with App Attest). The token is cached in the shared Keychain so the
+/// keyboard/share extensions reuse it.
 struct KeyGlotSession: Sendable {
 
     /// Keychain account for the temporary dev key pasted in Settings (Step 2 only).
@@ -30,11 +32,11 @@ struct KeyGlotSession: Sendable {
     }
 
     enum SessionError: Error, LocalizedError {
-        case devKeyMissing
+        case notConfigured
         var errorDescription: String? {
             switch self {
-            case .devKeyMissing:
-                return String(localized: "Add the KeyGlot dev key in Settings to use KeyGlot mode.")
+            case .notConfigured:
+                return String(localized: "KeyGlot needs an active Pro subscription. Subscribe, or switch to Custom in Advanced with your own AI key.")
             }
         }
     }
@@ -75,17 +77,39 @@ struct KeyGlotSession: Sendable {
     }
 
     private func mint() async throws -> String {
-        // DEV path: exchange the dev key for a session token. Superseded by `exchange(jws:)` once
-        // the user is subscribed; kept for testing until StoreKit is fully wired (Step 3b).
-        guard let devKey = credentials.secret(Self.devKeyAccount) else { throw SessionError.devKeyMissing }
+        // Production: build the session from the active StoreKit subscription (JWS verified
+        // server-side, with App Attest). This makes the session self-sufficient, so it works even
+        // if the user opens a feature before the app's startup refresh has run.
+        if let jws = await Self.currentEntitlementJWS() {
+            return try await exchange(jws: jws)
+        }
 
-        var request = URLRequest(url: baseURL.appendingPathComponent("v1/session"))
-        request.httpMethod = "POST"
-        request.timeoutInterval = 30
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(devKey, forHTTPHeaderField: "x-dev-key")
-        request.httpBody = try JSONEncoder().encode(["devSubject": storage.installID])
-        return try await complete(request)
+#if DEBUG
+        // Dev-only shortcut to exercise the backend without a subscription (backend DEV_MODE=1).
+        if let devKey = credentials.secret(Self.devKeyAccount) {
+            var request = URLRequest(url: baseURL.appendingPathComponent("v1/session"))
+            request.httpMethod = "POST"
+            request.timeoutInterval = 30
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue(devKey, forHTTPHeaderField: "x-dev-key")
+            request.httpBody = try JSONEncoder().encode(["devSubject": storage.installID])
+            return try await complete(request)
+        }
+#endif
+
+        throw SessionError.notConfigured
+    }
+
+    /// The signed JWS of the active KeyGlot subscription entitlement, if any (StoreKit 2). Available
+    /// from the app and the extensions, so the session can be built wherever it's first needed.
+    static func currentEntitlementJWS() async -> String? {
+        for await result in Transaction.currentEntitlements {
+            guard case .verified(let t) = result,
+                  Configuration.subscriptionProductIDs.contains(t.productID),
+                  t.revocationDate == nil else { continue }
+            return result.jwsRepresentation
+        }
+        return nil
     }
 
     /// Send a `/v1/session` request, decode `{ session }`, cache the token, and return it.
