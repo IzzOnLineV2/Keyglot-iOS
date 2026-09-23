@@ -243,8 +243,8 @@ struct ToolbarView: View {
             ScrollView {
                 ScriptText(text: text, size: 17, style: .body, color: KGColor.ink)
                     .frame(maxWidth: .infinity, alignment: .topLeading)
-                    .padding(.top, 10)     // keep the first line clear of the header edge
-                    .padding(.bottom, 12)
+                    .padding(.top, 24)     // a full line of clearance so the first line isn't cut off
+                    .padding(.bottom, 14)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
