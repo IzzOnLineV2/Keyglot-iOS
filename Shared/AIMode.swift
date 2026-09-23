@@ -18,12 +18,19 @@ enum AIResolver {
         storage: AppGroupStorage = .shared,
         credentials: CredentialStore = .shared
     ) throws -> any AIProvider {
+        let base: any AIProvider
+        let modelID: String
         switch storage.aiMode {
         case .keyglot:
-            return KeyGlotProvider(session: KeyGlotSession(storage: storage, credentials: credentials))
+            base = KeyGlotProvider(session: KeyGlotSession(storage: storage, credentials: credentials))
+            modelID = "keyglot"
         case .custom:
-            return try AIProviderFactory.make(storage: storage, credentials: credentials)
+            base = try AIProviderFactory.make(storage: storage, credentials: credentials)
+            let p = storage.selectedProvider
+            modelID = "custom:\(p.rawValue):\(p.modelName)"
         }
+        // Cache identical requests (same text + system prompt + model) to avoid re-spending tokens.
+        return CachedProvider(wrapped: base, modelID: modelID)
     }
 
     static func audioTranslator(
