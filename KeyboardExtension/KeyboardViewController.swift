@@ -192,16 +192,22 @@ final class KeyboardViewController: UIInputViewController {
             return
         }
 
-        let clip = (UIPasteboard.general.string ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !clip.isEmpty else {
+        // `hasStrings` doesn't require the paste permission, so we can rule out an empty clipboard
+        // without triggering the prompt.
+        guard UIPasteboard.general.hasStrings else {
             state.showError(String(localized: "Copy a message first, then tap the clipboard button."))
             return
         }
 
-        state.beginWork(String(localized: "Translating…"))
-
         Task { [weak self] in
             guard let self else { return }
+            // Reading `.string` shows the paste permission prompt and returns nil until the user
+            // allows; poll briefly so a single tap works once they tap Allow.
+            guard let clip = await self.readClipboardWithRetry() else {
+                self.state.showError(String(localized: "Copy a message first, then tap the clipboard button."))
+                return
+            }
+            self.state.beginWork(String(localized: "Translating…"))
             do {
                 let result = try await self.service.translate(clip, to: .deviceLanguage)
                 self.state.clipboardResult = result
@@ -211,6 +217,19 @@ final class KeyboardViewController: UIInputViewController {
                 self.state.showError(self.bannerMessage(for: error))
             }
         }
+    }
+
+    /// Read the clipboard, retrying for a few seconds so the flow completes on one tap after the
+    /// user grants the paste prompt. Returns nil if nothing readable appears (denied or empty).
+    private func readClipboardWithRetry() async -> String? {
+        for _ in 0..<16 {   // ~4.8s at 0.3s intervals
+            if let s = UIPasteboard.general.string?.trimmingCharacters(in: .whitespacesAndNewlines),
+               !s.isEmpty {
+                return s
+            }
+            try? await Task.sleep(nanoseconds: 300_000_000)
+        }
+        return nil
     }
 
     /// Put the user's original words back after a translation (the "Undo" pill).
