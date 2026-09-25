@@ -9,8 +9,18 @@ Primary language: English (U.S.). Also provided: Italian. The other 8 UI locales
 - **Support URL:** https://www.izzonline.it/support
 - **Marketing URL:** https://www.izzonline.it/support
 - **Privacy Policy URL:** https://www.izzonline.it/support (privacy section)
+- **Terms of Use (EULA):** https://www.apple.com/legal/internet-services/itunes/dev/stdeula/ (Apple standard EULA)
 - **Category:** Primary = Productivity, Secondary = Utilities
 - **Bundle ID:** it.izzonline.keyglot
+
+> **Guideline 3.1.2 (auto-renewable subs):** a functional **Terms of Use (EULA)** link MUST appear in
+> the App Store metadata. Set the App Information → License Agreement to Apple's standard EULA, AND
+> append these two lines at the END of the Description in every locale:
+>   IT: `Termini d'uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/` and
+>       `Privacy: https://www.izzonline.it/support`
+>   EN: `Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/` and
+>       `Privacy Policy: https://www.izzonline.it/support`
+> This is a metadata-only fix: update the fields and resubmit, no new build needed.
 
 ---
 
